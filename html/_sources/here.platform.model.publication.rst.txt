@@ -1,0 +1,7 @@
+here.platform.model.publication module
+======================================
+
+.. automodule:: here.platform.model.publication
+   :members:
+   :undoc-members:
+   :show-inheritance:

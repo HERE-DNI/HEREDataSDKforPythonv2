@@ -1,0 +1,7 @@
+here.inspector.base module
+==========================
+
+.. automodule:: here.inspector.base
+   :members:
+   :undoc-members:
+   :show-inheritance:

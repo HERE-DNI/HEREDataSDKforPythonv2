@@ -1,0 +1,7 @@
+here.platform.schema\_api module
+================================
+
+.. automodule:: here.platform.schema_api
+   :members:
+   :undoc-members:
+   :show-inheritance:

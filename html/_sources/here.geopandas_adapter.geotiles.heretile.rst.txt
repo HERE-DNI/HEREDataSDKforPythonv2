@@ -1,0 +1,7 @@
+here.geopandas\_adapter.geotiles.heretile module
+================================================
+
+.. automodule:: here.geopandas_adapter.geotiles.heretile
+   :members:
+   :undoc-members:
+   :show-inheritance:

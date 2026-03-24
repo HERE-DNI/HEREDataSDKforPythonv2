@@ -1,0 +1,7 @@
+here.platform.api.artifact\_api module
+======================================
+
+.. automodule:: here.platform.api.artifact_api
+   :members:
+   :undoc-members:
+   :show-inheritance:

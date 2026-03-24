@@ -1,0 +1,618 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.content.hmc2.constants &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/content/hmc2/constants';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.content.hmc2.constants</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.content.hmc2.constants</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2022-2023 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Constants for the HMC.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="Constant">
+<a class="viewcode-back" href="../../../../here.content.hmc2.constants.html#here.content.hmc2.constants.Constant">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Constant</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Constants needed across the code.&quot;&quot;&quot;</span>
+
+    <span class="n">address_extracter</span> <span class="o">=</span> <span class="s2">&quot;address_extracter&quot;</span>
+    <span class="n">partition_id</span> <span class="o">=</span> <span class="s2">&quot;partition_id&quot;</span>
+    <span class="n">place_extracter</span> <span class="o">=</span> <span class="s2">&quot;place_extracter&quot;</span>
+    <span class="n">supplier_extracter</span> <span class="o">=</span> <span class="s2">&quot;supplier_extracter&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="FieldName">
+<a class="viewcode-back" href="../../../../here.content.hmc2.constants.html#here.content.hmc2.constants.FieldName">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">FieldName</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;HMC Field Name Constants.&quot;&quot;&quot;</span>
+
+    <span class="n">accessors</span> <span class="o">=</span> <span class="s2">&quot;accessors&quot;</span>
+    <span class="n">additional_data</span> <span class="o">=</span> <span class="s2">&quot;additional_data&quot;</span>
+    <span class="n">address_relation</span> <span class="o">=</span> <span class="s2">&quot;address_relation&quot;</span>
+    <span class="n">air_conditioning</span> <span class="o">=</span> <span class="s2">&quot;air_conditioning&quot;</span>
+    <span class="n">alt_category</span> <span class="o">=</span> <span class="s2">&quot;alt_category&quot;</span>
+    <span class="n">alternate_geometry</span> <span class="o">=</span> <span class="s2">&quot;alternate_geometry&quot;</span>
+    <span class="n">area_type</span> <span class="o">=</span> <span class="s2">&quot;area_type&quot;</span>
+    <span class="n">beer_selection</span> <span class="o">=</span> <span class="s2">&quot;beer_selection&quot;</span>
+    <span class="n">bounding_box</span> <span class="o">=</span> <span class="s2">&quot;bounding_box&quot;</span>
+    <span class="n">category</span> <span class="o">=</span> <span class="s2">&quot;category&quot;</span>
+    <span class="n">catering</span> <span class="o">=</span> <span class="s2">&quot;catering&quot;</span>
+    <span class="n">childrens_menu</span> <span class="o">=</span> <span class="s2">&quot;childrens_menu&quot;</span>
+    <span class="n">cooking_types</span> <span class="o">=</span> <span class="s2">&quot;cooking_types&quot;</span>
+    <span class="n">conference_hall</span> <span class="o">=</span> <span class="s2">&quot;conference_hall&quot;</span>
+    <span class="n">contact_info</span> <span class="o">=</span> <span class="s2">&quot;contact_info&quot;</span>
+    <span class="n">country_code</span> <span class="o">=</span> <span class="s2">&quot;country_code&quot;</span>
+    <span class="n">currency_type</span> <span class="o">=</span> <span class="s2">&quot;currency_type&quot;</span>
+    <span class="n">day_of_week</span> <span class="o">=</span> <span class="s2">&quot;day_of_week&quot;</span>
+    <span class="n">delivery</span> <span class="o">=</span> <span class="s2">&quot;delivery&quot;</span>
+    <span class="n">dress_code</span> <span class="o">=</span> <span class="s2">&quot;dress_code&quot;</span>
+    <span class="n">elevators</span> <span class="o">=</span> <span class="s2">&quot;elevators&quot;</span>
+    <span class="n">escalators</span> <span class="o">=</span> <span class="s2">&quot;escalators&quot;</span>
+    <span class="n">family_friendly</span> <span class="o">=</span> <span class="s2">&quot;family_friendly&quot;</span>
+    <span class="n">geometry</span> <span class="o">=</span> <span class="s2">&quot;geometry&quot;</span>
+    <span class="n">handicap_accessible</span> <span class="o">=</span> <span class="s2">&quot;handicap_accessible&quot;</span>
+    <span class="n">handicap_rooms</span> <span class="o">=</span> <span class="s2">&quot;handicap_rooms&quot;</span>
+    <span class="n">hot_tub</span> <span class="o">=</span> <span class="s2">&quot;hot_tub&quot;</span>
+    <span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;id&quot;</span>
+    <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;label&quot;</span>
+    <span class="n">level_information</span> <span class="o">=</span> <span class="s2">&quot;level_information&quot;</span>
+    <span class="n">location_type</span> <span class="o">=</span> <span class="s2">&quot;location_type&quot;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;name&quot;</span>
+    <span class="n">name_type</span> <span class="o">=</span> <span class="s2">&quot;name_type&quot;</span>
+    <span class="n">onsite_heart_defribillator</span> <span class="o">=</span> <span class="s2">&quot;onsite_heart_defribillator&quot;</span>
+    <span class="n">payment_type</span> <span class="o">=</span> <span class="s2">&quot;payment_type&quot;</span>
+    <span class="n">political_geometry</span> <span class="o">=</span> <span class="s2">&quot;political_geometry&quot;</span>
+    <span class="n">political_view_name_replacement</span> <span class="o">=</span> <span class="s2">&quot;political_view_name_replacement&quot;</span>
+    <span class="n">political_view_action</span> <span class="o">=</span> <span class="s2">&quot;political_view_action&quot;</span>
+    <span class="n">primary</span> <span class="o">=</span> <span class="s2">&quot;primary&quot;</span>
+    <span class="n">qualifier</span> <span class="o">=</span> <span class="s2">&quot;qualifier&quot;</span>
+    <span class="n">relationship</span> <span class="o">=</span> <span class="s2">&quot;relationship&quot;</span>
+    <span class="n">representation</span> <span class="o">=</span> <span class="s2">&quot;representation&quot;</span>
+    <span class="n">reservation_required</span> <span class="o">=</span> <span class="s2">&quot;reservation_required&quot;</span>
+    <span class="n">restrooms_available</span> <span class="o">=</span> <span class="s2">&quot;restrooms_available&quot;</span>
+    <span class="n">sauna</span> <span class="o">=</span> <span class="s2">&quot;sauna&quot;</span>
+    <span class="n">seating_capacity</span> <span class="o">=</span> <span class="s2">&quot;seating_capacity&quot;</span>
+    <span class="n">seating_options</span> <span class="o">=</span> <span class="s2">&quot;seating_options&quot;</span>
+    <span class="n">security_guard</span> <span class="o">=</span> <span class="s2">&quot;security_guard&quot;</span>
+    <span class="n">segment_anchor_side</span> <span class="o">=</span> <span class="s2">&quot;segment_anchor_side&quot;</span>
+    <span class="n">spa</span> <span class="o">=</span> <span class="s2">&quot;spa&quot;</span>
+    <span class="n">specialties</span> <span class="o">=</span> <span class="s2">&quot;specialties&quot;</span>
+    <span class="n">sports_infrastructure</span> <span class="o">=</span> <span class="s2">&quot;sports_infrastructure&quot;</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="s2">&quot;status&quot;</span>
+    <span class="n">smoking</span> <span class="o">=</span> <span class="s2">&quot;smoking&quot;</span>
+    <span class="n">swimming</span> <span class="o">=</span> <span class="s2">&quot;swimming&quot;</span>
+    <span class="n">swimming_pool</span> <span class="o">=</span> <span class="s2">&quot;swimming_pool&quot;</span>
+    <span class="n">swimming_pool_indoor</span> <span class="o">=</span> <span class="s2">&quot;swimming_pool_indoor&quot;</span>
+    <span class="n">swimming_pool_outdoor</span> <span class="o">=</span> <span class="s2">&quot;swimming_pool_outdoor&quot;</span>
+    <span class="n">takeout</span> <span class="o">=</span> <span class="s2">&quot;takeout&quot;</span>
+    <span class="n">television</span> <span class="o">=</span> <span class="s2">&quot;television&quot;</span>
+    <span class="nb">type</span> <span class="o">=</span> <span class="s2">&quot;type&quot;</span>
+    <span class="n">valid_unnamed</span> <span class="o">=</span> <span class="s2">&quot;valid_unnamed&quot;</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;value&quot;</span>
+    <span class="n">verified</span> <span class="o">=</span> <span class="s2">&quot;verified&quot;</span>
+    <span class="n">within_location_ref</span> <span class="o">=</span> <span class="s2">&quot;within_location_ref&quot;</span>
+    <span class="n">wine_selection</span> <span class="o">=</span> <span class="s2">&quot;wine_selection&quot;</span>
+
+    <span class="n">postal_code</span> <span class="o">=</span> <span class="s2">&quot;postal_code&quot;</span>
+    <span class="n">city</span> <span class="o">=</span> <span class="s2">&quot;city&quot;</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="s2">&quot;state&quot;</span>
+    <span class="n">county</span> <span class="o">=</span> <span class="s2">&quot;county&quot;</span>
+    <span class="n">region</span> <span class="o">=</span> <span class="s2">&quot;region&quot;</span>
+    <span class="n">district</span> <span class="o">=</span> <span class="s2">&quot;district&quot;</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="s2">&quot;area&quot;</span>
+    <span class="n">street</span> <span class="o">=</span> <span class="s2">&quot;street&quot;</span>
+    <span class="n">house</span> <span class="o">=</span> <span class="s2">&quot;house&quot;</span>
+    <span class="n">building</span> <span class="o">=</span> <span class="s2">&quot;building&quot;</span>
+    <span class="n">building_unit</span> <span class="o">=</span> <span class="s2">&quot;building_unit&quot;</span>
+    <span class="n">level_name</span> <span class="o">=</span> <span class="s2">&quot;level_name&quot;</span>
+    <span class="n">unit_name</span> <span class="o">=</span> <span class="s2">&quot;unit_name&quot;</span>
+    <span class="n">postal_mapping</span> <span class="o">=</span> <span class="s2">&quot;postal_mapping&quot;</span>
+    <span class="n">state_code</span> <span class="o">=</span> <span class="s2">&quot;state_code&quot;</span>
+    <span class="n">country_code</span> <span class="o">=</span> <span class="s2">&quot;country_code&quot;</span>
+    <span class="n">location_address_type</span> <span class="o">=</span> <span class="s2">&quot;location_address_type&quot;</span>
+    <span class="n">source_type</span> <span class="o">=</span> <span class="s2">&quot;source_type&quot;</span>
+
+    <span class="n">high_canopy</span> <span class="o">=</span> <span class="s2">&quot;high_canopy&quot;</span>
+    <span class="n">idle_reduction_system</span> <span class="o">=</span> <span class="s2">&quot;idle_reduction_system&quot;</span>
+    <span class="n">number_of_showers</span> <span class="o">=</span> <span class="s2">&quot;number_of_showers&quot;</span>
+    <span class="n">showers</span> <span class="o">=</span> <span class="s2">&quot;showers&quot;</span>
+    <span class="n">truck_parking</span> <span class="o">=</span> <span class="s2">&quot;truck_parking&quot;</span>
+    <span class="n">truck_scales</span> <span class="o">=</span> <span class="s2">&quot;truck_scales&quot;</span>
+    <span class="n">truck_service</span> <span class="o">=</span> <span class="s2">&quot;truck_service&quot;</span>
+    <span class="n">truck_wash</span> <span class="o">=</span> <span class="s2">&quot;truck_wash&quot;</span>
+    <span class="n">truck_secure_parking</span> <span class="o">=</span> <span class="s2">&quot;truck_secure_parking&quot;</span>
+    <span class="n">truck_night_parking_only</span> <span class="o">=</span> <span class="s2">&quot;truck_night_parking_only&quot;</span>
+    <span class="n">truck_stop</span> <span class="o">=</span> <span class="s2">&quot;truck_stop&quot;</span>
+
+    <span class="n">biodiesel</span> <span class="o">=</span> <span class="s2">&quot;biodiesel&quot;</span>
+    <span class="n">cng</span> <span class="o">=</span> <span class="s2">&quot;cng&quot;</span>
+    <span class="n">diesel</span> <span class="o">=</span> <span class="s2">&quot;diesel&quot;</span>
+    <span class="n">diesel_with_additives</span> <span class="o">=</span> <span class="s2">&quot;diesel_with_additives&quot;</span>
+    <span class="n">e85</span> <span class="o">=</span> <span class="s2">&quot;e85&quot;</span>
+    <span class="n">e10</span> <span class="o">=</span> <span class="s2">&quot;e10&quot;</span>
+    <span class="n">ethanol</span> <span class="o">=</span> <span class="s2">&quot;ethanol&quot;</span>
+    <span class="n">ethanol_with_additives</span> <span class="o">=</span> <span class="s2">&quot;ethanol_with_additives&quot;</span>
+    <span class="n">gasoline</span> <span class="o">=</span> <span class="s2">&quot;gasoline&quot;</span>
+    <span class="n">high_volume_pumps</span> <span class="o">=</span> <span class="s2">&quot;high_volume_pumps&quot;</span>
+    <span class="n">hydrogen</span> <span class="o">=</span> <span class="s2">&quot;hydrogen&quot;</span>
+    <span class="n">lpg</span> <span class="o">=</span> <span class="s2">&quot;lpg&quot;</span>
+    <span class="n">midgrade</span> <span class="o">=</span> <span class="s2">&quot;midgrade&quot;</span>
+    <span class="n">pay_at_pump</span> <span class="o">=</span> <span class="s2">&quot;pay_at_pump&quot;</span>
+    <span class="n">premium</span> <span class="o">=</span> <span class="s2">&quot;premium&quot;</span>
+    <span class="n">premium_with_additives</span> <span class="o">=</span> <span class="s2">&quot;premium_with_additives&quot;</span>
+    <span class="n">regular</span> <span class="o">=</span> <span class="s2">&quot;regular&quot;</span>
+    <span class="n">regular_with_additives</span> <span class="o">=</span> <span class="s2">&quot;regular_with_additives&quot;</span>
+    <span class="n">lng</span> <span class="o">=</span> <span class="s2">&quot;lng&quot;</span>
+    <span class="n">biodiesel_grade</span> <span class="o">=</span> <span class="s2">&quot;biodiesel_grade&quot;</span>
+    <span class="n">diesel_additive</span> <span class="o">=</span> <span class="s2">&quot;diesel_additive&quot;</span>
+    <span class="n">diesel_additive_type</span> <span class="o">=</span> <span class="s2">&quot;diesel_additive_type&quot;</span>
+    <span class="n">hydrogen_pressure</span> <span class="o">=</span> <span class="s2">&quot;hydrogen_pressure&quot;</span>
+    <span class="n">match_level</span> <span class="o">=</span> <span class="s2">&quot;match_level&quot;</span>
+
+    <span class="n">supplier</span> <span class="o">=</span> <span class="s2">&quot;supplier&quot;</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;author&quot;</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="s2">&quot;place&quot;</span>
+    <span class="n">external_identifier</span> <span class="o">=</span> <span class="s2">&quot;external_identifier&quot;</span>
+    <span class="n">contact_information</span> <span class="o">=</span> <span class="s2">&quot;contact_information&quot;</span>
+    <span class="n">operating_time</span> <span class="o">=</span> <span class="s2">&quot;operating_time&quot;</span>
+    <span class="n">feedback</span> <span class="o">=</span> <span class="s2">&quot;feedback&quot;</span>
+    <span class="n">payment</span> <span class="o">=</span> <span class="s2">&quot;payment&quot;</span>
+    <span class="n">relationship_attribute</span> <span class="o">=</span> <span class="s2">&quot;relationship_attribute&quot;</span>
+    <span class="n">capacity_attribute</span> <span class="o">=</span> <span class="s2">&quot;capacity_attribute&quot;</span>
+    <span class="n">internet_connection_attribute</span> <span class="o">=</span> <span class="s2">&quot;internet_connection_attribute&quot;</span>
+    <span class="n">price_range</span> <span class="o">=</span> <span class="s2">&quot;price_range&quot;</span>
+    <span class="n">spoken_language</span> <span class="o">=</span> <span class="s2">&quot;spoken_language&quot;</span>
+    <span class="n">qr_code_attribute</span> <span class="o">=</span> <span class="s2">&quot;qr_code_attribute&quot;</span>
+    <span class="n">verification_attribute</span> <span class="o">=</span> <span class="s2">&quot;verification_attribute&quot;</span>
+    <span class="n">media_reference_attribute</span> <span class="o">=</span> <span class="s2">&quot;media_reference_attribute&quot;</span>
+    <span class="n">media_reference</span> <span class="o">=</span> <span class="s2">&quot;media_reference&quot;</span>
+    <span class="n">quality_score</span> <span class="o">=</span> <span class="s2">&quot;quality_score&quot;</span>
+    <span class="n">place_access_attribute</span> <span class="o">=</span> <span class="s2">&quot;place_access_attribute&quot;</span>
+    <span class="n">alcohol_service_attribute</span> <span class="o">=</span> <span class="s2">&quot;alcohol_service_attribute&quot;</span>
+    <span class="n">amenities_attribute</span> <span class="o">=</span> <span class="s2">&quot;amenities_attribute&quot;</span>
+    <span class="n">basic_info_attribute</span> <span class="o">=</span> <span class="s2">&quot;basic_info_attribute&quot;</span>
+    <span class="n">other_information</span> <span class="o">=</span> <span class="s2">&quot;other_information&quot;</span>
+    <span class="n">electric_charge_attribute</span> <span class="o">=</span> <span class="s2">&quot;electric_charge_attribute&quot;</span>
+    <span class="n">hotel_attribute</span> <span class="o">=</span> <span class="s2">&quot;hotel_attribute&quot;</span>
+    <span class="n">location_information</span> <span class="o">=</span> <span class="s2">&quot;location_information&quot;</span>
+    <span class="n">parking_attribute</span> <span class="o">=</span> <span class="s2">&quot;parking_attribute&quot;</span>
+    <span class="n">restaurant_attribute</span> <span class="o">=</span> <span class="s2">&quot;restaurant_attribute&quot;</span>
+    <span class="n">transit_attribute</span> <span class="o">=</span> <span class="s2">&quot;transit_attribute&quot;</span>
+    <span class="n">vehicle_services_attribute</span> <span class="o">=</span> <span class="s2">&quot;vehicle_services_attribute&quot;</span>
+    <span class="n">address</span> <span class="o">=</span> <span class="s2">&quot;address&quot;</span>
+    <span class="n">location</span> <span class="o">=</span> <span class="s2">&quot;location&quot;</span>
+    <span class="n">truck_attribute</span> <span class="o">=</span> <span class="s2">&quot;truck_attribute&quot;</span>
+    <span class="n">fuel_type_attribute</span> <span class="o">=</span> <span class="s2">&quot;fuel_type_attribute&quot;</span>
+    <span class="n">social_signal</span> <span class="o">=</span> <span class="s2">&quot;social_signal&quot;</span>
+    <span class="n">port_attribute</span> <span class="o">=</span> <span class="s2">&quot;port_attribute&quot;</span>
+    <span class="n">safety_camera</span> <span class="o">=</span> <span class="s2">&quot;safety_camera&quot;</span>
+    <span class="n">black_spot</span> <span class="o">=</span> <span class="s2">&quot;black_spot&quot;</span>
+    <span class="n">match_level_attribute</span> <span class="o">=</span> <span class="s2">&quot;match_level_attribute&quot;</span>
+    <span class="n">affiliation_attribute</span> <span class="o">=</span> <span class="s2">&quot;affiliation_attribute&quot;</span>
+    <span class="n">office_type_attribute</span> <span class="o">=</span> <span class="s2">&quot;office_type_attribute&quot;</span>
+    <span class="n">note_type_attribute</span> <span class="o">=</span> <span class="s2">&quot;note_type_attribute&quot;</span>
+    <span class="n">place_category_confidence_attribute</span> <span class="o">=</span> <span class="s2">&quot;place_category_confidence_attribute&quot;</span>
+    <span class="n">popularity_attribute</span> <span class="o">=</span> <span class="s2">&quot;popularity_attribute&quot;</span>
+    <span class="n">vendor_url_attribute</span> <span class="o">=</span> <span class="s2">&quot;vendor_url_attribute&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="ObjectType">
+<a class="viewcode-back" href="../../../../here.content.hmc2.constants.html#here.content.hmc2.constants.ObjectType">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ObjectType</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;HMC Object Type Name Constants.&quot;&quot;&quot;</span>
+
+    <span class="n">supplier</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">supplier</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">author</span>
+    <span class="n">place</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">place</span>
+    <span class="n">external_identifier</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">external_identifier</span>
+    <span class="n">contact_information</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">contact_information</span>
+    <span class="n">operating_time</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">operating_time</span>
+    <span class="n">feedback</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">feedback</span>
+    <span class="n">payment</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">payment</span>
+    <span class="n">relationship_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">relationship_attribute</span>
+    <span class="n">capacity_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">capacity_attribute</span>
+    <span class="n">internet_connection_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">internet_connection_attribute</span>
+    <span class="n">price_range</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">price_range</span>
+    <span class="n">spoken_language</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">spoken_language</span>
+    <span class="n">qr_code_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">qr_code_attribute</span>
+    <span class="n">verification_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">verification_attribute</span>
+    <span class="n">media_reference_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">media_reference_attribute</span>
+    <span class="n">quality_score</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">quality_score</span>
+    <span class="n">place_access_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">place_access_attribute</span>
+    <span class="n">alcohol_service_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">alcohol_service_attribute</span>
+    <span class="n">amenities_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">amenities_attribute</span>
+    <span class="n">basic_info_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">basic_info_attribute</span>
+    <span class="n">other_information</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">other_information</span>
+    <span class="n">electric_charge_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">electric_charge_attribute</span>
+    <span class="n">hotel_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">hotel_attribute</span>
+    <span class="n">location_information</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">location_information</span>
+    <span class="n">parking_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">parking_attribute</span>
+    <span class="n">restaurant_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">restaurant_attribute</span>
+    <span class="n">transit_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">transit_attribute</span>
+    <span class="n">vehicle_services_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">vehicle_services_attribute</span>
+    <span class="n">address</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">address</span>
+    <span class="n">location</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">location</span>
+    <span class="n">truck_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">truck_attribute</span>
+    <span class="n">fuel_type_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">fuel_type_attribute</span>
+    <span class="n">social_signal</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">social_signal</span>
+    <span class="n">port_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">port_attribute</span>
+    <span class="n">safety_camera</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">safety_camera</span>
+    <span class="n">black_spot</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">black_spot</span>
+    <span class="n">match_level_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">match_level_attribute</span>
+    <span class="n">affiliation_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">affiliation_attribute</span>
+    <span class="n">office_type_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">office_type_attribute</span>
+    <span class="n">note_type_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">note_type_attribute</span>
+    <span class="n">place_category_confidence_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">place_category_confidence_attribute</span>
+    <span class="n">popularity_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">popularity_attribute</span>
+    <span class="n">vendor_url_attribute</span> <span class="o">=</span> <span class="n">FieldName</span><span class="o">.</span><span class="n">vendor_url_attribute</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

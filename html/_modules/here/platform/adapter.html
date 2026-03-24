@@ -1,0 +1,1263 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.platform.adapter &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/platform/adapter';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.platform.adapter</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.platform.adapter</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;HERE platform, content adaptation, encoding and decoding.&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dataclasses</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">TYPE_CHECKING</span><span class="p">,</span>
+    <span class="n">Callable</span><span class="p">,</span>
+    <span class="n">Dict</span><span class="p">,</span>
+    <span class="n">Iterable</span><span class="p">,</span>
+    <span class="n">Iterator</span><span class="p">,</span>
+    <span class="n">NewType</span><span class="p">,</span>
+    <span class="n">Optional</span><span class="p">,</span>
+    <span class="n">Tuple</span><span class="p">,</span>
+    <span class="n">Union</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">geojson</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geojson</span><span class="w"> </span><span class="kn">import</span> <span class="n">LineString</span><span class="p">,</span> <span class="n">MultiLineString</span><span class="p">,</span> <span class="n">MultiPoint</span><span class="p">,</span> <span class="n">MultiPolygon</span><span class="p">,</span> <span class="n">Point</span><span class="p">,</span> <span class="n">Polygon</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geojson.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">Geometry</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">UnsupportedContentTypeDecodeException</span><span class="p">,</span>
+    <span class="n">UnsupportedContentTypeEncodeException</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.partition</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">IndexPartition</span><span class="p">,</span>
+    <span class="n">StreamPartition</span><span class="p">,</span>
+    <span class="n">VersionedPartition</span><span class="p">,</span>
+    <span class="n">VolatilePartition</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.schema</span><span class="w"> </span><span class="kn">import</span> <span class="n">Schema</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.layer</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamLayer</span><span class="p">,</span> <span class="n">VersionedLayer</span><span class="p">,</span> <span class="n">VolatileLayer</span>
+
+
+<div class="viewcode-block" id="Encoder">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Encoder">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Encoder</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A content encoder and its capabilities.&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">supported_content_types</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="o">...</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: the dictionary of MIME content types supported when encoding single blobs  # noqa</span>
+<span class="sd">        with the ``encode_blob`` function of this encoder, each with the type of the encoded data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Encoder.encode_blob">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Encoder.encode_blob">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encode_blob</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Encode one single blob of data.</span>
+
+<span class="sd">        :param data: the data to be encoded, its type corresponds to the type declared in</span>
+<span class="sd">          the property ``supported_content_types`` for the content type</span>
+<span class="sd">        :param content_type: the MIME content type to be encoded</span>
+<span class="sd">        :param schema: the schema, if the content type requires one</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: the encoded data  # noqa</span>
+<span class="sd">        :raises UnsupportedContentTypeEncodeException: in case the content type is not encodable</span>
+<span class="sd">        :raises ValueError: if the schema is mandatory for the content type but missing</span>
+<span class="sd">        :raises EncodeException: in case the blob can&#39;t be properly encoded  # noqa</span>
+<span class="sd">        :raises SchemaException: in case the schema can&#39;t be used to encode the content  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_verify_encode_blob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="n">data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Data is not set&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">content_type</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Content type is not set&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">content_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">supported_content_types</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">UnsupportedContentTypeEncodeException</span><span class="p">(</span><span class="n">content_type</span><span class="o">=</span><span class="n">content_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">schema</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">content_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">schema</span><span class="o">.</span><span class="n">supported_content_types</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Schema does not support content type </span><span class="si">{</span><span class="n">content_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Decoder">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Decoder">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Decoder</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A content decoder and its capabilities.&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">supported_content_types</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="o">...</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: the dictionary of MIME content types supported when decoding single blobs  # noqa</span>
+<span class="sd">        with the ``decode_blob`` function of this decoder, each with the type of the decoded data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Decoder.decode_blob">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Decoder.decode_blob">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">decode_blob</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Decode one single blob of data.</span>
+
+<span class="sd">        :param data: the encoded data</span>
+<span class="sd">        :param content_type: the MIME content type to be decoded</span>
+<span class="sd">        :param schema: the schema, if the content type requires one</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: the decoded blob, its type corresponds to the type declared in</span>
+<span class="sd">          the property ``supported_content_types`` for the content type  # noqa</span>
+<span class="sd">        :raises UnsupportedContentTypeDecodeException: in case the content type is not decodable</span>
+<span class="sd">        :raises ValueError: if the schema is mandatory for the content type but missing</span>
+<span class="sd">        :raises DecodeException: in case the blob can&#39;t be properly decoded  # noqa</span>
+<span class="sd">        :raises SchemaException: in case the schema can&#39;t be used to decode the content  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_verify_decode_blob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Data is not set or empty&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">content_type</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Content type is not set&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">content_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">supported_content_types</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">UnsupportedContentTypeDecodeException</span><span class="p">(</span><span class="n">content_type</span><span class="o">=</span><span class="n">content_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">schema</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">content_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">schema</span><span class="o">.</span><span class="n">supported_content_types</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Schema does not support content type </span><span class="si">{</span><span class="n">content_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_verify_and_return_decoded</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">decoded</span><span class="p">,</span> <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">decoded</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">supported_content_types</span><span class="p">[</span><span class="n">content_type</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">decoded</span></div>
+
+
+
+<span class="c1"># Some types supported by the ContentAdapter interface.</span>
+<span class="c1"># These model single values of well-known types with additional, clear semantic.</span>
+<span class="c1"># These types can be used in data classes and in composite types below.</span>
+
+<span class="n">Partition</span> <span class="o">=</span> <span class="n">NewType</span><span class="p">(</span><span class="s2">&quot;Partition&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="n">Identifier</span> <span class="o">=</span> <span class="n">NewType</span><span class="p">(</span><span class="s2">&quot;Identifier&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span>
+<span class="n">DecodedMessage</span> <span class="o">=</span> <span class="n">NewType</span><span class="p">(</span><span class="s2">&quot;DecodedMessage&quot;</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span>
+
+
+<span class="c1"># Specialized types and helper functions to instantiate them</span>
+
+
+<div class="viewcode-block" id="Ref">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Ref">[docs]</a>
+<span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Ref</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A reference to an object in a partition.&quot;&quot;&quot;</span>
+
+    <span class="n">partition</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">identifier</span><span class="p">:</span> <span class="n">Identifier</span></div>
+
+
+
+<div class="viewcode-block" id="Range">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Range">[docs]</a>
+<span class="nd">@dataclasses</span><span class="o">.</span><span class="n">dataclass</span><span class="p">(</span><span class="n">frozen</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Range</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A [0, 1] range.&quot;&quot;&quot;</span>
+
+    <span class="n">start</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="n">end</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span></div>
+
+
+
+<div class="viewcode-block" id="make_ref">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.make_ref">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_ref</span><span class="p">(</span><span class="n">partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Partition</span><span class="p">],</span> <span class="n">identifier</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Identifier</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Ref</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Construct a new Reference given partition and identifier.</span>
+
+<span class="sd">    This supports a variety of parameter types and performs basics checks.</span>
+
+<span class="sd">    :param partition: the partition name</span>
+<span class="sd">    :param identifier: the object or feature identifier</span>
+<span class="sd">    :return: a reference</span>
+<span class="sd">    :raises ValueError: in case of invalid or empty parameters</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">partition</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Partition parameter not set&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">identifier</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Identifier parameter not set&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Ref</span><span class="p">(</span><span class="n">Partition</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">partition</span><span class="p">)),</span> <span class="n">Identifier</span><span class="p">(</span><span class="n">identifier</span><span class="p">))</span></div>
+
+
+
+<span class="c1"># TODO (OLPSUP-18956) remove this method once admin place category data are referenced correctly</span>
+<div class="viewcode-block" id="make_cat_ref">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.make_cat_ref">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_cat_ref</span><span class="p">(</span><span class="n">partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Partition</span><span class="p">],</span> <span class="n">identifier</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Identifier</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Ref</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Construct a new Category Reference given identifier and/or partition.</span>
+
+<span class="sd">    This supports a variety of parameter types and performs basics checks.</span>
+
+<span class="sd">    :param partition: the partition name</span>
+<span class="sd">    :param identifier: the object or feature identifier</span>
+<span class="sd">    :return: a reference</span>
+<span class="sd">    :raises ValueError: in case of invalid or empty parameters</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">identifier</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Identifier parameter not set&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">Ref</span><span class="p">(</span><span class="n">Partition</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">partition</span><span class="p">)),</span> <span class="n">Identifier</span><span class="p">(</span><span class="n">identifier</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="make_range">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.make_range">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">make_range</span><span class="p">(</span>
+    <span class="n">start</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
+    <span class="n">end</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Range</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Construct a new Range given start and end offsets.</span>
+
+<span class="sd">    This supports a variety of parameter types and performs basics checks.</span>
+
+<span class="sd">    :param start: the start offset, when available and greater or equal 0.0</span>
+<span class="sd">    :param end: the end offset, when available and less or equal 1.0.</span>
+<span class="sd">    :return: a range</span>
+<span class="sd">    :raises ValueError: in case of parameters out of range</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">start</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">start_offset</span> <span class="o">=</span> <span class="n">start</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">start_offset</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">start_offset</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Start offset </span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s2"> must be in [0, 1] range&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">end</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">end_offset</span> <span class="o">=</span> <span class="n">end</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">end_offset</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">end</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">end_offset</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;End offset </span><span class="si">{</span><span class="n">end</span><span class="si">}</span><span class="s2"> must be in [0, 1] range&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Disabled because HMC violates this condition in some special cases</span>
+    <span class="c1"># if start_offset &gt; end_offset:</span>
+    <span class="c1">#     raise ValueError(f&quot;Start offset {start} greater than end offset {end}&quot;)</span>
+
+    <span class="k">return</span> <span class="n">Range</span><span class="p">(</span><span class="n">start_offset</span><span class="p">,</span> <span class="n">end_offset</span><span class="p">)</span></div>
+
+
+
+<span class="c1"># Content is described by Python data classes. Each field of a data class must</span>
+<span class="c1"># have one of the supported types. Type are not only used as hints but affect</span>
+<span class="c1"># the behavior of the software at runtime. Data classes are used to specify</span>
+<span class="c1"># the fields on the objects passed to ``from_objects``.</span>
+<span class="c1">#</span>
+<span class="c1"># The hints describe the data classes provided to ``from_objects``,</span>
+<span class="c1"># they don&#39;t describe the output format. The output format is adapter-specific,</span>
+<span class="c1"># although based on the actual type of the field and its type hint.</span>
+<span class="c1"># Adapter implementations use type information to better represent each value,</span>
+<span class="c1"># handle partition and object id, validate the data and convert non-basic types</span>
+<span class="c1"># like ranges and geometries to the most appropriate format for the output.</span>
+<span class="c1"># It is important that partition and object identifiers are marked</span>
+<span class="c1"># with the corresponding type hint to enable automatic indexing.</span>
+
+<span class="n">supported_single_value_types</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">bool</span><span class="p">,</span>
+    <span class="nb">int</span><span class="p">,</span>
+    <span class="nb">float</span><span class="p">,</span>
+    <span class="nb">str</span><span class="p">,</span>
+    <span class="n">datetime</span><span class="p">,</span>
+    <span class="n">DecodedMessage</span><span class="p">,</span>
+    <span class="n">Partition</span><span class="p">,</span>
+    <span class="n">Identifier</span><span class="p">,</span>
+    <span class="n">Ref</span><span class="p">,</span>
+    <span class="n">Range</span><span class="p">,</span>
+    <span class="n">Geometry</span><span class="p">,</span>
+    <span class="n">Point</span><span class="p">,</span>
+    <span class="n">MultiPoint</span><span class="p">,</span>
+    <span class="n">LineString</span><span class="p">,</span>
+    <span class="n">MultiLineString</span><span class="p">,</span>
+    <span class="n">Polygon</span><span class="p">,</span>
+    <span class="n">MultiPolygon</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<span class="c1"># The data class that specifies the content, as mentioned, should have fields of one</span>
+<span class="c1"># of the types mentioned above. In addition, composite types are supported,</span>
+<span class="c1"># although with some constraints:</span>
+<span class="c1">#</span>
+<span class="c1"># - Optional[T], of a supported type T</span>
+<span class="c1"># - Dict[str, T], key must be str, elements must be of a supported type T</span>
+<span class="c1"># - List[T],  elements must be of a supported type T</span>
+<span class="c1"># - a data class with supported fields</span>
+<span class="c1">#</span>
+<span class="c1"># These and other constrains are checked at runtime and in tests.</span>
+
+
+<div class="viewcode-block" id="ContentAdapter">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.ContentAdapter">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ContentAdapter</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Interface of the content adapters, an adapter specialized to</span>
+<span class="sd">    work with content via the `here-content` package.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="ContentAdapter.from_tabular">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.ContentAdapter.from_tabular">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_tabular</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">geometry_column</span><span class="o">=</span><span class="s2">&quot;geometry&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Convert the given tabular data.</span>
+
+<span class="sd">        :param columns: column names</span>
+<span class="sd">        :param data: tabular data</span>
+<span class="sd">        :param geometry_column: geometry column string</span>
+<span class="sd">        :return: data representation is function of the adapter  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="ContentAdapter.from_objects">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.ContentAdapter.from_objects">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_objects</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">fields</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">object</span><span class="p">],</span>
+        <span class="n">single_element</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">index_partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Partition</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">index_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Identifier</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">index_ref</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Ref</span><span class="p">]]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adapt content form an object representation to the target format.</span>
+
+<span class="sd">        It can optionally perform indexing of objects, based on their partition,</span>
+<span class="sd">        identifier and set of references to other objects. Indexing is specified by</span>
+<span class="sd">        naming the field of the object that contains the value to index, or by</span>
+<span class="sd">        passing a function that calculates that value from the object.</span>
+
+<span class="sd">        :param fields: the fields to extract, as specified by a dataclass. Field names are looked</span>
+<span class="sd">            up among the attributes of each object via ``getattr`. When missing, ``None`` or</span>
+<span class="sd">            equivalent is used. Each field has a type that describes its semantic:</span>
+<span class="sd">            it is used to adapt the value to the most appropriate representation for</span>
+<span class="sd">            the output format. ``TypeError`` is raised in case this is not possible.</span>
+<span class="sd">        :param data: the objects to adapt to the target format. Fields not mentioned in ``fields``</span>
+<span class="sd">            are discarded. Expected but missing fields and identifiers are considered ``None``.</span>
+<span class="sd">            Field values may be of any type compatible with the type declared for the field.</span>
+<span class="sd">            Partition ids don&#39;t have to be unique, but they have to be contiguous: all the objects</span>
+<span class="sd">            with a given partition identifier must be returned in sequence. Object identifiers,</span>
+<span class="sd">            when present, must be unique across the whole content.</span>
+<span class="sd">        :param single_element: the data contains exactly one element, the content adapter</span>
+<span class="sd">            case use this information to optimize or return a specialized representation</span>
+<span class="sd">        :param index_partition: index the content by partition</span>
+<span class="sd">        :param index_id: index the content by object identifier</span>
+<span class="sd">        :param index_ref: index the content by references. Each object can contain zero,</span>
+<span class="sd">            one or more references, and references can be shared among multiple objects.</span>
+<span class="sd">        :return: an adapter-specific representation of the structured content.</span>
+<span class="sd">        :raises:</span>
+<span class="sd">            ValueError: if the fields are not described by a dataclass</span>
+<span class="sd">            KeyError: in case partition id, object id or reference is needed but not present</span>
+<span class="sd">            TypeError: in case partition or object id is not of type int or string.</span>
+<span class="sd">            Also raised in case field values are not of the type declared for the field,</span>
+<span class="sd">            or if they can&#39;t be converted to it.</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+    <span class="c1"># The following are support functions shared across implementations</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_validate_params</span><span class="p">(</span>
+        <span class="n">single_element</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>
+        <span class="n">index_partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Partition</span><span class="p">]],</span>
+        <span class="n">index_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Identifier</span><span class="p">]],</span>
+        <span class="n">index_ref</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Ref</span><span class="p">]]]],</span>
+    <span class="p">):</span>
+        <span class="k">if</span> <span class="n">single_element</span> <span class="ow">and</span> <span class="n">index_ref</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Single element and indexing by references &quot;</span>
+                <span class="s2">&quot;to other objects are mutually-exclusive&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">index_ref</span> <span class="ow">and</span> <span class="p">(</span><span class="n">index_partition</span> <span class="ow">or</span> <span class="n">index_id</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Indexing by partition or object identifier and indexing by &quot;</span>
+                <span class="s2">&quot;references to other objects are mutually-exclusive&quot;</span>
+            <span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_validate_fields</span><span class="p">(</span><span class="n">fields</span><span class="p">:</span> <span class="nb">type</span><span class="p">):</span>
+        <span class="c1"># This check validates the constraints on the data class (fields)</span>
+        <span class="c1"># as described by the comment block where `supported_single_value_types`</span>
+        <span class="c1"># and the types are defined, in `adapter.py`.</span>
+        <span class="c1"># This is a sanity check, it may be too strict or too loose sometimes.</span>
+        <span class="c1"># As runtime type checking with Python is complex, especially when dealing</span>
+        <span class="c1"># with generics, if this fails and can&#39;t be fixed it&#39;s always possible</span>
+        <span class="c1"># to skip the check. An alternative would be relying on some library like</span>
+        <span class="c1"># https://github.com/ilevkivskyi/typing_inspect</span>
+        <span class="c1"># although, at the time of writing, this library seems to be still in its early stages</span>
+        <span class="c1"># More standard (generic) type checks are available only in Python 3.9+</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">validate_type</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">supported_single_value_types</span><span class="p">:</span>
+                <span class="k">return</span>
+            <span class="k">if</span> <span class="n">dataclasses</span><span class="o">.</span><span class="n">is_dataclass</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+                <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">dataclasses</span><span class="o">.</span><span class="n">fields</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+                    <span class="n">validate_type</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span> <span class="n">f</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">f</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+                <span class="k">return</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="s2">&quot;__origin__&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="n">Union</span><span class="p">:</span>
+                <span class="n">args</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="s2">&quot;__args__&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="p">(</span><span class="n">tt</span><span class="p">,</span> <span class="n">tt2</span><span class="p">)</span> <span class="o">=</span> <span class="n">args</span>
+                    <span class="k">if</span> <span class="n">tt2</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">):</span>  <span class="c1"># noqa: E721</span>
+                        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Unions are not supported&quot;</span><span class="p">)</span>
+                    <span class="n">validate_type</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;[T]&quot;</span><span class="p">,</span> <span class="n">tt</span><span class="p">)</span>
+                    <span class="k">return</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="s2">&quot;__origin__&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span><span class="p">:</span>
+                <span class="p">(</span><span class="n">tt</span><span class="p">,)</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="s2">&quot;__args__&quot;</span><span class="p">)</span>
+                <span class="n">validate_type</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;[T]&quot;</span><span class="p">,</span> <span class="n">tt</span><span class="p">)</span>
+                <span class="k">return</span>
+            <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="s2">&quot;__origin__&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">dict</span><span class="p">:</span>
+                <span class="p">(</span><span class="n">kt</span><span class="p">,</span> <span class="n">vt</span><span class="p">)</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="s2">&quot;__args__&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">kt</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">str</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Field </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> has key type </span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2">, when only str is supported&quot;</span><span class="p">)</span>
+                <span class="n">validate_type</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot;[_, V]&quot;</span><span class="p">,</span> <span class="n">vt</span><span class="p">)</span>
+                <span class="k">return</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Field </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> of unsupported type </span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">dataclasses</span><span class="o">.</span><span class="n">is_dataclass</span><span class="p">(</span><span class="n">fields</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Fields must be specified using a dataclass&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">dataclasses</span><span class="o">.</span><span class="n">fields</span><span class="p">(</span><span class="n">fields</span><span class="p">):</span>
+            <span class="n">validate_type</span><span class="p">(</span><span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">field</span><span class="o">.</span><span class="n">type</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_validate_indices</span><span class="p">(</span>
+        <span class="n">fields</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
+        <span class="n">index_partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Partition</span><span class="p">]],</span>
+        <span class="n">index_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Identifier</span><span class="p">]],</span>
+    <span class="p">):</span>
+        <span class="n">field_names</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">dataclasses</span><span class="o">.</span><span class="n">fields</span><span class="p">(</span><span class="n">fields</span><span class="p">)]</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index_partition</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">index_partition</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">field_names</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Cannot index by </span><span class="si">{</span><span class="n">index_partition</span><span class="si">}</span><span class="s2"> as </span><span class="si">{</span><span class="n">fields</span><span class="si">}</span><span class="s2"> doesn&#39;t have this field&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index_id</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">index_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">field_names</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cannot index by </span><span class="si">{</span><span class="n">index_id</span><span class="si">}</span><span class="s2"> as </span><span class="si">{</span><span class="n">fields</span><span class="si">}</span><span class="s2"> doesn&#39;t have this field&quot;</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_validate_value</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="c1"># if not isinstance(value, field.type):</span>
+        <span class="c1"># raise ValueError(</span>
+        <span class="c1">#   f&quot;Value of field &#39;{field.name}&#39; of unsupported type {type(value)}&quot;)</span>
+        <span class="k">pass</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_validate_object</span><span class="p">(</span><span class="n">fields</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">object</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fields</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> to be of type </span><span class="si">{</span><span class="n">fields</span><span class="si">}</span><span class="s2">, instead of </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">dataclasses</span><span class="o">.</span><span class="n">fields</span><span class="p">(</span><span class="n">fields</span><span class="p">):</span>
+            <span class="n">ContentAdapter</span><span class="o">.</span><span class="n">_validate_value</span><span class="p">(</span><span class="n">field</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">field</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">x</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_extract_partition</span><span class="p">(</span>
+        <span class="n">index_partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Partition</span><span class="p">]],</span> <span class="n">x</span><span class="p">:</span> <span class="nb">object</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Partition</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">index_partition</span>
+        <span class="n">pid</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">index_partition</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index_partition</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">index_partition</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pid</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Missing partition in object </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Partition identifier </span><span class="si">{</span><span class="n">pid</span><span class="si">}</span><span class="s2"> is not a string&quot;</span><span class="p">)</span>
+        <span class="c1"># isinstance can&#39;t be used if Partition is NewType</span>
+        <span class="c1"># if not isinstance(pid, Partition):</span>
+        <span class="c1"># raise TypeError(</span>
+        <span class="c1">#     f&quot;{partition_field} of unsupported type {type(pid)} in object {x}&quot;</span>
+        <span class="c1"># )</span>
+        <span class="k">return</span> <span class="n">Partition</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_extract_identifier</span><span class="p">(</span>
+        <span class="n">index_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Identifier</span><span class="p">]],</span> <span class="n">x</span><span class="p">:</span> <span class="nb">object</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Identifier</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">index_id</span>
+        <span class="n">oid</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">index_id</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index_id</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">index_id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">oid</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Missing identifier in object </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">oid</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Object identifier </span><span class="si">{</span><span class="n">oid</span><span class="si">}</span><span class="s2"> is not a string&quot;</span><span class="p">)</span>
+        <span class="c1"># isinstance can&#39;t be used if Identifier is NewType</span>
+        <span class="c1"># if not isinstance(oid, Identifier):</span>
+        <span class="c1"># raise TypeError(</span>
+        <span class="c1">#     f&quot;{identifier_field} of unsupported type {type(oid)} in object {x}&quot;</span>
+        <span class="c1"># )</span>
+        <span class="k">return</span> <span class="n">Identifier</span><span class="p">(</span><span class="n">oid</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_extract_refs</span><span class="p">(</span>
+        <span class="n">index_ref</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Ref</span><span class="p">]]]],</span> <span class="n">x</span><span class="p">:</span> <span class="nb">object</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Ref</span><span class="p">]:</span>
+        <span class="k">assert</span> <span class="n">index_ref</span>
+        <span class="n">refs</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Ref</span><span class="p">]]</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">index_ref</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">index_ref</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">index_ref</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="c1"># We support both single-reference and multi-references</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">refs</span><span class="p">]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">refs</span><span class="p">,</span> <span class="n">Ref</span><span class="p">)</span> <span class="k">else</span> <span class="n">refs</span></div>
+
+
+
+<div class="viewcode-block" id="Adapter">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Adapter</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An adapter controls the encoding and decoding process of platform data.</span>
+<span class="sd">    It transforms data from and to adapter-specific data structure and supports</span>
+<span class="sd">    reading, writing, encoding and decoding a variety of MIME content types.</span>
+
+<span class="sd">    For the list of MIME content types supported when reading and writing</span>
+<span class="sd">    a layer with ``read_*`` and ``write_*`` functions of the :class:`Layer`</span>
+<span class="sd">    and its subclasses, please see documentation of specific adapters,</span>
+<span class="sd">    and the respective :class:`Decoder` and :class:`Encoder` class documentation.</span>
+
+<span class="sd">    All the operations involving content passes through an adapter when</span>
+<span class="sd">    the parameters ``encode`` or ``decode`` are ``True``, their default value.</span>
+<span class="sd">    These are parameters of the ``read_*`` and ``write_*`` functions.</span>
+<span class="sd">    If a content type is not supported, or if reading or writing raw content is preferred,</span>
+<span class="sd">    pass ``False`` to skip encoding or decoding and deal with raw bytes instead.</span>
+
+<span class="sd">    If no adapter is specified, a default one is provided that is generic</span>
+<span class="sd">    enough to encode and decode a common content types from and to</span>
+<span class="sd">    standard Python classes, such as lists and dictionaries.</span>
+
+<span class="sd">    More sophisticated adapters, subclasses of ``Adapter``, are provided in separate packages.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoder</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Encoder</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The encoder associated with the adapter.&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">decoder</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Decoder</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The decoder associated with the adapter.&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">content_adapter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ContentAdapter</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The adapter specialized for content.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Adapter.from_versioned_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.from_versioned_metadata">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_versioned_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partitions</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">VersionedPartition</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt versioned partition metadata to the target format.</span>
+
+<span class="sd">        :param partitions: sequence of partition metadata from a versioned layer</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the formats and types it supports  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.from_versioned_data">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.from_versioned_data">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_versioned_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">partitions_data</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">VersionedPartition</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]],</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt versioned partition metadata and data to the target format.</span>
+
+<span class="sd">        :param partitions_data: sequence of partition metadata and data from a versioned layer</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the formats and types it supports  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.to_versioned_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.to_versioned_metadata">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_versioned_metadata</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">:</span> <span class="s2">&quot;VersionedLayer&quot;</span><span class="p">,</span> <span class="n">partitions_update</span><span class="p">,</span> <span class="n">partitions_delete</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Iterator</span><span class="p">[</span><span class="n">VersionedPartition</span><span class="p">],</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt what update and delete from the target format to versioned partition metadata.</span>
+
+<span class="sd">        :param layer: the layer all the metadata and data belong to</span>
+<span class="sd">        :param partitions_update: adapter-specific, the partitions metadata to update, if any</span>
+<span class="sd">        :param partitions_delete: adapter-specific, the partitions metadata to delete, if any</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: `Iterator` with the :class:`VersionedPartition` that are adapted</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.to_versioned_data">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.to_versioned_data">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_versioned_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer</span><span class="p">:</span> <span class="s2">&quot;VersionedLayer&quot;</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">,</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">bytes</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt data from the target format to versioned partition metadata and data.</span>
+
+<span class="sd">        :param layer: the layer all the metadata and data belong to</span>
+<span class="sd">        :param data: adapter-specific, the data to adapt</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: sequence of partition id and data for the versioned layer  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.from_volatile_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.from_volatile_metadata">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_volatile_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partitions</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">VolatilePartition</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt volatile partition metadata to the target format.</span>
+
+<span class="sd">        :param partitions: sequence of partition metadata from a volatile layer</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the formats and types it supports  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.from_volatile_data">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.from_volatile_data">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_volatile_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">partitions_data</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">VolatilePartition</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]],</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt volatile partition metadata and data to the target format.</span>
+
+<span class="sd">        :param partitions_data: sequence of partition metadata and data from a volatile layer</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the formats and types it supports  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.to_volatile_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.to_volatile_metadata">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_volatile_metadata</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">:</span> <span class="s2">&quot;VolatileLayer&quot;</span><span class="p">,</span> <span class="n">partitions_update</span><span class="p">,</span> <span class="n">partitions_delete</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Iterator</span><span class="p">[</span><span class="n">VolatilePartition</span><span class="p">],</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt what update and delete from the target format to volatile partition metadata.</span>
+
+<span class="sd">        :param layer: the layer all the metadata and data belong to</span>
+<span class="sd">        :param partitions_update: adapter-specific, the partitions metadata to update, if any</span>
+<span class="sd">        :param partitions_delete: adapter-specific, the partitions metadata to delete, if any</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: tuple of `Iterator`, the first with the :class:`VolatilePartition`</span>
+<span class="sd">          that are adapted, the second with the partition ids to delete  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.to_volatile_data">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.to_volatile_data">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_volatile_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer</span><span class="p">:</span> <span class="s2">&quot;VolatileLayer&quot;</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">,</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">bytes</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt data from the target format to volatile partition metadata and data.</span>
+
+<span class="sd">        :param layer: the layer all the metadata and data belong to</span>
+<span class="sd">        :param data: adapter-specific, the data to adapt</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: sequence of partition id and data for the volatile layer  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.from_stream_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.from_stream_metadata">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_stream_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partitions</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">StreamPartition</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt stream partition metadata to the target format.</span>
+
+<span class="sd">        :param partitions: sequence of partition metadata from a stream layer</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the formats and types it supports  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.from_stream_data">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.from_stream_data">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_stream_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">partitions_data</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">StreamPartition</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]],</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt stream partition metadata and data to the target format.</span>
+
+<span class="sd">        :param partitions_data: sequence of partition metadata and data from a stream layer</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the formats and types it supports  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.to_stream_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.to_stream_metadata">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_stream_metadata</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">:</span> <span class="s2">&quot;StreamLayer&quot;</span><span class="p">,</span> <span class="n">partitions</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">StreamPartition</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt what to publish from the target format to stream partition metadata.</span>
+
+<span class="sd">        :param layer: the layer all the metadata and data belong to</span>
+<span class="sd">        :param partitions: adapter-specific, the partitions metadata to publish</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: `Iterator` with the :class:`StreamPartition` that are adapted</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.to_stream_data">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.to_stream_data">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_stream_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer</span><span class="p">:</span> <span class="s2">&quot;StreamLayer&quot;</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">,</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="n">timestamp</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt data from the target format to stream partition metadata and data.</span>
+
+<span class="sd">        :param layer: the layer all the metadata and data belong to</span>
+<span class="sd">        :param data: adapter-specific, the data to adapt</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param timestamp: optional timestamp for all the messages, if none is specified in data:</span>
+<span class="sd">            in milliseconds since Unix epoch (1970-01-01T00:00:00 UTC)</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: sequence of partition id, data and timestamp for the stream layer  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.from_index_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.from_index_metadata">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_index_metadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partitions</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">IndexPartition</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt index partition metadata to the target format.</span>
+
+<span class="sd">        :param partitions: sequence of partition metadata from an index layer</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the formats and types it supports  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.from_index_data">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.from_index_data">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_index_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">partitions_data</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">IndexPartition</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]],</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt index partition metadata and data to the target format.</span>
+
+<span class="sd">        :param partitions_data: sequence of partition metadata and data from an index layer</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the formats and types it supports  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.to_index_single_data">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.to_index_single_data">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_index_single_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">,</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt index data from the target format.</span>
+
+<span class="sd">        :param data: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the formats and types it supports</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: data encoded for an index layer  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.from_feature_ids">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.from_feature_ids">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_feature_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_ids</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt a sequence of feature identifiers to the target format.</span>
+
+<span class="sd">        :param feature_ids: sequence of feature identifiers</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the formats and types it supports  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.to_feature_ids">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.to_feature_ids">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_feature_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt data from the target format to a sequence of feature identifiers.</span>
+
+<span class="sd">        :param data: adapter-specific, the data to adapt</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: sequence of feature identifiers  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.from_geo_features">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.from_geo_features">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_geo_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">geojson</span><span class="o">.</span><span class="n">Feature</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt a sequence of geographic features to the target format.</span>
+
+<span class="sd">        :param features: sequence of geographic features</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the formats and types it supports  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="Adapter.to_geo_features">
+<a class="viewcode-back" href="../../../here.platform.adapter.html#here.platform.adapter.Adapter.to_geo_features">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_geo_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">geojson</span><span class="o">.</span><span class="n">Feature</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt data from the target format to a sequence of geographic features.</span>
+
+<span class="sd">        :param data: adapter-specific, the data to adapt</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: sequence of geographic features  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

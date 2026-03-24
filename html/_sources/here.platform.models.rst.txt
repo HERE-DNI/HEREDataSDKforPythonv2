@@ -1,0 +1,7 @@
+here.platform.models module
+===========================
+
+.. automodule:: here.platform.models
+   :members:
+   :undoc-members:
+   :show-inheritance:

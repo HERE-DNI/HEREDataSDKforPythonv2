@@ -1,0 +1,16 @@
+here.geopandas\_adapter.utils package
+=====================================
+
+.. automodule:: here.geopandas_adapter.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.geopandas_adapter.utils.dataframe
+   here.geopandas_adapter.utils.geo

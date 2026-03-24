@@ -1,0 +1,7 @@
+here.content.hmc2.adas\_attributes module
+=========================================
+
+.. automodule:: here.content.hmc2.adas_attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:

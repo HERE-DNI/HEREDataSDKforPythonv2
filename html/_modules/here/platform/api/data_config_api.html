@@ -1,0 +1,828 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.platform.api.data_config_api &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/platform/api/data_config_api';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.platform.api.data_config_api</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.platform.api.data_config_api</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains a :class:`DataConfigApi` class to perform API operations.</span>
+
+<span class="sd">The HERE API reference documentation used in this module can be found here:</span>
+<span class="sd">|config_api_reference|</span>
+
+<span class="sd">.. |config_api_reference| raw:: html</span>
+
+<span class="sd">   &lt;a href=&quot;https://developer.here.com/documentation/data-api/api-reference-config.html&quot; target=&quot;_blank&quot;&gt;Config API Reference&lt;/a&gt;  # noqa E501</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">urllib.parse</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlparse</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.base_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.auth</span><span class="w"> </span><span class="kn">import</span> <span class="n">Auth</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">ApplicationConfig</span><span class="p">,</span> <span class="n">PlatformConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlatformException</span>
+
+
+<div class="viewcode-block" id="DataConfigApi">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DataConfigApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class provides access to HERE platform Data Config APIs.</span>
+
+<span class="sd">    The config service provides basic catalog management operations. It manages all platform</span>
+<span class="sd">    resources needed for different kinds of catalogs and operations on them.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">platform_config</span><span class="p">:</span> <span class="n">PlatformConfig</span><span class="p">,</span>
+        <span class="n">application_config</span><span class="p">:</span> <span class="n">ApplicationConfig</span><span class="p">,</span>
+        <span class="n">auth</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Auth</span><span class="p">],</span>
+        <span class="n">proxies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Instantiate DataConfigApi object.</span>
+
+<span class="sd">        :param platform_config: a mandatory :class:`PlatformConfig` object to provide</span>
+<span class="sd">        configuration information for the API.</span>
+<span class="sd">        :param application_config: a mandatory :class:`ApplicationConfig` object to provide</span>
+<span class="sd">        configuration information for the API.</span>
+<span class="sd">        :param auth: an Authentication instance.</span>
+<span class="sd">        :param proxies: an optional proxy configuration. Defaults to the environment proxy</span>
+<span class="sd">        configuration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DataConfigApi</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">platform_config</span><span class="o">=</span><span class="n">platform_config</span><span class="p">,</span>
+            <span class="n">application_config</span><span class="o">=</span><span class="n">application_config</span><span class="p">,</span>
+            <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">,</span>
+            <span class="n">proxies</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># temporary work-around for LDS support: If api url has scheme, use value unchanged</span>
+        <span class="c1"># as scheme and netloc.</span>
+        <span class="n">parsed</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">platform_config</span><span class="o">.</span><span class="n">api</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">parsed</span><span class="o">.</span><span class="n">scheme</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">platform_config</span><span class="o">.</span><span class="n">api</span><span class="si">}</span><span class="s2">/config/v1&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;https://config.data.</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">platform_config</span><span class="o">.</span><span class="n">api</span><span class="si">}</span><span class="s2">/config/v1&quot;</span>  <span class="c1"># noqa: E231</span>
+            <span class="p">)</span>
+
+<div class="viewcode-block" id="DataConfigApi.get_catalogs">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.get_catalogs">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_catalogs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">filters</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List (or search) catalogs and layers.</span>
+
+<span class="sd">        :param filters: a dictionary with search criteria as key/value pairs</span>
+<span class="sd">        :return: a dictionary with all catalog information found</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/catalogs&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="c1"># params = {&quot;billingTag&quot;: billing_tag}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">filters</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.create_catalog">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.create_catalog">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_catalog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a catalog.</span>
+
+<span class="sd">        :param data: a dict with a catalog metadata.</span>
+<span class="sd">        :param billing_tag: A string which is used for grouping billing records.</span>
+<span class="sd">        :return: a dict with the catalog creation status.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/catalogs&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">202</span><span class="p">]:</span>
+            <span class="c1"># Note: 200 is returned only by LDS</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.get_catalog_details">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.get_catalog_details">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_catalog_details</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">catalog_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the full catalog configuration for the requested catalog.</span>
+
+<span class="sd">        :param catalog_hrn: a HERE Resource Name</span>
+<span class="sd">        :param billing_tag: A string which is used for grouping billing records.</span>
+<span class="sd">        :return: a dictionary with catalog details</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/catalogs/</span><span class="si">{</span><span class="n">catalog_hrn</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.catalog_exists">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.catalog_exists">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">catalog_exists</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">catalog_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check whether a catalog with the specified HRN exists.</span>
+
+<span class="sd">        :param catalog_hrn: a HERE Resource Name</span>
+<span class="sd">        :param billing_tag: A string which is used for grouping billing records.</span>
+<span class="sd">        :return: Boolean value based on Http response</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/catalogs/</span><span class="si">{</span><span class="n">catalog_hrn</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.update_catalog">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.update_catalog">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_catalog</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">catalog_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Update a catalog.</span>
+
+<span class="sd">        :param catalog_hrn: a HERE Resource Name.</span>
+<span class="sd">        :param data: body of the update catalog request.</span>
+<span class="sd">        :param billing_tag: A string which is used for grouping billing records.</span>
+<span class="sd">        :return: a dict with catalog update status.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/catalogs/</span><span class="si">{</span><span class="n">catalog_hrn</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.patch_catalog">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.patch_catalog">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">patch_catalog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">catalog_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Modify or patch a catalog.</span>
+
+<span class="sd">        :param catalog_hrn: a HERE Resource Name.</span>
+<span class="sd">        :param data: body of the modify catalog request.</span>
+<span class="sd">        :return: a dict with catalog update status.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/catalogs/</span><span class="si">{</span><span class="n">catalog_hrn</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.delete_catalog">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.delete_catalog">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_catalog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">catalog_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Delete a catalog.</span>
+
+<span class="sd">        :param catalog_hrn: a HERE Resource Name.</span>
+<span class="sd">        :param billing_tag: a string which is used for grouping billing records.</span>
+<span class="sd">        :return: a dict with catalog deletion status.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/catalogs/</span><span class="si">{</span><span class="n">catalog_hrn</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">202</span><span class="p">]:</span>
+            <span class="c1"># Note: 200 is returned only by LDS</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.patch_layer">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.patch_layer">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">patch_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">catalog_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Modify or patch a catalog layer.</span>
+
+<span class="sd">        :param catalog_hrn: a HERE Resource Name.</span>
+<span class="sd">        :param layer_id: a string which represents layer id.</span>
+<span class="sd">        :param data: body of the update catalog request.</span>
+<span class="sd">        :return: a dict with catalog layer update status.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/catalogs/</span><span class="si">{</span><span class="n">catalog_hrn</span><span class="si">}</span><span class="s2">/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.delete_layer">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.delete_layer">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">catalog_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Delete a catalog layer.</span>
+
+<span class="sd">        :param catalog_hrn: a HERE Resource Name.</span>
+<span class="sd">        :param layer_id: a string which represents layer id.</span>
+<span class="sd">        :return: a dict with catalog layer deletion status.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/catalogs/</span><span class="si">{</span><span class="n">catalog_hrn</span><span class="si">}</span><span class="s2">/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.disable_automatic_version_deletion">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.disable_automatic_version_deletion">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">disable_automatic_version_deletion</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">catalog_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Disable automatic retired versions cleanup.</span>
+
+<span class="sd">        :param catalog_hrn: a HERE Resource Name.</span>
+<span class="sd">        :return: a dict with catalog automatic version deletion status.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/catalogs/</span><span class="si">{</span><span class="n">catalog_hrn</span><span class="si">}</span><span class="s2">/automaticVersionDeletion&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.get_catalog_status">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.get_catalog_status">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_catalog_status</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">catalog_status_href</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the status of the catalog operations for the given token.</span>
+
+<span class="sd">        :param catalog_status_href: a catalog status href url.</span>
+<span class="sd">        :param billing_tag: A string which is used for grouping billing records.</span>
+<span class="sd">        :return: A tuple with dict with the status of the catalog/layer operation and bool set to</span>
+<span class="sd">            True if the operation completed or False if the operation is still in progress.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">catalog_status_href</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">201</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">303</span><span class="p">]:</span>
+            <span class="c1"># Note: 201 is returned only by LDS</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">202</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.check_subscription_exists">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.check_subscription_exists">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">check_subscription_exists</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subscription_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Checks whether a subscription with the specified HRN exists.</span>
+
+<span class="sd">        :param subscription_hrn: The HERE Resource Name (HRN) of subscription</span>
+<span class="sd">        :return: True if subscription exists.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/subscriptions/</span><span class="si">{</span><span class="n">subscription_hrn</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.list_subscriptions">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.list_subscriptions">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_subscriptions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">filters</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lists all subscriptions that your account has access to.</span>
+
+<span class="sd">        :param filters: Http query params dict.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/subscriptions&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">filters</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.create_subscription">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.create_subscription">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_subscription</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">configuration_object</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">x_idempotency_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Creates a subscription between source catalog/layer and target catalog/layer</span>
+
+<span class="sd">        :param configuration_object: A subscription configuration object.</span>
+<span class="sd">        :param x_idempotency_key:  is the unique value generated by client for create</span>
+<span class="sd">        subscription request. Following retry requests must have the same x-idempotency-key</span>
+<span class="sd">        header value like first create subscription request and the same body content.</span>
+<span class="sd">        If retry request body content will be different, then server will return 409 status code.</span>
+<span class="sd">        Minimum length: 10, maximum length: 255.</span>
+
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/subscriptions&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span>
+        <span class="k">if</span> <span class="n">x_idempotency_key</span><span class="p">:</span>
+            <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;x-idempotency-key&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">x_idempotency_key</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">configuration_object</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.get_subscription">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.get_subscription">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_subscription</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subscription_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns configuration of the subscription associated with the HRN.</span>
+
+<span class="sd">        :param subscription_hrn: The HERE Resource Name (HRN) of subscription</span>
+
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/subscriptions/</span><span class="si">{</span><span class="n">subscription_hrn</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.delete_subscription">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.delete_subscription">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_subscription</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subscription_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">x_idempotency_key</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Deletes a subscription associated with the HRN.</span>
+
+<span class="sd">        :param subscription_hrn: The HERE Resource Name (HRN) of subscription.</span>
+<span class="sd">        :param x_idempotency_key:  is the unique value generated by client for create</span>
+<span class="sd">        subscription request. Following retry requests must have the same x-idempotency-key</span>
+<span class="sd">        header value like first create subscription request and the same body content.</span>
+<span class="sd">        If retry request body content will be different, then server will return 409 status code.</span>
+<span class="sd">        Minimum length: 10, maximum length: 255.</span>
+
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/subscriptions/</span><span class="si">{</span><span class="n">subscription_hrn</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span>
+        <span class="k">if</span> <span class="n">x_idempotency_key</span><span class="p">:</span>
+            <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;x-idempotency-key&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">x_idempotency_key</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">202</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataConfigApi.get_subscription_status">
+<a class="viewcode-back" href="../../../../here.platform.api.data_config_api.html#here.platform.api.data_config_api.DataConfigApi.get_subscription_status">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_subscription_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status_token</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the status of the subscription.</span>
+
+<span class="sd">        :param status_token: Status token from create/delete subscription response.</span>
+
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/subscriptions/status/</span><span class="si">{</span><span class="n">status_token</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

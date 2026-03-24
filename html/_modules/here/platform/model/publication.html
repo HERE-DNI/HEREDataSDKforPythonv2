@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.platform.model.publication &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/platform/model/publication';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.platform.model.publication</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.platform.model.publication</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module defines the model and functions related to a publication.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">enum</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">uuid</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">PublicationException</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.model.version_dependency</span><span class="w"> </span><span class="kn">import</span> <span class="n">VersionDependency</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.layer</span><span class="w"> </span><span class="kn">import</span> <span class="n">Layer</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="PublicationState">
+<a class="viewcode-back" href="../../../../here.platform.model.publication.html#here.platform.model.publication.PublicationState">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">PublicationState</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Enum class for publication states.&quot;&quot;&quot;</span>
+
+    <span class="n">INITIALIZED</span> <span class="o">=</span> <span class="s2">&quot;initialized&quot;</span>
+    <span class="n">SUCCEEDED</span> <span class="o">=</span> <span class="s2">&quot;succeeded&quot;</span>
+    <span class="n">FAILED</span> <span class="o">=</span> <span class="s2">&quot;failed&quot;</span>
+    <span class="n">CANCELLED</span> <span class="o">=</span> <span class="s2">&quot;cancelled&quot;</span>
+    <span class="n">EXPIRED</span> <span class="o">=</span> <span class="s2">&quot;expired&quot;</span>
+    <span class="n">SUBMITTED</span> <span class="o">=</span> <span class="s2">&quot;submitted&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="Publication">
+<a class="viewcode-back" href="../../../../here.platform.model.publication.html#here.platform.model.publication.Publication">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Publication</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A publication is needed to write to a catalog.</span>
+
+<span class="sd">    Create a publication via the ``Catalog.init_publication`` function,</span>
+<span class="sd">    specifying to which layers you want to write to. The request</span>
+<span class="sd">    is validated and a ``Publication`` is returned when it can be satisfied.</span>
+
+<span class="sd">    Use the publication in the `set_*` and `write_*` method of ``Layer`` classes,</span>
+<span class="sd">    for layers that need a publication to operate.</span>
+
+<span class="sd">    When writing is complete, close the publication by either</span>
+<span class="sd">    calling the ``complete`` function, or ``cancel``. Note however that</span>
+<span class="sd">    not all the layer types support cancelling and rolling back a publication.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">catalog</span><span class="p">,</span>
+        <span class="n">layers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="s2">&quot;Layer&quot;</span><span class="p">],</span>
+        <span class="n">dependencies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">VersionDependency</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">publication_info</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a new publication.</span>
+
+<span class="sd">        :param catalog: the catalog.</span>
+<span class="sd">        :param layers: the list of layers affected.</span>
+<span class="sd">        :param dependencies: the dependencies of the new version.</span>
+<span class="sd">        :param publication_info: ID and catalog version for an existing publication.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">catalog</span> <span class="o">=</span> <span class="n">catalog</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="n">layers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dependencies</span> <span class="o">=</span> <span class="n">dependencies</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">catalog</span><span class="o">.</span><span class="n">billing_tag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_layer_combinations</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_validate_layer_exist</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">publication_info</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">publication_id</span> <span class="o">=</span> <span class="n">publication_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">catalog_version</span> <span class="o">=</span> <span class="n">publication_info</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">publication_details</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_initialize_publication</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">publication_id</span> <span class="o">=</span> <span class="n">publication_details</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+            <span class="c1"># version is unset in case no versioned layers are involved</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">catalog_version</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">publication_details</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;catalogVersion&quot;</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_active</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">catalog</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">application_config</span><span class="o">.</span><span class="n">polling_wait</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Entry point for publication context manager</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exc_type</span><span class="p">,</span> <span class="n">exc_value</span><span class="p">,</span> <span class="n">exc_tb</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Exit for publication context manager</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">exc_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">cancel</span><span class="p">()</span>
+            <span class="k">except</span> <span class="n">PublicationException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Error occured when canceling publication with&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;Publication id: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">publication_id</span><span class="si">}</span><span class="s2"> state: </span><span class="si">{</span><span class="n">e</span><span class="o">.</span><span class="n">publication_state</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">complete</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_validate_layer_combinations</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validate layer combinations.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">iseq</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">)</span>
+        <span class="n">first</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">iseq</span><span class="p">)</span>
+        <span class="n">first_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">first</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">first</span><span class="o">.</span><span class="n">is_versioned</span><span class="p">()</span> <span class="ow">or</span> <span class="n">first</span><span class="o">.</span><span class="n">is_volatile</span><span class="p">()</span> <span class="ow">or</span> <span class="n">first</span><span class="o">.</span><span class="n">is_stream</span><span class="p">()):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Initialize publication failed: Publication does not support </span><span class="si">{</span><span class="n">first_type</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+        <span class="n">validation_status</span> <span class="o">=</span> <span class="nb">all</span><span class="p">((</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">is</span> <span class="n">first_type</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">iseq</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">validation_status</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Initialize publication failed: Layer types for publication are different.&quot;</span>
+                <span class="s2">&quot;A publication can only consist of layer IDs that have the same layer type.&quot;</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_validate_layer_exist</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Validate layer exists.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">validation_status</span> <span class="o">=</span> <span class="nb">all</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">catalog</span><span class="o">.</span><span class="n">has_layer</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">id</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">validation_status</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;Initialize publication failed: &quot;</span>
+                <span class="s2">&quot;Some layers do not exist or do not belong to the catalog.&quot;</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_initialize_publication</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the publication.</span>
+
+<span class="sd">        :return: dict with publication response</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">deps</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="p">[{</span><span class="s2">&quot;hrn&quot;</span><span class="p">:</span> <span class="n">d</span><span class="o">.</span><span class="n">hrn</span><span class="p">,</span> <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="n">d</span><span class="o">.</span><span class="n">version</span><span class="p">,</span> <span class="s2">&quot;direct&quot;</span><span class="p">:</span> <span class="n">d</span><span class="o">.</span><span class="n">direct</span><span class="p">}</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dependencies</span><span class="p">]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dependencies</span>
+            <span class="k">else</span> <span class="kc">None</span>
+        <span class="p">)</span>
+        <span class="n">layer_ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">layer</span><span class="o">.</span><span class="n">id</span> <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">]</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;layerIds&quot;</span><span class="p">:</span> <span class="n">layer_ids</span><span class="p">,</span> <span class="s2">&quot;versionDependencies&quot;</span><span class="p">:</span> <span class="n">deps</span><span class="p">}</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span>
+            <span class="nb">dict</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">catalog</span><span class="o">.</span><span class="n">_data_publish_api</span><span class="o">.</span><span class="n">init_publication</span><span class="p">(</span>
+                <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+            <span class="p">),</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_poll_publication_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expected_state</span><span class="p">:</span> <span class="n">PublicationState</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Poll the publication status until the expected state has reached.</span>
+
+<span class="sd">        :param expected_state: the publication state to match.</span>
+<span class="sd">        :raises PublicationException: is raised in case the publication is not</span>
+<span class="sd">            finalized successfully.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;status polling wait </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="si">}</span><span class="s2"> sec.&quot;</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="p">)</span>
+            <span class="n">status_resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">catalog</span><span class="o">.</span><span class="n">_data_publish_api</span><span class="o">.</span><span class="n">get_publication</span><span class="p">(</span>
+                <span class="n">publication_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">publication_id</span><span class="p">,</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+            <span class="p">)</span>
+            <span class="n">current_state</span> <span class="o">=</span> <span class="n">PublicationState</span><span class="p">(</span><span class="n">status_resp</span><span class="p">[</span><span class="s2">&quot;details&quot;</span><span class="p">][</span><span class="s2">&quot;state&quot;</span><span class="p">])</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Publication id: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">publication_id</span><span class="si">}</span><span class="s2"> state: </span><span class="si">{</span><span class="n">current_state</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">current_state</span> <span class="ow">in</span> <span class="p">[</span>
+                <span class="n">PublicationState</span><span class="o">.</span><span class="n">SUCCEEDED</span><span class="p">,</span>
+                <span class="n">PublicationState</span><span class="o">.</span><span class="n">FAILED</span><span class="p">,</span>
+                <span class="n">PublicationState</span><span class="o">.</span><span class="n">CANCELLED</span><span class="p">,</span>
+                <span class="n">PublicationState</span><span class="o">.</span><span class="n">EXPIRED</span><span class="p">,</span>
+            <span class="p">]:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;Publication for id: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">publication_id</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;finished with state: </span><span class="si">{</span><span class="n">current_state</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+                <span class="k">if</span> <span class="n">current_state</span> <span class="o">==</span> <span class="n">expected_state</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">is_active</span> <span class="o">=</span> <span class="kc">False</span>
+                    <span class="k">return</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">PublicationException</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">publication_id</span><span class="p">),</span> <span class="n">current_state</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Publication.complete">
+<a class="viewcode-back" href="../../../../here.platform.model.publication.html#here.platform.model.publication.Publication.complete">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">complete</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Complete the publication succesfully.</span>
+
+<span class="sd">        After calling this function, the object can&#39;t be used anymore.</span>
+<span class="sd">        Pending transactions are committed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_active</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">catalog</span><span class="o">.</span><span class="n">_data_publish_api</span><span class="o">.</span><span class="n">submit_publication</span><span class="p">(</span>
+                <span class="n">publication_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">publication_id</span><span class="p">,</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+            <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_poll_publication_status</span><span class="p">(</span><span class="n">PublicationState</span><span class="o">.</span><span class="n">SUCCEEDED</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Publication.cancel">
+<a class="viewcode-back" href="../../../../here.platform.model.publication.html#here.platform.model.publication.Publication.cancel">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cancel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">strict</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Cancel the publication, usually as a result of errors.</span>
+
+<span class="sd">        After calling this function, the object can&#39;t be used anymore.</span>
+<span class="sd">        Pending transactions are rolled back, but data written</span>
+<span class="sd">        to APIs that are not transaction-based stay written.</span>
+<span class="sd">        :param strict: True to require that the publication exists, False to allow it to have</span>
+<span class="sd">            already been cancelled.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_active</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">catalog</span><span class="o">.</span><span class="n">_data_publish_api</span><span class="o">.</span><span class="n">cancel_publication</span><span class="p">(</span>
+                <span class="n">publication_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">publication_id</span><span class="p">,</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="n">strict</span>
+            <span class="p">):</span>
+                <span class="k">return</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_poll_publication_status</span><span class="p">(</span><span class="n">PublicationState</span><span class="o">.</span><span class="n">CANCELLED</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

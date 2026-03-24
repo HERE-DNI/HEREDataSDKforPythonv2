@@ -1,0 +1,16 @@
+here namespace
+==============
+
+.. py:module:: here
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.content
+   here.geopandas_adapter
+   here.geotiles
+   here.inspector
+   here.platform

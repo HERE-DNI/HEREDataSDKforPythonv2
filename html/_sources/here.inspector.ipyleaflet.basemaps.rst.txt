@@ -1,0 +1,7 @@
+here.inspector.ipyleaflet.basemaps module
+=========================================
+
+.. automodule:: here.inspector.ipyleaflet.basemaps
+   :members:
+   :undoc-members:
+   :show-inheritance:

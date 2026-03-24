@@ -1,0 +1,1198 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>here.platform.api.artifact_api module &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="_static/documentation_options.js?v=8a448e45"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'here.platform.api.artifact_api';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="here.platform.api.base_api module" href="here.platform.api.base_api.html" />
+    <link rel="prev" title="here.platform.api.aaa_oauth2_api module" href="here.platform.api.aaa_oauth2_api.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.content.html">here.content package</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.content.hmc2.html">here.content.hmc2 package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.adas_attributes.html">here.content.hmc2.adas_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.address_attributes.html">here.content.hmc2.address_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_index.html">here.content.hmc2.admin_index module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_locations.html">here.content.hmc2.admin_locations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_place_profiles.html">here.content.hmc2.admin_place_profiles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_places.html">here.content.hmc2.admin_places module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.advanced_navigation_attributes.html">here.content.hmc2.advanced_navigation_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.base_attributes.html">here.content.hmc2.base_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.bicycle_attributes.html">here.content.hmc2.bicycle_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.composite_road_attributes.html">here.content.hmc2.composite_road_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.constants.html">here.content.hmc2.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.environmental_zone_conditions.html">here.content.hmc2.environmental_zone_conditions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.environmental_zones.html">here.content.hmc2.environmental_zones module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.extended_speed_limit.html">here.content.hmc2.extended_speed_limit module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.extracters.html">here.content.hmc2.extracters module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.here_places.html">here.content.hmc2.here_places module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.hmc.html">here.content.hmc2.hmc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.metadata.html">here.content.hmc2.metadata module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.models.html">here.content.hmc2.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.navigation_attributes.html">here.content.hmc2.navigation_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.parsers.html">here.content.hmc2.parsers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.place_context.html">here.content.hmc2.place_context module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.road_attributes.html">here.content.hmc2.road_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.segment_admin_boundary.html">here.content.hmc2.segment_admin_boundary module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.segment_street_names.html">here.content.hmc2.segment_street_names module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.sign_text.html">here.content.hmc2.sign_text module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.street_names.html">here.content.hmc2.street_names module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.topology_attributes.html">here.content.hmc2.topology_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.topology_geometry.html">here.content.hmc2.topology_geometry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.traffic_patterns.html">here.content.hmc2.traffic_patterns module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.truck_attributes.html">here.content.hmc2.truck_attributes module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.content.utils.html">here.content.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.utils.hmc_external_references.html">here.content.utils.hmc_external_references module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.utils.proto.html">here.content.utils.proto module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.base.html">here.content.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.content.html">here.content.content module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.geopandas_adapter.html">here.geopandas_adapter package</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.geopandas_adapter.geotiles.html">here.geopandas_adapter.geotiles package</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.geotiles.heretile.html">here.geopandas_adapter.geotiles.heretile module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.geopandas_adapter.utils.html">here.geopandas_adapter.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.utils.dataframe.html">here.geopandas_adapter.utils.dataframe module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.utils.geo.html">here.geopandas_adapter.utils.geo module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.geopandas_adapter.geopandas_adapter.html">here.geopandas_adapter.geopandas_adapter module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.geotiles.html">here.geotiles package</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="here.geotiles.heretile.html">here.geotiles.heretile module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.inspector.html">here.inspector package</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.brand.html">here.inspector.brand package</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.brand.colors.html">here.inspector.brand.colors module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.ipyleaflet.html">here.inspector.ipyleaflet package</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.ipyleaflet.basemaps.html">here.inspector.ipyleaflet.basemaps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.ipyleaflet.utils.html">here.inspector.ipyleaflet.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.keplergl.html">here.inspector.keplergl package</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.keplergl.utils.html">here.inspector.keplergl.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.base.html">here.inspector.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.styles.html">here.inspector.styles module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.utils.html">here.inspector.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="here.platform.html">here.platform package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="here.platform.api.html">here.platform.api package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="here.platform.api.factory.html">here.platform.api.factory namespace</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.platform.api.factory.apifactory.html">here.platform.api.factory.apifactory module</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="here.platform.api.registry.html">here.platform.api.registry package</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.platform.api.registry.lookup_api_registry.html">here.platform.api.registry.lookup_api_registry module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.aaa_authorization_api.html">here.platform.api.aaa_authorization_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.aaa_oauth2_api.html">here.platform.api.aaa_oauth2_api module</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">here.platform.api.artifact_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.base_api.html">here.platform.api.base_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_blob_api.html">here.platform.api.data_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_config_api.html">here.platform.api.data_config_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_index_api.html">here.platform.api.data_index_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_ingest_api.html">here.platform.api.data_ingest_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_interactive_api.html">here.platform.api.data_interactive_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_metadata_api.html">here.platform.api.data_metadata_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_object_blob_api.html">here.platform.api.data_object_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_publish_api.html">here.platform.api.data_publish_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_query_api.html">here.platform.api.data_query_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_statistics_api.html">here.platform.api.data_statistics_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_stream_api.html">here.platform.api.data_stream_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_volatile_blob_api.html">here.platform.api.data_volatile_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.lookup_api.html">here.platform.api.lookup_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.map_matching_api.html">here.platform.api.map_matching_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.service_api.html">here.platform.api.service_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.service_registry_api.html">here.platform.api.service_registry_api module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.config.html">here.platform.config package</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.china.html">here.platform.config.china package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.default.html">here.platform.config.default package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.internal.html">here.platform.config.internal package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.local.html">here.platform.config.local package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.private_eu_west_1.html">here.platform.config.private_eu_west_1 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.private_us_west_2.html">here.platform.config.private_us_west_2 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.application_config.html">here.platform.config.application_config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.platform_config.html">here.platform.config.platform_config module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.model.html">here.platform.model package</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.publication.html">here.platform.model.publication module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.subscription.html">here.platform.model.subscription module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.version_dependency.html">here.platform.model.version_dependency module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.schema.html">here.platform.schema package</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.ParserFactory.html">here.platform.schema.ParserFactory module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.geojson_parser.html">here.platform.schema.geojson_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.json_parser.html">here.platform.schema.json_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.parser.html">here.platform.schema.parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.protobuf_parser.html">here.platform.schema.protobuf_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.schema.html">here.platform.schema.schema module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.schema_registry.html">here.platform.schema.schema_registry module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.utils.html">here.platform.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.collection.html">here.platform.utils.collection module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.deprecation.html">here.platform.utils.deprecation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.file.html">here.platform.utils.file module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.geo.html">here.platform.utils.geo module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.properties_helper.html">here.platform.utils.properties_helper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.protobuf.html">here.platform.utils.protobuf module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.adapter.html">here.platform.adapter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.adapter_default.html">here.platform.adapter_default module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.artifact.html">here.platform.artifact module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.auth.html">here.platform.auth module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.catalog.html">here.platform.catalog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.constants.html">here.platform.constants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.credentials.html">here.platform.credentials module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.environment.html">here.platform.environment module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.exceptions.html">here.platform.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.layer.html">here.platform.layer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.map_matcher.html">here.platform.map_matcher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.models.html">here.platform.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.partition.html">here.platform.partition module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.platform.html">here.platform.platform module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.project.html">here.platform.project module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.schema_api.html">here.platform.schema_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.service.html">here.platform.service module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="here.html" class="nav-link">here namespace</a></li>
+    
+    
+    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
+    
+    
+    <li class="breadcrumb-item"><a href="here.platform.api.html" class="nav-link">here.platform.api package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.platform.api.artifact_api module</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="module-here.platform.api.artifact_api">
+<span id="here-platform-api-artifact-api-module"></span><h1>here.platform.api.artifact_api module<a class="headerlink" href="#module-here.platform.api.artifact_api" title="Link to this heading">#</a></h1>
+<p>This module contains a <a class="reference internal" href="#here.platform.api.artifact_api.ArtifactApi" title="here.platform.api.artifact_api.ArtifactApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">ArtifactApi</span></code></a> class to perform Artifact API operations.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.AccessType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">here.platform.api.artifact_api.</span></span><span class="sig-name descname"><span class="pre">AccessType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#AccessType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.AccessType" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Access types enum used to list artifacts and schemas</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.AccessType.default">
+<span class="sig-name descname"><span class="pre">default</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#here.platform.api.artifact_api.AccessType.default" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.AccessType.orgAdmin">
+<span class="sig-name descname"><span class="pre">orgAdmin</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#here.platform.api.artifact_api.AccessType.orgAdmin" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">here.platform.api.artifact_api.</span></span><span class="sig-name descname"><span class="pre">ArtifactApi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platform_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.platform.config.platform_config.html#here.platform.config.platform_config.PlatformConfig" title="here.platform.config.platform_config.PlatformConfig"><span class="pre">PlatformConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">application_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.platform.config.application_config.html#here.platform.config.application_config.ApplicationConfig" title="here.platform.config.application_config.ApplicationConfig"><span class="pre">ApplicationConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">auth</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.platform.auth.html#here.platform.auth.Auth" title="here.platform.auth.Auth"><span class="pre">Auth</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proxies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="here.platform.api.base_api.html#here.platform.api.base_api.BaseApi" title="here.platform.api.base_api.BaseApi"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseApi</span></code></a></p>
+<p>This class provides access to HERE platform Artifact APIs.</p>
+<p>The artifact service provides a way to store/consume schemas and artifacts. An artifact is
+the package which can contain code, assets, binary files, and configuration data. Artifacts
+are uniquely named, versioned, and immutable. Each schema and artifact are identified by group
+ID, artifact ID and version.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.add_schema_to_resource_policy">
+<span class="sig-name descname"><span class="pre">add_schema_to_resource_policy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.add_schema_to_resource_policy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.add_schema_to_resource_policy" title="Link to this definition">#</a></dt>
+<dd><p>Add schema and all attached artifacts to a newly created resource policy. This API works
+for tokens with or without a project scope. When the access token is project scoped, all
+the resources added to a resource policy must either be homed or referenced in the project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>schema_hrn</strong> – The HRN of the Schema.</p></li>
+<li><p><strong>body</strong> – a dictionary with resource policy.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.delete_artifact">
+<span class="sig-name descname"><span class="pre">delete_artifact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.delete_artifact"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.delete_artifact" title="Link to this definition">#</a></dt>
+<dd><p>Delete the artifact and related files by given HRN. If scoped token
+is used, then the artifact is deleted within the project the token
+belongs to. Partial HRN without version could be used. If more than
+one version of artifact exists and partial HRN is passed then force
+flag must be set to true.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>artifact_hrn</strong> – The HRN of the schema.</p></li>
+<li><p><strong>force</strong> – The flag to force the deletion even if the artifact
+is linked to a project. By default force flag is set to false.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.delete_artifact_file">
+<span class="sig-name descname"><span class="pre">delete_artifact_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.delete_artifact_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.delete_artifact_file" title="Link to this definition">#</a></dt>
+<dd><p>Delete file from the artifact. for the given HRN</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>artifact_hrn</strong> – The HRN of the artifact</p></li>
+<li><p><strong>file_name</strong> – The path to artifact file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.delete_schema">
+<span class="sig-name descname"><span class="pre">delete_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.delete_schema"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.delete_schema" title="Link to this definition">#</a></dt>
+<dd><p>Delete the schema and related artifacts by given HRN. If scoped token is used, then the
+schema is deleted within the project the token belongs to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>schema_hrn</strong> – The HRN of the schema.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.download_artifact_file_by_reference">
+<span class="sig-name descname"><span class="pre">download_artifact_file_by_reference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.download_artifact_file_by_reference"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.download_artifact_file_by_reference" title="Link to this definition">#</a></dt>
+<dd><p>Downloads artifact file using API Key authentication. Reference access must
+be granted to the artifact before this endpoint can be used. The calling
+principal must have “readResource” permission to the artifact in order
+to retrieve the file. In addition to API Key, this API supports tokens with
+or without a project scope.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>artifact_hrn</strong> – The HRN of the artifact.</p></li>
+<li><p><strong>file_name</strong> – The path to artifact file</p></li>
+<li><p><strong>api_key</strong> – The API key token used for request authentication</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.get_artifact">
+<span class="sig-name descname"><span class="pre">get_artifact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.get_artifact"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.get_artifact" title="Link to this definition">#</a></dt>
+<dd><p>Return the information about artifact (hrn, groupId, artifactId, version) and linked
+files. If scoped token is used, then the information about artifact is returned within
+the project the token belongs to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>artifact_hrn</strong> – The HRN of the artifact.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.get_artifact_file">
+<span class="sig-name descname"><span class="pre">get_artifact_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.get_artifact_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.get_artifact_file" title="Link to this definition">#</a></dt>
+<dd><p>Return the binary data of file linked to artifact.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>artifact_hrn</strong> – The HRN of the artifact</p></li>
+<li><p><strong>file_name</strong> – The path to artifact file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.get_artifact_file_from_archive">
+<span class="sig-name descname"><span class="pre">get_artifact_file_from_archive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">archive_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_in_archive</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.get_artifact_file_from_archive"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.get_artifact_file_from_archive" title="Link to this definition">#</a></dt>
+<dd><p>Returns the binary data of a file stored in archive.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>artifact_hrn</strong> – The HRN of the schema.</p></li>
+<li><p><strong>archive_file</strong> – The name of artifact archive. Supported archive types are zip and jar</p></li>
+<li><p><strong>file_in_archive</strong> – Relative path of file in archive</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.get_artifact_registration">
+<span class="sig-name descname"><span class="pre">get_artifact_registration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.get_artifact_registration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.get_artifact_registration" title="Link to this definition">#</a></dt>
+<dd><p>Return the information about registered artifact. Requires ‘accessApi’ permission and
+‘readResource’ permission to specified artifact</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_id</strong> – The groupId of the artifact.</p></li>
+<li><p><strong>artifact_id</strong> – The ID of the artifact.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.get_reference_access_state">
+<span class="sig-name descname"><span class="pre">get_reference_access_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.get_reference_access_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.get_reference_access_state" title="Link to this definition">#</a></dt>
+<dd><p>Check that specified artifact has API key access enabled.
+The calling principal must have “readResource” permission
+to the artifact in order to use this endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>artifact_hrn</strong> – The HRN of the artifact.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.get_schema">
+<span class="sig-name descname"><span class="pre">get_schema</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.get_schema"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.get_schema" title="Link to this definition">#</a></dt>
+<dd><p>Return the information about schema (hrn, groupId, artifactId, version) and related
+artifact and variants for the given HRN. If scoped token is used, then the information
+about schema is returned within the project the token belongs to.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>schema_hrn</strong> – The HRN of the schema.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.get_schema_document">
+<span class="sig-name descname"><span class="pre">get_schema_document</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.get_schema_document"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.get_schema_document" title="Link to this definition">#</a></dt>
+<dd><p>Return the url to schema documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>schema_hrn</strong> – The HRN of the schema.</p></li>
+<li><p><strong>file</strong> – The path to schema file.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.get_schema_main_message">
+<span class="sig-name descname"><span class="pre">get_schema_main_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.get_schema_main_message"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.get_schema_main_message" title="Link to this definition">#</a></dt>
+<dd><p>Return the binary data of main message file from the schema.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>schema_hrn</strong> – The HRN of the Schema.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.grant_reference_access">
+<span class="sig-name descname"><span class="pre">grant_reference_access</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.grant_reference_access"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.grant_reference_access" title="Link to this definition">#</a></dt>
+<dd><p>Grants API Key access to the artifact. This allows any principal that has “readResource”
+permission to the artifact to use the “references” API to download artifact files using API
+Access Key instead of the Bearer Token authorization. The calling principal must have
+“shareResource” permission to the artifact in order to use this endpoint. This API works
+for tokens with or without a project scope.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>artifact_hrn</strong> – The HRN of the artifact.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.link_schema_to_project">
+<span class="sig-name descname"><span class="pre">link_schema_to_project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.link_schema_to_project"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.link_schema_to_project" title="Link to this definition">#</a></dt>
+<dd><p>Link schema to project request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>schema_hrn</strong> – The HRN of the Schema.</p></li>
+<li><p><strong>body</strong> – a dictionary with project HRN.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.list_artifacts">
+<span class="sig-name descname"><span class="pre">list_artifacts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">access</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#here.platform.api.artifact_api.AccessType" title="here.platform.api.artifact_api.AccessType"><span class="pre">AccessType</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_param</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">artifact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.list_artifacts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.list_artifacts" title="Link to this definition">#</a></dt>
+<dd><p>Return the list of available artifacts. Requires permission to ‘apiAccess’.If scoped token
+is used, then the list of artifacts is returned within the project the token belongs to.
+If unscoped token is used, then the list of artifacts is returned including the artifacts
+belonging to the projects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>access</strong> – Comma separated list of access types (with OR semantic) to filter result.
+If ‘default’, returns artifacts user has read access to.
+If ‘orgAdmin’, returns artifacts
+OrgAdmin user have access to.</p></li>
+<li><p><strong>sort</strong> – sort parameter</p></li>
+<li><p><strong>order</strong> – order of sorting. Available values : ASC, DESC</p></li>
+<li><p><strong>from_param</strong> – from parameter</p></li>
+<li><p><strong>group_id</strong> – Applies filtering based on groupId</p></li>
+<li><p><strong>artifact_id</strong> – Applies filtering based on artifactId</p></li>
+<li><p><strong>limit</strong> – limit number of records</p></li>
+<li><p><strong>offset</strong> – offset number of records</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.list_schemas">
+<span class="sig-name descname"><span class="pre">list_schemas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">access</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_param</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">artifact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.list_schemas"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.list_schemas" title="Link to this definition">#</a></dt>
+<dd><p>Return the list of available schemas. If scoped token is used, then the list of schemas is
+returned within the project the token belongs to. If unscoped token is used, then the list
+of schemas is returned including the schemas belonging to the projects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>access</strong> – Comma separated list of access types (with OR semantic) to filter result.
+If ‘default’, returns schema user have read access to. If ‘orgAdmin’, returns catalogs
+OrgAdmin user have access to.</p></li>
+<li><p><strong>sort</strong> – sort parameter</p></li>
+<li><p><strong>order</strong> – order of sorting</p></li>
+<li><p><strong>from_param</strong> – from parameter</p></li>
+<li><p><strong>group_id</strong> – Applies filtering based on groupId</p></li>
+<li><p><strong>artifact_id</strong> – Applies filtering based on artifactId</p></li>
+<li><p><strong>limit</strong> – limit number of records</p></li>
+<li><p><strong>offset</strong> – offset number of records</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.make_schema_linkable">
+<span class="sig-name descname"><span class="pre">make_schema_linkable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.make_schema_linkable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.make_schema_linkable" title="Link to this definition">#</a></dt>
+<dd><p>Make schema and all attached artifacts available for linking to
+a specific project or realm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>schema_hrn</strong> – The HRN of the Schema.</p></li>
+<li><p><strong>body</strong> – a dictionary with project or realm Hrn.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.put_artifact_file">
+<span class="sig-name descname"><span class="pre">put_artifact_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.put_artifact_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.put_artifact_file" title="Link to this definition">#</a></dt>
+<dd><p>Upload the file and linked to artifact. Requires permission to ‘modifyResource’
+for the given HRN.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>artifact_hrn</strong> – The HRN of the artifact.</p></li>
+<li><p><strong>body</strong> – Data to be uploaded</p></li>
+<li><p><strong>file_name</strong> – The path to artifact file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.register_artifact">
+<span class="sig-name descname"><span class="pre">register_artifact</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.register_artifact"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.register_artifact" title="Link to this definition">#</a></dt>
+<dd><p>Requires ‘accessApi’ permission. Create artifact with version ‘NONE’. If scoped token
+is used then the artifact is registered within the project the token belongs to otherwise
+grant ‘readResource’, ‘modifyResource’ and ‘shareResource’ permissions to app which send
+request and provided user id</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_id</strong> – The groupId of the artifact.</p></li>
+<li><p><strong>artifact_id</strong> – The ID of the artifact.</p></li>
+<li><p><strong>body</strong> – Contains the data you want to add or remove from the UserID</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.remove_schema_linkability">
+<span class="sig-name descname"><span class="pre">remove_schema_linkability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.remove_schema_linkability"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.remove_schema_linkability" title="Link to this definition">#</a></dt>
+<dd><p>Makes schema and all attached artifacts not available for linking to a project or realm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>schema_hrn</strong> – The HRN of the schema.</p></li>
+<li><p><strong>target_hrn</strong> – The HRN of the target. Project HRN from which schema is to be unlinked</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.revoke_reference_access">
+<span class="sig-name descname"><span class="pre">revoke_reference_access</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.revoke_reference_access"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.revoke_reference_access" title="Link to this definition">#</a></dt>
+<dd><p>Revokes API Key access from the artifact. This removes the ability to use the “references”
+API to download artifact files using API Access Key. The calling principal must have
+“shareResource” permission to the artifact in order to use this endpoint. This API
+works for tokens with or without a project scope.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>artifact_hrn</strong> – The HRN of the artifact.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.unlink_schema_from_project">
+<span class="sig-name descname"><span class="pre">unlink_schema_from_project</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">project_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.unlink_schema_from_project"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.unlink_schema_from_project" title="Link to this definition">#</a></dt>
+<dd><p>Unlink schema and all attached Artifacts from the project it was previously linked. This
+API works for tokens with or without a project scope.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>schema_hrn</strong> – The HRN of the schema.</p></li>
+<li><p><strong>project_hrn</strong> – The HRN of the project.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.update_artifact_permission">
+<span class="sig-name descname"><span class="pre">update_artifact_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artifact_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.update_artifact_permission"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.update_artifact_permission" title="Link to this definition">#</a></dt>
+<dd><p>READ grants ‘readResource’, MODIFY grants ‘modifyResource’, SHARE grants ‘shareResource’.
+Requires permission to ‘shareResource’ for the given HRN.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>artifact_hrn</strong> – The HRN of the artifact.</p></li>
+<li><p><strong>body</strong> – a dictionary with permissions.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.api.artifact_api.ArtifactApi.update_schema_permission">
+<span class="sig-name descname"><span class="pre">update_schema_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schema_hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">body</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/here/platform/api/artifact_api.html#ArtifactApi.update_schema_permission"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.api.artifact_api.ArtifactApi.update_schema_permission" title="Link to this definition">#</a></dt>
+<dd><p>Grant/revoke permissions for schema. READ grants ‘readResource’,
+MODIFY grants ‘modifyResource’, SHARE grants ‘shareResource’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>schema_hrn</strong> – The HRN of the schema.</p></li>
+<li><p><strong>body</strong> – a dictionary with permissions.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>response from the API.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.PlatformException" title="here.platform.exceptions.PlatformException"><strong>PlatformException</strong></a> – If platform responds with an HTTP error.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="here.platform.api.aaa_oauth2_api.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">here.platform.api.aaa_oauth2_api module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="here.platform.api.base_api.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">here.platform.api.base_api module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.AccessType"><code class="docutils literal notranslate"><span class="pre">AccessType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.AccessType.default"><code class="docutils literal notranslate"><span class="pre">AccessType.default</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.AccessType.orgAdmin"><code class="docutils literal notranslate"><span class="pre">AccessType.orgAdmin</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi"><code class="docutils literal notranslate"><span class="pre">ArtifactApi</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.add_schema_to_resource_policy"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.add_schema_to_resource_policy()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.delete_artifact"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.delete_artifact()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.delete_artifact_file"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.delete_artifact_file()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.delete_schema"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.delete_schema()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.download_artifact_file_by_reference"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.download_artifact_file_by_reference()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.get_artifact"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.get_artifact()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.get_artifact_file"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.get_artifact_file()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.get_artifact_file_from_archive"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.get_artifact_file_from_archive()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.get_artifact_registration"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.get_artifact_registration()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.get_reference_access_state"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.get_reference_access_state()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.get_schema"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.get_schema()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.get_schema_document"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.get_schema_document()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.get_schema_main_message"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.get_schema_main_message()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.grant_reference_access"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.grant_reference_access()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.link_schema_to_project"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.link_schema_to_project()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.list_artifacts"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.list_artifacts()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.list_schemas"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.list_schemas()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.make_schema_linkable"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.make_schema_linkable()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.put_artifact_file"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.put_artifact_file()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.register_artifact"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.register_artifact()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.remove_schema_linkability"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.remove_schema_linkability()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.revoke_reference_access"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.revoke_reference_access()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.unlink_schema_from_project"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.unlink_schema_from_project()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.update_artifact_permission"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.update_artifact_permission()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.api.artifact_api.ArtifactApi.update_schema_permission"><code class="docutils literal notranslate"><span class="pre">ArtifactApi.update_schema_permission()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="_sources/here.platform.api.artifact_api.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

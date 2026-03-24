@@ -1,0 +1,7 @@
+here.content.hmc2.composite\_road\_attributes module
+====================================================
+
+.. automodule:: here.content.hmc2.composite_road_attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:

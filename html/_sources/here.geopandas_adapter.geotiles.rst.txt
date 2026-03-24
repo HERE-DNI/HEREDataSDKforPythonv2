@@ -1,0 +1,15 @@
+here.geopandas\_adapter.geotiles package
+========================================
+
+.. automodule:: here.geopandas_adapter.geotiles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.geopandas_adapter.geotiles.heretile

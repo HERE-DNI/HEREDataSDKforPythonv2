@@ -1,0 +1,7 @@
+here.platform.config.default package
+====================================
+
+.. automodule:: here.platform.config.default
+   :members:
+   :undoc-members:
+   :show-inheritance:

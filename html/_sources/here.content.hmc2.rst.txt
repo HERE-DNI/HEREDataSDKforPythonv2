@@ -1,0 +1,45 @@
+here.content.hmc2 package
+=========================
+
+.. automodule:: here.content.hmc2
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.content.hmc2.adas_attributes
+   here.content.hmc2.address_attributes
+   here.content.hmc2.admin_index
+   here.content.hmc2.admin_locations
+   here.content.hmc2.admin_place_profiles
+   here.content.hmc2.admin_places
+   here.content.hmc2.advanced_navigation_attributes
+   here.content.hmc2.base_attributes
+   here.content.hmc2.bicycle_attributes
+   here.content.hmc2.composite_road_attributes
+   here.content.hmc2.constants
+   here.content.hmc2.environmental_zone_conditions
+   here.content.hmc2.environmental_zones
+   here.content.hmc2.extended_speed_limit
+   here.content.hmc2.extracters
+   here.content.hmc2.here_places
+   here.content.hmc2.hmc
+   here.content.hmc2.metadata
+   here.content.hmc2.models
+   here.content.hmc2.navigation_attributes
+   here.content.hmc2.parsers
+   here.content.hmc2.place_context
+   here.content.hmc2.road_attributes
+   here.content.hmc2.segment_admin_boundary
+   here.content.hmc2.segment_street_names
+   here.content.hmc2.sign_text
+   here.content.hmc2.street_names
+   here.content.hmc2.topology_attributes
+   here.content.hmc2.topology_geometry
+   here.content.hmc2.traffic_patterns
+   here.content.hmc2.truck_attributes

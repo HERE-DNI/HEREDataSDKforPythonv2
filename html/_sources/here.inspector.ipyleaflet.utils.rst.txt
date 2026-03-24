@@ -1,0 +1,7 @@
+here.inspector.ipyleaflet.utils module
+======================================
+
+.. automodule:: here.inspector.ipyleaflet.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

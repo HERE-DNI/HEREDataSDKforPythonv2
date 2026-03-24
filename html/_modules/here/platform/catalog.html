@@ -1,0 +1,1492 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.platform.catalog &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/platform/catalog';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.platform.catalog</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.platform.catalog</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;HERE platform catalog abstraction.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">webbrowser</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">deprecated</span><span class="w"> </span><span class="kn">import</span> <span class="n">deprecated</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.adapter</span><span class="w"> </span><span class="kn">import</span> <span class="n">Adapter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.aaa_authorization_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">AAAAuthorizationApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.artifact_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">ArtifactApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.base_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.data_blob_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataBlobApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.data_index_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataIndexApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.data_ingest_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataIngestApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.data_interactive_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataInteractiveApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.data_metadata_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataMetadataApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.data_object_blob_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataObjectBlobApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.data_publish_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataPublishApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.data_query_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataQueryApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.data_statistics_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataStatisticsApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.data_stream_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataStreamApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.data_volatile_blob_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataVolatileBlobApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.factory.apifactory</span><span class="w"> </span><span class="kn">import</span> <span class="n">API</span><span class="p">,</span> <span class="n">APIFactory</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">CatalogConfigurationException</span><span class="p">,</span> <span class="n">LayerConfigurationException</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.layer</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">IndexLayer</span><span class="p">,</span>
+    <span class="n">InteractiveMapLayer</span><span class="p">,</span>
+    <span class="n">Layer</span><span class="p">,</span>
+    <span class="n">LayerConfiguration</span><span class="p">,</span>
+    <span class="n">LayerType</span><span class="p">,</span>
+    <span class="n">ObjectStoreLayer</span><span class="p">,</span>
+    <span class="n">StreamIngestion</span><span class="p">,</span>
+    <span class="n">StreamLayer</span><span class="p">,</span>
+    <span class="n">VersionedLayer</span><span class="p">,</span>
+    <span class="n">VolatileLayer</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.model</span><span class="w"> </span><span class="kn">import</span> <span class="n">Publication</span><span class="p">,</span> <span class="n">PublicationState</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.model.version_dependency</span><span class="w"> </span><span class="kn">import</span> <span class="n">VersionDependency</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.models</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AutomaticVersionDeletion</span><span class="p">,</span>
+    <span class="n">Coverage</span><span class="p">,</span>
+    <span class="n">Notifications</span><span class="p">,</span>
+    <span class="n">Owner</span><span class="p">,</span>
+    <span class="n">Replication</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.partition</span><span class="w"> </span><span class="kn">import</span> <span class="n">Partition</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">JsonDictDocument</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.platform</span><span class="w"> </span><span class="kn">import</span> <span class="n">Platform</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Dependency">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Dependency">[docs]</a>
+<span class="nd">@deprecated</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="s2">&quot;2.18&quot;</span><span class="p">,</span> <span class="n">reason</span><span class="o">=</span><span class="s2">&quot;Please use here.platform.model.VersionDependency&quot;</span><span class="p">)</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Dependency</span><span class="p">(</span><span class="n">VersionDependency</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class is deprecated. Please use here.platform.model.VersionDependency.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="Version">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Version">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Version</span><span class="p">(</span><span class="n">JsonDictDocument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Represents a catalog version with its details.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The version number&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;version&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dependencies</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">VersionDependency</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The list of dependencies on external catalogs and their versions&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">VersionDependency</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;dependencies&quot;</span><span class="p">]]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">shared_dependencies</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">VersionDependency</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The list of dependencies on external catalogs and their versions&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">VersionDependency</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;sharedDependencies&quot;</span><span class="p">]]</span></div>
+
+
+
+<div class="viewcode-block" id="CatalogConfiguration">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.CatalogConfiguration">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CatalogConfiguration</span><span class="p">(</span><span class="n">JsonDictDocument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The configuration of a catalog, including its most significant properties</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The ID of the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">hrn</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The HERE Resource Name (HRN) of the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The name of the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">summary</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The summary of the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;summary&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">description</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;A longer description of the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;description&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tags</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;List of user-defined tags applied to the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;tags&quot;</span><span class="p">,</span> <span class="p">[])]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">coverage</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Coverage</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The geographic area that this catalog covers&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Coverage</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;coverage&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">billing_tag</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;List of billing tags used for grouping billing records together for the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;billingTags&quot;</span><span class="p">,</span> <span class="p">[])]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">created</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">datetime</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Timestamp, in ISO 8601 format, when the catalog was initially created&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;created&quot;</span><span class="p">],</span> <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">T%H:%M:%S.</span><span class="si">%f</span><span class="s2">Z&quot;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">owner</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Owner</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The owner of the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Owner</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;owner&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">replication</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Replication</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The replication set for the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Replication</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;replication&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">automatic_version_deletion</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AutomaticVersionDeletion</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Specifies the number of versions to keep for the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">AutomaticVersionDeletion</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;automaticVersionDeletion&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">layers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">LayerConfiguration</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The layers in the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">LayerConfiguration</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">]]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The version of the catalog configuration&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;version&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">notifications</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Notifications</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Indicates whether or not to notify each time the version of the catalog changes&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Notifications</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;notifications&quot;</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="Catalog">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Catalog</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;HERE platform catalog abstraction.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">platform</span><span class="p">:</span> <span class="s2">&quot;Platform&quot;</span><span class="p">,</span>
+        <span class="n">adapter</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Adapter</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Instantiate catalog given its HRN, API instances, and schema registry.</span>
+
+<span class="sd">        :param hrn: the HERE Resource Name of the catalog</span>
+<span class="sd">        :param platform: a Platform instance</span>
+<span class="sd">        :param adapter: the ``Adapter`` to transform data between different representations</span>
+<span class="sd">          ``None`` to use the default adapter of the platform.</span>
+<span class="sd">        :param billing_tag: A string to represent a grouping of billing records.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span> <span class="o">=</span> <span class="n">hrn</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">platform</span> <span class="o">=</span> <span class="n">platform</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adapter</span><span class="p">:</span> <span class="n">Adapter</span> <span class="o">=</span> <span class="n">adapter</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">adapter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_data_config_api</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">data_config_api</span>  <span class="c1"># type: ignore</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_base_api</span><span class="p">:</span> <span class="n">BaseApi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">base_api</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">billing_tag</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="p">:</span> <span class="n">APIFactory</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">api_factory</span>
+
+        <span class="c1"># These are lazy-loaded</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_details</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_layer_details</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_configuration</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">CatalogConfiguration</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_layer_configuration</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">LayerConfiguration</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_data_blob_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataBlobApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads DataBlob API.</span>
+
+<span class="sd">        :return: DataBlobApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">DataBlobApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">DATA_BLOB</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_data_volatile_blob_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataVolatileBlobApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads DataVolatileBlob API.</span>
+
+<span class="sd">        :return: DataVolatileBlobApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span>
+            <span class="n">DataVolatileBlobApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">DATA_VOLATILE_BLOB</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_data_metadata_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataMetadataApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads DataMetadata API.</span>
+
+<span class="sd">        :return: DataMetadataApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">DataMetadataApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">DATA_METADATA</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_data_publish_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataPublishApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads DataPublish API.</span>
+
+<span class="sd">        :return: DataPublishApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">DataPublishApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">DATA_PUBLISH</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_data_query_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataQueryApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads DataQuery API.</span>
+
+<span class="sd">        :return: DataQueryApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">DataQueryApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">DATA_QUERY</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_data_index_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataIndexApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads DataIndex API.</span>
+
+<span class="sd">        :return: DataIndexApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">DataIndexApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">DATA_INDEX</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_data_stream_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataStreamApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads DataStream API.</span>
+
+<span class="sd">        :return: DataStreamApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">DataStreamApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">DATA_STREAM</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_artifact_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ArtifactApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads Artifact API.</span>
+
+<span class="sd">        :return: ArtifactApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">ArtifactApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">ARTIFACT</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_data_ingest_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataIngestApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads DataIngest API.</span>
+
+<span class="sd">        This API is not implemented on the Local Data Service.</span>
+
+<span class="sd">        :return: DataIngestApi instance</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">DataIngestApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">DATA_INGEST</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_data_interactive_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataInteractiveApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads DataInteractive API.</span>
+
+<span class="sd">        This API is not implemented on the Local Data Service.</span>
+
+<span class="sd">        :return: DataInteractiveApi instance</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">DataInteractiveApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">DATA_INTERACTIVE</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_data_object_blob_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataObjectBlobApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads DataObjectBlobApi API.</span>
+
+<span class="sd">        This API is not implemented on the Local Data Service.</span>
+
+<span class="sd">        :return: DataObjectBlobApi instance</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">DataObjectBlobApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">DATA_OBJECT_BLOB</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_data_statistics_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataStatisticsApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads DataStatisticsApi API.</span>
+
+<span class="sd">        This API is not implemented on the Local Data Service.</span>
+
+<span class="sd">        :return: DataStatisticsApi instance</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">DataStatisticsApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">DATA_STATISTICS</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_aaa_auth_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AAAAuthorizationApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns parent platform&#39;s AAAAuthorization instance.</span>
+
+<span class="sd">        This API is not implemented on the Local Data Service.</span>
+
+<span class="sd">        :return: AAAAuthorization instance</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">aaa_auth_api</span>  <span class="c1"># type: ignore</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_ensure_catalog_config_loaded</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_details</span><span class="p">:</span>
+            <span class="n">json_config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_config_api</span><span class="o">.</span><span class="n">get_catalog_details</span><span class="p">(</span><span class="n">catalog_hrn</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_details</span> <span class="o">=</span> <span class="n">json_config</span>  <span class="c1"># TODO: remove</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_layer_details</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="n">layer</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]:</span> <span class="n">layer</span> <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">json_config</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">]</span>
+            <span class="p">}</span>  <span class="c1"># TODO: remove</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_configuration</span> <span class="o">=</span> <span class="n">CatalogConfiguration</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">json_config</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_layer_configuration</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="n">layer</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]:</span> <span class="n">LayerConfiguration</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">json_config</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">]</span>
+            <span class="p">}</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_invalidate_catalog_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_details</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_layer_details</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_configuration</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_layer_configuration</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="Catalog.lookup_apis">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.lookup_apis">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">lookup_apis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lookup implemented APIs for the given HRN.</span>
+
+<span class="sd">        :param region: an Optional param to look up a specific region for a given resource</span>
+<span class="sd">        :return: dictionary with API descriptions for the HRN</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">res</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">lookup_api</span><span class="o">.</span><span class="n">get_resource_api_list</span><span class="p">(</span><span class="n">hrn</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="n">region</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span></div>
+
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">CatalogConfiguration</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The configuration of the catalog&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_catalog_config_loaded</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_configuration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_configuration</span>
+
+<div class="viewcode-block" id="Catalog.get_details">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.get_details">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_details</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Fetch and buffer catalog details from the platform.</span>
+
+<span class="sd">        :return: catalog details</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_catalog_config_loaded</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_details</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_details</span></div>
+
+
+<div class="viewcode-block" id="Catalog.has_layer">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.has_layer">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">has_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if a layer ID exists in the catalog.</span>
+
+<span class="sd">        :param layer_id: layer ID in the catalog.</span>
+<span class="sd">        :return: a boolean value indicating if a layer exists</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_catalog_config_loaded</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_layer_details</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">layer_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_layer_details</span></div>
+
+
+<div class="viewcode-block" id="Catalog.first_version">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.first_version">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">first_version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return first version of the catalog available on the platform.</span>
+
+<span class="sd">        :return: first version number of the catalog if present, ``None`` otherwise</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_metadata_api</span><span class="o">.</span><span class="n">get_minimum_version</span><span class="p">(</span><span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Catalog.latest_version">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.latest_version">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">latest_version</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return latest version of the catalog available on the platform.</span>
+
+<span class="sd">        :return: latest version number of the catalog if present, ``None`` otherwise</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_metadata_api</span><span class="o">.</span><span class="n">get_latest_version</span><span class="p">(</span><span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Catalog.list_versions">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.list_versions">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_versions</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">end</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Version</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return list of all catalog versions available on the platform, with one dict each.</span>
+
+<span class="sd">        :param start: An int to represent start version of catalog, ``None`` if unspecified</span>
+<span class="sd">        :param end: An int to represent end version of catalog, ``None`` if unspecified</span>
+<span class="sd">        :return: list of all catalog versions beginning at ``start + 1``and continuing</span>
+<span class="sd">                through (and including) ``end``</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">if</span> <span class="n">end</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">latest_version</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">end</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">start</span> <span class="o">&gt;=</span> <span class="n">end</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        <span class="n">limit</span> <span class="o">=</span> <span class="mi">1000</span>
+        <span class="n">versions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">limit</span><span class="p">):</span>
+            <span class="n">list_versions_resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_metadata_api</span><span class="o">.</span><span class="n">list_versions</span><span class="p">(</span>
+                <span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">limit</span> <span class="k">if</span> <span class="n">i</span> <span class="o">+</span> <span class="n">limit</span> <span class="o">&lt;</span> <span class="n">end</span> <span class="k">else</span> <span class="n">end</span><span class="p">,</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="s2">&quot;versions&quot;</span> <span class="ow">in</span> <span class="n">list_versions_resp</span><span class="p">:</span>
+                <span class="n">versions</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">Version</span><span class="p">(</span><span class="n">version</span><span class="p">)</span> <span class="k">for</span> <span class="n">version</span> <span class="ow">in</span> <span class="n">list_versions_resp</span><span class="p">[</span><span class="s2">&quot;versions&quot;</span><span class="p">]])</span>
+        <span class="k">return</span> <span class="n">versions</span></div>
+
+
+<div class="viewcode-block" id="Catalog.get_version">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.get_version">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Version</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return details of a single version which is specified.</span>
+
+<span class="sd">        :param version: An int to specify the specific version</span>
+<span class="sd">        for which catalog details are needed</span>
+<span class="sd">        :return: details of the version specified</span>
+<span class="sd">        :raises ValueError:The value of the version is not an integer</span>
+<span class="sd">        or when the value is greater than the latest catalog version or less than 0</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">version</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span> <span class="ow">and</span> <span class="n">version</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">start</span> <span class="o">=</span> <span class="n">version</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="n">end</span> <span class="o">=</span> <span class="n">version</span>
+            <span class="n">latest</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">latest_version</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Invalid Version value -&gt; </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">, expected positive integer value.&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">latest</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">latest</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="k">if</span> <span class="n">start</span> <span class="o">&gt;=</span> <span class="n">latest</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Version </span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2"> does not exist.&quot;</span><span class="p">)</span>
+        <span class="n">get_version_resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_metadata_api</span><span class="o">.</span><span class="n">list_versions</span><span class="p">(</span>
+            <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">Version</span><span class="p">(</span><span class="n">get_version_resp</span><span class="p">[</span><span class="s2">&quot;versions&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span></div>
+
+
+<div class="viewcode-block" id="Catalog.get_layers_version">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.get_layers_version">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_layers_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">catalog_version</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return list of all available layers and layer version</span>
+<span class="sd">        for a given catalog version. Layer version is always</span>
+<span class="sd">        less or equal than the catalog version and it represent</span>
+<span class="sd">        the version when the layer was last updated.</span>
+
+<span class="sd">        :param catalog_version: An int to represent a catalog version</span>
+<span class="sd">        :return: all available layers with their version</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">layer_versions_resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_metadata_api</span><span class="o">.</span><span class="n">get_layers_version</span><span class="p">(</span>
+            <span class="n">catalog_version</span><span class="p">,</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;layerVersions&quot;</span> <span class="ow">in</span> <span class="n">layer_versions_resp</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span><span class="n">lv</span><span class="p">[</span><span class="s2">&quot;layer&quot;</span><span class="p">]:</span> <span class="n">lv</span><span class="p">[</span><span class="s2">&quot;version&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">lv</span> <span class="ow">in</span> <span class="n">layer_versions_resp</span><span class="p">[</span><span class="s2">&quot;layerVersions&quot;</span><span class="p">]}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{}</span></div>
+
+
+<div class="viewcode-block" id="Catalog.compatible_versions">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.compatible_versions">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">compatible_versions</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">catalog_dependencies</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Version</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return compatible versions iterator which returns list of Versions.</span>
+<span class="sd">        Each Version object contains version and shared_dependencies attribute.</span>
+<span class="sd">        :param catalog_dependencies: The catalog dependencies we want to search for</span>
+<span class="sd">        :param limit: number of records in api response.</span>
+<span class="sd">        :yields: List of class: `Version` objects.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">is_next</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">while</span> <span class="n">is_next</span><span class="p">:</span>
+            <span class="n">resp_json</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_metadata_api</span><span class="o">.</span><span class="n">compatible_versions</span><span class="p">(</span>
+                <span class="n">catalog_dependencies</span><span class="p">,</span> <span class="n">limit</span><span class="p">,</span> <span class="nb">next</span><span class="o">=</span><span class="n">url</span>
+            <span class="p">)</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="n">resp_json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;next&quot;</span><span class="p">)</span>
+            <span class="n">is_next</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">url</span> <span class="k">else</span> <span class="kc">False</span>
+            <span class="k">yield</span> <span class="p">[</span><span class="n">Version</span><span class="p">(</span><span class="n">version</span><span class="p">)</span> <span class="k">for</span> <span class="n">version</span> <span class="ow">in</span> <span class="n">resp_json</span><span class="p">[</span><span class="s2">&quot;versions&quot;</span><span class="p">]]</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_update_layer_in_catalog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">catalog_details</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">layers</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Layer</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Updates the catalog with :param:`catalog_details` and :param:`layers`.</span>
+<span class="sd">        :param catalog_details: Details of catalog.</span>
+<span class="sd">        :param layer_id: id of layer that needs to be added or updated in the catalog</span>
+<span class="sd">        :param layers: list of layers</span>
+<span class="sd">        :returns: object of added layer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="nb">any</span><span class="p">([</span><span class="n">layer</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">layer_id</span> <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">update_catalog</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">,</span>
+            <span class="n">layers</span><span class="o">=</span><span class="n">layers</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">updated_catalog</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">get_catalog</span><span class="p">(</span><span class="n">catalog_details</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">updated_catalog</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="n">layer_id</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Catalog.add_layer">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.add_layer">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_layer</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">layer_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">summary</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">details</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Layer</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds a layer to the catalog and returns the object of the created layer.</span>
+
+<span class="sd">        :param id: ID of the layer to be added</span>
+<span class="sd">        :param layer_type: layer_type of the layer to be added</span>
+<span class="sd">        :param name: name of the layer to be added</span>
+<span class="sd">        :param summary: summary of the layer to be added</span>
+<span class="sd">        :param description: description of the layer to be added</span>
+<span class="sd">        :param content_type: content_type of the layer to be added</span>
+<span class="sd">        :param details: other details of the layer to be added</span>
+<span class="sd">        :return: the object of added layer</span>
+<span class="sd">        :raises CatalogConfigurationException: if the catalog already</span>
+<span class="sd">            contains a layer with ID :param:`id`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">details</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="n">details</span><span class="p">[</span><span class="s2">&quot;layerType&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">layer_type</span>
+        <span class="n">details</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">details</span><span class="p">[</span><span class="s2">&quot;summary&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">summary</span>
+        <span class="n">details</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span>
+        <span class="n">details</span><span class="p">[</span><span class="s2">&quot;contentType&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">content_type</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_layer</span><span class="p">(</span><span class="n">details</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]):</span>
+            <span class="k">raise</span> <span class="n">CatalogConfigurationException</span><span class="p">(</span>
+                <span class="s2">&quot;Layer </span><span class="si">{}</span><span class="s2"> already exists in catalog </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">details</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+        <span class="n">catalog_details</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">json</span>
+        <span class="n">layers</span> <span class="o">=</span> <span class="n">catalog_details</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">]</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">details</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_update_layer_in_catalog</span><span class="p">(</span><span class="n">catalog_details</span><span class="p">,</span> <span class="n">details</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="n">layers</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Catalog.update_layer">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.update_layer">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_layer</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">layer_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">summary</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">details</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Updates the layer with :param:`layer_id` with given layer details.</span>
+
+<span class="sd">        :param layer_id: ID of the layer to be updated</span>
+<span class="sd">        :param layer_type: layer_type of the layer to be updated</span>
+<span class="sd">        :param name: name of the layer to be updated</span>
+<span class="sd">        :param summary: summary of the layer to be updated</span>
+<span class="sd">        :param description: description of the layer to be updated</span>
+<span class="sd">        :param content_type: content_type of the layer to be updated</span>
+<span class="sd">        :param details: other details of the layer to be updated</span>
+<span class="sd">        :raises CatalogConfigurationException: if the catalog has no layer</span>
+<span class="sd">            with the given ID :param:`layer_id`</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">details</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="n">details</span><span class="p">[</span><span class="s2">&quot;layerType&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">layer_type</span>
+        <span class="n">details</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">details</span><span class="p">[</span><span class="s2">&quot;summary&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">summary</span>
+        <span class="n">details</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span>
+        <span class="n">details</span><span class="p">[</span><span class="s2">&quot;contentType&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">content_type</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_layer</span><span class="p">(</span><span class="n">layer_id</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">CatalogConfigurationException</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Layer </span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2"> does not exist in catalog </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>  <span class="c1"># noqa: E501, E713</span>
+            <span class="p">)</span>
+        <span class="n">catalog_details</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">json</span>
+        <span class="n">layers</span> <span class="o">=</span> <span class="n">catalog_details</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layers</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">layers</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">layer_id</span><span class="p">:</span>
+                <span class="n">details</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">layer_id</span>
+                <span class="n">layers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">details</span>
+                <span class="k">break</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_layer_in_catalog</span><span class="p">(</span><span class="n">catalog_details</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">,</span> <span class="n">layers</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Catalog.get_layer">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.get_layer">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Layer</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create and return a :class:`Layer` object for the given layer ID.</span>
+
+<span class="sd">        :param layer_id: layer ID</span>
+<span class="sd">        :return: the layer requested</span>
+<span class="sd">        :raises ValueError: Unknown layer id</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_catalog_config_loaded</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_layer_details</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">layer_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_layer_details</span><span class="p">:</span>
+            <span class="n">layer_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_layer_details</span><span class="p">[</span><span class="n">layer_id</span><span class="p">][</span><span class="s2">&quot;layerType&quot;</span><span class="p">]</span>
+            <span class="n">layer_type_lower</span> <span class="o">=</span> <span class="n">layer_type</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">layer_type_lower</span> <span class="o">==</span> <span class="n">LayerType</span><span class="o">.</span><span class="n">VERSIONED</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="k">return</span> <span class="n">VersionedLayer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer_id</span><span class="p">,</span> <span class="n">catalog</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">layer_type_lower</span> <span class="o">==</span> <span class="n">LayerType</span><span class="o">.</span><span class="n">VOLATILE</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="k">return</span> <span class="n">VolatileLayer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer_id</span><span class="p">,</span> <span class="n">catalog</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">layer_type_lower</span> <span class="o">==</span> <span class="n">LayerType</span><span class="o">.</span><span class="n">STREAM</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="k">return</span> <span class="n">StreamLayer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer_id</span><span class="p">,</span> <span class="n">catalog</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">layer_type_lower</span> <span class="o">==</span> <span class="n">LayerType</span><span class="o">.</span><span class="n">INDEX</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="k">return</span> <span class="n">IndexLayer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer_id</span><span class="p">,</span> <span class="n">catalog</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">layer_type_lower</span> <span class="o">==</span> <span class="n">LayerType</span><span class="o">.</span><span class="n">INTERACTIVEMAP</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="k">return</span> <span class="n">InteractiveMapLayer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer_id</span><span class="p">,</span> <span class="n">catalog</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">layer_type_lower</span> <span class="o">==</span> <span class="n">LayerType</span><span class="o">.</span><span class="n">OBJECTSTORE</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+                <span class="k">return</span> <span class="n">ObjectStoreLayer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer_id</span><span class="p">,</span> <span class="n">catalog</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">Layer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer_id</span><span class="p">,</span> <span class="n">catalog</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown layer id </span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Catalog.list_layers">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.list_layers">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_layers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Layer</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a list of all the layers present in the catalog.</span>
+
+<span class="sd">        :return: a list of layers</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ensure_catalog_config_loaded</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">_layer_details</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span> <span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_layer_details</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="Catalog.open_in_portal">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.open_in_portal">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">open_in_portal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Open the catalog page on the HERE platform portal.&quot;&quot;&quot;</span>
+        <span class="n">portal_url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">platform_config</span><span class="o">.</span><span class="n">portal_url</span>
+        <span class="k">if</span> <span class="n">portal_url</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;here_platform_portal_url is not present in configuration.&quot;</span><span class="p">)</span>
+        <span class="n">webbrowser</span><span class="o">.</span><span class="n">open_new</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">portal_url</span><span class="si">}</span><span class="s2">/data/</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Catalog.modify_layer">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.modify_layer">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">modify_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">details</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Modify the catalog layer details.</span>
+
+<span class="sd">        :param layer_id: the identifier of the layer</span>
+<span class="sd">        :param details: Details of the catalog to be modified</span>
+
+<span class="sd">        The documentation for the API endpoint used can be found here:</span>
+<span class="sd">        |update_layer|</span>
+
+<span class="sd">        .. |update_layer| raw:: html</span>
+
+<span class="sd">          &lt;a href=&quot;https://developer.here.com/documentation/data-api/api-reference-config.html&quot; target=&quot;_blank&quot;&gt;Update a catalog layer&lt;/a&gt;  # noqa E501</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">          &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">          &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">          &gt;&gt;&gt; catalog = platform.get_catalog(&quot;hrn:here:data::olp-here:example&quot;) # doctest: +SKIP</span>
+<span class="sd">          &gt;&gt;&gt; catalog.modify_layer(&#39;layer-id&#39;, name=&#39;updated-name&#39;, description=&#39;updated-description&#39;) # doctest: +SKIP</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">details</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_config_api</span><span class="o">.</span><span class="n">patch_layer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">,</span> <span class="n">layer_id</span><span class="o">=</span><span class="n">layer_id</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">details</span><span class="p">)</span>
+        <span class="n">status_response</span><span class="p">,</span> <span class="n">complete</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_config_api</span><span class="o">.</span><span class="n">get_catalog_status</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">])</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">complete</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;status polling wait </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">_polling_wait</span><span class="si">}</span><span class="s2"> sec.&quot;</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">_polling_wait</span><span class="p">)</span>
+            <span class="n">status_response</span><span class="p">,</span> <span class="n">complete</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_config_api</span><span class="o">.</span><span class="n">get_catalog_status</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">])</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Layer update for hrn: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="si">}</span><span class="s2"> finished successfully.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_invalidate_catalog_config</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Catalog.delete_layer">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.delete_layer">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Delete the catalog layer. Supported layer-types: volatile, stream, index.</span>
+
+<span class="sd">        :param layer_id: the identifier of the layer</span>
+<span class="sd">        :raises CatalogConfigurationException: in case the catalog configuration is not accepted</span>
+<span class="sd">        :raises LayerConfigurationException: in case the layer configuration is not accepted</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">          &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">          &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">          &gt;&gt;&gt; catalog = platform.get_catalog(&quot;hrn:here:data::olp-here:example&quot;) # doctest: +SKIP</span>
+<span class="sd">          &gt;&gt;&gt; catalog.delete_layer(&quot;layer-id&quot;) # doctest: +SKIP</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_config_api</span><span class="o">.</span><span class="n">delete_layer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">)</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;status polling wait </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">_polling_wait</span><span class="si">}</span><span class="s2"> sec.&quot;</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">platform</span><span class="o">.</span><span class="n">_polling_wait</span><span class="p">)</span>
+            <span class="n">status_response</span><span class="p">,</span> <span class="n">complete</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_config_api</span><span class="o">.</span><span class="n">get_catalog_status</span><span class="p">(</span>
+                <span class="n">response</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="s2">&quot;status&quot;</span> <span class="ow">in</span> <span class="n">status_response</span> <span class="ow">and</span> <span class="n">status_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;pending&quot;</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="s2">&quot;status&quot;</span> <span class="ow">in</span> <span class="n">status_response</span> <span class="ow">and</span> <span class="n">status_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;failure&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">CatalogConfigurationException</span><span class="p">(</span><span class="n">status_response</span><span class="p">)</span>
+            <span class="k">if</span> <span class="s2">&quot;layers&quot;</span> <span class="ow">in</span> <span class="n">status_response</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">status_response</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">]:</span>
+                    <span class="k">if</span> <span class="n">layer</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">layer_id</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="n">LayerConfigurationException</span><span class="p">(</span><span class="n">status_response</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">if</span> <span class="n">complete</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">LayerConfigurationException</span><span class="p">(</span><span class="s2">&quot;Completed without layers response.&quot;</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Layer deletion for hrn: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="si">}</span><span class="s2"> finished successfully.&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_invalidate_catalog_config</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Catalog.init_publication">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.init_publication">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">init_publication</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layers</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">List</span><span class="p">[</span><span class="n">Layer</span><span class="p">]],</span>
+        <span class="n">dependencies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">VersionDependency</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[],</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Publication</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize a new publication, indicating which layers will be affected.</span>
+
+<span class="sd">        Pass the returned ``Publication`` to the functions that write to the layers.</span>
+<span class="sd">        Call `Publication.complete()` to complete the work.</span>
+
+<span class="sd">        Dependencies with other catalogs and relative versions can be published together with</span>
+<span class="sd">        the data. Submitting a new publication that affects one or more versioned layer</span>
+<span class="sd">        determines the creation of a new catalog version with the dependencies specified.</span>
+
+<span class="sd">        :param layers: which layers are affected by the publication</span>
+<span class="sd">        :param dependencies: list of dependencies to be use in case a new version is created</span>
+<span class="sd">        :return: a new publication valid for the layers specified  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">layers_list</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">]</span>
+        <span class="n">publication</span> <span class="o">=</span> <span class="n">Publication</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layers</span><span class="o">=</span><span class="n">layers_list</span><span class="p">,</span> <span class="n">dependencies</span><span class="o">=</span><span class="n">dependencies</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">publication</span></div>
+
+
+<div class="viewcode-block" id="Catalog.retrieve_publication">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.retrieve_publication">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">retrieve_publication</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">publication_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Publication</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieves an existing publication based on its ID.</span>
+
+<span class="sd">        :param publication_id: the ID for an already active publication.</span>
+<span class="sd">        :return: a publication for the ID.</span>
+<span class="sd">        :raises ValueError: the publication isn&#39;t in an initialized (or open) state or a layer from</span>
+<span class="sd">          the publication isn&#39;t present in the current catalog.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">publication_details</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_publish_api</span><span class="o">.</span><span class="n">get_publication</span><span class="p">(</span>
+            <span class="n">publication_id</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+        <span class="p">)</span>
+        <span class="n">state</span> <span class="o">=</span> <span class="n">PublicationState</span><span class="p">(</span><span class="n">publication_details</span><span class="p">[</span><span class="s2">&quot;details&quot;</span><span class="p">][</span><span class="s2">&quot;state&quot;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">state</span> <span class="o">!=</span> <span class="n">PublicationState</span><span class="o">.</span><span class="n">INITIALIZED</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Publication ID </span><span class="si">{</span><span class="n">publication_id</span><span class="si">}</span><span class="s2"> has an invalid state: </span><span class="si">{</span><span class="n">state</span><span class="o">.</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">layer_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">publication_details</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;layerIds&quot;</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="n">layer_id</span><span class="p">)</span> <span class="k">for</span> <span class="n">layer_id</span> <span class="ow">in</span> <span class="n">layer_ids</span><span class="p">]</span>
+
+        <span class="n">version_dependencies</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="n">publication_details</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+            <span class="s2">&quot;versionDependencies&quot;</span><span class="p">,</span> <span class="p">[]</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">version_dependencies</span><span class="p">:</span>
+            <span class="n">dependencies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">VersionDependency</span><span class="p">]]</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">VersionDependency</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">depend</span><span class="p">)</span> <span class="k">for</span> <span class="n">depend</span> <span class="ow">in</span> <span class="n">version_dependencies</span>
+            <span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dependencies</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="n">catalog_version</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">publication_details</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;catalogVersion&quot;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">Publication</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">,</span> <span class="p">(</span><span class="n">publication_id</span><span class="p">,</span> <span class="n">catalog_version</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Catalog.write_versioned_layers">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.write_versioned_layers">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write_versioned_layers</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layers_write_info</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]]],</span>
+        <span class="n">version_dependencies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">VersionDependency</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">encode</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">adapter</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Adapter</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Write data to versioned layers of a catalog, creating one single new version.</span>
+
+<span class="sd">        Data for each layer must be encoded according to the content type configured for the layer.</span>
+
+<span class="sd">        :param layers_write_info: a nested dict containing layer_ids, partition_ids and</span>
+<span class="sd">          encoded data in the form of bytes or file names or paths which will be uploaded</span>
+<span class="sd">        :param version_dependencies: A list of version dependencies</span>
+<span class="sd">        :param encode: whether to encode the data or upload raw bytes</span>
+<span class="sd">        :param adapter: the ``Adapter`` to transform the input data.</span>
+<span class="sd">          ``None`` to use the default adapter of the catalog.</span>
+<span class="sd">        :raises ValueError: in case one the layers specified is of the wrong type</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">layer_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">layers_write_info</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="n">publication</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">init_publication</span><span class="p">(</span>
+            <span class="n">layers</span><span class="o">=</span><span class="n">layer_ids</span><span class="p">,</span>
+            <span class="n">dependencies</span><span class="o">=</span><span class="n">version_dependencies</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">layer_id</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">layers_write_info</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer_id</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">VersionedLayer</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Layer </span><span class="si">{</span><span class="n">layer</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2"> is not a versioned layer&quot;</span><span class="p">)</span>
+            <span class="n">layer</span><span class="o">.</span><span class="n">write_partitions</span><span class="p">(</span>
+                <span class="n">publication</span><span class="o">=</span><span class="n">publication</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">encode</span><span class="o">=</span><span class="n">encode</span><span class="p">,</span> <span class="n">adapter</span><span class="o">=</span><span class="n">adapter</span>
+            <span class="p">)</span>
+        <span class="n">publication</span><span class="o">.</span><span class="n">complete</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Catalog.write_stream_layers">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.write_stream_layers">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write_stream_layers</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layers_write_info</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]]],</span>
+        <span class="n">timestamp</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">encode</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">inline_data_limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">819200</span><span class="p">,</span>
+        <span class="n">adapter</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Adapter</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Write data to stream layers of a catalog.</span>
+
+<span class="sd">        Data for each layer must be encoded according to the content type configured for the layer.</span>
+
+<span class="sd">        :param layers_write_info: a nested dict containing layer_ids, partition_ids and</span>
+<span class="sd">            encoded data in the form of bytes or file names or paths which will be uploaded.</span>
+<span class="sd">        :param timestamp: optional timestamp for all the messages:</span>
+<span class="sd">            in milliseconds since Unix epoch (1970-01-01T00:00:00 UTC)</span>
+<span class="sd">        :param inline_data_limit: threshold data size in bytes to decide if</span>
+<span class="sd">            inline stream data field should be populated, if data size</span>
+<span class="sd">            is less than the inline_data_limit then the data would</span>
+<span class="sd">            be added to StreamPartition.data field or else blob would</span>
+<span class="sd">            be uploaded and its data_handle will be added to</span>
+<span class="sd">            StreamPartition.data_handle field.</span>
+<span class="sd">            Default is 819200 bytes.</span>
+<span class="sd">        :param encode: whether to encode the data or upload raw bytes</span>
+<span class="sd">        :param adapter: the ``Adapter`` to transform the input data.</span>
+<span class="sd">          ``None`` to use the default adapter of the catalog.</span>
+<span class="sd">        :raises ValueError: in case one the layers specified is of the wrong type</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># publication is not needed anymore for writing stream layer</span>
+        <span class="c1"># publication = self.init_publication(layers=layer_ids)</span>
+        <span class="k">for</span> <span class="n">layer_id</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">layers_write_info</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer_id</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">StreamLayer</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Layer </span><span class="si">{</span><span class="n">layer</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2"> is not a stream layer&quot;</span><span class="p">)</span>
+            <span class="n">layer</span><span class="o">.</span><span class="n">write_stream</span><span class="p">(</span>
+                <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+                <span class="n">encode</span><span class="o">=</span><span class="n">encode</span><span class="p">,</span>
+                <span class="n">timestamp</span><span class="o">=</span><span class="n">timestamp</span><span class="p">,</span>
+                <span class="n">inline_data_limit</span><span class="o">=</span><span class="n">inline_data_limit</span><span class="p">,</span>
+                <span class="n">adapter</span><span class="o">=</span><span class="n">adapter</span><span class="p">,</span>
+            <span class="p">)</span></div>
+
+        <span class="c1"># publication.complete()</span>
+
+<div class="viewcode-block" id="Catalog.write_volatile_layers">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.write_volatile_layers">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write_volatile_layers</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layers_write_info</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]]],</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Write data to volatile layers of a catalog.</span>
+
+<span class="sd">        Data for each layer must be encoded according to the content type configured for the layer.</span>
+
+<span class="sd">        :param layers_write_info: a nested dict containing layer_ids, partition_ids and</span>
+<span class="sd">          encoded data in the form of bytes or file names or paths which will be uploaded.</span>
+<span class="sd">        :raises ValueError: in case one the layers specified is of the wrong type</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">layer_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">layers_write_info</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="n">publication</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">init_publication</span><span class="p">(</span><span class="n">layers</span><span class="o">=</span><span class="n">layer_ids</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">layer_id</span><span class="p">,</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">layers_write_info</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer_id</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">VolatileLayer</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Layer </span><span class="si">{</span><span class="n">layer</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2"> is not a volatile layer&quot;</span><span class="p">)</span>
+            <span class="n">layer</span><span class="o">.</span><span class="n">write_partitions</span><span class="p">(</span><span class="n">publication</span><span class="o">=</span><span class="n">publication</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">encode</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">publication</span><span class="o">.</span><span class="n">complete</span><span class="p">()</span></div>
+
+
+<div class="viewcode-block" id="Catalog.ingest_sdii">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.ingest_sdii">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ingest_sdii</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">partition_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span>
+        <span class="n">path_or_data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">],</span>
+        <span class="n">checksum</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">trace_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">StreamIngestion</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Ingest sensor data in SDII format in a stream layer.</span>
+
+<span class="sd">        :param layer_id: the id of the stream layer</span>
+<span class="sd">        :param partition_id: A unique id to specify the partition</span>
+<span class="sd">        :param path_or_data: Data to be uploaded in the partition. It must be less than 20 MB</span>
+<span class="sd">        :param checksum: A base64 encoded SHA-256 hash of the data</span>
+<span class="sd">        :param trace_id: A unique id to track your request and identify the message in a catalog</span>
+<span class="sd">        :returns: Trace and message IDs returned by the service</span>
+<span class="sd">        :raises ValueError: Data size is greater than the permissible limit of 20 MB</span>
+
+<span class="sd">        Example::</span>
+
+<span class="sd">        &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">        &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">        &gt;&gt;&gt; catalog = platform.get_catalog(&quot;catalog_hrn&quot;) # doctest: +SKIP</span>
+<span class="sd">        &gt;&gt;&gt; layer_id = &quot;layer_id&quot; # doctest: ´+SKIP</span>
+<span class="sd">        &gt;&gt;&gt; partition_id = &quot;partition_id&quot; # doctest: +SKIP</span>
+<span class="sd">        &gt;&gt;&gt; data = b&#39;Some valid data in SDII format&#39; # doctest: +SKIP</span>
+<span class="sd">        &gt;&gt;&gt; catalog.ingest_sdii(layer_id, partition_id, data) # doctest: +SKIP</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">path_or_data</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
+            <span class="n">data_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">path_or_data</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">Path</span><span class="p">(</span><span class="n">path_or_data</span><span class="p">)</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File: </span><span class="si">{</span><span class="n">path_or_data</span><span class="si">}</span><span class="s2"> does not exist.&quot;</span><span class="p">)</span>
+
+            <span class="n">data_size</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getsize</span><span class="p">(</span><span class="n">path_or_data</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">data_size</span> <span class="o">&gt;</span> <span class="mi">20</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;ingest_sdii function supports writing SDII data to&quot;</span>
+                <span class="s2">&quot; stream layer up to 20 MB. For larger data sets, use&quot;</span>
+                <span class="s2">&quot; write_stream_layer functionality.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">partition_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">partition_id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">path_or_data</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">path_or_data</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">with</span> <span class="n">Partition</span><span class="o">.</span><span class="n">get_data_handler</span><span class="p">(</span><span class="n">path_or_data</span><span class="p">)</span> <span class="k">as</span> <span class="n">data_handler</span><span class="p">:</span>
+                <span class="n">data</span> <span class="o">=</span> <span class="n">data_handler</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data_ingest_api</span><span class="o">.</span><span class="n">ingest_sdii</span><span class="p">(</span>
+            <span class="n">layer_id</span><span class="o">=</span><span class="n">layer_id</span><span class="p">,</span>
+            <span class="n">body</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+            <span class="n">checksum_header</span><span class="o">=</span><span class="n">checksum</span><span class="p">,</span>
+            <span class="n">traceid_header</span><span class="o">=</span><span class="n">trace_id</span><span class="p">,</span>
+            <span class="n">message_key_header</span><span class="o">=</span><span class="n">partition_id</span><span class="p">,</span>
+            <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">StreamIngestion</span><span class="p">(</span><span class="n">response</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Catalog.write_index_layer">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.write_index_layer">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write_index_layer</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Layer</span><span class="p">],</span>
+        <span class="n">path_or_data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Path</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">,</span> <span class="s2">&quot;pd.DataFrame&quot;</span><span class="p">],</span>
+        <span class="n">timestamp</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">fields</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{},</span>
+        <span class="n">additional_metadata</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">{},</span>
+        <span class="n">encode</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">adapter</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Adapter</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Write data to an index layer.</span>
+
+<span class="sd">        :param layer: the layer or ID of the layer</span>
+<span class="sd">        :param path_or_data: a file name or path or bytes with encoded content.</span>
+<span class="sd">          Alternatively, DataFrame is supported only for layers with content-type</span>
+<span class="sd">          application/x-parquet when using a ``GeoPandasAdapter``.</span>
+<span class="sd">        :param timestamp: timestamp</span>
+<span class="sd">        :param fields: a dict representing the fields of index record for data being uploaded</span>
+<span class="sd">        :param additional_metadata: a dict of additional metadata about data being uploaded</span>
+<span class="sd">        :param encode: whether to encode the data through an adapter or store raw bytes</span>
+<span class="sd">        :param adapter: the ``Adapter`` to transform the input data.</span>
+<span class="sd">          ``None`` to use the default adapter of the catalog.</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :raises ValueError: in case the specified layer is of the wrong type</span>
+
+<span class="sd">        Example::</span>
+
+<span class="sd">        &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">        &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">        &gt;&gt;&gt; catalog = platform.get_catalog(hrn=&quot;hrn:here:data::olp-here:write-function-test&quot;)</span>
+<span class="sd">        &gt;&gt;&gt; layer_id = &quot;sample_index_layer&quot;</span>
+<span class="sd">        &gt;&gt;&gt; file_path = &quot;~/sample_data.parquet&quot;</span>
+<span class="sd">        &gt;&gt;&gt; fields = {&quot;ingestionTime&quot;: 1114, &quot;partition_id&quot;: 343433}</span>
+<span class="sd">        &gt;&gt;&gt; catalog.write_index_layer(layer_id, path_or_data=file_path, # doctest: +SKIP</span>
+<span class="sd">        &gt;&gt;&gt;                           fields=fields, encode=False) # doctest: +SKIP</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">layer</span> <span class="o">=</span> <span class="n">layer</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">Layer</span><span class="p">)</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">IndexLayer</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Layer </span><span class="si">{</span><span class="n">layer</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2"> is not an index layer&quot;</span><span class="p">)</span>
+
+        <span class="n">layer</span><span class="o">.</span><span class="n">write_single_partition</span><span class="p">(</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">path_or_data</span><span class="p">,</span>
+            <span class="n">timestamp</span><span class="o">=</span><span class="n">timestamp</span><span class="p">,</span>
+            <span class="n">fields</span><span class="o">=</span><span class="n">fields</span><span class="p">,</span>
+            <span class="n">additional_metadata</span><span class="o">=</span><span class="n">additional_metadata</span><span class="p">,</span>
+            <span class="n">encode</span><span class="o">=</span><span class="n">encode</span><span class="p">,</span>
+            <span class="n">adapter</span><span class="o">=</span><span class="n">adapter</span><span class="p">,</span>
+            <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Catalog.grant_access">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.grant_access">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">grant_access</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entity_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">entity_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">action</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Grants access to a catalog to an entity.</span>
+
+<span class="sd">        :param entity_type: Type of entity app, user or group.</span>
+<span class="sd">        :param entity_id: a unique identifier for the given entity type.</span>
+<span class="sd">        :param action: an action type to grant access - read, write, manage.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_aaa_auth_api</span><span class="o">.</span><span class="n">add_grant</span><span class="p">(</span>
+            <span class="n">resource_hrn</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">,</span>
+            <span class="n">entity_id</span><span class="o">=</span><span class="n">entity_id</span><span class="p">,</span>
+            <span class="n">entity_type</span><span class="o">=</span><span class="n">entity_type</span><span class="p">,</span>
+            <span class="n">action_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">action</span><span class="si">}</span><span class="s2">Resource&quot;</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Catalog.revoke_access">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.revoke_access">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">revoke_access</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entity_type</span><span class="p">,</span> <span class="n">entity_id</span><span class="p">,</span> <span class="n">action</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Revokes access to a catalog from an entity.</span>
+
+<span class="sd">        :param entity_type: Type of entity app, user or group.</span>
+<span class="sd">        :param entity_id: a unique identifier for the given entity type.</span>
+<span class="sd">        :param action: an action type to grant access - read, write, manage.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_aaa_auth_api</span><span class="o">.</span><span class="n">remove_grant</span><span class="p">(</span>
+            <span class="n">resource_hrn</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">,</span>
+            <span class="n">entity_id</span><span class="o">=</span><span class="n">entity_id</span><span class="p">,</span>
+            <span class="n">entity_type</span><span class="o">=</span><span class="n">entity_type</span><span class="p">,</span>
+            <span class="n">action_id</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">action</span><span class="si">}</span><span class="s2">Resource&quot;</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Catalog.share">
+<a class="viewcode-back" href="../../../here.platform.catalog.html#here.platform.catalog.Catalog.share">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">share</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entity_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">entity_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Share a catalog with an entity.</span>
+
+<span class="sd">        :param entity_type: Type of entity app, user or a group.</span>
+<span class="sd">        :param entity_id: a unique identifier for the given entity type.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_aaa_auth_api</span><span class="o">.</span><span class="n">share_authorization</span><span class="p">(</span>
+            <span class="n">resource_hrn</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">hrn</span><span class="p">,</span> <span class="n">entity_type</span><span class="o">=</span><span class="n">entity_type</span><span class="p">,</span> <span class="n">entity_id</span><span class="o">=</span><span class="n">entity_id</span>
+        <span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

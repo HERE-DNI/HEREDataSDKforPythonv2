@@ -1,0 +1,7 @@
+here.platform.exceptions module
+===============================
+
+.. automodule:: here.platform.exceptions
+   :members:
+   :undoc-members:
+   :show-inheritance:

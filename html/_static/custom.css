@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap');
+
+:root{
+    --pst-font-family-base-system: 'FiraGO', Tahoma, 'Calibri', Helvetica, Arial, sans-serif;
+    --pst-font-family-monospace-system: 'Fira Mono', monospace;
+
+    /*****************************************************************************
+    * Colors are defined in rgb string way, "red, green, blue"
+    **/
+    --pst-color-primary: 15,22,33;
+    --pst-color-success: 0, 189, 125;
+    --pst-color-info: 0, 91, 129;
+    --pst-color-warning: 255, 189, 9;
+    --pst-color-danger:207, 0, 26, 1;
+    --pst-color-text-base: 15,22,33;
+
+    --pst-color-link: 61, 115, 208;
+    --pst-color-link-hover: 15,22,33;
+    --pst-color-active-navigation: 15,22,33;
+}
+
+code {
+    font-family: 'FiraGO', Tahoma, 'Calibri', Helvetica, Arial, sans-serif;
+    color: rgba(8, 168, 164, 1);
+    background-color:#eef0f1;
+    font-weight: 400;
+    font-size: 100%;
+  }
+
+.navbar-brand::after{
+    font-family: 'FiraGO', Tahoma, 'Calibri', Helvetica, Arial, sans-serif;
+    content: " Data SDK for Python";
+    font-weight: 600;
+    font-size:medium;
+    color: rgba(15, 22, 33, 0.8);
+  }
+
+.highlight{
+    font-weight: 400;
+    font-size: normal;
+  }
+

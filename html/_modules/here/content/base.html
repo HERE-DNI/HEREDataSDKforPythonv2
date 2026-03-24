@@ -1,0 +1,950 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.content.base &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/content/base';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.content.base</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.content.base</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2021-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Support classes common to all the bindings.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">abc</span><span class="w"> </span><span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span><span class="p">,</span> <span class="n">field</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">lru_cache</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.protobuf.message</span><span class="w"> </span><span class="kn">import</span> <span class="n">Message</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.content.content</span><span class="w"> </span><span class="kn">import</span> <span class="n">Content</span> <span class="k">as</span> <span class="n">ParentContent</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.content.content</span><span class="w"> </span><span class="kn">import</span> <span class="n">ContentBinding</span> <span class="k">as</span> <span class="n">ParentContentBinding</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.adapter</span><span class="w"> </span><span class="kn">import</span> <span class="n">Adapter</span><span class="p">,</span> <span class="n">ContentAdapter</span><span class="p">,</span> <span class="n">Identifier</span><span class="p">,</span> <span class="n">Partition</span><span class="p">,</span> <span class="n">Ref</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.layer</span><span class="w"> </span><span class="kn">import</span> <span class="n">LayerType</span>
+
+<span class="n">_CACHE_SIZE</span> <span class="o">=</span> <span class="mi">25</span>  <span class="c1"># on average, roughly equivalent to an area of 5x5 tiles</span>
+
+
+<div class="viewcode-block" id="ContentIndexer">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.ContentIndexer">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ContentIndexer</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Used to inspect and index content objects.</span>
+
+<span class="sd">    Each field describes how to extract index entries from an object.</span>
+<span class="sd">    Each content class must have one ``indexer`` of this type, as static parameter.</span>
+
+<span class="sd">    - ``None``: not indexable</span>
+<span class="sd">    - ``str``: get the value from a dataclass field with the corresponding name</span>
+<span class="sd">    - ``Callable``: get the value through a function, passing the object as parameter</span>
+
+<span class="sd">    ``refs`` is a mapping because more than one reference type can be defined per class.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Partition</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">identifier</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Identifier</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">refs</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Ref</span><span class="p">]]]]]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span>
+        <span class="n">default_factory</span><span class="o">=</span><span class="nb">dict</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="ContentPartition">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.ContentPartition">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ContentPartition</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Class to store, index and lookup objects from a parsed partition.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binding_cls</span><span class="p">:</span> <span class="n">Type</span><span class="p">[</span><span class="s2">&quot;ContentBinding&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">objects</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">object</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the content of a parsed partition by inserting and indexing</span>
+<span class="sd">        different types of object. This is supposed to be called by ``parse_and_index``</span>
+<span class="sd">        functions of content bindings, after parsing the content.</span>
+
+<span class="sd">        Object types must match the ones declared in ``object_types`` in the bindings.</span>
+<span class="sd">        Objects are automatically index according to the ``indexer`` specified</span>
+<span class="sd">        in ``object_types``, for each object type.</span>
+
+<span class="sd">        :param binding_cls: the class of the content bindings</span>
+<span class="sd">        :param objects: for each object type, a sequence of objects</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Regarding binding_cls parameter:</span>
+        <span class="c1"># https://stackoverflow.com/questions/70624956/whats-the-type-of-cls-introduced-by-classmethod</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span> <span class="o">=</span> <span class="n">binding_cls</span><span class="o">.</span><span class="n">object_types</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ref_types</span> <span class="o">=</span> <span class="n">binding_cls</span><span class="o">.</span><span class="n">ref_types</span><span class="p">()</span>
+
+        <span class="c1"># To handle MultiLayer Bindings object types where primary layer data (Message) needs to</span>
+        <span class="c1"># parsed_and_indexed before and then further associate with secondary dependent layers.</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">binding_cls</span><span class="p">,</span> <span class="s2">&quot;_internal_object_types&quot;</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span><span class="p">,</span> <span class="o">**</span><span class="n">binding_cls</span><span class="o">.</span><span class="n">_internal_object_types</span><span class="p">()}</span>  <span class="c1"># type: ignore # noqa: E501</span>
+
+        <span class="c1"># The objects, untouched</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_objects</span> <span class="o">=</span> <span class="n">objects</span>
+
+        <span class="c1"># Automatic object indexing</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">create_indexes_for_type</span><span class="p">(</span>
+            <span class="n">indexer</span><span class="p">:</span> <span class="n">ContentIndexer</span><span class="p">,</span> <span class="n">obj_list</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">object</span><span class="p">]</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">object</span><span class="p">],</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">object</span><span class="p">]]]]:</span>
+            <span class="n">by_id</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">by_refs</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">object</span><span class="p">]]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span>
+                <span class="k">lambda</span><span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">obj_list</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">indexer</span><span class="o">.</span><span class="n">identifier</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="n">obj_id</span> <span class="o">=</span> <span class="n">ContentAdapter</span><span class="o">.</span><span class="n">_extract_identifier</span><span class="p">(</span><span class="n">indexer</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+                    <span class="n">by_id</span><span class="p">[</span><span class="n">obj_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+                <span class="k">if</span> <span class="n">indexer</span><span class="o">.</span><span class="n">refs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">ref_type</span><span class="p">,</span> <span class="n">index_ref</span> <span class="ow">in</span> <span class="n">indexer</span><span class="o">.</span><span class="n">refs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                        <span class="k">for</span> <span class="n">ref</span> <span class="ow">in</span> <span class="n">ContentAdapter</span><span class="o">.</span><span class="n">_extract_refs</span><span class="p">(</span><span class="n">index_ref</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+                            <span class="n">by_refs</span><span class="p">[</span><span class="n">ref_type</span><span class="p">][</span><span class="n">ref</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">by_id</span><span class="p">,</span> <span class="n">by_refs</span>
+
+        <span class="n">indexers</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">ContentIndexer</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">s</span><span class="p">:</span> <span class="n">t</span><span class="o">.</span><span class="n">indexer</span> <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>  <span class="c1"># type: ignore</span>
+        <span class="p">}</span>
+        <span class="n">indexes_by_obj_type</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span>
+            <span class="nb">str</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">object</span><span class="p">],</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">object</span><span class="p">]]]]</span>
+        <span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">obj_type</span><span class="p">:</span> <span class="n">create_indexes_for_type</span><span class="p">(</span><span class="n">indexers</span><span class="p">[</span><span class="n">obj_type</span><span class="p">],</span> <span class="n">obj_list</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">obj_type</span><span class="p">,</span> <span class="n">obj_list</span> <span class="ow">in</span> <span class="n">objects</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">obj_type</span> <span class="ow">in</span> <span class="n">indexers</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_indexes</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">object</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">obj_type</span><span class="p">:</span> <span class="n">index_by_id</span>
+            <span class="k">for</span> <span class="n">obj_type</span><span class="p">,</span> <span class="p">(</span><span class="n">index_by_id</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="ow">in</span> <span class="n">indexes_by_obj_type</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">index_by_id</span>
+        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ref_indexes</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">object</span><span class="p">]]]]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="n">obj_type</span><span class="p">:</span> <span class="n">index_by_refs</span>
+            <span class="k">for</span> <span class="n">obj_type</span><span class="p">,</span> <span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">index_by_refs</span><span class="p">)</span> <span class="ow">in</span> <span class="n">indexes_by_obj_type</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">index_by_refs</span>
+        <span class="p">}</span>
+
+<div class="viewcode-block" id="ContentPartition.objects">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.ContentPartition.objects">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">objects</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">object</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List all the objects contained in the content partition.</span>
+<span class="sd">        Objects are returned in no special order and without duplicates.</span>
+
+<span class="sd">        :param obj_type: type of the object to list</span>
+<span class="sd">        :return: a collection of objects</span>
+<span class="sd">        :raises ValueError: in case of unsupported object type</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">obj_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported object type &#39;</span><span class="si">{</span><span class="n">obj_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">obj_type</span><span class="p">,</span> <span class="p">[])</span></div>
+
+
+<div class="viewcode-block" id="ContentPartition.index">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.ContentPartition.index">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">object</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Index all the objects contained in the content partition by their identifier.</span>
+<span class="sd">        This con be considered a primary index of the content.</span>
+
+<span class="sd">        :param obj_type: type of the object to index</span>
+<span class="sd">        :return: a collection of objects, indexed by their identifier</span>
+<span class="sd">        :raises ValueError: in case of unsupported object type</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">obj_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported object type &#39;</span><span class="si">{</span><span class="n">obj_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indexes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">obj_type</span><span class="p">,</span> <span class="p">{})</span></div>
+
+
+<div class="viewcode-block" id="ContentPartition.ref_index">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.ContentPartition.ref_index">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ref_index</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">ref_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">object</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Index all the objects contained in the content partition by their references</span>
+<span class="sd">        to other objects, in the same partition or in another partition.</span>
+<span class="sd">        This con be considered a secondary index of the content.</span>
+
+<span class="sd">        :param obj_type: type of the object to index</span>
+<span class="sd">        :param ref_type: type of the reference to index</span>
+<span class="sd">        :return: a collection of objects, indexed by their external references</span>
+<span class="sd">        :raises ValueError: in case of unsupported object or reference type</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">obj_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported object type &#39;</span><span class="si">{</span><span class="n">obj_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">ref_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ref_types</span><span class="p">[</span><span class="n">obj_type</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Unsupported reference type &#39;</span><span class="si">{</span><span class="n">ref_type</span><span class="si">}</span><span class="s2">&#39; for object type &#39;</span><span class="si">{</span><span class="n">obj_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ref_indexes</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">obj_type</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ref_type</span><span class="p">,</span> <span class="p">{})</span></div>
+</div>
+
+
+
+<span class="c1"># The following and other classes in base.py can become the base classes among many more</span>
+<span class="c1"># content bindings, in addition to the new HMC bindings, like HDLM, traffic, weather, ...</span>
+<span class="c1"># In this case, ParentContent and ParentContentBinding from the parent package</span>
+<span class="c1"># will then collapse to this ContentBinding, removing the duplication</span>
+
+
+<div class="viewcode-block" id="ContentBinding">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.ContentBinding">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">ContentBinding</span><span class="p">(</span><span class="n">ParentContentBinding</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The entry point for developers.</span>
+
+<span class="sd">    This is the base class for all the bindings: this class represents the main</span>
+<span class="sd">    developer-facing API to obtain data form bindings and is common across all the bindings.</span>
+
+<span class="sd">    Bindings exposes objects.</span>
+
+<span class="sd">    Features are objects indexed by their partition and identifier.</span>
+<span class="sd">    Identifiers cannot be duplicate in the same partition.</span>
+
+<span class="sd">    Attributes are objects indexed by the feature they apply to.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="n">ParentContent</span><span class="p">,</span> <span class="n">adapter</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Adapter</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Instantiate an instance of content binding.</span>
+
+<span class="sd">        :param content: Content object that references a catalog at a fixed version</span>
+<span class="sd">        :param adapter: the ``Adapter`` to transform data between different representations,</span>
+<span class="sd">            ``None`` to use the adapter defined in ``content``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">adapter</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_catalog</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">_catalog</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_schema_hrn</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">schema_hrn</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span><span class="p">:</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">object_types</span><span class="p">()</span>
+
+<div class="viewcode-block" id="ContentBinding.schema_hrn">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.ContentBinding.schema_hrn">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">schema_hrn</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: the HRN of schemas this binding can parse and index</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="ContentBinding.object_types">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.ContentBinding.object_types">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">object_types</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">type</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: the name and types of objects supported by this binding</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="ContentBinding.ref_types">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.ContentBinding.ref_types">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ref_types</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Mapping</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: the reference types supported by each object type of this binding</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">type_name</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">object_type</span><span class="p">,</span> <span class="s2">&quot;indexer&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">refs</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+            <span class="k">for</span> <span class="n">type_name</span><span class="p">,</span> <span class="n">object_type</span> <span class="ow">in</span> <span class="bp">cls</span><span class="o">.</span><span class="n">object_types</span><span class="p">()</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="p">}</span></div>
+
+
+<div class="viewcode-block" id="ContentBinding.get">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.ContentBinding.get">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]],</span>
+        <span class="n">object_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">identifier</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a selected or all the objects of a specific type from the content.</span>
+
+<span class="sd">        :param partition: the partition(s) where the objects are stored</span>
+<span class="sd">        :param object_type: the type of the objects</span>
+<span class="sd">        :param identifier: the identifier of the object, in case of looking up one specific object</span>
+<span class="sd">        :return: one or all the objects of the requested type contained in the requested</span>
+<span class="sd">            partition(s), format is adapter-dependent</span>
+<span class="sd">        :raises ValueError: if the requested object type is not supported</span>
+<span class="sd">        :raises KeyError: if a specific object is requested but it cannot be found</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+<div class="viewcode-block" id="ContentBinding.get_ref">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.ContentBinding.get_ref">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_ref</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">object_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">ref</span><span class="p">:</span> <span class="n">Ref</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a selected object of a specific type from the content via a direct reference to it.</span>
+
+<span class="sd">        :param object_type: the type of the objects</span>
+<span class="sd">        :param ref: reference to a partition and object</span>
+<span class="sd">        :return: the object of the requested type referenced by ``ref``, that in turn</span>
+<span class="sd">            specifies partition and object identifier, format is adapter-dependent</span>
+<span class="sd">        :raises ValueError: if the requested object type is not supported  # noqa: DAR402</span>
+<span class="sd">        :raises KeyError: if the requested object cannot be found  # noqa: DAR402</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">ref</span><span class="o">.</span><span class="n">partition</span><span class="p">,</span> <span class="n">object_type</span><span class="p">,</span> <span class="n">ref</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ContentBinding.get_referencing">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.ContentBinding.get_referencing">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_referencing</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]],</span>
+        <span class="n">object_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">ref_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">referenced_obj</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get objects of a specific type that reference other objects of the content.</span>
+
+<span class="sd">        :param partition: the partition(s) where the objects are stored</span>
+<span class="sd">        :param object_type: the type of the objects</span>
+<span class="sd">        :param ref_type: the type of the reference, among the ones supported by the object type</span>
+<span class="sd">        :param referenced_obj: return only object referencing this specific partition and object</span>
+<span class="sd">        :return: objects containing the requested reference, format is adapter-dependent</span>
+<span class="sd">        :raises ValueError: if the requested object or reference type is not supported</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+</div>
+
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">_ContentBindingImpl</span><span class="p">(</span><span class="n">ContentBinding</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Common functions needed by each binding, common implementation, and technical interface.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_verify_object_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">object_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">object_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported object type &#39;</span><span class="si">{</span><span class="n">object_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_partitions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]])</span> <span class="o">-&gt;</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">partition</span><span class="p">)]</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">partition</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span> <span class="k">else</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">partition</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_indexer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">object_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ContentIndexer</span><span class="p">:</span>
+        <span class="c1"># We assume every type has an indexer as property</span>
+        <span class="n">indexer</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span><span class="p">[</span><span class="n">object_type</span><span class="p">],</span> <span class="s2">&quot;indexer&quot;</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">indexer</span><span class="p">,</span> <span class="n">ContentIndexer</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">indexer</span>
+
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ContentPartition</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Main method for the implementation of the binding. Get, decode, parse and index content</span>
+<span class="sd">        of a partition. Return ``None`` if no content is available for the partition.</span>
+
+<span class="sd">        The result is cached by where the method is called.</span>
+
+<span class="sd">        :param partition_id: identifier of the partition</span>
+<span class="sd">        :return: content of the partition parsed and indexed</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]],</span>
+        <span class="n">object_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">identifier</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a selected or all the objects of a specific type from the content.</span>
+
+<span class="sd">        :param partition: the partition(s) where the objects are stored</span>
+<span class="sd">        :param object_type: the type of the objects</span>
+<span class="sd">        :param identifier: the identifier of the object, in case of looking up one specific object</span>
+<span class="sd">        :return: one or all the objects of the requested type contained in the requested</span>
+<span class="sd">            partition(s), format is adapter-dependent</span>
+<span class="sd">        :raises ValueError: if the requested object type is not supported</span>
+<span class="sd">        :raises KeyError: if a specific object is requested but it cannot be found</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_verify_object_type</span><span class="p">(</span><span class="n">object_type</span><span class="p">)</span>
+        <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indexer</span><span class="p">(</span><span class="n">object_type</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">identifier</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">partition</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">)):</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;To get a specific object, the partition parameter &quot;</span>
+                    <span class="s2">&quot;must be one single partition identifier&quot;</span>
+                <span class="p">)</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">partition</span><span class="p">,</span> <span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">))</span>
+            <span class="n">parsed_partition</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_partition</span><span class="p">(</span><span class="n">partition</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">parsed_partition</span><span class="p">:</span>
+                <span class="n">feature</span> <span class="o">=</span> <span class="n">parsed_partition</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">object_type</span><span class="p">)[</span><span class="n">identifier</span><span class="p">]</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_content_adapter</span><span class="o">.</span><span class="n">from_objects</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span><span class="p">[</span><span class="n">object_type</span><span class="p">],</span>
+                    <span class="p">[</span><span class="n">feature</span><span class="p">],</span>
+                    <span class="n">single_element</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">index_partition</span><span class="o">=</span><span class="n">indexer</span><span class="o">.</span><span class="n">partition</span><span class="p">,</span>
+                    <span class="n">index_id</span><span class="o">=</span><span class="n">indexer</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Partition &#39;</span><span class="si">{</span><span class="n">partition</span><span class="si">}</span><span class="s2">&#39; contains no content or does not exists&quot;</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="k">def</span><span class="w"> </span><span class="nf">all_objects</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">object</span><span class="p">]:</span>
+                <span class="n">parsed_partitions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">ContentPartition</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="n">absent_partitions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">partition_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_partitions</span><span class="p">(</span><span class="n">partition</span><span class="p">):</span>
+                    <span class="n">parsed_partition</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_partition</span><span class="p">(</span><span class="n">partition_id</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">parsed_partition</span><span class="p">:</span>
+                        <span class="n">parsed_partitions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parsed_partition</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">absent_partitions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">partition_id</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">absent_partitions</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;Partitions &#39;</span><span class="si">{</span><span class="n">absent_partitions</span><span class="si">}</span><span class="s2">&#39; contains no content or does not exist&quot;</span>
+                    <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">p_id</span> <span class="ow">in</span> <span class="n">parsed_partitions</span><span class="p">:</span>
+                        <span class="k">yield from</span> <span class="n">p_id</span><span class="o">.</span><span class="n">objects</span><span class="p">(</span><span class="n">object_type</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_content_adapter</span><span class="o">.</span><span class="n">from_objects</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span><span class="p">[</span><span class="n">object_type</span><span class="p">],</span>
+                <span class="n">all_objects</span><span class="p">(),</span>
+                <span class="n">index_partition</span><span class="o">=</span><span class="n">indexer</span><span class="o">.</span><span class="n">partition</span><span class="p">,</span>
+                <span class="n">index_id</span><span class="o">=</span><span class="n">indexer</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_referencing</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]],</span>
+        <span class="n">object_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">ref_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">referenced_obj</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get objects of a specific type that reference other objects of the content.</span>
+
+<span class="sd">        :param partition: the partition(s) where the objects are stored</span>
+<span class="sd">        :param object_type: the type of the objects</span>
+<span class="sd">        :param ref_type: the type of the reference, among the ones supported by the object type</span>
+<span class="sd">        :param referenced_obj: return only object referencing this specific partition and object</span>
+<span class="sd">        :return: objects containing the requested reference, format is adapter-dependent</span>
+<span class="sd">        :raises ValueError: if the requested object or reference type is not supported</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_verify_object_type</span><span class="p">(</span><span class="n">object_type</span><span class="p">)</span>
+        <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_indexer</span><span class="p">(</span><span class="n">object_type</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">ref_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">indexer</span><span class="o">.</span><span class="n">refs</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unsupported reference type &#39;</span><span class="si">{</span><span class="n">ref_type</span><span class="si">}</span><span class="s2">&#39; for &#39;</span><span class="si">{</span><span class="n">object_type</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">referencing_objects</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">object</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">partition_id</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_partitions</span><span class="p">(</span><span class="n">partition</span><span class="p">):</span>
+                <span class="n">parsed_partition</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_partition</span><span class="p">(</span><span class="n">partition_id</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">parsed_partition</span><span class="p">:</span>
+                    <span class="n">ref_index</span> <span class="o">=</span> <span class="n">parsed_partition</span><span class="o">.</span><span class="n">ref_index</span><span class="p">(</span><span class="n">object_type</span><span class="p">,</span> <span class="n">ref_type</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">referenced_obj</span><span class="p">:</span>
+                        <span class="k">yield from</span> <span class="n">ref_index</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">referenced_obj</span><span class="p">,</span> <span class="p">[])</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="c1"># Same object could be present more than once in this case,</span>
+                        <span class="c1"># for example when it has two references of the same type.</span>
+                        <span class="c1"># We clean up the answer by removing duplicates.</span>
+                        <span class="n">seen</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+                        <span class="k">for</span> <span class="n">objs</span> <span class="ow">in</span> <span class="n">ref_index</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+                            <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">objs</span><span class="p">:</span>
+                                <span class="k">if</span> <span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
+                                    <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+                                    <span class="k">yield</span> <span class="n">x</span>
+
+        <span class="c1"># When looking for all the objects that reference a given one, we return all the objects</span>
+        <span class="c1"># with that reference, otherwise we build the index of references</span>
+        <span class="n">index_ref</span> <span class="o">=</span> <span class="kc">None</span> <span class="k">if</span> <span class="n">referenced_obj</span> <span class="k">else</span> <span class="n">indexer</span><span class="o">.</span><span class="n">refs</span><span class="p">[</span><span class="n">ref_type</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_content_adapter</span><span class="o">.</span><span class="n">from_objects</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_object_types</span><span class="p">[</span><span class="n">object_type</span><span class="p">],</span>
+            <span class="n">referencing_objects</span><span class="p">(),</span>
+            <span class="n">index_ref</span><span class="o">=</span><span class="n">index_ref</span><span class="p">,</span>
+        <span class="p">)</span>
+
+
+<div class="viewcode-block" id="SingleLayerBinding">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.SingleLayerBinding">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">SingleLayerBinding</span><span class="p">(</span><span class="n">_ContentBindingImpl</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The base class for all the bindings based on one single layer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">content</span><span class="p">:</span> <span class="n">ParentContent</span><span class="p">,</span>
+        <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">adapter</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Adapter</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">layer_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">LayerType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Instantiate a content single-layer binding.</span>
+
+<span class="sd">        :param content: Content object that references a catalog at a fixed version</span>
+<span class="sd">        :param layer_id: ID of the only layer that contains the content</span>
+<span class="sd">        :param adapter: the ``Adapter`` to transform data between different representations,</span>
+<span class="sd">            ``None`` to use the adapter defined in ``content``.</span>
+<span class="sd">        :param layer_type: the layer type to be supported by the binding.</span>
+<span class="sd">        :raises ValueError: if the specified layer is not of a supported type</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="n">adapter</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_catalog</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="n">layer_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_layer</span><span class="o">.</span><span class="n">get_schema</span><span class="p">()</span>
+        <span class="c1"># Only versioned layers are supported so far,</span>
+        <span class="c1"># mainly due to caching of volatile data that is problematic</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_layer</span><span class="o">.</span><span class="n">configuration</span><span class="o">.</span><span class="n">type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="n">LayerType</span><span class="o">.</span><span class="n">VERSIONED</span><span class="p">,</span> <span class="n">layer_type</span><span class="p">}:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The layer type of the layer &#39;</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">&#39; is not supported&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SingleLayerBinding.parse_and_index">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.SingleLayerBinding.parse_and_index">[docs]</a>
+    <span class="nd">@classmethod</span>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">parse_and_index</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">msg</span><span class="p">:</span> <span class="n">Message</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ContentPartition</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parse and index decoded message from the single layer into whatever</span>
+<span class="sd">        form is comfortable for the bindings. The resulting, parsed content is cached.</span>
+
+<span class="sd">        This is used by ``get_partition`` to parse and index content</span>
+<span class="sd">        retrieved and decoded from the layer, before caching it and returning it</span>
+<span class="sd">        to the implementation of the binding.</span>
+
+<span class="sd">        It is responsibility of the binding to implement the parser.</span>
+
+<span class="sd">        :param partition_id: identifier of the partition</span>
+<span class="sd">        :param msg: decoded content from the layer, in the form of a Protobuf message</span>
+<span class="sd">        :return: the content of a partition parsed and indexed in its own data structure</span>
+<span class="sd">        &quot;&quot;&quot;</span></div>
+
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_retrieve_and_decode_partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Message</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieve and decode a partition.</span>
+
+<span class="sd">        Result is not cached, because caching happens at higher level, in ``get_partition``.</span>
+
+<span class="sd">        :param partition_id: partition ID</span>
+<span class="sd">        :return: the partition data, decoded into a Protobuf :class:`Message` when this</span>
+<span class="sd">            is available, otherwise return ``None``.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># get the blob for the pid</span>
+        <span class="n">blob</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_layer</span><span class="o">.</span><span class="n">read_partitions</span><span class="p">(</span>
+                <span class="p">[</span><span class="n">partition_id</span><span class="p">],</span> <span class="n">decode</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">version</span>
+            <span class="p">),</span>
+            <span class="kc">None</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">blob</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="n">_</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">blob</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">)</span>
+
+        <span class="c1"># Possible improvement to remove code duplication: the layer can decode the data directly</span>
+        <span class="n">decoded</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_schema</span><span class="o">.</span><span class="n">decode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">decoded</span><span class="p">,</span> <span class="n">Message</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">decoded</span>
+
+<div class="viewcode-block" id="SingleLayerBinding.get_partition">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.SingleLayerBinding.get_partition">[docs]</a>
+    <span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="n">_CACHE_SIZE</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_partition</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ContentPartition</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Main method for the implementation of the binding. Get, decode, parse and index content</span>
+<span class="sd">        of a partition. Return ``None`` if no content is available for the partition.</span>
+
+<span class="sd">        The result is cached.</span>
+
+<span class="sd">        :param partition_id: identifier of the partition</span>
+<span class="sd">        :return: content of the partition parsed and indexed</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Partition ids are in general int or string. It&#39;s good that user-facing function</span>
+        <span class="c1"># support both cases. In HMC, partition ids are always string, so we convert</span>
+        <span class="c1"># int to string internally as soon as possible to avoid having a mix of int and</span>
+        <span class="c1"># strings in data models and partition identifiers. Partition ids are always</span>
+        <span class="c1"># strings when exposed back to the user, both when they&#39;re part of the content</span>
+        <span class="c1"># and when they&#39;re part of indexing structures like dictionaries.</span>
+        <span class="n">partition_id</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">partition_id</span><span class="p">)</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_retrieve_and_decode_partition</span><span class="p">(</span><span class="n">partition_id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_and_index</span><span class="p">(</span><span class="n">partition_id</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span> <span class="k">if</span> <span class="n">message</span> <span class="k">else</span> <span class="kc">None</span></div>
+</div>
+
+
+
+<span class="c1"># TODO: this is a preliminary design</span>
+<div class="viewcode-block" id="MultiLayerBinding">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.MultiLayerBinding">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MultiLayerBinding</span><span class="p">(</span><span class="n">_ContentBindingImpl</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The base class for all the bindings based on multiple layers.</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+
+
+<span class="c1"># TODO: this is a preliminary design</span>
+<div class="viewcode-block" id="CompositeBinding">
+<a class="viewcode-back" href="../../../here.content.base.html#here.content.base.CompositeBinding">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">CompositeBinding</span><span class="p">(</span><span class="n">_ContentBindingImpl</span><span class="p">,</span> <span class="n">ABC</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The base class for all the bindings based on other, multiple bindings.</span>
+<span class="sd">    &quot;&quot;&quot;</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

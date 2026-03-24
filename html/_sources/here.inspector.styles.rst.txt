@@ -1,0 +1,7 @@
+here.inspector.styles module
+============================
+
+.. automodule:: here.inspector.styles
+   :members:
+   :undoc-members:
+   :show-inheritance:

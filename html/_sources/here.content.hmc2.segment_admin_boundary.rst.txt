@@ -1,0 +1,7 @@
+here.content.hmc2.segment\_admin\_boundary module
+=================================================
+
+.. automodule:: here.content.hmc2.segment_admin_boundary
+   :members:
+   :undoc-members:
+   :show-inheritance:

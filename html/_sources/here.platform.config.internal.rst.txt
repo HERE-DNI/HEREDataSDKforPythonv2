@@ -1,0 +1,7 @@
+here.platform.config.internal package
+=====================================
+
+.. automodule:: here.platform.config.internal
+   :members:
+   :undoc-members:
+   :show-inheritance:

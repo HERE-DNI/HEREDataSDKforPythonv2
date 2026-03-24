@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.platform.api.base_api &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/platform/api/base_api';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.platform.api.base_api</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.platform.api.base_api</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains a :class:`BaseApi` class to perform API operations.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">urllib.request</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">datetime</span><span class="w"> </span><span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">TYPE_CHECKING</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">urllib.parse</span><span class="w"> </span><span class="kn">import</span> <span class="n">urlparse</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">backoff</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests.adapters</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">importlib.metadata</span><span class="w"> </span><span class="kn">import</span> <span class="n">version</span>  <span class="c1"># isort:skip</span>
+
+<span class="n">__version__</span> <span class="o">=</span> <span class="n">version</span><span class="p">(</span><span class="s2">&quot;here-platform&quot;</span><span class="p">)</span>  <span class="c1"># isort:skip</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">ApplicationConfig</span><span class="p">,</span> <span class="n">PlatformConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">AuthenticationException</span><span class="p">,</span>
+    <span class="n">InequalReadsException</span><span class="p">,</span>
+    <span class="n">ResourceLimitExceededException</span><span class="p">,</span>
+    <span class="n">ServiceUnavailableException</span><span class="p">,</span>
+    <span class="n">TooManyRequestsException</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">requests</span><span class="w"> </span><span class="kn">import</span> <span class="ne">ConnectionError</span><span class="p">,</span> <span class="n">Response</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.auth</span><span class="w"> </span><span class="kn">import</span> <span class="n">Auth</span>
+
+
+<div class="viewcode-block" id="BaseApi">
+<a class="viewcode-back" href="../../../../here.platform.api.base_api.html#here.platform.api.base_api.BaseApi">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">BaseApi</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class provides access to some Restful API operations.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">platform_config</span><span class="p">:</span> <span class="n">PlatformConfig</span><span class="p">,</span>
+        <span class="n">application_config</span><span class="p">:</span> <span class="n">ApplicationConfig</span><span class="p">,</span>
+        <span class="n">auth</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;Auth&quot;</span><span class="p">],</span>
+        <span class="n">proxies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Instantiate API with auth token.</span>
+
+<span class="sd">        :param platform_config: a mandatory :class:`PlatformConfig` object to provide</span>
+<span class="sd">            configuration information for the API.</span>
+<span class="sd">        :param application_config: a mandatory :class:`ApplicationConfig` object to provide</span>
+<span class="sd">            configuration information for the API.</span>
+<span class="sd">        :param auth: an Authentication instance.</span>
+<span class="sd">        :param proxies: an optional proxy configuration. Defaults to the environment proxy</span>
+<span class="sd">        configuration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">auth</span> <span class="o">=</span> <span class="n">auth</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">platform_config</span> <span class="o">=</span> <span class="n">platform_config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">application_config</span> <span class="o">=</span> <span class="n">application_config</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxies</span> <span class="o">=</span> <span class="n">proxies</span> <span class="ow">or</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">getproxies</span><span class="p">()</span>
+
+        <span class="c1"># Full URL is provided for platform config api when using Local DataService.</span>
+        <span class="c1"># TODO: Provide a more direct way to check for LDS.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_local</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">urlparse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">platform_config</span><span class="o">.</span><span class="n">api</span><span class="p">)</span><span class="o">.</span><span class="n">scheme</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_user_agent</span> <span class="o">=</span> <span class="s2">&quot;PySDK/&quot;</span> <span class="o">+</span> <span class="n">__version__</span>
+
+        <span class="c1"># create our own dedicated HTTP connection pool.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_http_pool</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+        <span class="n">adapter</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">adapters</span><span class="o">.</span><span class="n">HTTPAdapter</span><span class="p">()</span>
+        <span class="c1"># use our pool for both http and https</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_http_pool</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s2">&quot;http://&quot;</span><span class="p">,</span> <span class="n">adapter</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_http_pool</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s2">&quot;https://&quot;</span><span class="p">,</span> <span class="n">adapter</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">headers</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return HTTP request headers with Bearer token in ``Authorization``</span>
+<span class="sd">        field.</span>
+
+<span class="sd">        :return: authorization tokens</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">auth</span><span class="o">.</span><span class="n">token</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auth</span> <span class="k">else</span> <span class="p">{}</span>
+
+<div class="viewcode-block" id="BaseApi.format_url">
+<a class="viewcode-back" href="../../../../here.platform.api.base_api.html#here.platform.api.base_api.BaseApi.format_url">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">format_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Formats the URL based on the base URL and path.</span>
+
+<span class="sd">        :param base_url: The base URL for the request.</span>
+<span class="sd">        :param path: The path for the URL. This is expected to have the leading &#39;/&#39;.</span>
+<span class="sd">        :return: The formatted URL.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">path</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base_url</span><span class="si">}{</span><span class="n">path</span><span class="si">}</span><span class="s2">&quot;</span></div>
+
+
+<div class="viewcode-block" id="BaseApi.get">
+<a class="viewcode-back" href="../../../../here.platform.api.base_api.html#here.platform.api.base_api.BaseApi.get">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Response</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Perform a get request of an API at a specified URL with backoff.</span>
+
+<span class="sd">        :param url: URL of the API.</span>
+<span class="sd">        :param params: Parameters to pass to the API.</span>
+<span class="sd">        :param headers: Request headers. Defaults to the Api headers property.</span>
+<span class="sd">        :param kwargs: Optional arguments that request takes.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BaseApi.head">
+<a class="viewcode-back" href="../../../../here.platform.api.base_api.html#here.platform.api.base_api.BaseApi.head">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Response</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Perform a head request of an API at specified URL with backoff.</span>
+
+<span class="sd">        :param url: URL of the API.</span>
+<span class="sd">        :param params: Parameters to pass to the API.</span>
+<span class="sd">        :param headers: Request headers. Defaults to the api headers property.</span>
+<span class="sd">        :param kwargs: Optional arguments that request takes.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;HEAD&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BaseApi.post">
+<a class="viewcode-back" href="../../../../here.platform.api.base_api.html#here.platform.api.base_api.BaseApi.post">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">post</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">headers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Response</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Perform a post request of an API at a specified URL with backoff.</span>
+
+<span class="sd">        :param url: URL of the API.</span>
+<span class="sd">        :param data: Post data for http request.</span>
+<span class="sd">        :param params: Parameters to pass to the API.</span>
+<span class="sd">        :param headers: Request headers. Defaults to the api headers property.</span>
+<span class="sd">        :param kwargs: Optional arguments that request takes.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">list</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BaseApi.put">
+<a class="viewcode-back" href="../../../../here.platform.api.base_api.html#here.platform.api.base_api.BaseApi.put">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">put</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">headers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Response</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Perform a put request of an API at a specified URL with backoff.</span>
+
+<span class="sd">        :param url: URL of the API</span>
+<span class="sd">        :param data: Put data for http request.</span>
+<span class="sd">        :param params: Parameters to pass to the API.</span>
+<span class="sd">        :param headers: Request headers. Defaults to the api headers property.</span>
+<span class="sd">        :param kwargs: Optional arguments that request takes.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">list</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;PUT&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;PUT&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BaseApi.patch">
+<a class="viewcode-back" href="../../../../here.platform.api.base_api.html#here.platform.api.base_api.BaseApi.patch">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">patch</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">headers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Response</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Perform a patch request of an API at a specified URL with backoff.</span>
+
+<span class="sd">        :param url: URL of the API</span>
+<span class="sd">        :param data: Patch data for http request.</span>
+<span class="sd">        :param params: Parameters to pass to the API.</span>
+<span class="sd">        :param headers: Request headers. Defaults to the api headers property.</span>
+<span class="sd">        :param kwargs: Optional arguments that request takes.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">list</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;PATCH&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;PATCH&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BaseApi.delete">
+<a class="viewcode-back" href="../../../../here.platform.api.base_api.html#here.platform.api.base_api.BaseApi.delete">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Response</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Perform a delete request of an API at a specified URL with backoff.</span>
+
+<span class="sd">        :param url: URL of the API</span>
+<span class="sd">        :param params: parameters to pass to the API.</span>
+<span class="sd">        :param headers: Request headers. Defaults to the api headers property.</span>
+<span class="sd">        :param kwargs: Optional arguments that request takes.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;DELETE&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BaseApi.request">
+<a class="viewcode-back" href="../../../../here.platform.api.base_api.html#here.platform.api.base_api.BaseApi.request">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">request</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">headers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">stream</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Response</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Performs a request of an API at a specified URL with a backoff.</span>
+<span class="sd">        :param method: The HTTP method to perform.</span>
+<span class="sd">        :param url: URL of the API</span>
+<span class="sd">        :param headers: Request headers. Defaults to the api headers property.</span>
+<span class="sd">        :param stream: whether to stream data.</span>
+<span class="sd">        :param kwargs: Optional arguments that request takes.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span>
+        <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_user_agent</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">validate_resp_content_length</span><span class="p">(</span><span class="n">resp</span><span class="p">):</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Validate content actual length vs expected length.</span>
+<span class="sd">            If length differs raise InequalReadsException.</span>
+
+<span class="sd">            :param resp: Response object.</span>
+<span class="sd">            :raises InequalReadsException: if content actual vs expected length differs.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">expected_length</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Content-Length&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">expected_length</span><span class="p">:</span>
+                <span class="n">expected_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">expected_length</span><span class="p">)</span>
+                <span class="n">actual_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">raw</span><span class="o">.</span><span class="n">tell</span><span class="p">())</span>
+                <span class="k">if</span> <span class="n">actual_length</span> <span class="o">!=</span> <span class="n">expected_length</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="n">InequalReadsException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+
+        <span class="c1"># Inner backoff loop retries on connection error. Outer backoff loop retries based on too</span>
+        <span class="c1"># many requests.</span>
+        <span class="nd">@backoff</span><span class="o">.</span><span class="n">on_exception</span><span class="p">(</span>
+            <span class="n">backoff</span><span class="o">.</span><span class="n">expo</span><span class="p">,</span>
+            <span class="p">(</span>
+                <span class="n">ServiceUnavailableException</span><span class="p">,</span>
+                <span class="n">TooManyRequestsException</span><span class="p">,</span>
+                <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ReadTimeout</span><span class="p">,</span>
+                <span class="n">InequalReadsException</span><span class="p">,</span>
+            <span class="p">),</span>
+            <span class="n">max_time</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">application_config</span><span class="o">.</span><span class="n">retry_max_time</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="nd">@backoff</span><span class="o">.</span><span class="n">on_exception</span><span class="p">(</span>
+            <span class="n">backoff</span><span class="o">.</span><span class="n">constant</span><span class="p">,</span>
+            <span class="p">(</span><span class="ne">ConnectionError</span><span class="p">,</span> <span class="n">requests</span><span class="o">.</span><span class="n">exceptions</span><span class="o">.</span><span class="n">ConnectTimeout</span><span class="p">),</span>
+            <span class="n">max_time</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">application_config</span><span class="o">.</span><span class="n">connect_retry_max_time</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">request_impl</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Response</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Perform a request of an API at a specified URL.</span>
+
+<span class="sd">            :raises TooManyRequestsException: If platform responds with HTTP 429.</span>
+<span class="sd">            :raises ServiceUnavailableException: If platform responds with HTTP 408, 500, 502, 503,</span>
+<span class="sd">            or 504.</span>
+<span class="sd">            :raises AuthenticationException: If platform responds with HTTP 401 or 403.</span>
+<span class="sd">            :raises ResourceLimitExceededException: If platform responds with HTTP 402.</span>
+<span class="sd">            :return: response from the API.</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">start_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+            <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_http_pool</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+                <span class="n">method</span><span class="p">,</span>
+                <span class="n">url</span><span class="p">,</span>
+                <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+                <span class="n">proxies</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">proxies</span><span class="p">,</span>
+                <span class="n">timeout</span><span class="o">=</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">application_config</span><span class="o">.</span><span class="n">connect_timeout</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">application_config</span><span class="o">.</span><span class="n">read_timeout</span><span class="p">,</span>
+                <span class="p">),</span>
+                <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
+                <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">run_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">resp</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">run_time</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span><span class="si">}</span><span class="s2"> sec.&quot;</span><span class="p">)</span>
+            <span class="c1"># By-Passing HEAD method because Response will have headers[&#39;content-length&#39;]</span>
+            <span class="c1"># but no message body. So that InequalReadsException is not raised.</span>
+            <span class="c1"># The HTTP HEAD method requests the headers that would be returned</span>
+            <span class="c1"># if the HEAD request&#39;s URL was instead requested with the HTTP GET method.</span>
+            <span class="c1"># For example,if a URL might produce a large download,</span>
+            <span class="c1"># a HEAD request could read its Content-Length header to check the filesize</span>
+            <span class="c1"># without actually downloading the file.</span>
+            <span class="c1"># https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="ow">not</span> <span class="n">stream</span>
+                <span class="ow">and</span> <span class="n">method</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;HEAD&quot;</span><span class="p">]</span>
+                <span class="ow">and</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">404</span><span class="p">,</span> <span class="mi">429</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">502</span><span class="p">,</span> <span class="mi">503</span><span class="p">,</span> <span class="mi">504</span><span class="p">]</span>
+            <span class="p">):</span>
+                <span class="n">validate_resp_content_length</span><span class="p">(</span><span class="n">resp</span><span class="o">=</span><span class="n">resp</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">429</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">TooManyRequestsException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+            <span class="c1"># Request timeout, internal server error, invalid gateway, service unavailable,</span>
+            <span class="c1"># or gateway timeout.</span>
+            <span class="k">elif</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">408</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">502</span><span class="p">,</span> <span class="mi">503</span><span class="p">,</span> <span class="mi">504</span><span class="p">]:</span>
+                <span class="k">raise</span> <span class="n">ServiceUnavailableException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">402</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="n">ResourceLimitExceededException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">401</span><span class="p">,</span> <span class="mi">403</span><span class="p">]:</span>
+                <span class="k">raise</span> <span class="n">AuthenticationException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">resp</span>
+
+        <span class="n">result_resp</span><span class="p">:</span> <span class="n">Response</span> <span class="o">=</span> <span class="n">request_impl</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">result_resp</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

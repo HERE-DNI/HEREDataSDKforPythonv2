@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.platform.api.data_stream_api &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/platform/api/data_stream_api';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.platform.api.data_stream_api</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.platform.api.data_stream_api</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains a :class:`DataStreamApi` class to perform API operations.</span>
+
+<span class="sd">The HERE API reference documentation used in this module can be found here:</span>
+<span class="sd">|stream_api_reference|</span>
+
+<span class="sd">.. |stream_api_reference| raw:: html</span>
+
+<span class="sd">   &lt;a href=&quot;https://developer.here.com/documentation/data-api/api-reference-stream.html&quot; target=&quot;_blank&quot;&gt;Stream API Reference&lt;/a&gt;  # noqa E501</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.base_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.auth</span><span class="w"> </span><span class="kn">import</span> <span class="n">Auth</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">ApplicationConfig</span><span class="p">,</span> <span class="n">PlatformConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlatformException</span>
+
+
+<div class="viewcode-block" id="DataStreamApi">
+<a class="viewcode-back" href="../../../../here.platform.api.data_stream_api.html#here.platform.api.data_stream_api.DataStreamApi">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DataStreamApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class provides access to HERE platform Stream APIs.</span>
+
+<span class="sd">    The stream service provides the ability to consume data from a stream layer.</span>
+<span class="sd">    With this service you can subscribe to a stream layer and consume messages.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">base_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">auth</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Auth</span><span class="p">],</span>
+        <span class="n">platform_config</span><span class="p">:</span> <span class="n">PlatformConfig</span><span class="p">,</span>
+        <span class="n">application_config</span><span class="p">:</span> <span class="n">ApplicationConfig</span><span class="p">,</span>
+        <span class="n">proxies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Instantiate StreamApi object.</span>
+
+<span class="sd">        :param base_url: a Stream API Url obtained from Lookup API for a given hrn.</span>
+<span class="sd">        :param platform_config: a mandatory :class:`PlatformConfig` object to provide</span>
+<span class="sd">            configuration information for the API.</span>
+<span class="sd">        :param application_config: a mandatory :class:`ApplicationConfig` object to provide</span>
+<span class="sd">            configuration information for the API.</span>
+<span class="sd">        :param auth: an Authentication instance.</span>
+<span class="sd">        :param proxies: an optional proxy configuration. Defaults to the environment proxy</span>
+<span class="sd">        configuration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DataStreamApi</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">platform_config</span><span class="o">=</span><span class="n">platform_config</span><span class="p">,</span>
+            <span class="n">application_config</span><span class="o">=</span><span class="n">application_config</span><span class="p">,</span>
+            <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">,</span>
+            <span class="n">proxies</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">=</span> <span class="n">base_url</span>
+
+<div class="viewcode-block" id="DataStreamApi.subscribe">
+<a class="viewcode-back" href="../../../../here.platform.api.data_stream_api.html#here.platform.api.data_stream_api.DataStreamApi.subscribe">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">subscribe</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">subscription_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">mode</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;serial&quot;</span><span class="p">,</span>
+        <span class="n">consumer_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">kafka_consumer_properties</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Enable message consumption for given layer ID.</span>
+
+<span class="sd">        :param layer_id: a string with the layer ID of stream layer.</span>
+<span class="sd">        :param subscription_id: subscription id returned from the subscribe call.</span>
+<span class="sd">        :param mode: The subscription mode of this subscriptionId.By default value is serial.</span>
+<span class="sd">        :param consumer_id: The ID to use to identify this consumer.</span>
+<span class="sd">            It must be unique within the consumer group. If you do not provide one,</span>
+<span class="sd">            the system will generate one.</span>
+<span class="sd">        :param kafka_consumer_properties: This is the same as Kafka Consumer properties with</span>
+<span class="sd">            some default values changed.</span>
+<span class="sd">        :return: dict containing node base url and subscription id.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">/subscribe&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="n">mode</span><span class="p">,</span> <span class="s2">&quot;subscriptionId&quot;</span><span class="p">:</span> <span class="n">subscription_id</span><span class="p">,</span> <span class="s2">&quot;consumerId&quot;</span><span class="p">:</span> <span class="n">consumer_id</span><span class="p">}</span>
+        <span class="k">if</span> <span class="n">kafka_consumer_properties</span><span class="p">:</span>
+            <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">kafka_consumer_properties</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">201</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataStreamApi.delete_subscription">
+<a class="viewcode-back" href="../../../../here.platform.api.data_stream_api.html#here.platform.api.data_stream_api.DataStreamApi.delete_subscription">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_subscription</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">node_base_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">subscription_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;serial&quot;</span><span class="p">,</span>
+        <span class="n">strict</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Disable message consumption for given layer ID.</span>
+
+<span class="sd">        :param node_base_url: node base url returned from subscribe call.</span>
+<span class="sd">        :param layer_id: a string with the layer ID.</span>
+<span class="sd">        :param subscription_id: subscription id returned from the subscribe call.</span>
+<span class="sd">        :param strict: If the subscription doesn&#39;t exist, strict=True will raise a</span>
+<span class="sd">            PlatformException while strict=False will not.</span>
+<span class="sd">        :param mode: The subscription mode of this subscriptionId.By default value is serial.</span>
+<span class="sd">        :return: True if the subscription exists and was deleted, False if it doesn&#39;t exist.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">success_codes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">]</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">strict</span><span class="p">:</span>
+            <span class="n">success_codes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
+
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">/subscribe&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">node_base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="n">mode</span><span class="p">,</span> <span class="s2">&quot;subscriptionId&quot;</span><span class="p">:</span> <span class="n">subscription_id</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">in</span> <span class="n">success_codes</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">404</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataStreamApi.consume_data">
+<a class="viewcode-back" href="../../../../here.platform.api.data_stream_api.html#here.platform.api.data_stream_api.DataStreamApi.consume_data">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">consume_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">node_base_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">subscription_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;serial&quot;</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Consume data for given layer ID and subscription ID.</span>
+
+<span class="sd">        :param node_base_url: node base url returned from subscribe call.</span>
+<span class="sd">        :param layer_id: a string with the layer ID</span>
+<span class="sd">        :param subscription_id :  subscription id returned from the subscribe call.</span>
+<span class="sd">        :param mode: The subscription mode of this subscriptionId. By default value is serial.</span>
+<span class="sd">        :return: messages from the stream layer.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">/partitions&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">node_base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="n">mode</span><span class="p">,</span> <span class="s2">&quot;subscriptionId&quot;</span><span class="p">:</span> <span class="n">subscription_id</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataStreamApi.endpoint">
+<a class="viewcode-back" href="../../../../here.platform.api.data_stream_api.html#here.platform.api.data_stream_api.DataStreamApi.endpoint">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">endpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">internal</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get a list of Kafka Broker URL&#39;s, client ID,</span>
+<span class="sd">        and Group ID prefix. Type is set to a consumer.</span>
+
+<span class="sd">        :param layer_id: a string with the layer ID of stream layer.</span>
+<span class="sd">        :param internal: Specifies whether internal bootstrap servers</span>
+<span class="sd">            will be returned in the response.</span>
+<span class="sd">        :return: Dict containing Kafka Broker URL&#39;s, client ID,</span>
+<span class="sd">                and Group ID prefix.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">/endpoint&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;internal&quot;</span><span class="p">:</span> <span class="n">internal</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataStreamApi.kafka_endpoint">
+<a class="viewcode-back" href="../../../../here.platform.api.data_stream_api.html#here.platform.api.data_stream_api.DataStreamApi.kafka_endpoint">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">kafka_endpoint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">kafka_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Exposes the endpoint to use to produce and consume the data of the layer directly,</span>
+<span class="sd">        per type of user - consumer or producer. It returns a list of Kafka Broker URL&#39;s,</span>
+<span class="sd">        client ID, and Group ID prefix.</span>
+
+<span class="sd">        :param layer_id: a string with the layer ID of stream layer.</span>
+<span class="sd">        :param kafka_type: a string denoting type as a producer or consumer.</span>
+<span class="sd">        :return: Dict containing Kafka Broker URL&#39;s, client ID,</span>
+<span class="sd">                and Group ID prefix.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">kafka_type</span><span class="si">}</span><span class="s2">/endpoint&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataStreamApi.commit_offsets">
+<a class="viewcode-back" href="../../../../here.platform.api.data_stream_api.html#here.platform.api.data_stream_api.DataStreamApi.commit_offsets">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">commit_offsets</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">node_base_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">subscription_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">offsets</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span>
+        <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;serial&quot;</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Commit offsets for a streaming layer and a given subscription.</span>
+
+<span class="sd">        After reading data, you should commit the offset of the last message read</span>
+<span class="sd">        from each partition so that your application can resume reading new messages</span>
+<span class="sd">        from the correct partition in the event that there is a disruption to the subscription,</span>
+<span class="sd">        such as an application crash. An offset can also be useful if you delete a subscription</span>
+<span class="sd">        then recreate a subscription for the same layer, because the new subscription</span>
+<span class="sd">        can start reading data from the offset.</span>
+
+<span class="sd">        Only one offset per partition is allowed.</span>
+
+<span class="sd">        :param node_base_url: node base url returned from subscribe call.</span>
+<span class="sd">        :param layer_id: a string with the layer ID</span>
+<span class="sd">        :param subscription_id :  subscription id returned from the subscribe call.</span>
+<span class="sd">        :param offsets: list of offsets</span>
+<span class="sd">            [{&quot;partition&quot;: &lt;Partition ID&gt;,&quot;offset&quot;: &lt;Offset Number&gt;}, ...]</span>
+<span class="sd">        :param mode: The subscription mode of this subscriptionId. By default value is serial.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">/offsets&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">node_base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="n">mode</span><span class="p">,</span> <span class="s2">&quot;subscriptionId&quot;</span><span class="p">:</span> <span class="n">subscription_id</span><span class="p">}</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span>
+        <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;application/json&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">offsets</span><span class="o">=</span><span class="n">offsets</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataStreamApi.seek_to_offset">
+<a class="viewcode-back" href="../../../../here.platform.api.data_stream_api.html#here.platform.api.data_stream_api.DataStreamApi.seek_to_offset">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">seek_to_offset</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">node_base_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">subscription_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">offsets</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">],</span>
+        <span class="n">mode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;serial&quot;</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Seek a stream offset for a streaming layer and a given subscription.</span>
+
+<span class="sd">        :param node_base_url: node base url returned from subscribe call.</span>
+<span class="sd">        :param layer_id: a string with the layer ID</span>
+<span class="sd">        :param subscription_id :  subscription id returned from the subscribe call.</span>
+<span class="sd">        :param offsets: list of offsets [{&quot;partition&quot;: &lt;Partition ID&gt;,</span>
+<span class="sd">            &quot;offset&quot;: &lt;Offset Number&gt;}, ...]</span>
+<span class="sd">        :param mode: The subscription mode of this subscriptionId. By default value is serial.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;mode&quot;</span><span class="p">:</span> <span class="n">mode</span><span class="p">,</span> <span class="s2">&quot;subscriptionId&quot;</span><span class="p">:</span> <span class="n">subscription_id</span><span class="p">}</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span>
+        <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;application/json&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">/seek&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="n">node_base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">offsets</span><span class="o">=</span><span class="n">offsets</span><span class="p">)</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

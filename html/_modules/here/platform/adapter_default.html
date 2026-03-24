@@ -1,0 +1,1240 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.platform.adapter_default &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/platform/adapter_default';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.platform.adapter_default</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.platform.adapter_default</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">HERE platform, content adaptation, encoding and decoding to standard</span>
+<span class="sd">Python classes such as list, dictionaries, and protocol buffers ``Message`` types.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">StringIO</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">TYPE_CHECKING</span><span class="p">,</span>
+    <span class="n">Any</span><span class="p">,</span>
+    <span class="n">Callable</span><span class="p">,</span>
+    <span class="n">Dict</span><span class="p">,</span>
+    <span class="n">Iterable</span><span class="p">,</span>
+    <span class="n">Iterator</span><span class="p">,</span>
+    <span class="n">List</span><span class="p">,</span>
+    <span class="n">Mapping</span><span class="p">,</span>
+    <span class="n">Optional</span><span class="p">,</span>
+    <span class="n">Tuple</span><span class="p">,</span>
+    <span class="n">Union</span><span class="p">,</span>
+    <span class="n">cast</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">geojson</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geojson</span><span class="w"> </span><span class="kn">import</span> <span class="n">Feature</span><span class="p">,</span> <span class="n">FeatureCollection</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">geojson.mapping</span><span class="w"> </span><span class="kn">import</span> <span class="n">GEO_INTERFACE_MARKER</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.protobuf.message</span><span class="w"> </span><span class="kn">import</span> <span class="n">Message</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.adapter</span><span class="w"> </span><span class="kn">import</span> <span class="n">Adapter</span><span class="p">,</span> <span class="n">ContentAdapter</span><span class="p">,</span> <span class="n">Decoder</span><span class="p">,</span> <span class="n">Encoder</span><span class="p">,</span> <span class="n">Ref</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.partition</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">IndexPartition</span><span class="p">,</span>
+    <span class="n">StreamPartition</span><span class="p">,</span>
+    <span class="n">VersionedPartition</span><span class="p">,</span>
+    <span class="n">VolatilePartition</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.schema</span><span class="w"> </span><span class="kn">import</span> <span class="n">Schema</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.utils.collection</span><span class="w"> </span><span class="kn">import</span> <span class="n">iter_tuples</span>
+
+<span class="k">if</span> <span class="n">TYPE_CHECKING</span><span class="p">:</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.layer</span><span class="w"> </span><span class="kn">import</span> <span class="n">StreamLayer</span><span class="p">,</span> <span class="n">VersionedLayer</span><span class="p">,</span> <span class="n">VolatileLayer</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.adapter</span><span class="w"> </span><span class="kn">import</span> <span class="n">Identifier</span><span class="p">,</span> <span class="n">Partition</span>
+
+
+<div class="viewcode-block" id="DefaultEncoder">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultEncoder">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DefaultEncoder</span><span class="p">(</span><span class="n">Encoder</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A content encoder and its capabilities.&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">supported_content_types</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="o">...</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: the dictionary of MIME content types supported when encoding single blobs</span>
+<span class="sd">        with the ``encode_blob`` function of this encoder, each with the type of the encoded data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;application/x-protobuf&quot;</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span>
+            <span class="s2">&quot;application/json&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+            <span class="s2">&quot;text/csv&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+            <span class="s2">&quot;application/vnd.geo+json&quot;</span><span class="p">:</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">FeatureCollection</span><span class="p">),</span>
+            <span class="s2">&quot;application/geo+json&quot;</span><span class="p">:</span> <span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">FeatureCollection</span><span class="p">),</span>
+        <span class="p">}</span>
+
+<div class="viewcode-block" id="DefaultEncoder.encode_blob">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultEncoder.encode_blob">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encode_blob</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Encode one single blob of data.</span>
+
+<span class="sd">        :param data: the data to be encoded, its type corresponds to the type declared in</span>
+<span class="sd">          the property ``supported_content_types`` for the content type</span>
+<span class="sd">        :param content_type: the MIME content type to be encoded</span>
+<span class="sd">        :param schema: the schema, if the content type requires one</span>
+<span class="sd">        :param kwargs: additional, content-type-specific parameters for the encoder:</span>
+
+<span class="sd">        For JSON (application/json):</span>
+<span class="sd">            For additional info, please see:</span>
+<span class="sd">            https://docs.python.org/3/library/json.html?highlight=json#json.dumps</span>
+
+<span class="sd">        For CSV (text/csv):</span>
+<span class="sd">            For additional info, please see:</span>
+<span class="sd">            https://docs.python.org/3/library/csv.html#csv.DictWriter</span>
+
+<span class="sd">        For GeoJSON (application/geo+json or application/vnd.geo+json):</span>
+<span class="sd">            For additional info, please see:</span>
+<span class="sd">            https://github.com/jazzband/geojson#geojson-encoding-decoding</span>
+
+
+<span class="sd">        :return: the encoded data</span>
+<span class="sd">        :raises UnsupportedContentTypeEncodeException: in case the content type is not encodable</span>
+<span class="sd">        :raises ValueError: if the schema is mandatory for the content type but missing</span>
+<span class="sd">        :raises EncodeException: in case the blob can&#39;t be properly encoded  # noqa</span>
+<span class="sd">        :raises SchemaException: in case the schema can&#39;t be used to encode the content  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_verify_encode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">schema</span><span class="p">)</span>
+        <span class="n">encoded</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="n">content_type</span> <span class="o">==</span> <span class="s2">&quot;application/json&quot;</span><span class="p">:</span>
+            <span class="n">encoded</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">schema</span><span class="o">.</span><span class="n">encode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">schema</span>
+                <span class="k">else</span> <span class="n">DefaultEncoder</span><span class="o">.</span><span class="n">_encode_json_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">content_type</span> <span class="o">==</span> <span class="s2">&quot;text/csv&quot;</span><span class="p">:</span>
+            <span class="n">encoded</span> <span class="o">=</span> <span class="n">DefaultEncoder</span><span class="o">.</span><span class="n">_encode_csv_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">content_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;application/geo+json&quot;</span><span class="p">,</span> <span class="s2">&quot;application/vnd.geo+json&quot;</span><span class="p">):</span>
+            <span class="n">encoded</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">schema</span><span class="o">.</span><span class="n">encode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">schema</span>
+                <span class="k">else</span> <span class="n">DefaultEncoder</span><span class="o">.</span><span class="n">_encode_geojson_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">content_type</span> <span class="o">==</span> <span class="s2">&quot;application/x-protobuf&quot;</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">schema</span><span class="p">:</span>
+                <span class="n">encoded</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">encode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Schema is required to encode content type </span><span class="si">{</span><span class="n">content_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="n">encoded</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>  <span class="c1"># if this fails, it&#39;s because of supported_content_types</span>
+        <span class="k">return</span> <span class="n">encoded</span></div>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_encode_json_blob</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+        <span class="n">data_bytes</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data_bytes</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_encode_csv_blob</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">NamedTemporaryFile</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;r+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tmp</span><span class="p">:</span>
+            <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+            <span class="n">tmp</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">tmp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_encode_geojson_blob</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+        <span class="n">data_bytes</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">=</span> <span class="n">geojson</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data_bytes</span></div>
+
+
+
+<div class="viewcode-block" id="DefaultDecoder">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultDecoder">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DefaultDecoder</span><span class="p">(</span><span class="n">Decoder</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The decoder provided by default in case no ``Adapter`` is configured for the platform</span>
+<span class="sd">    or for a specific catalog.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">supported_content_types</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">type</span><span class="p">,</span> <span class="o">...</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        :return: the dictionary of MIME content types supported when decoding single blobs</span>
+<span class="sd">        with the ``decode_blob`` function of this decoder, each with the type of the decoded data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;application/protobuf&quot;</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span>
+            <span class="s2">&quot;application/x-protobuf&quot;</span><span class="p">:</span> <span class="n">Message</span><span class="p">,</span>
+            <span class="s2">&quot;application/json&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span>
+            <span class="s2">&quot;text/csv&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+            <span class="s2">&quot;application/vnd.geo+json&quot;</span><span class="p">:</span> <span class="n">FeatureCollection</span><span class="p">,</span>
+            <span class="s2">&quot;application/geo+json&quot;</span><span class="p">:</span> <span class="n">FeatureCollection</span><span class="p">,</span>
+        <span class="p">}</span>
+
+<div class="viewcode-block" id="DefaultDecoder.decode_blob">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultDecoder.decode_blob">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">decode_blob</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Decode one single blob of data.</span>
+
+<span class="sd">        :param data: the encoded data</span>
+<span class="sd">        :param content_type: the MIME content type to be decoded</span>
+<span class="sd">        :param schema: the schema, if the content type requires one</span>
+<span class="sd">        :param kwargs: additional, content-type-specific parameters for the decoder:</span>
+
+<span class="sd">        For JSON (application/json):</span>
+<span class="sd">            For additional info, please see:</span>
+<span class="sd">            https://docs.python.org/3/library/json.html?highlight=json#json.loads</span>
+
+<span class="sd">        For CSV (text/csv):</span>
+<span class="sd">            For additional info, please see:</span>
+<span class="sd">            https://docs.python.org/3/library/csv.html#csv.DictReader</span>
+
+<span class="sd">        For GeoJSON (application/geo+json or application/vnd.geo+json):</span>
+<span class="sd">            For additional info, please see:</span>
+<span class="sd">            https://github.com/jazzband/geojson#geojson-encoding-decoding</span>
+
+<span class="sd">        :return: the decoded blob, its type correspond to the type declared in</span>
+<span class="sd">          the property ``decodable_content_types`` for the content type</span>
+<span class="sd">        :raises UnsupportedContentTypeDecodeException: in case the content type is not decodable</span>
+<span class="sd">        :raises ValueError: if the schema is mandatory for the content type but missing</span>
+<span class="sd">        :raises DecodeException: in case the blob can&#39;t be properly decoded  # noqa</span>
+<span class="sd">        :raises SchemaException: in case the schema can&#39;t be used to decode the content  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_verify_decode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">schema</span><span class="p">)</span>
+        <span class="n">decoded</span><span class="p">:</span> <span class="n">Any</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">content_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;application/protobuf&quot;</span><span class="p">,</span> <span class="s2">&quot;application/x-protobuf&quot;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">schema</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Schema is required to decode content type </span><span class="si">{</span><span class="n">content_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="c1"># Actual protobuf decoding</span>
+            <span class="n">decoded</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">decode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">content_type</span> <span class="o">==</span> <span class="s2">&quot;application/json&quot;</span><span class="p">:</span>
+            <span class="n">decoded</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">schema</span><span class="o">.</span><span class="n">decode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">schema</span>
+                <span class="k">else</span> <span class="n">DefaultDecoder</span><span class="o">.</span><span class="n">_decode_json_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">content_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;application/vnd.geo+json&quot;</span><span class="p">,</span> <span class="s2">&quot;application/geo+json&quot;</span><span class="p">]:</span>
+            <span class="n">decoded</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">schema</span><span class="o">.</span><span class="n">decode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">schema</span>
+                <span class="k">else</span> <span class="n">DefaultDecoder</span><span class="o">.</span><span class="n">_decode_geojson_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">content_type</span> <span class="o">==</span> <span class="s2">&quot;text/csv&quot;</span><span class="p">:</span>
+            <span class="n">decoded</span> <span class="o">=</span> <span class="n">DefaultDecoder</span><span class="o">.</span><span class="n">_decode_csv_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">assert</span> <span class="n">decoded</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>  <span class="c1"># if this fails, it&#39;s because of supported_content_types</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_verify_and_return_decoded</span><span class="p">(</span><span class="n">decoded</span><span class="p">,</span> <span class="n">content_type</span><span class="p">)</span></div>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_decode_json_blob</span><span class="p">(</span><span class="n">blob</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+        <span class="n">dict_obj</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">blob</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">dict_obj</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_decode_csv_blob</span><span class="p">(</span><span class="n">blob</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">blob</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_decode_geojson_blob</span><span class="p">(</span><span class="n">blob</span><span class="p">:</span> <span class="nb">bytes</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FeatureCollection</span><span class="p">:</span>
+        <span class="n">feature_collection</span> <span class="o">=</span> <span class="n">geojson</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">blob</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">feature_collection</span><span class="p">,</span> <span class="n">FeatureCollection</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Blob does not contain a valid GeoJSON FeatureCollection&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">feature_collection</span></div>
+
+
+
+<div class="viewcode-block" id="DefaultContentAdapter">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultContentAdapter">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DefaultContentAdapter</span><span class="p">(</span><span class="n">ContentAdapter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The default content adapter, that exposes content via dictionaries and lists.&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="DefaultContentAdapter.from_tabular">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultContentAdapter.from_tabular">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_tabular</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">geometry_column</span><span class="o">=</span><span class="s2">&quot;geometry&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Convert the given tabular data.</span>
+
+<span class="sd">        :param columns: column names</span>
+<span class="sd">        :param data: tabular data</span>
+<span class="sd">        :param geometry_column: geometry column string</span>
+<span class="sd">        :return: data representation is function of the adapter  # noqa</span>
+<span class="sd">        :raises NotImplementedError: so far.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
+
+
+<div class="viewcode-block" id="DefaultContentAdapter.from_objects">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultContentAdapter.from_objects">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_objects</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">fields</span><span class="p">:</span> <span class="nb">type</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">object</span><span class="p">],</span>
+        <span class="n">single_element</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">index_partition</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Partition</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">index_id</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Identifier</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">index_ref</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="nb">object</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Ref</span><span class="p">]]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span>
+        <span class="nb">object</span><span class="p">,</span>  <span class="c1"># one single object</span>
+        <span class="n">List</span><span class="p">[</span><span class="nb">object</span><span class="p">],</span>  <span class="c1"># non-indexed objects</span>
+        <span class="n">Dict</span><span class="p">[</span><span class="n">Partition</span><span class="p">,</span> <span class="nb">object</span><span class="p">],</span>  <span class="c1"># objects indexed by partition</span>
+        <span class="n">Dict</span><span class="p">[</span><span class="n">Identifier</span><span class="p">,</span> <span class="nb">object</span><span class="p">],</span>  <span class="c1"># objects indexed by id</span>
+        <span class="n">Dict</span><span class="p">[</span><span class="n">Partition</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Identifier</span><span class="p">,</span> <span class="nb">object</span><span class="p">]],</span>  <span class="c1"># objects indexed by partition and id</span>
+        <span class="n">Dict</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">object</span><span class="p">]],</span>  <span class="c1"># objects indexed by reference</span>
+    <span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adapt content form an object representation to the target format.</span>
+
+<span class="sd">        It can optionally perform indexing of objects, based on their partition,</span>
+<span class="sd">        identifier and set of references to other objects. Indexing is specified by</span>
+<span class="sd">        naming the field of the object that contains the value to index, or by</span>
+<span class="sd">        passing a function that calculates that value from the object.</span>
+
+<span class="sd">        If indexing by object id is enabled, object are indexed by their identifier,</span>
+<span class="sd">        nesting them into an outer dictionary with the object identifier used as key:</span>
+
+<span class="sd">        { o1_id: o1, o2_id: o2, o3_id: o3, ... }</span>
+
+<span class="sd">        When both partition and object indexing is enabled, object are indexed by partition</span>
+<span class="sd">        identifier, nesting them into an outer dictionary with the partition identifiers used</span>
+<span class="sd">        as key. This wraps also the dictionary that index objects by their identifiers:</span>
+
+<span class="sd">        { p1_id: { o1_id: o1, o2_id: o2, ... }, p2_id: { o3_id: o3, ... } }</span>
+
+<span class="sd">        When only indexing by partition is enabled, objects are returned in one single dict:</span>
+<span class="sd">        { p1_id: [ o1, o2, ... ], p2_id: [ o3, ... ] }</span>
+
+<span class="sd">        When no indexing is enabled, objects are returned in a list:</span>
+<span class="sd">        [ o1, o2, o3, ... ]</span>
+
+<span class="sd">        When indexing by reference is enabled, objects are grouped and indexed</span>
+<span class="sd">        by the zero, one or more reference they contain. Result is indexed by reference.</span>
+<span class="sd">        This may result in the same object present more than once:</span>
+
+<span class="sd">        { r1: [ o1, o3, ... ], r2: [ o2, o3, ... ], r3: [ o1, o2, o4, ... ] }</span>
+
+<span class="sd">        :param fields: the fields to extract, as specified by a dataclass. Field names are looked</span>
+<span class="sd">            up among the attributes of each object via ``getattr`. When missing, ``None`` or</span>
+<span class="sd">            equivalent is used. Each field has a type that describes its semantic:</span>
+<span class="sd">            it is used to adapt the value to the most appropriate representation for</span>
+<span class="sd">            the output format. ``TypeError`` is raised in case this is not possible.</span>
+<span class="sd">        :param data: the objects to adapt to the target format. Fields not mentioned in ``fields``</span>
+<span class="sd">            are discarded. Expected but missing fields and identifiers are considered ``None``.</span>
+<span class="sd">            Field values may be of any type compatible with the type declared for the field.</span>
+<span class="sd">            Partition ids don&#39;t have to be unique, but they have to be contiguous: all the objects</span>
+<span class="sd">            with a given partition identifier must be returned in sequence. Object identifiers,</span>
+<span class="sd">            when present, must be unique across the whole content.</span>
+<span class="sd">        :param single_element: the data contains exactly one element, the content adapter</span>
+<span class="sd">            case use this information to optimize or return a specialized representation</span>
+<span class="sd">        :param index_partition: index the content by partition, using the field specified</span>
+<span class="sd">        :param index_id: index the content by object identifier, using the field specified</span>
+<span class="sd">        :param index_ref: index the content by references, using the field specified. Each</span>
+<span class="sd">            object can contain zero, one or more references, and references can be shared</span>
+<span class="sd">            among multiple objects.</span>
+<span class="sd">        :return: objects indexed as requested. Indexing is implemented with ``Dict``.</span>
+<span class="sd">        :raises:</span>
+<span class="sd">            ValueError: if the fields are not described by a dataclass</span>
+<span class="sd">            KeyError: in case partition id, object id or reference is needed but not present</span>
+<span class="sd">            TypeError: in case partition or object id is not of type int or string.</span>
+<span class="sd">            Also raised in case field values are not of the type declared for the field,</span>
+<span class="sd">            or if they can&#39;t be converted to it.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Function main code begins here</span>
+        <span class="n">ContentAdapter</span><span class="o">.</span><span class="n">_validate_params</span><span class="p">(</span><span class="n">single_element</span><span class="p">,</span> <span class="n">index_partition</span><span class="p">,</span> <span class="n">index_id</span><span class="p">,</span> <span class="n">index_ref</span><span class="p">)</span>
+        <span class="n">ContentAdapter</span><span class="o">.</span><span class="n">_validate_fields</span><span class="p">(</span><span class="n">fields</span><span class="p">)</span>
+        <span class="n">ContentAdapter</span><span class="o">.</span><span class="n">_validate_indices</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="n">index_partition</span><span class="p">,</span> <span class="n">index_id</span><span class="p">)</span>
+
+        <span class="c1"># Enable on-the-fly validation of data</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">ContentAdapter</span><span class="o">.</span><span class="n">_validate_object</span><span class="p">(</span><span class="n">fields</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">data</span><span class="p">)</span>
+
+        <span class="c1"># Single element representation is obtained by simply returning</span>
+        <span class="c1"># the first object unchanged without any indexing structure around</span>
+        <span class="k">if</span> <span class="n">single_element</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">index_ref</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Ref</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">object</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">ref</span> <span class="ow">in</span> <span class="n">ContentAdapter</span><span class="o">.</span><span class="n">_extract_refs</span><span class="p">(</span><span class="n">index_ref</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span>
+                    <span class="n">result</span><span class="p">[</span><span class="n">ref</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">result</span>
+        <span class="k">elif</span> <span class="n">index_partition</span> <span class="ow">and</span> <span class="n">index_id</span><span class="p">:</span>
+            <span class="n">result2</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Partition</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Identifier</span><span class="p">,</span> <span class="nb">object</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+                <span class="n">partition</span> <span class="o">=</span> <span class="n">ContentAdapter</span><span class="o">.</span><span class="n">_extract_partition</span><span class="p">(</span><span class="n">index_partition</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+                <span class="nb">id</span> <span class="o">=</span> <span class="n">ContentAdapter</span><span class="o">.</span><span class="n">_extract_identifier</span><span class="p">(</span><span class="n">index_id</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+                <span class="n">result2</span><span class="p">[</span><span class="n">partition</span><span class="p">][</span><span class="nb">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">obj</span>
+            <span class="k">return</span> <span class="n">result2</span>
+        <span class="k">elif</span> <span class="n">index_partition</span><span class="p">:</span>  <span class="c1"># and not index_id</span>
+            <span class="n">result3</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Partition</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">object</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+                <span class="n">partition</span> <span class="o">=</span> <span class="n">ContentAdapter</span><span class="o">.</span><span class="n">_extract_partition</span><span class="p">(</span><span class="n">index_partition</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span>
+                <span class="n">result3</span><span class="p">[</span><span class="n">partition</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">result3</span>
+        <span class="k">elif</span> <span class="n">index_id</span><span class="p">:</span>  <span class="c1"># and not index_partition</span>
+            <span class="k">return</span> <span class="p">{</span><span class="n">ContentAdapter</span><span class="o">.</span><span class="n">_extract_identifier</span><span class="p">(</span><span class="n">index_id</span><span class="p">,</span> <span class="n">obj</span><span class="p">):</span> <span class="n">obj</span> <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">data</span><span class="p">}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="DefaultAdapter">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DefaultAdapter</span><span class="p">(</span><span class="n">Adapter</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This adapter transforms data from and to standard Python classes,</span>
+<span class="sd">    such as list, dictionaries, and protocol buffers ``Message`` types.</span>
+
+<span class="sd">    An adapter controls the encoding and decoding process of platform data.</span>
+<span class="sd">    It transforms data from and to adapter-specific data structure and supports</span>
+<span class="sd">    reading, writing, encoding and decoding a variety of MIME content types.</span>
+
+<span class="sd">    For the list of MIME content types supported when reading and writing</span>
+<span class="sd">    a layer with ``read_*`` and ``write_*`` functions of the :class:`Layer`</span>
+<span class="sd">    and its subclasses, please see documentation of :class:`DefaultDecoder`</span>
+<span class="sd">    and :class:`DefaultEncoder`.</span>
+
+<span class="sd">    All the operations involving content passes through an adapter when</span>
+<span class="sd">    the parameters ``encode`` or ``decode`` are ``True``, their default value.</span>
+<span class="sd">    These are parameters of the ``read_*`` and ``write_*`` functions.</span>
+<span class="sd">    If a content type is not supported, or if reading or writing raw content is preferred,</span>
+<span class="sd">    pass ``False`` to skip encoding or decoding and deal with raw bytes instead.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the default adapter.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_encoder</span><span class="p">:</span> <span class="n">Encoder</span> <span class="o">=</span> <span class="n">DefaultEncoder</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_decoder</span><span class="p">:</span> <span class="n">Decoder</span> <span class="o">=</span> <span class="n">DefaultDecoder</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_content_adapter</span><span class="p">:</span> <span class="n">ContentAdapter</span> <span class="o">=</span> <span class="n">DefaultContentAdapter</span><span class="p">()</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">encoder</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Encoder</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The encoder associated with the adapter.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_encoder</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">decoder</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Decoder</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The decoder associated with the adapter.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_decoder</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">content_adapter</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ContentAdapter</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The adapter specialized for content.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_content_adapter</span>
+
+<div class="viewcode-block" id="DefaultAdapter.from_versioned_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.from_versioned_metadata">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_versioned_metadata</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">partitions</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">VersionedPartition</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">VersionedPartition</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adapt versioned partition metadata to a sequence of :class:``VersionedPartition``.</span>
+
+<span class="sd">        :param partitions: sequence of partition metadata from a versioned layer</span>
+<span class="sd">        :param kwargs: unused</span>
+<span class="sd">        :return: partition metadata as sequence of :class:``VersionedPartition``</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">partitions</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.from_versioned_data">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.from_versioned_data">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_versioned_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">partitions_data</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">VersionedPartition</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]],</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">VersionedPartition</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt versioned partition metadata and data to a sequence of</span>
+<span class="sd">        class:``VersionedPartition`` and decoded data.</span>
+
+<span class="sd">        :param partitions_data: sequence of partition metadata and data from a versioned layer</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: additional, content-type-specific parameters, see :class:`DefaultDecoder`</span>
+<span class="sd">        :return: sequence of :class:``VersionedPartition`` and decoded data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">decode</span><span class="p">(</span><span class="n">p_data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">VersionedPartition</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">p_data</span>
+            <span class="k">return</span> <span class="n">p</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span><span class="o">.</span><span class="n">decode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="n">decode</span><span class="p">,</span> <span class="n">partitions_data</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.to_versioned_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.to_versioned_metadata">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_versioned_metadata</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer</span><span class="p">:</span> <span class="s2">&quot;VersionedLayer&quot;</span><span class="p">,</span>
+        <span class="n">partitions_update</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterator</span><span class="p">[</span><span class="n">VersionedPartition</span><span class="p">]],</span>
+        <span class="n">partitions_delete</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterator</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Iterator</span><span class="p">[</span><span class="n">VersionedPartition</span><span class="p">],</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt sequences of :class:`VersionedPartition` and partition ids</span>
+<span class="sd">        to versioned partition metadata and partition ids to update and delete.</span>
+
+<span class="sd">        :param layer: the layer all the metadata and data belong to</span>
+<span class="sd">        :param partitions_update: the sequence of partitions metadata to update, if any</span>
+<span class="sd">        :param partitions_delete: the sequence of partitions ids to delete, if any</span>
+<span class="sd">        :param kwargs: unused</span>
+<span class="sd">        :return: tuple of `Iterator`, the first with the :class:`VersionedPartition`</span>
+<span class="sd">          that have to be updated, the second with the partition ids to delete</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">partitions_update</span> <span class="ow">or</span> <span class="nb">iter</span><span class="p">([]),</span> <span class="n">partitions_delete</span> <span class="ow">or</span> <span class="nb">iter</span><span class="p">([])</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.to_versioned_data">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.to_versioned_data">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_versioned_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer</span><span class="p">:</span> <span class="s2">&quot;VersionedLayer&quot;</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">]],</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">]],</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">bytes</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt data from sequence of partition ids and data to versioned partition id and data.</span>
+
+<span class="sd">        :param layer: the layer all the metadata and data belong to</span>
+<span class="sd">        :param data: dictionary or sequence of partition id and content to adapt</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: additional, content-type-specific parameters, see :class:`DefaultEncoder`</span>
+<span class="sd">        :return: sequence of partition id and data for the versioned layer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">encode</span><span class="p">(</span><span class="n">pid_msg</span><span class="p">):</span>
+            <span class="n">pid</span><span class="p">,</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">pid_msg</span>
+            <span class="k">return</span> <span class="n">pid</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">encode_blob</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="n">encode</span><span class="p">,</span> <span class="n">iter_tuples</span><span class="p">(</span><span class="n">data</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.from_volatile_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.from_volatile_metadata">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_volatile_metadata</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">partitions</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">VolatilePartition</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">VolatilePartition</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adapt volatile partition metadata to a sequence of :class:``VolatilePartition``.</span>
+
+<span class="sd">        :param partitions: sequence of partition metadata from a volatile layer</span>
+<span class="sd">        :param kwargs: unused</span>
+<span class="sd">        :return: partition metadata as sequence of :class:``VolatilePartition``</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">partitions</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.from_volatile_data">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.from_volatile_data">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_volatile_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">partitions_data</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">VolatilePartition</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]],</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">VolatilePartition</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt volatile partition metadata and data to a sequence of</span>
+<span class="sd">        class:``VolatilePartition`` and decoded data.</span>
+
+<span class="sd">        :param partitions_data: sequence of partition metadata and data from a volatile layer</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: additional, content-type-specific parameters, see :class:`DefaultDecoder`</span>
+<span class="sd">        :return: sequence of :class:``VolatilePartition`` and decoded data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">decode</span><span class="p">(</span><span class="n">p_data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">VolatilePartition</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">p_data</span>
+            <span class="k">return</span> <span class="n">p</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span><span class="o">.</span><span class="n">decode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="n">decode</span><span class="p">,</span> <span class="n">partitions_data</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.to_volatile_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.to_volatile_metadata">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_volatile_metadata</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer</span><span class="p">:</span> <span class="s2">&quot;VolatileLayer&quot;</span><span class="p">,</span>
+        <span class="n">partitions_update</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterator</span><span class="p">[</span><span class="n">VolatilePartition</span><span class="p">]],</span>
+        <span class="n">partitions_delete</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Iterator</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Iterator</span><span class="p">[</span><span class="n">VolatilePartition</span><span class="p">],</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt sequences of :class:`VolatilePartition` and partition ids</span>
+<span class="sd">        to volatile partition metadata and partition ids to update and delete.</span>
+
+<span class="sd">        :param layer: the layer all the metadata and data belong to</span>
+<span class="sd">        :param partitions_update: the sequence of partitions metadata to update, if any</span>
+<span class="sd">        :param partitions_delete: the sequence of partitions ids to delete, if any</span>
+<span class="sd">        :param kwargs: unused</span>
+<span class="sd">        :return: tuple of `Iterator`, the first with the :class:`VolatilePartition`</span>
+<span class="sd">          that have to be updated, the second with the partition ids to delete</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">partitions_update</span> <span class="ow">or</span> <span class="nb">iter</span><span class="p">([]),</span> <span class="n">partitions_delete</span> <span class="ow">or</span> <span class="nb">iter</span><span class="p">([])</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.to_volatile_data">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.to_volatile_data">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_volatile_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer</span><span class="p">:</span> <span class="s2">&quot;VolatileLayer&quot;</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">]],</span> <span class="n">Mapping</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">]],</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">bytes</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt data from sequence of partition ids and data to volatile partition id and data.</span>
+
+<span class="sd">        :param layer: the layer all the metadata and data belong to</span>
+<span class="sd">        :param data: dictionary or sequence of partition id and content to adapt</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: additional, content-type-specific parameters, see :class:`DefaultEncoder`</span>
+<span class="sd">        :return: sequence of partition id and data for the volatile layer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">encode</span><span class="p">(</span><span class="n">pid_msg</span><span class="p">):</span>
+            <span class="n">pid</span><span class="p">,</span> <span class="n">msg</span> <span class="o">=</span> <span class="n">pid_msg</span>
+            <span class="k">return</span> <span class="n">pid</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">encode_blob</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="n">encode</span><span class="p">,</span> <span class="n">iter_tuples</span><span class="p">(</span><span class="n">data</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.from_stream_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.from_stream_metadata">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_stream_metadata</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">partitions</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">StreamPartition</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">StreamPartition</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt stream partition metadata to a sequence of :class:``StreamPartition``.</span>
+
+<span class="sd">        :param partitions: sequence of partition metadata from a stream layer</span>
+<span class="sd">        :param kwargs: unused</span>
+<span class="sd">        :return: partition metadata as sequence of :class:``StreamPartition``</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">partitions</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.from_stream_data">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.from_stream_data">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_stream_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">partitions_data</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">StreamPartition</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]],</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">StreamPartition</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt versioned partition metadata and data to a sequence of</span>
+<span class="sd">        class:``StreamPartition`` and decoded data.</span>
+
+<span class="sd">        :param partitions_data: sequence of partition metadata and data from a stream layer</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: additional, content-type-specific parameters, see :class:`DefaultDecoder`</span>
+<span class="sd">        :return: sequence of :class:``StreamPartition`` and decoded data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">decode</span><span class="p">(</span><span class="n">p_data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">StreamPartition</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">p_data</span>
+            <span class="k">return</span> <span class="n">p</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span><span class="o">.</span><span class="n">decode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="n">decode</span><span class="p">,</span> <span class="n">partitions_data</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.to_stream_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.to_stream_metadata">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_stream_metadata</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">:</span> <span class="s2">&quot;StreamLayer&quot;</span><span class="p">,</span> <span class="n">partitions</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">StreamPartition</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">StreamPartition</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt what to publish from the target format to stream partition metadata.</span>
+
+<span class="sd">        :param layer: the layer all the metadata and data belong to</span>
+<span class="sd">        :param partitions: sequence of partitions metadata to publish</span>
+<span class="sd">        :param kwargs: unused</span>
+<span class="sd">        :return: `Iterator` with the :class:`StreamPartition` that are adapted</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">partitions</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.to_stream_data">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.to_stream_data">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_stream_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer</span><span class="p">:</span> <span class="s2">&quot;StreamLayer&quot;</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span>
+            <span class="n">Iterable</span><span class="p">[</span>
+                <span class="n">Union</span><span class="p">[</span>
+                    <span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">],</span>  <span class="c1"># id, data</span>
+                    <span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span>  <span class="c1"># id, data, ts</span>
+                <span class="p">]</span>
+            <span class="p">],</span>
+            <span class="n">Mapping</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">],</span>  <span class="c1"># id, data</span>
+        <span class="p">],</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="n">timestamp</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt data from the target format to stream partition metadata and data.</span>
+
+<span class="sd">        :param layer: the layer all the metadata and data belong to</span>
+<span class="sd">        :param data: sequence of partition id, content and optional timestamp to adapt</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param timestamp: optional timestamp for all the messages, if none is specified in data:</span>
+<span class="sd">            in milliseconds since Unix epoch (1970-01-01T00:00:00 UTC)</span>
+<span class="sd">        :param kwargs: adapter-specific, please consult the documentation</span>
+<span class="sd">          of the specific adapter to for the parameters and types it supports</span>
+<span class="sd">        :return: sequence of partition id, data and timestamp for the stream layer</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">normalize</span><span class="p">(</span>
+            <span class="n">entry</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span>
+                <span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">],</span>  <span class="c1"># id, data</span>
+                <span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span>  <span class="c1"># id, data, ts</span>
+            <span class="p">]</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                <span class="nb">id</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">entry</span><span class="p">)</span>
+                <span class="k">return</span> <span class="nb">id</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="n">ts</span> <span class="ow">or</span> <span class="n">timestamp</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="nb">id</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cast</span><span class="p">(</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">Any</span><span class="p">],</span> <span class="n">entry</span><span class="p">)</span>
+                <span class="k">return</span> <span class="nb">id</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timestamp</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unexpected format for data&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">encode</span><span class="p">(</span><span class="n">pid_msg_ts</span><span class="p">):</span>
+            <span class="n">pid</span><span class="p">,</span> <span class="n">msg</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">pid_msg_ts</span>
+            <span class="k">return</span> <span class="n">pid</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">encode_blob</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">),</span> <span class="n">ts</span>
+
+        <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="n">encode</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="n">normalize</span><span class="p">,</span> <span class="n">iter_tuples</span><span class="p">(</span><span class="n">data</span><span class="p">)))</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.from_index_metadata">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.from_index_metadata">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_index_metadata</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">partitions</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">IndexPartition</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">IndexPartition</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adapt index partition metadata to a sequence of :class:``IndexPartition``.</span>
+
+<span class="sd">        :param partitions: sequence of partition metadata from an index layer</span>
+<span class="sd">        :param kwargs: unused</span>
+<span class="sd">        :return: partition metadata as sequence of :class:``IndexPartition``</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">partitions</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.from_index_data">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.from_index_data">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_index_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">partitions_data</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">IndexPartition</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">]],</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">IndexPartition</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt versioned partition metadata and data to a sequence of</span>
+<span class="sd">        class:``IndexPartition`` and decoded data.</span>
+
+<span class="sd">        :param partitions_data: sequence of partition metadata and data from an index layer</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: additional, content-type-specific parameters, see :class:`DefaultDecoder`</span>
+<span class="sd">        :return: sequence of :class:``IndexPartition`` and decoded data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">decode</span><span class="p">(</span><span class="n">p_data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">IndexPartition</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">p_data</span>
+            <span class="k">return</span> <span class="n">p</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">decoder</span><span class="o">.</span><span class="n">decode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="n">decode</span><span class="p">,</span> <span class="n">partitions_data</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.to_index_single_data">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.to_index_single_data">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_index_single_data</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">content_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt data to be stored in an index layer.</span>
+
+<span class="sd">        :param data: data (nothing supported so far)</span>
+<span class="sd">        :param content_type: the MIME content type of the layer</span>
+<span class="sd">        :param schema: optional :class:`Schema` of the layer</span>
+<span class="sd">        :param kwargs: additional, content-type-specific parameters, see :class:`DefaultEncoder`</span>
+<span class="sd">        :return: data encoded for an index layer</span>
+<span class="sd">        :raises ValueError: in case the content type is not supported by the adapter  # noqa</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoder</span><span class="o">.</span><span class="n">encode_blob</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">content_type</span><span class="p">,</span> <span class="n">schema</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.from_feature_ids">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.from_feature_ids">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_feature_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">feature_ids</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt a sequence of feature identifiers to a list.</span>
+
+<span class="sd">        :param feature_ids: sequence of feature identifiers</span>
+<span class="sd">        :param kwargs: unused</span>
+<span class="sd">        :return: a list of feature identifiers</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">feature_ids</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.to_feature_ids">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.to_feature_ids">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_feature_ids</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt data to a sequence of feature identifiers.</span>
+
+<span class="sd">        :param data: sequence, list or iterator of feature identifiers</span>
+<span class="sd">        :param kwargs: unused</span>
+<span class="sd">        :return: sequence of feature identifiers</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.from_geo_features">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.from_geo_features">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_geo_features</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">:</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Feature</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FeatureCollection</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt a sequence of geographic features to a GeoJSON FeatureCollection.</span>
+
+<span class="sd">        :param features: sequence of geographic features</span>
+<span class="sd">        :param kwargs: unused</span>
+<span class="sd">        :return: a single GeoJSON FeatureCollection containing the features</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">FeatureCollection</span><span class="p">(</span><span class="n">features</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">features</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="DefaultAdapter.to_geo_features">
+<a class="viewcode-back" href="../../../here.platform.adapter_default.html#here.platform.adapter_default.DefaultAdapter.to_geo_features">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_geo_features</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">geojson</span><span class="o">.</span><span class="n">FeatureCollection</span><span class="p">,</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Feature</span><span class="p">,</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]],</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">Feature</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adapt data in a supported format to a sequence of geographic features.</span>
+
+<span class="sd">        This adapter supports the following formats:</span>
+<span class="sd">        - A :class:``CollectionFeature`` or GeoJSON FeatureCollection dictionary or</span>
+<span class="sd">          any object implementing the ``__geo_interface__`` with ``type=&quot;FeatureCollection&quot;``</span>
+<span class="sd">          as described in https://gist.github.com/sgillies/2217756</span>
+<span class="sd">        - An iterable of :class:``Feature`` or GeoJSON Feature dictionary or</span>
+<span class="sd">          any object implementing the ``__geo_interface__`` with ``type=&quot;Feature&quot;``</span>
+<span class="sd">          as described in https://gist.github.com/sgillies/2217756</span>
+
+<span class="sd">        :param data: a collection of features in one of the supported formats</span>
+<span class="sd">        :param kwargs: unused</span>
+<span class="sd">        :return: sequence of geographic features</span>
+<span class="sd">        :raises ValueError: if data doesn&#39;t match any of the supported formats</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">to_feature</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">Feature</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">f</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">GEO_INTERFACE_MARKER</span><span class="p">):</span>
+                <span class="n">f</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">GEO_INTERFACE_MARKER</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;Feature&quot;</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">f</span><span class="si">}</span><span class="s2"> is not a geographic feature&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">Feature</span><span class="p">(</span>
+                    <span class="nb">id</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">),</span> <span class="n">geometry</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;geometry&quot;</span><span class="p">),</span> <span class="n">properties</span><span class="o">=</span><span class="n">f</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;properties&quot;</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">f</span><span class="si">}</span><span class="s2"> is not a geographic feature&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">GEO_INTERFACE_MARKER</span><span class="p">):</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">GEO_INTERFACE_MARKER</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;FeatureCollection&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">data</span><span class="si">}</span><span class="s2"> is not a collection of geographic features&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="n">to_feature</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;features&quot;</span><span class="p">,</span> <span class="p">[]))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="n">to_feature</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

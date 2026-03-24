@@ -1,0 +1,7 @@
+here.content.hmc2.extended\_speed\_limit module
+===============================================
+
+.. automodule:: here.content.hmc2.extended_speed_limit
+   :members:
+   :undoc-members:
+   :show-inheritance:

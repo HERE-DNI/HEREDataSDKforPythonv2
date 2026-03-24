@@ -1,0 +1,20 @@
+here.platform.utils package
+===========================
+
+.. automodule:: here.platform.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.platform.utils.collection
+   here.platform.utils.deprecation
+   here.platform.utils.file
+   here.platform.utils.geo
+   here.platform.utils.properties_helper
+   here.platform.utils.protobuf

@@ -1,0 +1,7 @@
+here.platform.utils.collection module
+=====================================
+
+.. automodule:: here.platform.utils.collection
+   :members:
+   :undoc-members:
+   :show-inheritance:

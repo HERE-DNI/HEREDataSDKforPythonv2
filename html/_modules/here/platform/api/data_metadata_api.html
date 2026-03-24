@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.platform.api.data_metadata_api &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/platform/api/data_metadata_api';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.platform.api.data_metadata_api</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.platform.api.data_metadata_api</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains a :class:`DataMetadataApi` class to perform API operations.</span>
+
+<span class="sd">The HERE API reference documentation used in this module can be found here:</span>
+<span class="sd">|metadata_api_reference|</span>
+
+<span class="sd">.. |metadata_api_reference| raw:: html</span>
+
+<span class="sd">   &lt;a href=&quot;https://developer.here.com/documentation/data-api/api-reference-metadata.html&quot; target=&quot;_blank&quot;&gt;Metadata API Reference&lt;/a&gt;  # noqa E501</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.base_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.auth</span><span class="w"> </span><span class="kn">import</span> <span class="n">Auth</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">ApplicationConfig</span><span class="p">,</span> <span class="n">PlatformConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlatformException</span>
+
+
+<div class="viewcode-block" id="DataMetadataApi">
+<a class="viewcode-back" href="../../../../here.platform.api.data_metadata_api.html#here.platform.api.data_metadata_api.DataMetadataApi">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DataMetadataApi</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class provides access to HERE platform Metadata APIs.</span>
+
+<span class="sd">    The metadata service provides a way to get information (metadata) about layers and partitions</span>
+<span class="sd">    stored in a catalog. This service exposes the metadata for all the partitions or all the</span>
+<span class="sd">    changed partitions. For a catalog with versioned layers, you can retrieve metadata for a</span>
+<span class="sd">    particular version or version range of the catalog.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">base_url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">auth</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Auth</span><span class="p">],</span>
+        <span class="n">platform_config</span><span class="p">:</span> <span class="n">PlatformConfig</span><span class="p">,</span>
+        <span class="n">application_config</span><span class="p">:</span> <span class="n">ApplicationConfig</span><span class="p">,</span>
+        <span class="n">proxies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Instantiate DataMetadataApi object.</span>
+
+<span class="sd">        :param base_url: a Metadata API Url obtained from Lookup API for a given hrn.</span>
+<span class="sd">        :param platform_config: a mandatory :class:`PlatformConfig` object to provide</span>
+<span class="sd">            configuration information for the API.</span>
+<span class="sd">        :param application_config: a mandatory :class:`ApplicationConfig` object to provide</span>
+<span class="sd">            configuration information for the API.</span>
+<span class="sd">        :param auth: an Authentication instance.</span>
+<span class="sd">        :param proxies: an optional proxy configuration. Defaults to the environment proxy</span>
+<span class="sd">        configuration.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">DataMetadataApi</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+            <span class="n">platform_config</span><span class="o">=</span><span class="n">platform_config</span><span class="p">,</span>
+            <span class="n">application_config</span><span class="o">=</span><span class="n">application_config</span><span class="p">,</span>
+            <span class="n">auth</span><span class="o">=</span><span class="n">auth</span><span class="p">,</span>
+            <span class="n">proxies</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_url</span> <span class="o">=</span> <span class="n">base_url</span>
+
+<div class="viewcode-block" id="DataMetadataApi.get_layers_version">
+<a class="viewcode-back" href="../../../../here.platform.api.data_metadata_api.html#here.platform.api.data_metadata_api.DataMetadataApi.get_layers_version">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_layers_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return information about layer versions for the catalog version.</span>
+
+<span class="sd">        :param version: Catalog version.</span>
+<span class="sd">        :param billing_tag: Billing Tag is an optional free-form tag which is used for grouping</span>
+<span class="sd">            billing records together.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/layerVersions&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="n">version</span><span class="p">,</span> <span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataMetadataApi.get_changes">
+<a class="viewcode-back" href="../../../../here.platform.api.data_metadata_api.html#here.platform.api.data_metadata_api.DataMetadataApi.get_changes">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_changes</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">start_version</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">end_version</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">since_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">part</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">additional_fields</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;dataSize&quot;</span><span class="p">,</span> <span class="s2">&quot;checksum&quot;</span><span class="p">,</span> <span class="s2">&quot;compressedDataSize&quot;</span><span class="p">,</span> <span class="s2">&quot;crc&quot;</span><span class="p">],</span>
+        <span class="n">range_header</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the latest partition metadata in a version range for a versioned layer or a time</span>
+<span class="sd">        range for a volatile layer. For versioned layers the range is expressed as a start and</span>
+<span class="sd">        end version and might not return all changes for the partitions which were added and</span>
+<span class="sd">        removed in between the specified start and end versions.</span>
+
+<span class="sd">        :param layer_id: Unique layer id. Content of this parameter refers to a valid layer ID.</span>
+<span class="sd">        :param start_version: Available/Required for versioned layers only; the beginning of the</span>
+<span class="sd">            range of versions you want to get (exclusive). By convention -1 indicates the initial</span>
+<span class="sd">            version before the first publication. After the first publication,the catalog version</span>
+<span class="sd">            is 0</span>
+<span class="sd">        :param end_version: Available/Required for versioned layers only; the end of the range of</span>
+<span class="sd">            versions you want to get (inclusive). This must be a valid catalog version greater</span>
+<span class="sd">            than the startVersion.</span>
+<span class="sd">        :param since_time: Available/Required for volatile layers only; will return partitions</span>
+<span class="sd">            whose data has been modified since this time, in milliseconds since epoch, inclusive.</span>
+<span class="sd">        :param part: Available/Required for versioned layers only; indicates which part of the</span>
+<span class="sd">            layer shall be queried.</span>
+<span class="sd">        :param additional_fields: Available values : dataSize, checksum, compressedDataSize, crc</span>
+<span class="sd">        :param range_header: an optional Range parameter to resume download of a large response</span>
+<span class="sd">            for versioned layers when there is a connection issue between the client and server.</span>
+<span class="sd">            Specify a single byte range offset like this: Range: bytes=10-. This parameter is</span>
+<span class="sd">            compliant with RFC 7233, but note that this parameter only supports a single byte</span>
+<span class="sd">            range. The range parameter can also be specified as a query parameter, i.e.</span>
+<span class="sd">            range=bytes=10-. For volatile layers use the pagination links returned in the response</span>
+<span class="sd">            body.</span>
+<span class="sd">        :param billing_tag: Billing Tag is an optional free-form tag which is used for grouping</span>
+<span class="sd">            billing records together.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">/changes&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">additional_fields_str</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cast</span><span class="p">(</span><span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">additional_fields</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">additional_fields</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span>
+            <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;startVersion&quot;</span><span class="p">:</span> <span class="n">start_version</span><span class="p">,</span>
+            <span class="s2">&quot;endVersion&quot;</span><span class="p">:</span> <span class="n">end_version</span><span class="p">,</span>
+            <span class="s2">&quot;sinceTime&quot;</span><span class="p">:</span> <span class="n">since_time</span><span class="p">,</span>
+            <span class="s2">&quot;part&quot;</span><span class="p">:</span> <span class="n">part</span><span class="p">,</span>
+            <span class="s2">&quot;additionalFields&quot;</span><span class="p">:</span> <span class="n">additional_fields_str</span><span class="p">,</span>
+            <span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span>
+        <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">range_header</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">206</span><span class="p">]:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataMetadataApi.get_changes_parts">
+<a class="viewcode-back" href="../../../../here.platform.api.data_metadata_api.html#here.platform.api.data_metadata_api.DataMetadataApi.get_changes_parts">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_changes_parts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">num_requested_parts</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a list of Part Ids which represent the parts that can be used to limit the scope</span>
+<span class="sd">        of queries of changes for the version range. This allows to run parallel queries with</span>
+<span class="sd">        multiple parts. The user has to provide the desired number of parts and the service will</span>
+<span class="sd">        return a list of Part Ids. Please note in some cases the requested number of parts will</span>
+<span class="sd">        make them too small and in this case the service might return lesser amount of the parts</span>
+<span class="sd">        than requested.</span>
+
+<span class="sd">        :param layer_id: Unique layer id. Content of this parameter refers to a valid layer ID.</span>
+<span class="sd">        :param num_requested_parts: Indicates requested number of parts.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">/changes/parts&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;numRequestedParts&quot;</span><span class="p">:</span> <span class="n">num_requested_parts</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataMetadataApi.get_partitions">
+<a class="viewcode-back" href="../../../../here.platform.api.data_metadata_api.html#here.platform.api.data_metadata_api.DataMetadataApi.get_partitions">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_partitions</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">version</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">part</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">additional_fields</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;dataSize&quot;</span><span class="p">,</span> <span class="s2">&quot;checksum&quot;</span><span class="p">,</span> <span class="s2">&quot;compressedDataSize&quot;</span><span class="p">,</span> <span class="s2">&quot;crc&quot;</span><span class="p">],</span>
+        <span class="n">range_header</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the metadata for all partitions in a specific layer.</span>
+
+<span class="sd">        :param layer_id: Unique layer id. Content of this parameter refers to a valid layer ID.</span>
+<span class="sd">        :param version: If you are getting metadata from a versioned layer, specify the version</span>
+<span class="sd">            of the layer you want. This parameter is required for versioned layers. If you are</span>
+<span class="sd">            getting metadata from another layer type, do not specify this parameter.</span>
+<span class="sd">        :param part: Available/Required for versioned layers only; indicates which part of the</span>
+<span class="sd">            layer shall be queried.</span>
+<span class="sd">        :param additional_fields: Available values : dataSize, checksum, compressedDataSize, crc</span>
+<span class="sd">        :param range_header: an optional Range parameter to resume download of a large response</span>
+<span class="sd">            for versioned layers when there is a connection issue between the client and server.</span>
+<span class="sd">            Specify a single byte range offset like this: Range: bytes=10-. This parameter is</span>
+<span class="sd">            compliant with RFC 7233, but note that this parameter only supports a single byte</span>
+<span class="sd">            range. The range parameter can also be specified as a query parameter, i.e.</span>
+<span class="sd">            range=bytes=10-. For volatile layers use the pagination links returned in the response</span>
+<span class="sd">            body.</span>
+<span class="sd">        :param billing_tag: Billing Tag is an optional free-form tag which is used for grouping</span>
+<span class="sd">            billing records together.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">/partitions&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">additional_fields_str</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cast</span><span class="p">(</span><span class="n">Iterable</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">additional_fields</span><span class="p">))</span>
+            <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">additional_fields</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span>
+            <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="n">version</span><span class="p">,</span>
+            <span class="s2">&quot;part&quot;</span><span class="p">:</span> <span class="n">part</span><span class="p">,</span>
+            <span class="s2">&quot;additionalFields&quot;</span><span class="p">:</span> <span class="n">additional_fields_str</span><span class="p">,</span>
+            <span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">headers</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">headers</span>
+        <span class="n">headers</span><span class="p">[</span><span class="s2">&quot;Range&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">range_header</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">206</span><span class="p">]:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataMetadataApi.get_partitions_parts">
+<a class="viewcode-back" href="../../../../here.platform.api.data_metadata_api.html#here.platform.api.data_metadata_api.DataMetadataApi.get_partitions_parts">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_partitions_parts</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">num_requested_parts</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a list of Part Ids which represent the parts that can be used to limit the scope</span>
+<span class="sd">        of queries of the metadata for all partitions in a specific layer. This allows to run</span>
+<span class="sd">        parallel queries with multiple parts. The user has to provide the desired number of parts</span>
+<span class="sd">        and the service will return a list of Part Ids. Please note in some cases the requested</span>
+<span class="sd">        number of parts will make them too small and in this case the service might return lesser</span>
+<span class="sd">        amount of the parts than requested.</span>
+
+<span class="sd">        :param layer_id: Unique layer id. Content of this parameter refers to a valid layer ID.</span>
+<span class="sd">        :param num_requested_parts: Indicates requested number of parts.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;/layers/</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2">/partitions/parts&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;numRequestedParts&quot;</span><span class="p">:</span> <span class="n">num_requested_parts</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataMetadataApi.list_versions">
+<a class="viewcode-back" href="../../../../here.platform.api.data_metadata_api.html#here.platform.api.data_metadata_api.DataMetadataApi.list_versions">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_versions</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">start_version</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">end_version</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+        <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return information about specific catalog version(s). If the catalog doesn&#39;t contain any</span>
+<span class="sd">        versions, an empty dictionary is returned. Maximum number of versions to be returned</span>
+<span class="sd">        per call is 1000 versions. If requested range is bigger than 1000 versions,</span>
+<span class="sd">        400 Bad Request will be returned.</span>
+
+<span class="sd">        :param start_version: The version number after which list of returned versions will begin.</span>
+<span class="sd">            Minimum value -1 will return list starting with version 0.</span>
+<span class="sd">        :param end_version: The end of the range of versions you want to get (inclusive). This</span>
+<span class="sd">            must be a valid catalog version greater than the startVersion. The maximum value for</span>
+<span class="sd">            this parameter is returned from the /versions/latest endpoint. If this version does</span>
+<span class="sd">            not exist, 400 Bad Request is returned</span>
+<span class="sd">        :param billing_tag: Billing Tag is an optional free-form tag which is used for grouping</span>
+<span class="sd">            billing records together.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/versions&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;startVersion&quot;</span><span class="p">:</span> <span class="n">start_version</span><span class="p">,</span>
+            <span class="s2">&quot;endVersion&quot;</span><span class="p">:</span> <span class="n">end_version</span><span class="p">,</span>
+            <span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">elif</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataMetadataApi.compatible_versions">
+<a class="viewcode-back" href="../../../../here.platform.api.data_metadata_api.html#here.platform.api.data_metadata_api.DataMetadataApi.compatible_versions">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">compatible_versions</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">catalog_dependencies</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">next</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Given a list of HRNs and versions provided by the user, returns a list of versions of this</span>
+<span class="sd">        catalog for which the listed HRN are either present in the direct or indirect dependencies</span>
+<span class="sd">        with the same version, or are not present. Please note that versions that don&#39;t depend on</span>
+<span class="sd">        any of the provided catalog HRNs, are also considered compatible. The compatible versions</span>
+<span class="sd">        are returned in reverse order, from the newest to the oldest. When there is no compatible</span>
+<span class="sd">        version the service returns an empty list. When the catalog has no version a 404 is</span>
+<span class="sd">        returned.</span>
+
+<span class="sd">        :param catalog_dependencies: The catalog dependencies we want to search for</span>
+<span class="sd">        :param limit: The numbers of items to return per page</span>
+<span class="sd">        :param next: The next url where the iteration will continue.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/versions/compatibles&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="nb">next</span> <span class="k">if</span> <span class="nb">next</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;limit&quot;</span><span class="p">:</span> <span class="n">limit</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">catalog_dependencies</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="n">resp_json</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">resp_json</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataMetadataApi.get_latest_version">
+<a class="viewcode-back" href="../../../../here.platform.api.data_metadata_api.html#here.platform.api.data_metadata_api.DataMetadataApi.get_latest_version">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_latest_version</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">start_version</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return information about the latest version for the given catalog. If the catalog doesn&#39;t</span>
+<span class="sd">        contain any versions None will be returned.</span>
+
+<span class="sd">        :param start_version: The catalog version returned from a prior request to</span>
+<span class="sd">            /versions/latest. You should save the version from each request so that you can use it</span>
+<span class="sd">             in the startVersion parameter of subsequent requests. If you don&#39;t have the version</span>
+<span class="sd">             from a prior request, set the parameter to -1.</span>
+<span class="sd">        :param billing_tag: Billing Tag is an optional free-form tag which is used for grouping</span>
+<span class="sd">            billing records together.</span>
+<span class="sd">        :return: latest version number of the catalog if version exist else None</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/versions/latest&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;startVersion&quot;</span><span class="p">:</span> <span class="n">start_version</span><span class="p">,</span>
+            <span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;version&quot;</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataMetadataApi.get_minimum_version">
+<a class="viewcode-back" href="../../../../here.platform.api.data_metadata_api.html#here.platform.api.data_metadata_api.DataMetadataApi.get_minimum_version">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_minimum_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return minimum version for the given catalog. If the catalog doesn&#39;t</span>
+<span class="sd">        contain any versions None will be returned.</span>
+
+<span class="sd">        :param billing_tag: Billing Tag is an optional free-form tag which is used for grouping</span>
+<span class="sd">            billing records together.</span>
+<span class="sd">        :return: an int representing minimum version, if any</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/versions/minimum&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;version&quot;</span><span class="p">))</span>
+        <span class="k">elif</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">404</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataMetadataApi.set_minimum_version">
+<a class="viewcode-back" href="../../../../here.platform.api.data_metadata_api.html#here.platform.api.data_metadata_api.DataMetadataApi.set_minimum_version">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_minimum_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version_obj</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Sets minimum version for the given catalog.</span>
+
+<span class="sd">        :param version_obj: A version object that contains new minimum version.</span>
+<span class="sd">        :param billing_tag: Billing Tag is an optional free-form tag which is used for grouping</span>
+<span class="sd">            billing records together.</span>
+<span class="sd">        :raises PlatformException: If platform responds with an HTTP error.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/versions/minimum&quot;</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;billingTag&quot;</span><span class="p">:</span> <span class="n">billing_tag</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">version_obj</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">204</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">PlatformException</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

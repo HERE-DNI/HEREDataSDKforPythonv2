@@ -1,0 +1,7 @@
+here.content.hmc2.bicycle\_attributes module
+============================================
+
+.. automodule:: here.content.hmc2.bicycle_attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:

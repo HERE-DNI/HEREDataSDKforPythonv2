@@ -1,0 +1,1149 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.geopandas_adapter.geotiles.heretile &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/geopandas_adapter/geotiles/heretile';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.geopandas_adapter.geotiles.heretile</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.geopandas_adapter.geotiles.heretile</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2019-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module to operate with HERETile tiling scheme using (Geo)DataFrames.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">here.geotiles.heretile</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ht</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">The CRS of all the ``GeoSeries`` and ``GeoDataFrame`` accepted or returned.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="n">crs</span> <span class="o">=</span> <span class="s2">&quot;EPSG:4326&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_verify_integer_series</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Verify that the series is a series of integers. This is an important preliminary check</span>
+<span class="sd">    to make sure we&#39;re dealing with potentially-valid tile ids and make sure the user</span>
+<span class="sd">    hasn&#39;t converted, by mistake, tiles ids to floats or other types. On tile ids</span>
+<span class="sd">    we perform bit-level operations so floats are not ok.</span>
+
+<span class="sd">    This checks the type of the series, not that the integers they contain are valid ids.</span>
+
+<span class="sd">    NA values are supported by checking if the type</span>
+<span class="sd">    is uppercase Int or UInt, types that support NA.</span>
+
+<span class="sd">    :param tile_ids: series containing tile ids</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># TODO: try with is_integer_dtype</span>
+    <span class="n">error_msg</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Series data type different than integer and string: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+        <span class="n">tile_ids</span><span class="o">.</span><span class="n">dtype</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">tile_ids</span><span class="o">.</span><span class="n">dtype</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">int8</span><span class="p">,</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">int16</span><span class="p">,</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">,</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">,</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">uint16</span><span class="p">,</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">uint32</span><span class="p">,</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">uint64</span><span class="p">,</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">str_</span><span class="p">,</span>
+        <span class="nb">str</span><span class="p">,</span>
+    <span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span>
+        <span class="n">tile_ids</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span>
+        <span class="p">(</span>
+            <span class="n">pd</span><span class="o">.</span><span class="n">Int8Dtype</span><span class="p">,</span>
+            <span class="n">pd</span><span class="o">.</span><span class="n">Int16Dtype</span><span class="p">,</span>
+            <span class="n">pd</span><span class="o">.</span><span class="n">Int32Dtype</span><span class="p">,</span>
+            <span class="n">pd</span><span class="o">.</span><span class="n">Int64Dtype</span><span class="p">,</span>
+            <span class="n">pd</span><span class="o">.</span><span class="n">UInt8Dtype</span><span class="p">,</span>
+            <span class="n">pd</span><span class="o">.</span><span class="n">UInt16Dtype</span><span class="p">,</span>
+            <span class="n">pd</span><span class="o">.</span><span class="n">UInt32Dtype</span><span class="p">,</span>
+            <span class="n">pd</span><span class="o">.</span><span class="n">UInt64Dtype</span><span class="p">,</span>
+            <span class="n">pd</span><span class="o">.</span><span class="n">StringDtype</span><span class="p">,</span>
+        <span class="p">),</span>
+    <span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">error_msg</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_verify_crs</span><span class="p">(</span><span class="n">series</span><span class="p">:</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">series</span><span class="o">.</span><span class="n">crs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">series</span><span class="o">.</span><span class="n">crs</span> <span class="o">!=</span> <span class="n">crs</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;GeoSeries with incompatible CRS: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">crs</span><span class="p">))</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_to_geoseries</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">to_geo</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">:</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">to_geo</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">tile_ids</span><span class="p">),</span> <span class="n">tile_ids</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">crs</span><span class="o">=</span><span class="n">crs</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_to_bool</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">pred</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;tile_ids&quot;</span><span class="p">:</span> <span class="n">tile_ids</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;Int64&quot;</span><span class="p">),</span> <span class="s2">&quot;other&quot;</span><span class="p">:</span> <span class="n">other</span><span class="p">})</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+        <span class="n">t</span><span class="p">,</span> <span class="n">o</span> <span class="o">=</span> <span class="n">s</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">o</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">pred</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">o</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">NA</span>
+
+    <span class="c1"># Check if there&#39;s a better type for nullable boolean, or simply return false</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span> <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;object&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">_to_tile_list</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">to_list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+            <span class="n">ids</span> <span class="o">=</span> <span class="n">to_list</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">ids</span> <span class="k">if</span> <span class="n">ids</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">tile_ids</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="is_valid">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.is_valid">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">is_valid</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># bool</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if integers are a valid tile IDs.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained.</span>
+
+<span class="sd">    :param tile_ids: a Series of integers</span>
+<span class="sd">    :return: a ``Series`` of booleans with the result of the test</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers # noqa</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">    &gt;&gt;&gt; is_valid(pd.Series([0, 1, 2, 3, 4]))</span>
+<span class="sd">    0    False</span>
+<span class="sd">    1     True</span>
+<span class="sd">    2    False</span>
+<span class="sd">    3    False</span>
+<span class="sd">    4     True</span>
+<span class="sd">    dtype: bool</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tile_ids</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">ht</span><span class="o">.</span><span class="n">is_valid</span><span class="p">,</span> <span class="n">na_action</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="from_x_y_level">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.from_x_y_level">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">from_x_y_level</span><span class="p">(</span><span class="n">xs</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">ys</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">levels</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># tile id</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tiles given X and Y components and levels.</span>
+
+<span class="sd">    Series must be indexed the same. ``NaN`` values or series missing a row</span>
+<span class="sd">    for some index value determine the resulting tile ID to be ``NaN``.</span>
+<span class="sd">    This is also the case if not tile ID corresponds to a (x, y, level) tuple.</span>
+
+<span class="sd">    Index is retained.</span>
+
+<span class="sd">    :param xs: the Series with the tile X component</span>
+<span class="sd">    :param ys: the Series with the tile Y component</span>
+<span class="sd">    :param levels: the Series with tile levels</span>
+<span class="sd">    :return: a ``Series`` tile IDs, ``NaN`` when no tile ID can be calculated</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">ys</span><span class="p">)</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">levels</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">xs</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="n">ys</span><span class="p">,</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="n">levels</span><span class="p">},</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;Int64&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">x</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">y</span>
+        <span class="n">level</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">level</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">level</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">from_x_y_level</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># This syntax is preferred than `apply(fn, axis=1)` because it&#39;s possible</span>
+    <span class="c1"># to set the dtype to Int64, otherwise None values determine a conversion to float64</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span> <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;Int64&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="from_coordinates">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.from_coordinates">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">from_coordinates</span><span class="p">(</span><span class="n">lngs</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">lats</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># tile id</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tiles that contain points.</span>
+
+<span class="sd">    Series must be indexed the same. ``NaN`` values or series missing a row</span>
+<span class="sd">    for some index value determine the resulting tile ID to be ``NaN``.</span>
+<span class="sd">    This is also the case if a point can&#39;t be mapped to a tile ID.</span>
+
+<span class="sd">    Index is retained.</span>
+
+<span class="sd">    :param lngs: the Series with longitudes</span>
+<span class="sd">    :param lats: the Series with latitudes</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :return: a ``Series`` tile IDs, ``NaN`` when no tile ID can be calculated</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;lng&quot;</span><span class="p">:</span> <span class="n">lngs</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="n">lats</span><span class="p">},</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;float&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+        <span class="n">lng</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">lng</span>
+        <span class="n">lat</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">lat</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">lng</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">lat</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">from_coordinates</span><span class="p">(</span><span class="n">lng</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span> <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;Int64&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="from_point">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.from_point">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">from_point</span><span class="p">(</span><span class="n">pts</span><span class="p">:</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># tile id</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tiles that contain points.</span>
+
+<span class="sd">    ``NaN`` values or rows not containing a Point determine</span>
+<span class="sd">    the resulting tile ID to be ``NaN``.</span>
+<span class="sd">    This is also the case if a point can&#39;t be mapped to a tile ID.</span>
+
+<span class="sd">    Index is retained.</span>
+
+<span class="sd">    :param pts: the GeoSeries with the points</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :return: a ``Series`` tile IDs, ``NaN`` when no tile ID can be calculated</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_verify_crs</span><span class="p">(</span><span class="n">pts</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">pt</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">pt</span><span class="p">):</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">from_point</span><span class="p">(</span><span class="n">pt</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">pts</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">pts</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;Int64&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="in_geometry_bounds">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.in_geometry_bounds">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">in_geometry_bounds</span><span class="p">(</span>
+    <span class="n">geometries</span><span class="p">:</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">fully_contained</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># list of tile ids</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tiles that are included in the bounds of geometries.</span>
+
+<span class="sd">    If ``fully_contained`` is false, some of the returned tiles may be partially</span>
+<span class="sd">    outside the bounds. Otherwise, return only the tiles wholly inside the bounds.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained. ``NaN`` is also returned in place of empty lists.</span>
+
+<span class="sd">    Use ``pd.Series.explode`` method to turn the lists into multiple rows.</span>
+
+<span class="sd">    :param geometries: the GeoSeries with arbitrary geometries</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :param fully_contained: return only tiles wholly inside the bounding box</span>
+<span class="sd">    :return: a ``Series`` with the list of tile IDs corresponding to each geometry,</span>
+<span class="sd">             in the order of West to East first, then South to North</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">geo</span><span class="p">):</span>
+        <span class="n">ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ht</span><span class="o">.</span><span class="n">in_geometry_bounds</span><span class="p">(</span><span class="n">geo</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">fully_contained</span><span class="o">=</span><span class="n">fully_contained</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">ids</span> <span class="k">if</span> <span class="n">ids</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">geometries</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">na_action</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="in_geometry">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.in_geometry">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">in_geometry</span><span class="p">(</span>
+    <span class="n">geometries</span><span class="p">:</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">fully_contained</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># list of tile ids</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tiles that are included in the geometries.</span>
+
+<span class="sd">    If ``fully_contained`` is false, some of the returned tiles may be partially</span>
+<span class="sd">    outside the geometry. Otherwise, return only the tiles wholly inside the geometry.</span>
+
+<span class="sd">    Inclusion is modeled as the shapely relation ``intersects`` (``fully_contained`` is false)</span>
+<span class="sd">    or ``contains`` (otherwise) between the geometry and the tiles.</span>
+
+<span class="sd">    Examples (``fully_contained`` is false):</span>
+<span class="sd">    - if the geometry is a point, return one, two or four tiles</span>
+<span class="sd">    - if the geometry is a line string, it return all the tiles along the line</span>
+<span class="sd">    - if the geometry is a polygon, it returns all the tiles intersecting with the polygon</span>
+<span class="sd">    - for multi-geometries, return the union of the tiles in each geometry</span>
+
+<span class="sd">    Examples (``fully_contained`` is true):</span>
+<span class="sd">    - if the geometry is a point, nothing is returned</span>
+<span class="sd">    - if the geometry is a line string, nothing is returned</span>
+<span class="sd">    - if the geometry is a polygon, it returns all the tiles contained in the polygon</span>
+<span class="sd">    - for multi-geometries, return the union of the tiles in each geometry</span>
+
+<span class="sd">    Index and ``NaN`` values are retained. ``NaN`` is also returned in place of empty lists.</span>
+
+<span class="sd">    Use ``pd.Series.explode`` method to turn the lists into multiple rows.</span>
+
+<span class="sd">    :param geometries: the GeoSeries with arbitrary geometries</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :param fully_contained: return only tiles wholly inside the bounding box</span>
+<span class="sd">    :return: a ``Series`` with the list of tile IDs corresponding to each geometry,</span>
+<span class="sd">             in the order of West to East first, then South to North</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">geo</span><span class="p">):</span>
+        <span class="n">ids</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">ht</span><span class="o">.</span><span class="n">in_geometry</span><span class="p">(</span><span class="n">geo</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">fully_contained</span><span class="o">=</span><span class="n">fully_contained</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">ids</span> <span class="k">if</span> <span class="n">ids</span> <span class="k">else</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">geometries</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">na_action</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_x">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.get_x">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_x</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the X components of the tiles.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained.</span>
+<span class="sd">    ``NaN`` are also returned in case of invalid tile IDs.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :return: a ``Series`` of X components, ``NaN`` when not applicable</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">get_x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># This syntax is preferred than `apply(fn, axis=1)` because it&#39;s possible</span>
+    <span class="c1"># to set the dtype to Int32, otherwise None values determine a conversion to float64</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">tile_ids</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">tile_ids</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;Int32&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_y">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.get_y">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_y</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the Y components of the tiles.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained.</span>
+<span class="sd">    ``NaN`` are also returned in case of invalid tile IDs.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :return: a ``Series`` of Y components, ``NaN`` when not applicable</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">get_y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># This syntax is preferred than `apply(fn, axis=1)` because it&#39;s possible</span>
+    <span class="c1"># to set the dtype to Int32, otherwise None values determine a conversion to float64</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">tile_ids</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">tile_ids</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;Int32&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_level">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.get_level">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_level</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the levels of the tiles.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained.</span>
+<span class="sd">    ``NaN`` are also returned in case of invalid tile IDs.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :return: a ``Series`` tiling levels, ``NaN`` when not applicable</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">get_level</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="c1"># This syntax is preferred than `apply(fn, axis=1)` because it&#39;s possible</span>
+    <span class="c1"># to set the dtype to Int8, otherwise None values determine a conversion to float64</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">tile_ids</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">tile_ids</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;Int8&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_x_y_level">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.get_x_y_level">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_x_y_level</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>  <span class="c1"># x,y,level int</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the X and Y components and the levels of the tiles.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained.</span>
+<span class="sd">    ``NaN`` are also returned in case of invalid tile IDs.</span>
+
+<span class="sd">    Resulting ``NaN`` values are removed, unless ``drop_na`` is set to false.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :return: a ``DataFrame`` with columns ``x``, ``y``, ``level``, ``NaN`` when not applicable</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">get_x</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">),</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="n">get_y</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">),</span> <span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="n">get_level</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">)})</span></div>
+
+
+
+<div class="viewcode-block" id="get_center_coordinates">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.get_center_coordinates">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_center_coordinates</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>  <span class="c1"># lng,lat float</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the center points of the tiles.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained.</span>
+<span class="sd">    ``NaN`` are also returned in case of invalid tile IDs.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :return: a tuple of 2 ``Series`` containing longitude and latitude, ``NaN`` when not applicable</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">get_center_coordinates</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">tile_ids</span><span class="p">),</span> <span class="n">tile_ids</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;lng&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="get_center_point">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.get_center_point">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_center_point</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">:</span>  <span class="c1"># Point</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the center points of the tiles.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained by returning ``None``.</span>
+<span class="sd">    ``None`` are also returned in case of invalid tile IDs.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :return: a ``GeoSeries`` of points, ``None`` when not applicable</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_to_geoseries</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">,</span> <span class="n">ht</span><span class="o">.</span><span class="n">get_center_point</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_corners">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.get_corners">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_corners</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">:</span>  <span class="c1"># sw,ne Point</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the southwestern and northeastern corners of the tiles.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained by returning ``None``.</span>
+<span class="sd">    ``None`` are also returned in case of invalid tile IDs.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :return: a ``GeoDataFrame`` with columns ``southwest``, ``northeast``. ``None`` when not applicable # noqa</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers or strings # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_corners</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="n">corners</span> <span class="o">=</span> <span class="n">ht</span><span class="o">.</span><span class="n">get_corners</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">else</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;southwest&quot;</span><span class="p">:</span> <span class="n">corners</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;northeast&quot;</span><span class="p">:</span> <span class="n">corners</span><span class="p">[</span><span class="mi">1</span><span class="p">]}</span>
+
+    <span class="n">corners_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">to_corners</span><span class="p">,</span> <span class="n">tile_ids</span><span class="p">))</span>
+    <span class="n">sw</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">([</span><span class="n">corner</span><span class="p">[</span><span class="s2">&quot;southwest&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">corner</span> <span class="ow">in</span> <span class="n">corners_list</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">tile_ids</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="n">ne</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">([</span><span class="n">corner</span><span class="p">[</span><span class="s2">&quot;northeast&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">corner</span> <span class="ow">in</span> <span class="n">corners_list</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="n">tile_ids</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">({</span><span class="s2">&quot;southwest&quot;</span><span class="p">:</span> <span class="n">sw</span><span class="p">,</span> <span class="s2">&quot;northeast&quot;</span><span class="p">:</span> <span class="n">ne</span><span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="get_bounds">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.get_bounds">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_bounds</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>  <span class="c1"># west,south,east,north float</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the bounds of the tiles.</span>
+
+<span class="sd">    This function returns bounds following the same</span>
+<span class="sd">    convention of the ``bounds`` function of shapely.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained.</span>
+<span class="sd">    ``NaN`` are also returned in case of invalid tile IDs.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :return: a ``DataFrame`` with columns ``west``, ``south``,</span>
+<span class="sd">             ``east``, ``north``. ``NaN`` when not applicable</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">get_bounds</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span>
+        <span class="nb">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">tile_ids</span><span class="p">),</span> <span class="n">tile_ids</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;west&quot;</span><span class="p">,</span> <span class="s2">&quot;south&quot;</span><span class="p">,</span> <span class="s2">&quot;east&quot;</span><span class="p">,</span> <span class="s2">&quot;north&quot;</span><span class="p">]</span>
+    <span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_boundary_ring">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.get_boundary_ring">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_boundary_ring</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">:</span>  <span class="c1"># LinearRing</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the boundary of the tiles as linear rings.</span>
+
+<span class="sd">    Each ring describes the boundary counter-clockwise.</span>
+<span class="sd">    It contains 5 points, since a linear ring is always closed</span>
+<span class="sd">    by repeating its first point.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained by returning ``None``.</span>
+<span class="sd">    ``None`` are also returned in case of invalid tile IDs.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :return: a ``gpd.GeoSeries`` of linear rings</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_to_geoseries</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">,</span> <span class="n">ht</span><span class="o">.</span><span class="n">get_boundary_ring</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_polygon">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.get_polygon">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_polygon</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">:</span>  <span class="c1"># Polygon</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tiles as polygons.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained by returning ``None``.</span>
+<span class="sd">    ``None`` are also returned in case of invalid tile IDs.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :return: a ``gpd.GeoSeries`` of polygons</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_to_geoseries</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">,</span> <span class="n">ht</span><span class="o">.</span><span class="n">get_polygon</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="contains_coordinates">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.contains_coordinates">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">contains_coordinates</span><span class="p">(</span>
+    <span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">lngs</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">lats</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># bool</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return if the tiles contains the points.</span>
+
+<span class="sd">    The check includes the tile boundary, aligned with the</span>
+<span class="sd">    way shapely ``intersects`` operates.</span>
+
+<span class="sd">    ``NaN`` values or not all the series containing a value for</span>
+<span class="sd">    a given index determine the resulting tile ID to be ``NaN``.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :param lngs: the Series with longitudes</span>
+<span class="sd">    :param lats: the Series with latitudes</span>
+<span class="sd">    :return: a ``pd.Series`` containing if the points are inside the tiles</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;tile_ids&quot;</span><span class="p">:</span> <span class="n">tile_ids</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;Int64&quot;</span><span class="p">),</span> <span class="s2">&quot;lng&quot;</span><span class="p">:</span> <span class="n">lngs</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">:</span> <span class="n">lats</span><span class="p">})</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+        <span class="n">t</span><span class="p">,</span> <span class="n">lng</span><span class="p">,</span> <span class="n">lat</span> <span class="o">=</span> <span class="n">s</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">lng</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">lat</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">contains_coordinates</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">lng</span><span class="p">,</span> <span class="n">lat</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">NA</span>
+
+    <span class="c1"># Check if there&#39;s a better type for nullable boolean, or simply return false</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)),</span> <span class="n">index</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;object&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="contains_point">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.contains_point">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">contains_point</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">pts</span><span class="p">:</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># bool</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return if the tiles contains the points.</span>
+
+<span class="sd">    This method is more efficient than ``contains_geometry`` for points.</span>
+
+<span class="sd">    The check includes the tile boundary, aligned with the</span>
+<span class="sd">    way shapely ``intersects`` operates.</span>
+
+<span class="sd">    ``NaN`` values or not all the series containing a value for</span>
+<span class="sd">    a given index determine the resulting tile ID to be ``NaN``.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :param pts: the ``gpd.GeoSeries` with points</span>
+<span class="sd">    :return: a ``pd.Series`` of booleans, if the points are inside the tiles</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_to_bool</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">,</span> <span class="n">pts</span><span class="p">,</span> <span class="n">ht</span><span class="o">.</span><span class="n">contains_point</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="contains_geometry">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.contains_geometry">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">contains_geometry</span><span class="p">(</span>
+    <span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">geometries</span><span class="p">:</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">,</span> <span class="n">fully_contained</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># bool</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return if the tiles contain the geometries.</span>
+
+<span class="sd">    Inclusion is modeled as the shapely relation ``intersects`` (``fully_contained`` is false)</span>
+<span class="sd">    or ``contains`` (otherwise) between the tile and the geometry.</span>
+
+<span class="sd">    ``NaN`` values or not all the series containing a value for</span>
+<span class="sd">    a given index determine the resulting tile ID to be ``NaN``.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :param geometries: a ``gpd.GeoSeries` with any geometric type</span>
+<span class="sd">    :param fully_contained: check if each geometry is fully contained in each tile</span>
+<span class="sd">    :return: a ``pd.Series`` of booleans, if the geometries are inside the tiles</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">predicate</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">geo</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">contains_geometry</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">geo</span><span class="p">,</span> <span class="n">fully_contained</span><span class="o">=</span><span class="n">fully_contained</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">_to_bool</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">,</span> <span class="n">geometries</span><span class="p">,</span> <span class="n">predicate</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="is_contained_in_geometry">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.is_contained_in_geometry">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">is_contained_in_geometry</span><span class="p">(</span>
+    <span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">geometries</span><span class="p">:</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">,</span> <span class="n">fully_contained</span><span class="o">=</span><span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># bool</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return if the tiles are contained in the geometries.</span>
+
+<span class="sd">    Inclusion is modeled as the shapely relation ``intersects`` (``fully_contained`` is false)</span>
+<span class="sd">    or ``contains`` (otherwise) between the geometry and the tile.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :param geometries: a ``gpd.GeoSeries` with any geometric type</span>
+<span class="sd">    :param fully_contained: check if the tile is fully contained in the geometry</span>
+<span class="sd">    :return: a ``pd.Series`` of booleans, if the tiles are contained in the geometries,</span>
+<span class="sd">             fully or partially</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">predicate</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">geo</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_contained_in_geometry</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">geo</span><span class="p">,</span> <span class="n">fully_contained</span><span class="o">=</span><span class="n">fully_contained</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">_to_bool</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">,</span> <span class="n">geometries</span><span class="p">,</span> <span class="n">predicate</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="ancestor">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.ancestor">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">ancestor</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># tile id</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the ancestor tiles at the given level for the tiles.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained. ``NaN`` is also returned in case</span>
+<span class="sd">    of invalid tile IDs or tiling level, or when the ancestor doesn&#39;t exist.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :return: a ``pd.Series`` with the tile IDs of the ancestors or parents, when existing</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">_verify_integer_series</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="ow">and</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_valid</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+            <span class="n">a</span> <span class="o">=</span> <span class="n">ht</span><span class="o">.</span><span class="n">ancestor</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">a</span> <span class="k">if</span> <span class="n">a</span> <span class="k">else</span> <span class="n">pd</span><span class="o">.</span><span class="n">NA</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">NA</span>
+
+    <span class="c1"># This syntax is preferred than `apply(fn, axis=1)` because it&#39;s possible</span>
+    <span class="c1"># to set the dtype to Int64, otherwise None values determine a conversion to float64</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">tile_ids</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">tile_ids</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s2">&quot;Int64&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="descendants">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.descendants">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">descendants</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># list of tile ids</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tile IDs of all descendants at some level for each tile.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained. ``NaN`` is also returned in place of</span>
+<span class="sd">    empty lists or in case of invalid tile IDs or tiling level.</span>
+
+<span class="sd">    Use ``pd.Series.explode`` method to turn the lists into multiple rows.</span>
+
+<span class="sd">    :param tile_ids: the tile IDs</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :return: a ``pd.Series`` with the list of descendants tile IDs for each tile</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">descendants</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">_to_tile_list</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">,</span> <span class="n">fn</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="is_parent">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.is_parent">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">is_parent</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">of_tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># bool</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if tiles are the direct parents of other tiles.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained.</span>
+<span class="sd">    Series should be indexed the same.</span>
+
+<span class="sd">    :param tile_ids: the subject tile IDs</span>
+<span class="sd">    :param of_tile_ids: check the relationship of the subjects with these tiles</span>
+<span class="sd">    :return: a ``pd.Series`` containing if each tile is the parent of the other tile</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_to_bool</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">,</span> <span class="n">of_tile_ids</span><span class="p">,</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_parent</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="is_descendant">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.is_descendant">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">is_descendant</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">of_tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># bool</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if tiles are the direct descendant of other tiles.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained.</span>
+<span class="sd">    Series should be indexed the same.</span>
+
+<span class="sd">    :param tile_ids: the subject tile IDs</span>
+<span class="sd">    :param of_tile_ids: check the relationship of the subjects with these tiles</span>
+<span class="sd">    :return: a ``pd.Series`` containing if each tile is the descendant of the other tile</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_to_bool</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">,</span> <span class="n">of_tile_ids</span><span class="p">,</span> <span class="n">ht</span><span class="o">.</span><span class="n">is_descendant</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="neighbors">
+<a class="viewcode-back" href="../../../../here.geopandas_adapter.geotiles.heretile.html#here.geopandas_adapter.geotiles.heretile.neighbors">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">neighbors</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>  <span class="c1"># list of tile ids</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return tile IDs of all neighbors on given level for tiles.</span>
+
+<span class="sd">    Index and ``NaN`` values are retained. ``NaN`` is also returned in place of</span>
+<span class="sd">    empty lists or in case of invalid tile IDs or tiling level.</span>
+
+<span class="sd">    Use ``pd.Series.explode`` method to turn the lists into multiple rows.</span>
+
+<span class="sd">    :param tile_ids: the subject tile IDs</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :return: a ``pd.Series`` with the list of neighboring tile IDs</span>
+<span class="sd">    :raises ValueError: in case the series doesn&#39;t contain integers  # noqa</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">fn</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ht</span><span class="o">.</span><span class="n">neighbors</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">_to_tile_list</span><span class="p">(</span><span class="n">tile_ids</span><span class="p">,</span> <span class="n">fn</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

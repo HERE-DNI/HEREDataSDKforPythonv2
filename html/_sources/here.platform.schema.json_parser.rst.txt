@@ -1,0 +1,7 @@
+here.platform.schema.json\_parser module
+========================================
+
+.. automodule:: here.platform.schema.json_parser
+   :members:
+   :undoc-members:
+   :show-inheritance:

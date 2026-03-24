@@ -1,0 +1,7 @@
+here.content.hmc2.admin\_locations module
+=========================================
+
+.. automodule:: here.content.hmc2.admin_locations
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,27 @@
+here.inspector package
+======================
+
+.. automodule:: here.inspector
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.inspector.brand
+   here.inspector.ipyleaflet
+   here.inspector.keplergl
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.inspector.base
+   here.inspector.styles
+   here.inspector.utils

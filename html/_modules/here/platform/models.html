@@ -1,0 +1,617 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.platform.models &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/platform/models';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.platform.models</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.platform.models</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;HERE platform catalog abstraction.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">enum</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">JsonDictDocument</span>
+
+
+<div class="viewcode-block" id="Coverage">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.Coverage">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Coverage</span><span class="p">(</span><span class="n">JsonDictDocument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The geographic area that this catalog or layer covers</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">admin_areas</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;A list of ISO 3166 two-letter codes for countries and regions&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;adminAreas&quot;</span><span class="p">,</span> <span class="p">[])]</span></div>
+
+
+
+<div class="viewcode-block" id="Creator">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.Creator">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Creator</span><span class="p">(</span><span class="n">JsonDictDocument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Details of the user or the application that initially created the catalog.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The unique ID of the user or application that initially created the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="Organisation">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.Organisation">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Organisation</span><span class="p">(</span><span class="n">JsonDictDocument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Organisation of the customer that created the catalog.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The ID of the customer organisation relating to this catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="Owner">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.Owner">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Owner</span><span class="p">(</span><span class="n">JsonDictDocument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Details of the owner of the catalog.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">creator</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Creator</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The user or application that initially created the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Creator</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;creator&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">organisation</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Organisation</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The organisation of the customer that created the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Organisation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;organisation&quot;</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="Region">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.Region">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Region</span><span class="p">(</span><span class="n">JsonDictDocument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The replication region of the catalog, including each region&#39;s role</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The ID of the region&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">role</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Indicates whether the region is a primary or failover region&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;role&quot;</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="Replication">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.Replication">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Replication</span><span class="p">(</span><span class="n">JsonDictDocument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The replication set for the catalog.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">regions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Region</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;A list of the catalog&#39;s replication regions and each region&#39;s role&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">Region</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;regions&quot;</span><span class="p">]]</span></div>
+
+
+
+<div class="viewcode-block" id="AutomaticVersionDeletion">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.AutomaticVersionDeletion">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">AutomaticVersionDeletion</span><span class="p">(</span><span class="n">JsonDictDocument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Specifies the number of versions to keep for the catalog.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">number_of_versions_to_keep</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The number of versions to keep.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;numberOfVersionsToKeep&quot;</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="Notifications">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.Notifications">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Notifications</span><span class="p">(</span><span class="n">JsonDictDocument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Indicates whether or not to notify each time the version of the catalog changes&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Determines if the notifications are enabled for the catalog&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;enabled&quot;</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="PartitioningScheme">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.PartitioningScheme">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">PartitioningScheme</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Enum class for the name of the partitioning scheme for the layer.&quot;&quot;&quot;</span>
+
+    <span class="n">GENERIC</span> <span class="o">=</span> <span class="s2">&quot;generic&quot;</span>
+    <span class="n">HERE_TILE</span> <span class="o">=</span> <span class="s2">&quot;heretile&quot;</span>
+    <span class="n">NO_PARTITIONING</span> <span class="o">=</span> <span class="s2">&quot;nopartitioning&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="Partitioning">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.Partitioning">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Partitioning</span><span class="p">(</span><span class="n">JsonDictDocument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Describes the way in which data is partitioned within the layer&quot;&quot;&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">scheme</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PartitioningScheme</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The name of the partitioning scheme for the layer&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">PartitioningScheme</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;scheme&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">tile_levels</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Quadtree tile levels which contain data partitions.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;tileLevels&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="VolumeType">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.VolumeType">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">VolumeType</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Enum class for the volume type to be used for storing the layer&#39;s data content..&quot;&quot;&quot;</span>
+
+    <span class="n">DURABLE</span> <span class="o">=</span> <span class="s2">&quot;durable&quot;</span>
+    <span class="n">VOLATILE</span> <span class="o">=</span> <span class="s2">&quot;volatile&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="MaxMemoryPolicy">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.MaxMemoryPolicy">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MaxMemoryPolicy</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Enum for the keys eviction policy when the memory limit for volatile layer is reached.&quot;&quot;&quot;</span>
+
+    <span class="n">FAIL_ON_WRITE</span> <span class="o">=</span> <span class="s2">&quot;failOnWrite&quot;</span>
+    <span class="n">REPLACE_LESS_RECENTLY_USED_KEY</span> <span class="o">=</span> <span class="s2">&quot;replaceLessRecentlyUsedKey&quot;</span></div>
+
+
+
+<div class="viewcode-block" id="Volume">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.Volume">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Volume</span><span class="p">(</span><span class="n">JsonDictDocument</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Describes the volume to be used for storing the layer&#39;s data content&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">volume_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">max_memory_policy</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a new volume.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">json_dict</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="p">{</span><span class="s2">&quot;volumeType&quot;</span><span class="p">:</span> <span class="n">volume_type</span><span class="p">}</span>
+            <span class="k">if</span> <span class="n">volume_type</span> <span class="o">==</span> <span class="n">VolumeType</span><span class="o">.</span><span class="n">DURABLE</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">else</span> <span class="p">{</span>
+                <span class="s2">&quot;volumeType&quot;</span><span class="p">:</span> <span class="n">volume_type</span><span class="p">,</span>
+                <span class="s2">&quot;maxMemoryPolicy&quot;</span><span class="p">:</span> <span class="n">max_memory_policy</span>
+                <span class="k">if</span> <span class="n">max_memory_policy</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                <span class="k">else</span> <span class="n">MaxMemoryPolicy</span><span class="o">.</span><span class="n">FAIL_ON_WRITE</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">json_dict</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="DurableVolume">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.DurableVolume">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DurableVolume</span><span class="p">(</span><span class="n">Volume</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Describes a catalog durable volume to be used for storing the layer&#39;s data content&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">volume</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a new durable volume.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Volume</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">volume</span><span class="p">[</span><span class="s2">&quot;volumeType&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">volume_type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VolumeType</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The type of volume used for storing the layer&#39;s data content&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">VolumeType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;volumeType&quot;</span><span class="p">])</span></div>
+
+
+
+<div class="viewcode-block" id="VolatileVolume">
+<a class="viewcode-back" href="../../../here.platform.models.html#here.platform.models.VolatileVolume">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">VolatileVolume</span><span class="p">(</span><span class="n">Volume</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Describes a catalog volatile volume to be used for storing the layer&#39;s data content.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">volume</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a new volatile volume.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">Volume</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">volume</span><span class="p">[</span><span class="s2">&quot;volumeType&quot;</span><span class="p">],</span> <span class="n">volume</span><span class="p">[</span><span class="s2">&quot;maxMemoryPolicy&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">volume_type</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VolumeType</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The type of volume used for storing the layer&#39;s data content&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">VolumeType</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;volumeType&quot;</span><span class="p">])</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">max_memory_policy</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MaxMemoryPolicy</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Defines a keys eviction policy when the memory limit for volatile layer is reached&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">MaxMemoryPolicy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">json</span><span class="p">[</span><span class="s2">&quot;maxMemoryPolicy&quot;</span><span class="p">])</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

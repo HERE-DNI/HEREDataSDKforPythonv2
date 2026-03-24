@@ -1,0 +1,7 @@
+here.platform.adapter\_default module
+=====================================
+
+.. automodule:: here.platform.adapter_default
+   :members:
+   :undoc-members:
+   :show-inheritance:

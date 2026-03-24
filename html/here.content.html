@@ -1,0 +1,934 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>here.content package &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="_static/documentation_options.js?v=8a448e45"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'here.content';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="here.content.hmc2 package" href="here.content.hmc2.html" />
+    <link rel="prev" title="here namespace" href="here.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">here.content package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.content.hmc2.html">here.content.hmc2 package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.adas_attributes.html">here.content.hmc2.adas_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.address_attributes.html">here.content.hmc2.address_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_index.html">here.content.hmc2.admin_index module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_locations.html">here.content.hmc2.admin_locations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_place_profiles.html">here.content.hmc2.admin_place_profiles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_places.html">here.content.hmc2.admin_places module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.advanced_navigation_attributes.html">here.content.hmc2.advanced_navigation_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.base_attributes.html">here.content.hmc2.base_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.bicycle_attributes.html">here.content.hmc2.bicycle_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.composite_road_attributes.html">here.content.hmc2.composite_road_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.constants.html">here.content.hmc2.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.environmental_zone_conditions.html">here.content.hmc2.environmental_zone_conditions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.environmental_zones.html">here.content.hmc2.environmental_zones module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.extended_speed_limit.html">here.content.hmc2.extended_speed_limit module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.extracters.html">here.content.hmc2.extracters module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.here_places.html">here.content.hmc2.here_places module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.hmc.html">here.content.hmc2.hmc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.metadata.html">here.content.hmc2.metadata module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.models.html">here.content.hmc2.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.navigation_attributes.html">here.content.hmc2.navigation_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.parsers.html">here.content.hmc2.parsers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.place_context.html">here.content.hmc2.place_context module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.road_attributes.html">here.content.hmc2.road_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.segment_admin_boundary.html">here.content.hmc2.segment_admin_boundary module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.segment_street_names.html">here.content.hmc2.segment_street_names module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.sign_text.html">here.content.hmc2.sign_text module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.street_names.html">here.content.hmc2.street_names module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.topology_attributes.html">here.content.hmc2.topology_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.topology_geometry.html">here.content.hmc2.topology_geometry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.traffic_patterns.html">here.content.hmc2.traffic_patterns module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.truck_attributes.html">here.content.hmc2.truck_attributes module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.content.utils.html">here.content.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.utils.hmc_external_references.html">here.content.utils.hmc_external_references module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.utils.proto.html">here.content.utils.proto module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.base.html">here.content.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.content.html">here.content.content module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.geopandas_adapter.html">here.geopandas_adapter package</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.geopandas_adapter.geotiles.html">here.geopandas_adapter.geotiles package</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.geotiles.heretile.html">here.geopandas_adapter.geotiles.heretile module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.geopandas_adapter.utils.html">here.geopandas_adapter.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.utils.dataframe.html">here.geopandas_adapter.utils.dataframe module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.utils.geo.html">here.geopandas_adapter.utils.geo module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.geopandas_adapter.geopandas_adapter.html">here.geopandas_adapter.geopandas_adapter module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.geotiles.html">here.geotiles package</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="here.geotiles.heretile.html">here.geotiles.heretile module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.inspector.html">here.inspector package</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.brand.html">here.inspector.brand package</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.brand.colors.html">here.inspector.brand.colors module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.ipyleaflet.html">here.inspector.ipyleaflet package</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.ipyleaflet.basemaps.html">here.inspector.ipyleaflet.basemaps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.ipyleaflet.utils.html">here.inspector.ipyleaflet.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.keplergl.html">here.inspector.keplergl package</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.keplergl.utils.html">here.inspector.keplergl.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.base.html">here.inspector.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.styles.html">here.inspector.styles module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.utils.html">here.inspector.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.platform.html">here.platform package</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.api.html">here.platform.api package</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="here.platform.api.factory.html">here.platform.api.factory namespace</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.platform.api.factory.apifactory.html">here.platform.api.factory.apifactory module</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="here.platform.api.registry.html">here.platform.api.registry package</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.platform.api.registry.lookup_api_registry.html">here.platform.api.registry.lookup_api_registry module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.aaa_authorization_api.html">here.platform.api.aaa_authorization_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.aaa_oauth2_api.html">here.platform.api.aaa_oauth2_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.artifact_api.html">here.platform.api.artifact_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.base_api.html">here.platform.api.base_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_blob_api.html">here.platform.api.data_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_config_api.html">here.platform.api.data_config_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_index_api.html">here.platform.api.data_index_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_ingest_api.html">here.platform.api.data_ingest_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_interactive_api.html">here.platform.api.data_interactive_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_metadata_api.html">here.platform.api.data_metadata_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_object_blob_api.html">here.platform.api.data_object_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_publish_api.html">here.platform.api.data_publish_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_query_api.html">here.platform.api.data_query_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_statistics_api.html">here.platform.api.data_statistics_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_stream_api.html">here.platform.api.data_stream_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_volatile_blob_api.html">here.platform.api.data_volatile_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.lookup_api.html">here.platform.api.lookup_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.map_matching_api.html">here.platform.api.map_matching_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.service_api.html">here.platform.api.service_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.service_registry_api.html">here.platform.api.service_registry_api module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.config.html">here.platform.config package</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.china.html">here.platform.config.china package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.default.html">here.platform.config.default package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.internal.html">here.platform.config.internal package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.local.html">here.platform.config.local package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.private_eu_west_1.html">here.platform.config.private_eu_west_1 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.private_us_west_2.html">here.platform.config.private_us_west_2 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.application_config.html">here.platform.config.application_config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.platform_config.html">here.platform.config.platform_config module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.model.html">here.platform.model package</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.publication.html">here.platform.model.publication module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.subscription.html">here.platform.model.subscription module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.version_dependency.html">here.platform.model.version_dependency module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.schema.html">here.platform.schema package</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.ParserFactory.html">here.platform.schema.ParserFactory module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.geojson_parser.html">here.platform.schema.geojson_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.json_parser.html">here.platform.schema.json_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.parser.html">here.platform.schema.parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.protobuf_parser.html">here.platform.schema.protobuf_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.schema.html">here.platform.schema.schema module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.schema_registry.html">here.platform.schema.schema_registry module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.utils.html">here.platform.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.collection.html">here.platform.utils.collection module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.deprecation.html">here.platform.utils.deprecation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.file.html">here.platform.utils.file module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.geo.html">here.platform.utils.geo module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.properties_helper.html">here.platform.utils.properties_helper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.protobuf.html">here.platform.utils.protobuf module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.adapter.html">here.platform.adapter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.adapter_default.html">here.platform.adapter_default module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.artifact.html">here.platform.artifact module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.auth.html">here.platform.auth module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.catalog.html">here.platform.catalog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.constants.html">here.platform.constants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.credentials.html">here.platform.credentials module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.environment.html">here.platform.environment module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.exceptions.html">here.platform.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.layer.html">here.platform.layer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.map_matcher.html">here.platform.map_matcher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.models.html">here.platform.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.partition.html">here.platform.partition module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.platform.html">here.platform.platform module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.project.html">here.platform.project module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.schema_api.html">here.platform.schema_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.service.html">here.platform.service module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="here.html" class="nav-link">here namespace</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.content package</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="module-here.content">
+<span id="here-content-package"></span><h1>here.content package<a class="headerlink" href="#module-here.content" title="Link to this heading">#</a></h1>
+<p>HERE Platform Python SDK, Content access package</p>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="here.content.hmc2.html">here.content.hmc2 package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="here.content.hmc2.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.adas_attributes.html">here.content.hmc2.adas_attributes module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.adas_attributes.html#here.content.hmc2.adas_attributes.AdasAttributes"><code class="docutils literal notranslate"><span class="pre">AdasAttributes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.adas_attributes.html#here.content.hmc2.adas_attributes.BuiltupAreaRoad"><code class="docutils literal notranslate"><span class="pre">BuiltupAreaRoad</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.adas_attributes.html#here.content.hmc2.adas_attributes.CurvatureHeading"><code class="docutils literal notranslate"><span class="pre">CurvatureHeading</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.adas_attributes.html#here.content.hmc2.adas_attributes.Elevation"><code class="docutils literal notranslate"><span class="pre">Elevation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.adas_attributes.html#here.content.hmc2.adas_attributes.LinkAccuracy"><code class="docutils literal notranslate"><span class="pre">LinkAccuracy</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.adas_attributes.html#here.content.hmc2.adas_attributes.SegmentAnchor"><code class="docutils literal notranslate"><span class="pre">SegmentAnchor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.adas_attributes.html#here.content.hmc2.adas_attributes.Slope"><code class="docutils literal notranslate"><span class="pre">Slope</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.address_attributes.html">here.content.hmc2.address_attributes module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.address_attributes.html#here.content.hmc2.address_attributes.AddressAttributes"><code class="docutils literal notranslate"><span class="pre">AddressAttributes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.address_attributes.html#here.content.hmc2.address_attributes.PostalCode"><code class="docutils literal notranslate"><span class="pre">PostalCode</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_index.html">here.content.hmc2.admin_index module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.admin_index.html#here.content.hmc2.admin_index.AdminIndex"><code class="docutils literal notranslate"><span class="pre">AdminIndex</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.admin_index.html#here.content.hmc2.admin_index.CountryTiles"><code class="docutils literal notranslate"><span class="pre">CountryTiles</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.admin_index.html#here.content.hmc2.admin_index.LocationTiles"><code class="docutils literal notranslate"><span class="pre">LocationTiles</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_locations.html">here.content.hmc2.admin_locations module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.admin_locations.html#here.content.hmc2.admin_locations.AdminLocations"><code class="docutils literal notranslate"><span class="pre">AdminLocations</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.admin_locations.html#here.content.hmc2.admin_locations.Location"><code class="docutils literal notranslate"><span class="pre">Location</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_place_profiles.html">here.content.hmc2.admin_place_profiles module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.admin_place_profiles.html#here.content.hmc2.admin_place_profiles.AdminPlaceProfileAttributes"><code class="docutils literal notranslate"><span class="pre">AdminPlaceProfileAttributes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.admin_place_profiles.html#here.content.hmc2.admin_place_profiles.AdminPlaceProfiles"><code class="docutils literal notranslate"><span class="pre">AdminPlaceProfiles</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_places.html">here.content.hmc2.admin_places module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.admin_places.html#here.content.hmc2.admin_places.AdminPlaces"><code class="docutils literal notranslate"><span class="pre">AdminPlaces</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.admin_places.html#here.content.hmc2.admin_places.Place"><code class="docutils literal notranslate"><span class="pre">Place</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.advanced_navigation_attributes.html">here.content.hmc2.advanced_navigation_attributes module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.advanced_navigation_attributes.html#here.content.hmc2.advanced_navigation_attributes.AdvancedNavigationAttributes"><code class="docutils literal notranslate"><span class="pre">AdvancedNavigationAttributes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.base_attributes.html">here.content.hmc2.base_attributes module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.base_attributes.html#here.content.hmc2.base_attributes.Attribute"><code class="docutils literal notranslate"><span class="pre">Attribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.base_attributes.html#here.content.hmc2.base_attributes.BaseAttributesBinding"><code class="docutils literal notranslate"><span class="pre">BaseAttributesBinding</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.base_attributes.html#here.content.hmc2.base_attributes.BaseAttributesMultiLayerBinding"><code class="docutils literal notranslate"><span class="pre">BaseAttributesMultiLayerBinding</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.base_attributes.html#here.content.hmc2.base_attributes.SegmentRef"><code class="docutils literal notranslate"><span class="pre">SegmentRef</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.bicycle_attributes.html">here.content.hmc2.bicycle_attributes module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.bicycle_attributes.html#here.content.hmc2.bicycle_attributes.BicycleAttributes"><code class="docutils literal notranslate"><span class="pre">BicycleAttributes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.composite_road_attributes.html">here.content.hmc2.composite_road_attributes module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.composite_road_attributes.html#here.content.hmc2.composite_road_attributes.ComplexIntersectionAttribute"><code class="docutils literal notranslate"><span class="pre">ComplexIntersectionAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.composite_road_attributes.html#here.content.hmc2.composite_road_attributes.ComplexObjectAttribute"><code class="docutils literal notranslate"><span class="pre">ComplexObjectAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.composite_road_attributes.html#here.content.hmc2.composite_road_attributes.ComplexRoadAttribute"><code class="docutils literal notranslate"><span class="pre">ComplexRoadAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.composite_road_attributes.html#here.content.hmc2.composite_road_attributes.CompositeRoadAttribute"><code class="docutils literal notranslate"><span class="pre">CompositeRoadAttribute</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.constants.html">here.content.hmc2.constants module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.constants.html#here.content.hmc2.constants.Constant"><code class="docutils literal notranslate"><span class="pre">Constant</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.constants.html#here.content.hmc2.constants.FieldName"><code class="docutils literal notranslate"><span class="pre">FieldName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.constants.html#here.content.hmc2.constants.ObjectType"><code class="docutils literal notranslate"><span class="pre">ObjectType</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.environmental_zone_conditions.html">here.content.hmc2.environmental_zone_conditions module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.environmental_zone_conditions.html#here.content.hmc2.environmental_zone_conditions.EnvironmentalZoneConditions"><code class="docutils literal notranslate"><span class="pre">EnvironmentalZoneConditions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.environmental_zone_conditions.html#here.content.hmc2.environmental_zone_conditions.SegmentToEnvironmentalZone"><code class="docutils literal notranslate"><span class="pre">SegmentToEnvironmentalZone</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.environmental_zones.html">here.content.hmc2.environmental_zones module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.environmental_zones.html#here.content.hmc2.environmental_zones.EnvironmentalZones"><code class="docutils literal notranslate"><span class="pre">EnvironmentalZones</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.environmental_zones.html#here.content.hmc2.environmental_zones.Zone"><code class="docutils literal notranslate"><span class="pre">Zone</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.extended_speed_limit.html">here.content.hmc2.extended_speed_limit module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.extended_speed_limit.html#here.content.hmc2.extended_speed_limit.ExtendedSpeedLimit"><code class="docutils literal notranslate"><span class="pre">ExtendedSpeedLimit</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.extended_speed_limit.html#here.content.hmc2.extended_speed_limit.ExtendedSpeedLimitAttributes"><code class="docutils literal notranslate"><span class="pre">ExtendedSpeedLimitAttributes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.extracters.html">here.content.hmc2.extracters module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.extracters.html#here.content.hmc2.extracters.CachedExtracter"><code class="docutils literal notranslate"><span class="pre">CachedExtracter</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.here_places.html">here.content.hmc2.here_places module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.here_places.html#here.content.hmc2.here_places.HerePlaces"><code class="docutils literal notranslate"><span class="pre">HerePlaces</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.hmc.html">here.content.hmc2.hmc module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.hmc.html#here.content.hmc2.hmc.HMC"><code class="docutils literal notranslate"><span class="pre">HMC</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.metadata.html">here.content.hmc2.metadata module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.metadata.html#here.content.hmc2.metadata.Category"><code class="docutils literal notranslate"><span class="pre">Category</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.metadata.html#here.content.hmc2.metadata.CategorySystem"><code class="docutils literal notranslate"><span class="pre">CategorySystem</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.metadata.html#here.content.hmc2.metadata.Metadata"><code class="docutils literal notranslate"><span class="pre">Metadata</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.models.html">here.content.hmc2.models module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Address"><code class="docutils literal notranslate"><span class="pre">Address</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.AffiliationAttribute"><code class="docutils literal notranslate"><span class="pre">AffiliationAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.AlcoholServiceAttribute"><code class="docutils literal notranslate"><span class="pre">AlcoholServiceAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.AmenitiesAttribute"><code class="docutils literal notranslate"><span class="pre">AmenitiesAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Author"><code class="docutils literal notranslate"><span class="pre">Author</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.BasicInfoAttribute"><code class="docutils literal notranslate"><span class="pre">BasicInfoAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.BlackSpot"><code class="docutils literal notranslate"><span class="pre">BlackSpot</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.CapacityAttribute"><code class="docutils literal notranslate"><span class="pre">CapacityAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Contact"><code class="docutils literal notranslate"><span class="pre">Contact</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.ContactAdditionalData"><code class="docutils literal notranslate"><span class="pre">ContactAdditionalData</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.ContactInformation"><code class="docutils literal notranslate"><span class="pre">ContactInformation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.DTO"><code class="docutils literal notranslate"><span class="pre">DTO</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.ElectricChargeAttribute"><code class="docutils literal notranslate"><span class="pre">ElectricChargeAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.ExternalIdentifier"><code class="docutils literal notranslate"><span class="pre">ExternalIdentifier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Feedback"><code class="docutils literal notranslate"><span class="pre">Feedback</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.FuelTypeAttribute"><code class="docutils literal notranslate"><span class="pre">FuelTypeAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.HotelAttribute"><code class="docutils literal notranslate"><span class="pre">HotelAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.InternetConnectionAttribute"><code class="docutils literal notranslate"><span class="pre">InternetConnectionAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Location"><code class="docutils literal notranslate"><span class="pre">Location</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.LocationInformation"><code class="docutils literal notranslate"><span class="pre">LocationInformation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.MatchLevelAttribute"><code class="docutils literal notranslate"><span class="pre">MatchLevelAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.MediaReference"><code class="docutils literal notranslate"><span class="pre">MediaReference</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.MediaReferenceAttribute"><code class="docutils literal notranslate"><span class="pre">MediaReferenceAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Name"><code class="docutils literal notranslate"><span class="pre">Name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.NoteTypeAttribute"><code class="docutils literal notranslate"><span class="pre">NoteTypeAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.OfficeTypeAttribute"><code class="docutils literal notranslate"><span class="pre">OfficeTypeAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.OperatingTime"><code class="docutils literal notranslate"><span class="pre">OperatingTime</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.OperationTime"><code class="docutils literal notranslate"><span class="pre">OperationTime</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.OtherInformation"><code class="docutils literal notranslate"><span class="pre">OtherInformation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.ParkingAttribute"><code class="docutils literal notranslate"><span class="pre">ParkingAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Payment"><code class="docutils literal notranslate"><span class="pre">Payment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Place"><code class="docutils literal notranslate"><span class="pre">Place</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.PlaceAccessAttribute"><code class="docutils literal notranslate"><span class="pre">PlaceAccessAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.PlaceCategoryConfidenceAttribute"><code class="docutils literal notranslate"><span class="pre">PlaceCategoryConfidenceAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.PopularityAttribute"><code class="docutils literal notranslate"><span class="pre">PopularityAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.PortAttribute"><code class="docutils literal notranslate"><span class="pre">PortAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.PostalCode"><code class="docutils literal notranslate"><span class="pre">PostalCode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.PriceRange"><code class="docutils literal notranslate"><span class="pre">PriceRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.QrCodeAttribute"><code class="docutils literal notranslate"><span class="pre">QrCodeAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Qualifier"><code class="docutils literal notranslate"><span class="pre">Qualifier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.QualityScore"><code class="docutils literal notranslate"><span class="pre">QualityScore</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Relationship"><code class="docutils literal notranslate"><span class="pre">Relationship</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.RelationshipAttribute"><code class="docutils literal notranslate"><span class="pre">RelationshipAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.RestaurantAttribute"><code class="docutils literal notranslate"><span class="pre">RestaurantAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.SafetyCamera"><code class="docutils literal notranslate"><span class="pre">SafetyCamera</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.SocialSignal"><code class="docutils literal notranslate"><span class="pre">SocialSignal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.SpokenLanguage"><code class="docutils literal notranslate"><span class="pre">SpokenLanguage</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Supplier"><code class="docutils literal notranslate"><span class="pre">Supplier</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Time"><code class="docutils literal notranslate"><span class="pre">Time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.TimeRange"><code class="docutils literal notranslate"><span class="pre">TimeRange</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.TransitAttribute"><code class="docutils literal notranslate"><span class="pre">TransitAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.TruckAttribute"><code class="docutils literal notranslate"><span class="pre">TruckAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.VehicleServicesAttribute"><code class="docutils literal notranslate"><span class="pre">VehicleServicesAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.VendorUrlAttribute"><code class="docutils literal notranslate"><span class="pre">VendorUrlAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.Verification"><code class="docutils literal notranslate"><span class="pre">Verification</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.models.html#here.content.hmc2.models.VerificationAttribute"><code class="docutils literal notranslate"><span class="pre">VerificationAttribute</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.navigation_attributes.html">here.content.hmc2.navigation_attributes module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.navigation_attributes.html#here.content.hmc2.navigation_attributes.NavigationAttributes"><code class="docutils literal notranslate"><span class="pre">NavigationAttributes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.parsers.html">here.content.hmc2.parsers module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_addresses"><code class="docutils literal notranslate"><span class="pre">parse_addresses()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_affiliation_attributes"><code class="docutils literal notranslate"><span class="pre">parse_affiliation_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_alcohol_service_attributes"><code class="docutils literal notranslate"><span class="pre">parse_alcohol_service_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_amenities_attributes"><code class="docutils literal notranslate"><span class="pre">parse_amenities_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_authors"><code class="docutils literal notranslate"><span class="pre">parse_authors()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_basic_info_attributes"><code class="docutils literal notranslate"><span class="pre">parse_basic_info_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_black_spots"><code class="docutils literal notranslate"><span class="pre">parse_black_spots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_capacity_attribute"><code class="docutils literal notranslate"><span class="pre">parse_capacity_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_categories"><code class="docutils literal notranslate"><span class="pre">parse_categories()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_contact_information"><code class="docutils literal notranslate"><span class="pre">parse_contact_information()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_contacts"><code class="docutils literal notranslate"><span class="pre">parse_contacts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_datetime"><code class="docutils literal notranslate"><span class="pre">parse_datetime()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_electric_charge_attributes"><code class="docutils literal notranslate"><span class="pre">parse_electric_charge_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_external_identifiers"><code class="docutils literal notranslate"><span class="pre">parse_external_identifiers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_feedbacks"><code class="docutils literal notranslate"><span class="pre">parse_feedbacks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_fuel_type_attributes"><code class="docutils literal notranslate"><span class="pre">parse_fuel_type_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_hotel_attributes"><code class="docutils literal notranslate"><span class="pre">parse_hotel_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_internet_connection_atttributes"><code class="docutils literal notranslate"><span class="pre">parse_internet_connection_atttributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_location_information"><code class="docutils literal notranslate"><span class="pre">parse_location_information()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_locations"><code class="docutils literal notranslate"><span class="pre">parse_locations()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_match_level_attribute"><code class="docutils literal notranslate"><span class="pre">parse_match_level_attribute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_media_reference_attributes"><code class="docutils literal notranslate"><span class="pre">parse_media_reference_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_media_references"><code class="docutils literal notranslate"><span class="pre">parse_media_references()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_names"><code class="docutils literal notranslate"><span class="pre">parse_names()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_note_type_attributes"><code class="docutils literal notranslate"><span class="pre">parse_note_type_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_office_type_attributes"><code class="docutils literal notranslate"><span class="pre">parse_office_type_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_operating_times"><code class="docutils literal notranslate"><span class="pre">parse_operating_times()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_operation_times"><code class="docutils literal notranslate"><span class="pre">parse_operation_times()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_other_information"><code class="docutils literal notranslate"><span class="pre">parse_other_information()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_parking_attributes"><code class="docutils literal notranslate"><span class="pre">parse_parking_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_payments"><code class="docutils literal notranslate"><span class="pre">parse_payments()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_place_access_attributes"><code class="docutils literal notranslate"><span class="pre">parse_place_access_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_place_catagory_confidence_attributes"><code class="docutils literal notranslate"><span class="pre">parse_place_catagory_confidence_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_places"><code class="docutils literal notranslate"><span class="pre">parse_places()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_populatity_attributes"><code class="docutils literal notranslate"><span class="pre">parse_populatity_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_port_attributes"><code class="docutils literal notranslate"><span class="pre">parse_port_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_postal_codes"><code class="docutils literal notranslate"><span class="pre">parse_postal_codes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_price_ranges"><code class="docutils literal notranslate"><span class="pre">parse_price_ranges()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_qr_code_attributes"><code class="docutils literal notranslate"><span class="pre">parse_qr_code_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_qualifiers"><code class="docutils literal notranslate"><span class="pre">parse_qualifiers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_quality_scores"><code class="docutils literal notranslate"><span class="pre">parse_quality_scores()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_relationship_attributes"><code class="docutils literal notranslate"><span class="pre">parse_relationship_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_relationships"><code class="docutils literal notranslate"><span class="pre">parse_relationships()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_restaurant_attributes"><code class="docutils literal notranslate"><span class="pre">parse_restaurant_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_safety_cameras"><code class="docutils literal notranslate"><span class="pre">parse_safety_cameras()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_simple_object_types"><code class="docutils literal notranslate"><span class="pre">parse_simple_object_types()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_social_signals"><code class="docutils literal notranslate"><span class="pre">parse_social_signals()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_spoken_languages"><code class="docutils literal notranslate"><span class="pre">parse_spoken_languages()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_suppliers"><code class="docutils literal notranslate"><span class="pre">parse_suppliers()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_transit_attributes"><code class="docutils literal notranslate"><span class="pre">parse_transit_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_truck_attributes"><code class="docutils literal notranslate"><span class="pre">parse_truck_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_vehicle_services_attributes"><code class="docutils literal notranslate"><span class="pre">parse_vehicle_services_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_vendor_url_attributes"><code class="docutils literal notranslate"><span class="pre">parse_vendor_url_attributes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.parsers.html#here.content.hmc2.parsers.parse_verification_attributes"><code class="docutils literal notranslate"><span class="pre">parse_verification_attributes()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.place_context.html">here.content.hmc2.place_context module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.place_context.html#here.content.hmc2.place_context.PlaceClassification"><code class="docutils literal notranslate"><span class="pre">PlaceClassification</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.place_context.html#here.content.hmc2.place_context.PlaceContext"><code class="docutils literal notranslate"><span class="pre">PlaceContext</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.road_attributes.html">here.content.hmc2.road_attributes module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.road_attributes.html#here.content.hmc2.road_attributes.RoadAttributes"><code class="docutils literal notranslate"><span class="pre">RoadAttributes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.segment_admin_boundary.html">here.content.hmc2.segment_admin_boundary module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.segment_admin_boundary.html#here.content.hmc2.segment_admin_boundary.SegmentAdminBoundary"><code class="docutils literal notranslate"><span class="pre">SegmentAdminBoundary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.segment_admin_boundary.html#here.content.hmc2.segment_admin_boundary.SegmentAdminBoundaryAttributes"><code class="docutils literal notranslate"><span class="pre">SegmentAdminBoundaryAttributes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.segment_street_names.html">here.content.hmc2.segment_street_names module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.segment_street_names.html#here.content.hmc2.segment_street_names.SegmentToStreetName"><code class="docutils literal notranslate"><span class="pre">SegmentToStreetName</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.sign_text.html">here.content.hmc2.sign_text module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.sign_text.html#here.content.hmc2.sign_text.SignText"><code class="docutils literal notranslate"><span class="pre">SignText</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.street_names.html">here.content.hmc2.street_names module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.street_names.html#here.content.hmc2.street_names.StreetName"><code class="docutils literal notranslate"><span class="pre">StreetName</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.street_names.html#here.content.hmc2.street_names.StreetNames"><code class="docutils literal notranslate"><span class="pre">StreetNames</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.street_names.html#here.content.hmc2.street_names.StreetSection"><code class="docutils literal notranslate"><span class="pre">StreetSection</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.topology_attributes.html">here.content.hmc2.topology_attributes module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.topology_attributes.html#here.content.hmc2.topology_attributes.TopologyAttributes"><code class="docutils literal notranslate"><span class="pre">TopologyAttributes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.topology_geometry.html">here.content.hmc2.topology_geometry module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.topology_geometry.html#here.content.hmc2.topology_geometry.Node"><code class="docutils literal notranslate"><span class="pre">Node</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.topology_geometry.html#here.content.hmc2.topology_geometry.Segment"><code class="docutils literal notranslate"><span class="pre">Segment</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.topology_geometry.html#here.content.hmc2.topology_geometry.TopologyGeometry"><code class="docutils literal notranslate"><span class="pre">TopologyGeometry</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.traffic_patterns.html">here.content.hmc2.traffic_patterns module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.traffic_patterns.html#here.content.hmc2.traffic_patterns.TrafficPatterns"><code class="docutils literal notranslate"><span class="pre">TrafficPatterns</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.truck_attributes.html">here.content.hmc2.truck_attributes module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.hmc2.truck_attributes.html#here.content.hmc2.truck_attributes.TruckAttributes"><code class="docutils literal notranslate"><span class="pre">TruckAttributes</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="here.content.utils.html">here.content.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="here.content.utils.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.utils.hmc_external_references.html">here.content.utils.hmc_external_references module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.utils.hmc_external_references.html#here.content.utils.hmc_external_references.HMCExternalReferences"><code class="docutils literal notranslate"><span class="pre">HMCExternalReferences</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.utils.proto.html">here.content.utils.proto module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.content.utils.proto.html#here.content.utils.proto.decode_enum"><code class="docutils literal notranslate"><span class="pre">decode_enum()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.utils.proto.html#here.content.utils.proto.decode_enum_array"><code class="docutils literal notranslate"><span class="pre">decode_enum_array()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.utils.proto.html#here.content.utils.proto.decode_message"><code class="docutils literal notranslate"><span class="pre">decode_message()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.utils.proto.html#here.content.utils.proto.has_field"><code class="docutils literal notranslate"><span class="pre">has_field()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.utils.proto.html#here.content.utils.proto.has_field_attr"><code class="docutils literal notranslate"><span class="pre">has_field_attr()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.utils.proto.html#here.content.utils.proto.parse_linestring"><code class="docutils literal notranslate"><span class="pre">parse_linestring()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.utils.proto.html#here.content.utils.proto.parse_multi_polygon"><code class="docutils literal notranslate"><span class="pre">parse_multi_polygon()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.utils.proto.html#here.content.utils.proto.parse_point"><code class="docutils literal notranslate"><span class="pre">parse_point()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.utils.proto.html#here.content.utils.proto.parse_ref"><code class="docutils literal notranslate"><span class="pre">parse_ref()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="here.content.utils.proto.html#here.content.utils.proto.value_or_None"><code class="docutils literal notranslate"><span class="pre">value_or_None()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="here.content.base.html">here.content.base module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="here.content.base.html#here.content.base.CompositeBinding"><code class="docutils literal notranslate"><span class="pre">CompositeBinding</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.base.html#here.content.base.ContentBinding"><code class="docutils literal notranslate"><span class="pre">ContentBinding</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.ContentBinding.get"><code class="docutils literal notranslate"><span class="pre">ContentBinding.get()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.ContentBinding.get_ref"><code class="docutils literal notranslate"><span class="pre">ContentBinding.get_ref()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.ContentBinding.get_referencing"><code class="docutils literal notranslate"><span class="pre">ContentBinding.get_referencing()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.ContentBinding.object_types"><code class="docutils literal notranslate"><span class="pre">ContentBinding.object_types()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.ContentBinding.ref_types"><code class="docutils literal notranslate"><span class="pre">ContentBinding.ref_types()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.ContentBinding.schema_hrn"><code class="docutils literal notranslate"><span class="pre">ContentBinding.schema_hrn()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.base.html#here.content.base.ContentIndexer"><code class="docutils literal notranslate"><span class="pre">ContentIndexer</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.ContentIndexer.identifier"><code class="docutils literal notranslate"><span class="pre">ContentIndexer.identifier</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.ContentIndexer.partition"><code class="docutils literal notranslate"><span class="pre">ContentIndexer.partition</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.ContentIndexer.refs"><code class="docutils literal notranslate"><span class="pre">ContentIndexer.refs</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.base.html#here.content.base.ContentPartition"><code class="docutils literal notranslate"><span class="pre">ContentPartition</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.ContentPartition.index"><code class="docutils literal notranslate"><span class="pre">ContentPartition.index()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.ContentPartition.objects"><code class="docutils literal notranslate"><span class="pre">ContentPartition.objects()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.ContentPartition.ref_index"><code class="docutils literal notranslate"><span class="pre">ContentPartition.ref_index()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.base.html#here.content.base.MultiLayerBinding"><code class="docutils literal notranslate"><span class="pre">MultiLayerBinding</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.base.html#here.content.base.SingleLayerBinding"><code class="docutils literal notranslate"><span class="pre">SingleLayerBinding</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.SingleLayerBinding.get_partition"><code class="docutils literal notranslate"><span class="pre">SingleLayerBinding.get_partition()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.base.html#here.content.base.SingleLayerBinding.parse_and_index"><code class="docutils literal notranslate"><span class="pre">SingleLayerBinding.parse_and_index()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="here.content.content.html">here.content.content module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="here.content.content.html#here.content.content.Content"><code class="docutils literal notranslate"><span class="pre">Content</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.content.html#here.content.content.ContentBinding"><code class="docutils literal notranslate"><span class="pre">ContentBinding</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="here.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">here namespace</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="here.content.hmc2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">here.content.hmc2 package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="_sources/here.content.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

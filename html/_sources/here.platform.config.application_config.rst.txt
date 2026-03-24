@@ -1,0 +1,7 @@
+here.platform.config.application\_config module
+===============================================
+
+.. automodule:: here.platform.config.application_config
+   :members:
+   :undoc-members:
+   :show-inheritance:

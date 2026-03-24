@@ -1,0 +1,15 @@
+here.inspector.brand package
+============================
+
+.. automodule:: here.inspector.brand
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.inspector.brand.colors

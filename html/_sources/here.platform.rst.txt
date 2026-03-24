@@ -1,0 +1,43 @@
+here.platform package
+=====================
+
+.. automodule:: here.platform
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.platform.api
+   here.platform.config
+   here.platform.model
+   here.platform.schema
+   here.platform.utils
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.platform.adapter
+   here.platform.adapter_default
+   here.platform.artifact
+   here.platform.auth
+   here.platform.catalog
+   here.platform.constants
+   here.platform.credentials
+   here.platform.environment
+   here.platform.exceptions
+   here.platform.layer
+   here.platform.map_matcher
+   here.platform.models
+   here.platform.partition
+   here.platform.platform
+   here.platform.project
+   here.platform.schema_api
+   here.platform.service

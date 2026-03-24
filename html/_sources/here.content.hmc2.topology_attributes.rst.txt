@@ -1,0 +1,7 @@
+here.content.hmc2.topology\_attributes module
+=============================================
+
+.. automodule:: here.content.hmc2.topology_attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:

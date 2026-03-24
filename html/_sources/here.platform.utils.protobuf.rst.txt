@@ -1,0 +1,7 @@
+here.platform.utils.protobuf module
+===================================
+
+.. automodule:: here.platform.utils.protobuf
+   :members:
+   :undoc-members:
+   :show-inheritance:

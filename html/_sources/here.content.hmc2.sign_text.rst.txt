@@ -1,0 +1,7 @@
+here.content.hmc2.sign\_text module
+===================================
+
+.. automodule:: here.content.hmc2.sign_text
+   :members:
+   :undoc-members:
+   :show-inheritance:

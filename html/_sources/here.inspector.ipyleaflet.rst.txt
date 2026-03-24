@@ -1,0 +1,16 @@
+here.inspector.ipyleaflet package
+=================================
+
+.. automodule:: here.inspector.ipyleaflet
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.inspector.ipyleaflet.basemaps
+   here.inspector.ipyleaflet.utils

@@ -1,0 +1,7 @@
+here.platform.partition module
+==============================
+
+.. automodule:: here.platform.partition
+   :members:
+   :undoc-members:
+   :show-inheritance:

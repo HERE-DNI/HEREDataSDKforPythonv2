@@ -1,0 +1,7 @@
+here.platform.schema.geojson\_parser module
+===========================================
+
+.. automodule:: here.platform.schema.geojson_parser
+   :members:
+   :undoc-members:
+   :show-inheritance:

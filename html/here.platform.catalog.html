@@ -1,0 +1,1264 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>here.platform.catalog module &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="_static/documentation_options.js?v=8a448e45"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'here.platform.catalog';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="here.platform.constants module" href="here.platform.constants.html" />
+    <link rel="prev" title="here.platform.auth module" href="here.platform.auth.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.content.html">here.content package</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.content.hmc2.html">here.content.hmc2 package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.adas_attributes.html">here.content.hmc2.adas_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.address_attributes.html">here.content.hmc2.address_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_index.html">here.content.hmc2.admin_index module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_locations.html">here.content.hmc2.admin_locations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_place_profiles.html">here.content.hmc2.admin_place_profiles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_places.html">here.content.hmc2.admin_places module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.advanced_navigation_attributes.html">here.content.hmc2.advanced_navigation_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.base_attributes.html">here.content.hmc2.base_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.bicycle_attributes.html">here.content.hmc2.bicycle_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.composite_road_attributes.html">here.content.hmc2.composite_road_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.constants.html">here.content.hmc2.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.environmental_zone_conditions.html">here.content.hmc2.environmental_zone_conditions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.environmental_zones.html">here.content.hmc2.environmental_zones module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.extended_speed_limit.html">here.content.hmc2.extended_speed_limit module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.extracters.html">here.content.hmc2.extracters module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.here_places.html">here.content.hmc2.here_places module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.hmc.html">here.content.hmc2.hmc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.metadata.html">here.content.hmc2.metadata module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.models.html">here.content.hmc2.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.navigation_attributes.html">here.content.hmc2.navigation_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.parsers.html">here.content.hmc2.parsers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.place_context.html">here.content.hmc2.place_context module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.road_attributes.html">here.content.hmc2.road_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.segment_admin_boundary.html">here.content.hmc2.segment_admin_boundary module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.segment_street_names.html">here.content.hmc2.segment_street_names module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.sign_text.html">here.content.hmc2.sign_text module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.street_names.html">here.content.hmc2.street_names module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.topology_attributes.html">here.content.hmc2.topology_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.topology_geometry.html">here.content.hmc2.topology_geometry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.traffic_patterns.html">here.content.hmc2.traffic_patterns module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.truck_attributes.html">here.content.hmc2.truck_attributes module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.content.utils.html">here.content.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.utils.hmc_external_references.html">here.content.utils.hmc_external_references module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.utils.proto.html">here.content.utils.proto module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.base.html">here.content.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.content.html">here.content.content module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.geopandas_adapter.html">here.geopandas_adapter package</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.geopandas_adapter.geotiles.html">here.geopandas_adapter.geotiles package</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.geotiles.heretile.html">here.geopandas_adapter.geotiles.heretile module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.geopandas_adapter.utils.html">here.geopandas_adapter.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.utils.dataframe.html">here.geopandas_adapter.utils.dataframe module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.utils.geo.html">here.geopandas_adapter.utils.geo module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.geopandas_adapter.geopandas_adapter.html">here.geopandas_adapter.geopandas_adapter module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.geotiles.html">here.geotiles package</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="here.geotiles.heretile.html">here.geotiles.heretile module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.inspector.html">here.inspector package</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.brand.html">here.inspector.brand package</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.brand.colors.html">here.inspector.brand.colors module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.ipyleaflet.html">here.inspector.ipyleaflet package</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.ipyleaflet.basemaps.html">here.inspector.ipyleaflet.basemaps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.ipyleaflet.utils.html">here.inspector.ipyleaflet.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.keplergl.html">here.inspector.keplergl package</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.keplergl.utils.html">here.inspector.keplergl.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.base.html">here.inspector.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.styles.html">here.inspector.styles module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.utils.html">here.inspector.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="here.platform.html">here.platform package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.api.html">here.platform.api package</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="here.platform.api.factory.html">here.platform.api.factory namespace</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.platform.api.factory.apifactory.html">here.platform.api.factory.apifactory module</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="here.platform.api.registry.html">here.platform.api.registry package</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.platform.api.registry.lookup_api_registry.html">here.platform.api.registry.lookup_api_registry module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.aaa_authorization_api.html">here.platform.api.aaa_authorization_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.aaa_oauth2_api.html">here.platform.api.aaa_oauth2_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.artifact_api.html">here.platform.api.artifact_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.base_api.html">here.platform.api.base_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_blob_api.html">here.platform.api.data_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_config_api.html">here.platform.api.data_config_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_index_api.html">here.platform.api.data_index_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_ingest_api.html">here.platform.api.data_ingest_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_interactive_api.html">here.platform.api.data_interactive_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_metadata_api.html">here.platform.api.data_metadata_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_object_blob_api.html">here.platform.api.data_object_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_publish_api.html">here.platform.api.data_publish_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_query_api.html">here.platform.api.data_query_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_statistics_api.html">here.platform.api.data_statistics_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_stream_api.html">here.platform.api.data_stream_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_volatile_blob_api.html">here.platform.api.data_volatile_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.lookup_api.html">here.platform.api.lookup_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.map_matching_api.html">here.platform.api.map_matching_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.service_api.html">here.platform.api.service_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.service_registry_api.html">here.platform.api.service_registry_api module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.config.html">here.platform.config package</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.china.html">here.platform.config.china package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.default.html">here.platform.config.default package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.internal.html">here.platform.config.internal package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.local.html">here.platform.config.local package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.private_eu_west_1.html">here.platform.config.private_eu_west_1 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.private_us_west_2.html">here.platform.config.private_us_west_2 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.application_config.html">here.platform.config.application_config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.platform_config.html">here.platform.config.platform_config module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.model.html">here.platform.model package</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.publication.html">here.platform.model.publication module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.subscription.html">here.platform.model.subscription module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.version_dependency.html">here.platform.model.version_dependency module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.schema.html">here.platform.schema package</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.ParserFactory.html">here.platform.schema.ParserFactory module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.geojson_parser.html">here.platform.schema.geojson_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.json_parser.html">here.platform.schema.json_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.parser.html">here.platform.schema.parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.protobuf_parser.html">here.platform.schema.protobuf_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.schema.html">here.platform.schema.schema module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.schema_registry.html">here.platform.schema.schema_registry module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.utils.html">here.platform.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.collection.html">here.platform.utils.collection module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.deprecation.html">here.platform.utils.deprecation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.file.html">here.platform.utils.file module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.geo.html">here.platform.utils.geo module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.properties_helper.html">here.platform.utils.properties_helper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.protobuf.html">here.platform.utils.protobuf module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.adapter.html">here.platform.adapter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.adapter_default.html">here.platform.adapter_default module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.artifact.html">here.platform.artifact module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.auth.html">here.platform.auth module</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">here.platform.catalog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.constants.html">here.platform.constants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.credentials.html">here.platform.credentials module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.environment.html">here.platform.environment module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.exceptions.html">here.platform.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.layer.html">here.platform.layer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.map_matcher.html">here.platform.map_matcher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.models.html">here.platform.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.partition.html">here.platform.partition module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.platform.html">here.platform.platform module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.project.html">here.platform.project module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.schema_api.html">here.platform.schema_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.service.html">here.platform.service module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="here.html" class="nav-link">here namespace</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="here.platform.html" class="nav-link">here.platform package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.platform.catalog module</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="module-here.platform.catalog">
+<span id="here-platform-catalog-module"></span><h1>here.platform.catalog module<a class="headerlink" href="#module-here.platform.catalog" title="Link to this heading">#</a></h1>
+<p>HERE platform catalog abstraction.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">here.platform.catalog.</span></span><span class="sig-name descname"><span class="pre">Catalog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hrn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">platform</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.platform.platform.html#here.platform.platform.Platform" title="here.platform.platform.Platform"><span class="pre">Platform</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">adapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.platform.adapter.html#here.platform.adapter.Adapter" title="here.platform.adapter.Adapter"><span class="pre">Adapter</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">billing_tag</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>HERE platform catalog abstraction.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.add_layer">
+<span class="sig-name descname"><span class="pre">add_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">details</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="here.platform.layer.html#here.platform.layer.Layer" title="here.platform.layer.Layer"><span class="pre">Layer</span></a></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.add_layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.add_layer" title="Link to this definition">#</a></dt>
+<dd><p>Adds a layer to the catalog and returns the object of the created layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – ID of the layer to be added</p></li>
+<li><p><strong>layer_type</strong> – layer_type of the layer to be added</p></li>
+<li><p><strong>name</strong> – name of the layer to be added</p></li>
+<li><p><strong>summary</strong> – summary of the layer to be added</p></li>
+<li><p><strong>description</strong> – description of the layer to be added</p></li>
+<li><p><strong>content_type</strong> – content_type of the layer to be added</p></li>
+<li><p><strong>details</strong> – other details of the layer to be added</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the object of added layer</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.CatalogConfigurationException" title="here.platform.exceptions.CatalogConfigurationException"><strong>CatalogConfigurationException</strong></a> – if the catalog already
+contains a layer with ID <a href="#id1"><span class="problematic" id="id2">:param:`id`</span></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.compatible_versions">
+<span class="sig-name descname"><span class="pre">compatible_versions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">catalog_dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#here.platform.catalog.Version" title="here.platform.catalog.Version"><span class="pre">Version</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.compatible_versions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.compatible_versions" title="Link to this definition">#</a></dt>
+<dd><p>Return compatible versions iterator which returns list of Versions.
+Each Version object contains version and shared_dependencies attribute.
+:param catalog_dependencies: The catalog dependencies we want to search for
+:param limit: number of records in api response.
+:yields: List of class: <cite>Version</cite> objects.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.configuration">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">configuration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#here.platform.catalog.CatalogConfiguration" title="here.platform.catalog.CatalogConfiguration"><span class="pre">CatalogConfiguration</span></a></em><a class="headerlink" href="#here.platform.catalog.Catalog.configuration" title="Link to this definition">#</a></dt>
+<dd><p>The configuration of the catalog</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.delete_layer">
+<span class="sig-name descname"><span class="pre">delete_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.delete_layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.delete_layer" title="Link to this definition">#</a></dt>
+<dd><p>Delete the catalog layer. Supported layer-types: volatile, stream, index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>layer_id</strong> – the identifier of the layer</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.CatalogConfigurationException" title="here.platform.exceptions.CatalogConfigurationException"><strong>CatalogConfigurationException</strong></a> – in case the catalog configuration is not accepted</p></li>
+<li><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.LayerConfigurationException" title="here.platform.exceptions.LayerConfigurationException"><strong>LayerConfigurationException</strong></a> – in case the layer configuration is not accepted</p></li>
+</ul>
+</dd>
+</dl>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">here.platform</span><span class="w"> </span><span class="kn">import</span> <span class="n">Platform</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">platform</span> <span class="o">=</span> <span class="n">Platform</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">catalog</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">get_catalog</span><span class="p">(</span><span class="s2">&quot;hrn:here:data::olp-here:example&quot;</span><span class="p">)</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">catalog</span><span class="o">.</span><span class="n">delete_layer</span><span class="p">(</span><span class="s2">&quot;layer-id&quot;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.first_version">
+<span class="sig-name descname"><span class="pre">first_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.first_version"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.first_version" title="Link to this definition">#</a></dt>
+<dd><p>Return first version of the catalog available on the platform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>first version number of the catalog if present, <code class="docutils literal notranslate"><span class="pre">None</span></code> otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.get_details">
+<span class="sig-name descname"><span class="pre">get_details</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.get_details"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.get_details" title="Link to this definition">#</a></dt>
+<dd><p>Fetch and buffer catalog details from the platform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>catalog details</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.get_layer">
+<span class="sig-name descname"><span class="pre">get_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="here.platform.layer.html#here.platform.layer.Layer" title="here.platform.layer.Layer"><span class="pre">Layer</span></a></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.get_layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.get_layer" title="Link to this definition">#</a></dt>
+<dd><p>Create and return a <code class="xref py py-class docutils literal notranslate"><span class="pre">Layer</span></code> object for the given layer ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>layer_id</strong> – layer ID</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>the layer requested</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – Unknown layer id</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.get_layers_version">
+<span class="sig-name descname"><span class="pre">get_layers_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">catalog_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.get_layers_version"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.get_layers_version" title="Link to this definition">#</a></dt>
+<dd><p>Return list of all available layers and layer version
+for a given catalog version. Layer version is always
+less or equal than the catalog version and it represent
+the version when the layer was last updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>catalog_version</strong> – An int to represent a catalog version</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>all available layers with their version</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.get_version">
+<span class="sig-name descname"><span class="pre">get_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#here.platform.catalog.Version" title="here.platform.catalog.Version"><span class="pre">Version</span></a></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.get_version"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.get_version" title="Link to this definition">#</a></dt>
+<dd><p>Return details of a single version which is specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>version</strong> – An int to specify the specific version</p>
+</dd>
+</dl>
+<p>for which catalog details are needed
+:return: details of the version specified
+:raises ValueError:The value of the version is not an integer
+or when the value is greater than the latest catalog version or less than 0</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.grant_access">
+<span class="sig-name descname"><span class="pre">grant_access</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.grant_access"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.grant_access" title="Link to this definition">#</a></dt>
+<dd><p>Grants access to a catalog to an entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity_type</strong> – Type of entity app, user or group.</p></li>
+<li><p><strong>entity_id</strong> – a unique identifier for the given entity type.</p></li>
+<li><p><strong>action</strong> – an action type to grant access - read, write, manage.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.has_layer">
+<span class="sig-name descname"><span class="pre">has_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.has_layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.has_layer" title="Link to this definition">#</a></dt>
+<dd><p>Check if a layer ID exists in the catalog.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>layer_id</strong> – layer ID in the catalog.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a boolean value indicating if a layer exists</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.ingest_sdii">
+<span class="sig-name descname"><span class="pre">ingest_sdii</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">partition_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_or_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">checksum</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="here.platform.layer.html#here.platform.layer.StreamIngestion" title="here.platform.layer.StreamIngestion"><span class="pre">StreamIngestion</span></a></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.ingest_sdii"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.ingest_sdii" title="Link to this definition">#</a></dt>
+<dd><p>Ingest sensor data in SDII format in a stream layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>layer_id</strong> – the id of the stream layer</p></li>
+<li><p><strong>partition_id</strong> – A unique id to specify the partition</p></li>
+<li><p><strong>path_or_data</strong> – Data to be uploaded in the partition. It must be less than 20 MB</p></li>
+<li><p><strong>checksum</strong> – A base64 encoded SHA-256 hash of the data</p></li>
+<li><p><strong>trace_id</strong> – A unique id to track your request and identify the message in a catalog</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Trace and message IDs returned by the service</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – Data size is greater than the permissible limit of 20 MB</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">here.platform</span><span class="w"> </span><span class="kn">import</span> <span class="n">Platform</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">platform</span> <span class="o">=</span> <span class="n">Platform</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">catalog</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">get_catalog</span><span class="p">(</span><span class="s2">&quot;catalog_hrn&quot;</span><span class="p">)</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">layer_id</span> <span class="o">=</span> <span class="s2">&quot;layer_id&quot;</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">partition_id</span> <span class="o">=</span> <span class="s2">&quot;partition_id&quot;</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="sa">b</span><span class="s1">&#39;Some valid data in SDII format&#39;</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">catalog</span><span class="o">.</span><span class="n">ingest_sdii</span><span class="p">(</span><span class="n">layer_id</span><span class="p">,</span> <span class="n">partition_id</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> 
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.init_publication">
+<span class="sig-name descname"><span class="pre">init_publication</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="here.platform.layer.html#here.platform.layer.Layer" title="here.platform.layer.Layer"><span class="pre">Layer</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="here.platform.model.version_dependency.html#here.platform.model.version_dependency.VersionDependency" title="here.platform.model.version_dependency.VersionDependency"><span class="pre">VersionDependency</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="here.platform.model.publication.html#here.platform.model.publication.Publication" title="here.platform.model.publication.Publication"><span class="pre">Publication</span></a></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.init_publication"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.init_publication" title="Link to this definition">#</a></dt>
+<dd><p>Initialize a new publication, indicating which layers will be affected.</p>
+<p>Pass the returned <code class="docutils literal notranslate"><span class="pre">Publication</span></code> to the functions that write to the layers.
+Call <cite>Publication.complete()</cite> to complete the work.</p>
+<p>Dependencies with other catalogs and relative versions can be published together with
+the data. Submitting a new publication that affects one or more versioned layer
+determines the creation of a new catalog version with the dependencies specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>layers</strong> – which layers are affected by the publication</p></li>
+<li><p><strong>dependencies</strong> – list of dependencies to be use in case a new version is created</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a new publication valid for the layers specified  # noqa</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.latest_version">
+<span class="sig-name descname"><span class="pre">latest_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.latest_version"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.latest_version" title="Link to this definition">#</a></dt>
+<dd><p>Return latest version of the catalog available on the platform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>latest version number of the catalog if present, <code class="docutils literal notranslate"><span class="pre">None</span></code> otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.list_layers">
+<span class="sig-name descname"><span class="pre">list_layers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="here.platform.layer.html#here.platform.layer.Layer" title="here.platform.layer.Layer"><span class="pre">Layer</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.list_layers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.list_layers" title="Link to this definition">#</a></dt>
+<dd><p>Return a list of all the layers present in the catalog.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a list of layers</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.list_versions">
+<span class="sig-name descname"><span class="pre">list_versions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#here.platform.catalog.Version" title="here.platform.catalog.Version"><span class="pre">Version</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.list_versions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.list_versions" title="Link to this definition">#</a></dt>
+<dd><p>Return list of all catalog versions available on the platform, with one dict each.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> – An int to represent start version of catalog, <code class="docutils literal notranslate"><span class="pre">None</span></code> if unspecified</p></li>
+<li><p><strong>end</strong> – An int to represent end version of catalog, <code class="docutils literal notranslate"><span class="pre">None</span></code> if unspecified</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of all catalog versions beginning at <code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">+</span> <span class="pre">1``and</span> <span class="pre">continuing</span>
+<span class="pre">through</span> <span class="pre">(and</span> <span class="pre">including)</span> <span class="pre">``end</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.lookup_apis">
+<span class="sig-name descname"><span class="pre">lookup_apis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.lookup_apis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.lookup_apis" title="Link to this definition">#</a></dt>
+<dd><p>Lookup implemented APIs for the given HRN.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>region</strong> – an Optional param to look up a specific region for a given resource</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>dictionary with API descriptions for the HRN</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.modify_layer">
+<span class="sig-name descname"><span class="pre">modify_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">details</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.modify_layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.modify_layer" title="Link to this definition">#</a></dt>
+<dd><p>Modify the catalog layer details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>layer_id</strong> – the identifier of the layer</p></li>
+<li><p><strong>details</strong> – Details of the catalog to be modified</p></li>
+</ul>
+</dd>
+</dl>
+<p>The documentation for the API endpoint used can be found here:
+<a href="https://developer.here.com/documentation/data-api/api-reference-config.html" target="_blank">Update a catalog layer</a>  # noqa E501</p>
+<p>Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">here.platform</span><span class="w"> </span><span class="kn">import</span> <span class="n">Platform</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">platform</span> <span class="o">=</span> <span class="n">Platform</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">catalog</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">get_catalog</span><span class="p">(</span><span class="s2">&quot;hrn:here:data::olp-here:example&quot;</span><span class="p">)</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">catalog</span><span class="o">.</span><span class="n">modify_layer</span><span class="p">(</span><span class="s1">&#39;layer-id&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;updated-name&#39;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;updated-description&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.open_in_portal">
+<span class="sig-name descname"><span class="pre">open_in_portal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.open_in_portal"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.open_in_portal" title="Link to this definition">#</a></dt>
+<dd><p>Open the catalog page on the HERE platform portal.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.retrieve_publication">
+<span class="sig-name descname"><span class="pre">retrieve_publication</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">publication_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="here.platform.model.publication.html#here.platform.model.publication.Publication" title="here.platform.model.publication.Publication"><span class="pre">Publication</span></a></span></span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.retrieve_publication"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.retrieve_publication" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves an existing publication based on its ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>publication_id</strong> – the ID for an already active publication.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a publication for the ID.</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – the publication isn’t in an initialized (or open) state or a layer from
+the publication isn’t present in the current catalog.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.revoke_access">
+<span class="sig-name descname"><span class="pre">revoke_access</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.revoke_access"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.revoke_access" title="Link to this definition">#</a></dt>
+<dd><p>Revokes access to a catalog from an entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity_type</strong> – Type of entity app, user or group.</p></li>
+<li><p><strong>entity_id</strong> – a unique identifier for the given entity type.</p></li>
+<li><p><strong>action</strong> – an action type to grant access - read, write, manage.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.share">
+<span class="sig-name descname"><span class="pre">share</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">entity_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entity_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.share"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.share" title="Link to this definition">#</a></dt>
+<dd><p>Share a catalog with an entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity_type</strong> – Type of entity app, user or a group.</p></li>
+<li><p><strong>entity_id</strong> – a unique identifier for the given entity type.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.update_layer">
+<span class="sig-name descname"><span class="pre">update_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layer_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">summary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">description</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">details</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.update_layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.update_layer" title="Link to this definition">#</a></dt>
+<dd><p>Updates the layer with <a href="#id3"><span class="problematic" id="id4">:param:`layer_id`</span></a> with given layer details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>layer_id</strong> – ID of the layer to be updated</p></li>
+<li><p><strong>layer_type</strong> – layer_type of the layer to be updated</p></li>
+<li><p><strong>name</strong> – name of the layer to be updated</p></li>
+<li><p><strong>summary</strong> – summary of the layer to be updated</p></li>
+<li><p><strong>description</strong> – description of the layer to be updated</p></li>
+<li><p><strong>content_type</strong> – content_type of the layer to be updated</p></li>
+<li><p><strong>details</strong> – other details of the layer to be updated</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="here.platform.exceptions.html#here.platform.exceptions.CatalogConfigurationException" title="here.platform.exceptions.CatalogConfigurationException"><strong>CatalogConfigurationException</strong></a> – if the catalog has no layer
+with the given ID <a href="#id5"><span class="problematic" id="id6">:param:`layer_id`</span></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.write_index_layer">
+<span class="sig-name descname"><span class="pre">write_index_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="here.platform.layer.html#here.platform.layer.Layer" title="here.platform.layer.Layer"><span class="pre">Layer</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">path_or_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">pd.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fields</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.platform.adapter.html#here.platform.adapter.Adapter" title="here.platform.adapter.Adapter"><span class="pre">Adapter</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.write_index_layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.write_index_layer" title="Link to this definition">#</a></dt>
+<dd><p>Write data to an index layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>layer</strong> – the layer or ID of the layer</p></li>
+<li><p><strong>path_or_data</strong> – a file name or path or bytes with encoded content.
+Alternatively, DataFrame is supported only for layers with content-type
+application/x-parquet when using a <code class="docutils literal notranslate"><span class="pre">GeoPandasAdapter</span></code>.</p></li>
+<li><p><strong>timestamp</strong> – timestamp</p></li>
+<li><p><strong>fields</strong> – a dict representing the fields of index record for data being uploaded</p></li>
+<li><p><strong>additional_metadata</strong> – a dict of additional metadata about data being uploaded</p></li>
+<li><p><strong>encode</strong> – whether to encode the data through an adapter or store raw bytes</p></li>
+<li><p><strong>adapter</strong> – the <code class="docutils literal notranslate"><span class="pre">Adapter</span></code> to transform the input data.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> to use the default adapter of the catalog.</p></li>
+<li><p><strong>kwargs</strong> – adapter-specific, please consult the documentation
+of the specific adapter to for the parameters and types it supports</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – in case the specified layer is of the wrong type</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">here.platform</span><span class="w"> </span><span class="kn">import</span> <span class="n">Platform</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">platform</span> <span class="o">=</span> <span class="n">Platform</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">catalog</span> <span class="o">=</span> <span class="n">platform</span><span class="o">.</span><span class="n">get_catalog</span><span class="p">(</span><span class="n">hrn</span><span class="o">=</span><span class="s2">&quot;hrn:here:data::olp-here:write-function-test&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">layer_id</span> <span class="o">=</span> <span class="s2">&quot;sample_index_layer&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;~/sample_data.parquet&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fields</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ingestionTime&quot;</span><span class="p">:</span> <span class="mi">1114</span><span class="p">,</span> <span class="s2">&quot;partition_id&quot;</span><span class="p">:</span> <span class="mi">343433</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">catalog</span><span class="o">.</span><span class="n">write_index_layer</span><span class="p">(</span><span class="n">layer_id</span><span class="p">,</span> <span class="n">path_or_data</span><span class="o">=</span><span class="n">file_path</span><span class="p">,</span> 
+<span class="gp">&gt;&gt;&gt; </span>                          <span class="n">fields</span><span class="o">=</span><span class="n">fields</span><span class="p">,</span> <span class="n">encode</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> 
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.write_stream_layers">
+<span class="sig-name descname"><span class="pre">write_stream_layers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layers_write_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inline_data_limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">819200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.platform.adapter.html#here.platform.adapter.Adapter" title="here.platform.adapter.Adapter"><span class="pre">Adapter</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.write_stream_layers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.write_stream_layers" title="Link to this definition">#</a></dt>
+<dd><p>Write data to stream layers of a catalog.</p>
+<p>Data for each layer must be encoded according to the content type configured for the layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>layers_write_info</strong> – a nested dict containing layer_ids, partition_ids and
+encoded data in the form of bytes or file names or paths which will be uploaded.</p></li>
+<li><p><strong>timestamp</strong> – optional timestamp for all the messages:
+in milliseconds since Unix epoch (1970-01-01T00:00:00 UTC)</p></li>
+<li><p><strong>inline_data_limit</strong> – threshold data size in bytes to decide if
+inline stream data field should be populated, if data size
+is less than the inline_data_limit then the data would
+be added to StreamPartition.data field or else blob would
+be uploaded and its data_handle will be added to
+StreamPartition.data_handle field.
+Default is 819200 bytes.</p></li>
+<li><p><strong>encode</strong> – whether to encode the data or upload raw bytes</p></li>
+<li><p><strong>adapter</strong> – the <code class="docutils literal notranslate"><span class="pre">Adapter</span></code> to transform the input data.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> to use the default adapter of the catalog.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – in case one the layers specified is of the wrong type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.write_versioned_layers">
+<span class="sig-name descname"><span class="pre">write_versioned_layers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layers_write_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version_dependencies</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="here.platform.model.version_dependency.html#here.platform.model.version_dependency.VersionDependency" title="here.platform.model.version_dependency.VersionDependency"><span class="pre">VersionDependency</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">encode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">adapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.platform.adapter.html#here.platform.adapter.Adapter" title="here.platform.adapter.Adapter"><span class="pre">Adapter</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.write_versioned_layers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.write_versioned_layers" title="Link to this definition">#</a></dt>
+<dd><p>Write data to versioned layers of a catalog, creating one single new version.</p>
+<p>Data for each layer must be encoded according to the content type configured for the layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>layers_write_info</strong> – a nested dict containing layer_ids, partition_ids and
+encoded data in the form of bytes or file names or paths which will be uploaded</p></li>
+<li><p><strong>version_dependencies</strong> – A list of version dependencies</p></li>
+<li><p><strong>encode</strong> – whether to encode the data or upload raw bytes</p></li>
+<li><p><strong>adapter</strong> – the <code class="docutils literal notranslate"><span class="pre">Adapter</span></code> to transform the input data.
+<code class="docutils literal notranslate"><span class="pre">None</span></code> to use the default adapter of the catalog.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – in case one the layers specified is of the wrong type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.platform.catalog.Catalog.write_volatile_layers">
+<span class="sig-name descname"><span class="pre">write_volatile_layers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layers_write_info</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Mapping</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Path</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Catalog.write_volatile_layers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Catalog.write_volatile_layers" title="Link to this definition">#</a></dt>
+<dd><p>Write data to volatile layers of a catalog.</p>
+<p>Data for each layer must be encoded according to the content type configured for the layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>layers_write_info</strong> – a nested dict containing layer_ids, partition_ids and
+encoded data in the form of bytes or file names or paths which will be uploaded.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – in case one the layers specified is of the wrong type</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">here.platform.catalog.</span></span><span class="sig-name descname"><span class="pre">CatalogConfiguration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#CatalogConfiguration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="here.platform.utils.html#here.platform.utils.JsonDictDocument" title="here.platform.utils.JsonDictDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">JsonDictDocument</span></code></a></p>
+<p>The configuration of a catalog, including its most significant properties</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.automatic_version_deletion">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">automatic_version_deletion</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="here.platform.models.html#here.platform.models.AutomaticVersionDeletion" title="here.platform.models.AutomaticVersionDeletion"><span class="pre">AutomaticVersionDeletion</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.automatic_version_deletion" title="Link to this definition">#</a></dt>
+<dd><p>Specifies the number of versions to keep for the catalog</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.billing_tag">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">billing_tag</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.billing_tag" title="Link to this definition">#</a></dt>
+<dd><p>List of billing tags used for grouping billing records together for the catalog</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.coverage">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">coverage</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="here.platform.models.html#here.platform.models.Coverage" title="here.platform.models.Coverage"><span class="pre">Coverage</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.coverage" title="Link to this definition">#</a></dt>
+<dd><p>The geographic area that this catalog covers</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.created">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">created</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.created" title="Link to this definition">#</a></dt>
+<dd><p>Timestamp, in ISO 8601 format, when the catalog was initially created</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.description">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.description" title="Link to this definition">#</a></dt>
+<dd><p>A longer description of the catalog</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.hrn">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">hrn</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.hrn" title="Link to this definition">#</a></dt>
+<dd><p>The HERE Resource Name (HRN) of the catalog</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.id" title="Link to this definition">#</a></dt>
+<dd><p>The ID of the catalog</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.layers">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">layers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="here.platform.layer.html#here.platform.layer.LayerConfiguration" title="here.platform.layer.LayerConfiguration"><span class="pre">LayerConfiguration</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.layers" title="Link to this definition">#</a></dt>
+<dd><p>The layers in the catalog</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.name" title="Link to this definition">#</a></dt>
+<dd><p>The name of the catalog</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.notifications">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">notifications</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="here.platform.models.html#here.platform.models.Notifications" title="here.platform.models.Notifications"><span class="pre">Notifications</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.notifications" title="Link to this definition">#</a></dt>
+<dd><p>Indicates whether or not to notify each time the version of the catalog changes</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.owner">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">owner</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="here.platform.models.html#here.platform.models.Owner" title="here.platform.models.Owner"><span class="pre">Owner</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.owner" title="Link to this definition">#</a></dt>
+<dd><p>The owner of the catalog</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.replication">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">replication</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="here.platform.models.html#here.platform.models.Replication" title="here.platform.models.Replication"><span class="pre">Replication</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.replication" title="Link to this definition">#</a></dt>
+<dd><p>The replication set for the catalog</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.summary">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">summary</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.summary" title="Link to this definition">#</a></dt>
+<dd><p>The summary of the catalog</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.tags">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tags</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.tags" title="Link to this definition">#</a></dt>
+<dd><p>List of user-defined tags applied to the catalog</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.CatalogConfiguration.version">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#here.platform.catalog.CatalogConfiguration.version" title="Link to this definition">#</a></dt>
+<dd><p>The version of the catalog configuration</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="here.platform.catalog.Dependency">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">here.platform.catalog.</span></span><span class="sig-name descname"><span class="pre">Dependency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Dependency"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Dependency" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="here.platform.model.version_dependency.html#here.platform.model.version_dependency.VersionDependency" title="here.platform.model.version_dependency.VersionDependency"><code class="xref py py-class docutils literal notranslate"><span class="pre">VersionDependency</span></code></a></p>
+<p>This class is deprecated. Please use here.platform.model.VersionDependency.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="here.platform.catalog.Version">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">here.platform.catalog.</span></span><span class="sig-name descname"><span class="pre">Version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_dict</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/here/platform/catalog.html#Version"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.platform.catalog.Version" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="here.platform.utils.html#here.platform.utils.JsonDictDocument" title="here.platform.utils.JsonDictDocument"><code class="xref py py-class docutils literal notranslate"><span class="pre">JsonDictDocument</span></code></a></p>
+<p>Represents a catalog version with its details.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.Version.dependencies">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dependencies</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="here.platform.model.version_dependency.html#here.platform.model.version_dependency.VersionDependency" title="here.platform.model.version_dependency.VersionDependency"><span class="pre">VersionDependency</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#here.platform.catalog.Version.dependencies" title="Link to this definition">#</a></dt>
+<dd><p>The list of dependencies on external catalogs and their versions</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.Version.shared_dependencies">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shared_dependencies</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="here.platform.model.version_dependency.html#here.platform.model.version_dependency.VersionDependency" title="here.platform.model.version_dependency.VersionDependency"><span class="pre">VersionDependency</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#here.platform.catalog.Version.shared_dependencies" title="Link to this definition">#</a></dt>
+<dd><p>The list of dependencies on external catalogs and their versions</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="here.platform.catalog.Version.version">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#here.platform.catalog.Version.version" title="Link to this definition">#</a></dt>
+<dd><p>The version number</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="here.platform.auth.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">here.platform.auth module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="here.platform.constants.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">here.platform.constants module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog"><code class="docutils literal notranslate"><span class="pre">Catalog</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.add_layer"><code class="docutils literal notranslate"><span class="pre">Catalog.add_layer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.compatible_versions"><code class="docutils literal notranslate"><span class="pre">Catalog.compatible_versions()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.configuration"><code class="docutils literal notranslate"><span class="pre">Catalog.configuration</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.delete_layer"><code class="docutils literal notranslate"><span class="pre">Catalog.delete_layer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.first_version"><code class="docutils literal notranslate"><span class="pre">Catalog.first_version()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.get_details"><code class="docutils literal notranslate"><span class="pre">Catalog.get_details()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.get_layer"><code class="docutils literal notranslate"><span class="pre">Catalog.get_layer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.get_layers_version"><code class="docutils literal notranslate"><span class="pre">Catalog.get_layers_version()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.get_version"><code class="docutils literal notranslate"><span class="pre">Catalog.get_version()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.grant_access"><code class="docutils literal notranslate"><span class="pre">Catalog.grant_access()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.has_layer"><code class="docutils literal notranslate"><span class="pre">Catalog.has_layer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.ingest_sdii"><code class="docutils literal notranslate"><span class="pre">Catalog.ingest_sdii()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.init_publication"><code class="docutils literal notranslate"><span class="pre">Catalog.init_publication()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.latest_version"><code class="docutils literal notranslate"><span class="pre">Catalog.latest_version()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.list_layers"><code class="docutils literal notranslate"><span class="pre">Catalog.list_layers()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.list_versions"><code class="docutils literal notranslate"><span class="pre">Catalog.list_versions()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.lookup_apis"><code class="docutils literal notranslate"><span class="pre">Catalog.lookup_apis()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.modify_layer"><code class="docutils literal notranslate"><span class="pre">Catalog.modify_layer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.open_in_portal"><code class="docutils literal notranslate"><span class="pre">Catalog.open_in_portal()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.retrieve_publication"><code class="docutils literal notranslate"><span class="pre">Catalog.retrieve_publication()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.revoke_access"><code class="docutils literal notranslate"><span class="pre">Catalog.revoke_access()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.share"><code class="docutils literal notranslate"><span class="pre">Catalog.share()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.update_layer"><code class="docutils literal notranslate"><span class="pre">Catalog.update_layer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.write_index_layer"><code class="docutils literal notranslate"><span class="pre">Catalog.write_index_layer()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.write_stream_layers"><code class="docutils literal notranslate"><span class="pre">Catalog.write_stream_layers()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.write_versioned_layers"><code class="docutils literal notranslate"><span class="pre">Catalog.write_versioned_layers()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Catalog.write_volatile_layers"><code class="docutils literal notranslate"><span class="pre">Catalog.write_volatile_layers()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.automatic_version_deletion"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.automatic_version_deletion</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.billing_tag"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.billing_tag</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.coverage"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.coverage</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.created"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.created</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.description"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.description</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.hrn"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.hrn</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.id"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.layers"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.layers</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.name"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.notifications"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.notifications</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.owner"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.owner</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.replication"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.replication</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.summary"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.summary</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.tags"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.tags</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.CatalogConfiguration.version"><code class="docutils literal notranslate"><span class="pre">CatalogConfiguration.version</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Dependency"><code class="docutils literal notranslate"><span class="pre">Dependency</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Version"><code class="docutils literal notranslate"><span class="pre">Version</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Version.dependencies"><code class="docutils literal notranslate"><span class="pre">Version.dependencies</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Version.shared_dependencies"><code class="docutils literal notranslate"><span class="pre">Version.shared_dependencies</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.platform.catalog.Version.version"><code class="docutils literal notranslate"><span class="pre">Version.version</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="_sources/here.platform.catalog.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

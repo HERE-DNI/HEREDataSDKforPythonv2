@@ -1,0 +1,7 @@
+here.content.hmc2.advanced\_navigation\_attributes module
+=========================================================
+
+.. automodule:: here.content.hmc2.advanced_navigation_attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:

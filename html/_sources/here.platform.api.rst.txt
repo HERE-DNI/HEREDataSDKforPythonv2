@@ -1,0 +1,43 @@
+here.platform.api package
+=========================
+
+.. automodule:: here.platform.api
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.platform.api.factory
+   here.platform.api.registry
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.platform.api.aaa_authorization_api
+   here.platform.api.aaa_oauth2_api
+   here.platform.api.artifact_api
+   here.platform.api.base_api
+   here.platform.api.data_blob_api
+   here.platform.api.data_config_api
+   here.platform.api.data_index_api
+   here.platform.api.data_ingest_api
+   here.platform.api.data_interactive_api
+   here.platform.api.data_metadata_api
+   here.platform.api.data_object_blob_api
+   here.platform.api.data_publish_api
+   here.platform.api.data_query_api
+   here.platform.api.data_statistics_api
+   here.platform.api.data_stream_api
+   here.platform.api.data_volatile_blob_api
+   here.platform.api.lookup_api
+   here.platform.api.map_matching_api
+   here.platform.api.service_api
+   here.platform.api.service_registry_api

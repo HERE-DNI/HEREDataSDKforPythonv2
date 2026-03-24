@@ -1,0 +1,7 @@
+here.platform.project module
+============================
+
+.. automodule:: here.platform.project
+   :members:
+   :undoc-members:
+   :show-inheritance:

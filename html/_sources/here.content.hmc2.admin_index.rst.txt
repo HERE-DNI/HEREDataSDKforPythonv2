@@ -1,0 +1,7 @@
+here.content.hmc2.admin\_index module
+=====================================
+
+.. automodule:: here.content.hmc2.admin_index
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+here.platform.utils.deprecation module
+======================================
+
+.. automodule:: here.platform.utils.deprecation
+   :members:
+   :undoc-members:
+   :show-inheritance:

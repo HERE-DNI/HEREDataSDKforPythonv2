@@ -1,0 +1,1629 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.platform.platform &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/platform/platform';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.platform.platform</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.platform.platform</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2020-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+<span class="sd">&quot;&quot;&quot;HERE platform module</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">uuid</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">cast</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.adapter</span><span class="w"> </span><span class="kn">import</span> <span class="n">Adapter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.adapter_default</span><span class="w"> </span><span class="kn">import</span> <span class="n">DefaultAdapter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.aaa_authorization_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">AAAAuthorizationApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.aaa_oauth2_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">AAAOauth2Api</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.artifact_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccessType</span><span class="p">,</span> <span class="n">ArtifactApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.base_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.data_config_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataConfigApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.factory.apifactory</span><span class="w"> </span><span class="kn">import</span> <span class="n">API</span><span class="p">,</span> <span class="n">APIFactory</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.lookup_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">LookupApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.map_matching_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapMatchingApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.registry</span><span class="w"> </span><span class="kn">import</span> <span class="n">LookupApiRegistry</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.api.service_registry_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">ServiceRegistryApi</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.artifact</span><span class="w"> </span><span class="kn">import</span> <span class="n">Artifact</span><span class="p">,</span> <span class="n">ArtifactConfiguration</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.auth</span><span class="w"> </span><span class="kn">import</span> <span class="n">Auth</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.catalog</span><span class="w"> </span><span class="kn">import</span> <span class="n">Catalog</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.config.application_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">ApplicationConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.config.platform_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">PlatformConfig</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.credentials</span><span class="w"> </span><span class="kn">import</span> <span class="n">CredentialsType</span><span class="p">,</span> <span class="n">PlatformCredentials</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.environment</span><span class="w"> </span><span class="kn">import</span> <span class="n">Environment</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.exceptions</span><span class="w"> </span><span class="kn">import</span> <span class="n">AuthenticationException</span><span class="p">,</span> <span class="n">PlatformException</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.layer</span><span class="w"> </span><span class="kn">import</span> <span class="n">Layer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.map_matcher</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapMatcher</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.model.subscription</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">InteractiveMapSubscription</span><span class="p">,</span>
+    <span class="n">InteractiveMapSubscriptionStatus</span><span class="p">,</span>
+    <span class="n">InteractiveMapSubscriptionType</span><span class="p">,</span>
+    <span class="n">InteractiveMapUnsubscribe</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.project</span><span class="w"> </span><span class="kn">import</span> <span class="n">Project</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.schema</span><span class="w"> </span><span class="kn">import</span> <span class="n">SchemaRegistry</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.schema_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">Schema</span><span class="p">,</span> <span class="n">SchemaConfiguration</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.service</span><span class="w"> </span><span class="kn">import</span> <span class="n">Service</span><span class="p">,</span> <span class="n">ServiceConfiguration</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="Platform">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Platform</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class is responsible for interacting with the HERE platform.</span>
+
+<span class="sd">    It requires PlatformCredentials, ApplicationConfig, Environment and proxies configuration.</span>
+<span class="sd">    If not provided, there are defined using default values or standard configuration files.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">credentials</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PlatformCredentials</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">application_config</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ApplicationConfig</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">environment</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Environment</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">proxies</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">adapter</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Adapter</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">project_hrn</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">platform_config</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PlatformConfig</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Instantiate Platform.</span>
+
+<span class="sd">        :param credentials: an instance of PlatformCredentials</span>
+<span class="sd">        :param application_config: an instance of ApplicationConfig</span>
+<span class="sd">        :param environment: an instance of Environment</span>
+<span class="sd">        :param proxies: dictionary with proxy configuration per protocol,</span>
+<span class="sd">                        e.g. ``{&quot;http&quot;: &quot;http://...&quot;, &quot;https&quot;: &quot;https://...&quot;}``,</span>
+<span class="sd">                        ``None`` to obtain proxy configuration from environment variables.</span>
+<span class="sd">        :param adapter: the ``Adapter`` to transform data in different representation.</span>
+<span class="sd">          A default one is provided in case ``None`` is specified.</span>
+<span class="sd">        :param billing_tag: A string to represent a grouping of billing records.</span>
+<span class="sd">        :param project_hrn: A string representing a project.</span>
+<span class="sd">        :param platform_config: the properties of Platform Configuration.</span>
+
+<span class="sd">        For more information about proxy configuration, please see:</span>
+<span class="sd">        https://requests.readthedocs.io/en/master/user/advanced/#proxies</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_environment</span> <span class="o">=</span> <span class="n">environment</span> <span class="ow">or</span> <span class="n">Environment</span><span class="o">.</span><span class="n">from_default</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_local_environment</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_environment</span> <span class="o">==</span> <span class="n">Environment</span><span class="o">.</span><span class="n">LOCAL</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">credentials</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PlatformCredentials</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_local_environment</span><span class="p">:</span>
+            <span class="c1"># Get credentials only when non-local environment</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">credentials</span> <span class="o">=</span> <span class="n">credentials</span> <span class="ow">or</span> <span class="n">PlatformCredentials</span><span class="o">.</span><span class="n">from_default</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">application_config</span> <span class="o">=</span> <span class="n">application_config</span> <span class="ow">or</span> <span class="n">ApplicationConfig</span><span class="o">.</span><span class="n">from_default</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_platform_config</span> <span class="o">=</span> <span class="n">platform_config</span> <span class="ow">or</span> <span class="n">PlatformConfig</span><span class="o">.</span><span class="n">from_environment</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_environment</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="mf">0.1</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_local_environment</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">application_config</span><span class="o">.</span><span class="n">polling_wait</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_retry_max_time</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="mi">5</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_local_environment</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">application_config</span><span class="o">.</span><span class="n">retry_max_time</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">proxies</span> <span class="o">=</span> <span class="n">proxies</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">default_adapter</span><span class="p">:</span> <span class="n">Adapter</span> <span class="o">=</span> <span class="n">DefaultAdapter</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">adapter</span><span class="p">:</span> <span class="n">Adapter</span> <span class="o">=</span> <span class="n">adapter</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_adapter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lookup_api_registry</span> <span class="o">=</span> <span class="n">LookupApiRegistry</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span> <span class="o">=</span> <span class="n">billing_tag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_project_hrn</span> <span class="o">=</span> <span class="n">project_hrn</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_platform_config</span><span class="o">.</span><span class="n">account_url</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">auth</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">credentials</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">credentials</span><span class="o">.</span><span class="n">cred_type</span> <span class="o">==</span> <span class="n">CredentialsType</span><span class="o">.</span><span class="n">Credentials</span>
+            <span class="p">):</span>
+                <span class="n">aaa_oauth2_api</span> <span class="o">=</span> <span class="n">AAAOauth2Api</span><span class="p">(</span>
+                    <span class="n">base_url</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">credentials</span><span class="o">.</span><span class="n">cred_properties</span><span class="p">[</span><span class="s2">&quot;endpoint&quot;</span><span class="p">],</span>
+                    <span class="n">platform_config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">platform_config</span><span class="p">,</span>
+                    <span class="n">application_config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">application_config</span><span class="p">,</span>
+                    <span class="n">proxies</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">auth</span> <span class="o">=</span> <span class="n">Auth</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">credentials</span><span class="p">,</span> <span class="n">aaa_oauth2_api</span><span class="o">=</span><span class="n">aaa_oauth2_api</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">credentials</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+                <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">credentials</span><span class="o">.</span><span class="n">cred_type</span> <span class="o">==</span> <span class="n">CredentialsType</span><span class="o">.</span><span class="n">Token</span>
+            <span class="p">):</span>
+                <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">credentials</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">auth</span> <span class="o">=</span> <span class="n">Auth</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">credentials</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Unexpected credentials type</span>
+                <span class="k">assert</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_project_hrn</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">auth</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">auth</span><span class="o">.</span><span class="n">set_scope</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_project_hrn</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">api_factory</span><span class="p">:</span> <span class="n">APIFactory</span> <span class="o">=</span> <span class="n">APIFactory</span><span class="p">(</span>
+            <span class="n">platform_config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">platform_config</span><span class="p">,</span>
+            <span class="n">application_config</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">application_config</span><span class="p">,</span>
+            <span class="n">auth</span><span class="o">=</span><span class="n">cast</span><span class="p">(</span><span class="n">Auth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">auth</span><span class="p">),</span>
+            <span class="n">proxies</span><span class="o">=</span><span class="n">cast</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">proxies</span><span class="p">),</span>
+            <span class="n">local_environment</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_local_environment</span><span class="p">,</span>
+            <span class="n">lookup_api_registry</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">lookup_api_registry</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_schema_reg</span><span class="p">:</span> <span class="n">SchemaRegistry</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: ignore</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">base_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BaseApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads the service BaseApi.</span>
+
+<span class="sd">        :return: BaseApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">BaseApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">BASE</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">data_config_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataConfigApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads the service DataConfig API.</span>
+
+<span class="sd">        :return: DataConfigApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">DataConfigApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">DATA_CONFIG</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">lookup_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LookupApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads the service Lookup API.</span>
+
+<span class="sd">        :return: LookupApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">LookupApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">LOOKUP</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">artifact_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ArtifactApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads the service Artifact API.</span>
+
+<span class="sd">        :return: ArtifactApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">ArtifactApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">ARTIFACT</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">schema_registry</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SchemaRegistry</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads the service SchemaRegistry API.</span>
+
+<span class="sd">        :return: singleton SchemaRegistry instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_schema_reg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_schema_reg</span> <span class="o">=</span> <span class="n">SchemaRegistry</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">platform_config</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">ARTIFACT</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_schema_reg</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">aaa_auth_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AAAAuthorizationApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads the service AAAAuthorization API.</span>
+
+<span class="sd">        This API is not implemented in the Local Data Service.</span>
+
+<span class="sd">        :return: AAAAuthorization instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">AAAAuthorizationApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">AAA_AUTH</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">service_registry_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ServiceRegistryApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads the service registry API.</span>
+
+<span class="sd">        This API is not implemented in the Local Data Service.</span>
+
+<span class="sd">        :return: ServiceRegistryApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">ServiceRegistryApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">SERVICE_REGISTRY</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">map_matching_api</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MapMatchingApi</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lazy loads the service registry API.</span>
+
+<span class="sd">        This API is not implemented in the Local Data Service.</span>
+
+<span class="sd">        :return: ServiceRegistryApi instance.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">cast</span><span class="p">(</span><span class="n">MapMatchingApi</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">api_factory</span><span class="o">.</span><span class="n">get_api</span><span class="p">(</span><span class="n">API</span><span class="o">.</span><span class="n">MAP_MATCHING</span><span class="p">))</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">environment</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Environment</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the platform environment.</span>
+
+<span class="sd">        :return: environment</span>
+<span class="sd">        :rtype: Environment</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_environment</span>
+
+    <span class="nd">@environment</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">environment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">environment</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the platform environment and platform config based on environment.</span>
+
+<span class="sd">        :param environment: environment</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_environment</span> <span class="o">=</span> <span class="n">environment</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_platform_config</span> <span class="o">=</span> <span class="n">PlatformConfig</span><span class="o">.</span><span class="n">from_environment</span><span class="p">(</span><span class="n">environment</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">platform_config</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PlatformConfig</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the platform config.</span>
+
+<span class="sd">        :return: Platform configuration</span>
+<span class="sd">        :rtype: PlatformConfig</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_platform_config</span>
+
+<div class="viewcode-block" id="Platform.get_status">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.get_status">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">as_type</span><span class="o">=</span><span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="n">event_type</span><span class="o">=</span><span class="s2">&quot;incident&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get platform status</span>
+
+<span class="sd">        :param as_type: format of the response</span>
+<span class="sd">        :param event_type: type of event</span>
+<span class="sd">        :return: Platform status in the desired format</span>
+<span class="sd">        :raises ValueError: Incorrect parameter value</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">platform_status_url</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">platform_config</span><span class="o">.</span><span class="n">platform_status_url</span>
+        <span class="k">if</span> <span class="n">platform_status_url</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;platform_status_url is not present in configuration.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">as_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;json&quot;</span><span class="p">,</span> <span class="s2">&quot;xml&quot;</span><span class="p">]:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;Parameter as_type must be &quot;xml&quot; or &quot;json&quot; (the default).&#39;</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="n">as_type</span><span class="p">,</span> <span class="s2">&quot;event&quot;</span><span class="p">:</span> <span class="n">event_type</span><span class="p">}</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">base_api</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">platform_status_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">as_type</span> <span class="o">==</span> <span class="s2">&quot;xml&quot;</span><span class="p">:</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">text</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">status</span></div>
+
+
+<div class="viewcode-block" id="Platform.get_catalog">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.get_catalog">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_catalog</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">adapter</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Adapter</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Catalog</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a :class:`Catalog` object for the given HRN.</span>
+
+<span class="sd">        :param hrn: a string representing a *HERE Resource Name*.</span>
+<span class="sd">        :param adapter: the ``Adapter`` to transform data between different representations.</span>
+<span class="sd">          The platform adapter is used case ``None`` is specified.</span>
+<span class="sd">        :param billing_tag: A string to represent a grouping of billing records.</span>
+<span class="sd">                            If None, platform billing tag will be used,if present.</span>
+
+<span class="sd">        :return: :class:`Catalog` object</span>
+<span class="sd">        :raises ValueError: if the catalog does not exist or credentials</span>
+<span class="sd">                            don&#39;t provide access to it</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">          &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">          &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">          &gt;&gt;&gt; platform.get_catalog(&quot;hrn:here:data::olp-here:oma-3&quot;) #doctest: +ELLIPSIS</span>
+<span class="sd">          &lt;here.platform.catalog.Catalog object at 0x...&gt;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">billing_tag</span> <span class="o">=</span> <span class="n">billing_tag</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">catalog_exists</span><span class="p">(</span><span class="n">catalog_hrn</span><span class="o">=</span><span class="n">hrn</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">Catalog</span><span class="p">(</span><span class="n">hrn</span><span class="o">=</span><span class="n">hrn</span><span class="p">,</span> <span class="n">platform</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">adapter</span><span class="o">=</span><span class="n">adapter</span><span class="p">,</span> <span class="n">billing_tag</span><span class="o">=</span><span class="n">billing_tag</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Catalog </span><span class="si">{</span><span class="n">hrn</span><span class="si">}</span><span class="s2"> does not exist or credentials don&#39;t provide access to it&quot;</span>
+            <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.catalog_exists">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.catalog_exists">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">catalog_exists</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check whether a catalog with the specified HRN exists.</span>
+
+<span class="sd">        :param hrn: a *HERE Resource Name*</span>
+<span class="sd">        :return: a boolean value indicating if a catalog exists</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">catalog_exists</span><span class="p">(</span><span class="n">catalog_hrn</span><span class="o">=</span><span class="n">hrn</span><span class="p">,</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.create_catalog">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.create_catalog">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_catalog</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">summary</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">details</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Catalog</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a catalog and return a :class:`Catalog` object for the given metadata.</span>
+
+<span class="sd">        :param id: An identifier unique within the realm, used to construct the catalog HRN</span>
+<span class="sd">        :param name: The short name for the catalog</span>
+<span class="sd">        :param summary: A one-sentence summary of the catalog</span>
+<span class="sd">        :param description: A detailed description of the catalog and what it contains</span>
+<span class="sd">        :param details: Optional catalog details - tags, layers, version, notifications and replication.</span>
+<span class="sd">                        See the documentation for the catalog configuration for more informations</span>
+<span class="sd">        :param billing_tag: A string to represent a grouping of billing records.</span>
+<span class="sd">                        If None, platform billing tag will be used,if present.</span>
+<span class="sd">        :return: a :class:`Catalog` object</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">          &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">          &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">          &gt;&gt;&gt; catalog = platform.create_catalog(id=&quot;create-catalog&quot;, name=&quot;name&quot;, # doctest: +SKIP</span>
+<span class="sd">                            summary=&quot;summary&quot;, description=&quot;description&quot;, tags=[&quot;tag1&quot;, &quot;tag2&quot;]) # doctest: +SKIP # noqa: E501</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">details</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;summary&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">summary</span>
+        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">create_catalog</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span><span class="p">)</span>
+        <span class="n">status_response</span><span class="p">,</span> <span class="n">complete</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_catalog_status</span><span class="p">(</span>
+            <span class="n">response</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+        <span class="p">)</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">complete</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;status polling wait </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="si">}</span><span class="s2"> sec.&quot;</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="p">)</span>
+            <span class="n">status_response</span><span class="p">,</span> <span class="n">complete</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_catalog_status</span><span class="p">(</span>
+                <span class="n">response</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+            <span class="p">)</span>
+        <span class="n">hrn</span> <span class="o">=</span> <span class="n">status_response</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;hrn&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">hrn</span><span class="p">:</span>
+            <span class="c1"># LocalDataServer returns a different response than does Platform</span>
+            <span class="n">hrn</span> <span class="o">=</span> <span class="n">status_response</span><span class="p">[</span><span class="s2">&quot;item&quot;</span><span class="p">][</span><span class="s2">&quot;href&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">Catalog</span><span class="p">(</span><span class="n">hrn</span><span class="p">,</span> <span class="n">platform</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">billing_tag</span><span class="o">=</span><span class="n">billing_tag</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.list_catalogs">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.list_catalogs">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_catalogs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">filters</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Catalog</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List all the catalogs accessible on the HERE platform.</span>
+
+<span class="sd">        Optionally, search and return only catalogs specified by some filter criteria.</span>
+<span class="sd">        It does not return catalog that credentials don&#39;t provide access to.</span>
+
+<span class="sd">        :param filters: keywords to search for</span>
+<span class="sd">        :return: a list of :class:`Catalog` objects</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">          &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">          &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">          &gt;&gt;&gt; platform.list_catalogs(coverage=&quot;CN&quot;) # doctest: +ELLIPSIS</span>
+<span class="sd">          [&lt;here.platform.catalog.Catalog object at ...]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">catalogs_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_catalogs</span><span class="p">(</span><span class="o">**</span><span class="n">filters</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">catalog_items</span> <span class="o">=</span> <span class="n">catalogs_info</span><span class="p">[</span><span class="s2">&quot;results&quot;</span><span class="p">][</span><span class="s2">&quot;items&quot;</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">catalog_items</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">catalogs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">cat</span> <span class="ow">in</span> <span class="n">catalog_items</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">catalogs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Catalog</span><span class="p">(</span><span class="n">cat</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">],</span> <span class="n">platform</span><span class="o">=</span><span class="bp">self</span><span class="p">))</span>
+            <span class="k">except</span> <span class="n">AuthenticationException</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;Unable to access HRN </span><span class="si">{}</span><span class="s2">. Skipping.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cat</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">]))</span>
+            <span class="k">except</span> <span class="n">PlatformException</span> <span class="k">as</span> <span class="n">ex</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+                    <span class="s2">&quot;Unable to look up HRN </span><span class="si">{}</span><span class="s2"> due to </span><span class="si">{}</span><span class="s2">. Skipping.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cat</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">],</span> <span class="nb">str</span><span class="p">(</span><span class="n">ex</span><span class="p">))</span>
+                <span class="p">)</span>
+        <span class="k">return</span> <span class="n">catalogs</span></div>
+
+
+<div class="viewcode-block" id="Platform.modify_catalog">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.modify_catalog">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">modify_catalog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">**</span><span class="n">details</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Modify the catalog details, including name, summary, description.</span>
+
+<span class="sd">        This replaces the complete details of the catalog.</span>
+
+<span class="sd">        After this call succeedes, obtain a new catalog via `get_catalog`</span>
+<span class="sd">        to have access to the modified details, including affected layers.</span>
+
+<span class="sd">        :param hrn: the *HERE Resource Name* of the catalog</span>
+<span class="sd">        :param details: Optional catalog details - tags, layers, version, notifications and replication.</span>
+<span class="sd">                        See the documentation for the catalog configuration for more informations.</span>
+
+<span class="sd">        The documentation for the API endpoint used can be found here:</span>
+<span class="sd">        |modify_catalog|</span>
+
+<span class="sd">        .. |modify_catalog| raw:: html</span>
+
+<span class="sd">          &lt;a href=&quot;https://developer.here.com/documentation/data-api/api-reference-config.html&quot; target=&quot;_blank&quot;&gt;Modify a Catalog&lt;/a&gt;  # noqa E501</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">          &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">          &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">          &gt;&gt;&gt; platform.modify_catalog(hrn=&quot;hrn:here:data::olp-here:update&quot;, name=&#39;updated-name&#39;, description=&#39;updated-description&#39;) # doctest: +SKIP</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">details</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">patch_catalog</span><span class="p">(</span><span class="n">hrn</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">details</span><span class="p">)</span>
+        <span class="n">status_response</span><span class="p">,</span> <span class="n">complete</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_catalog_status</span><span class="p">(</span>
+            <span class="n">response</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+        <span class="p">)</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">complete</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;status polling wait </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="si">}</span><span class="s2"> sec.&quot;</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="p">)</span>
+            <span class="n">status_response</span><span class="p">,</span> <span class="n">complete</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_catalog_status</span><span class="p">(</span>
+                <span class="n">response</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+            <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.update_catalog">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.update_catalog">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_catalog</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">summary</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">new_layers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">details</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Update the catalog details.</span>
+
+<span class="sd">        This replaces the complete details of the catalog.</span>
+
+<span class="sd">        After this call succeedes, obtain a new catalog via `get_catalog`</span>
+<span class="sd">        to have access to the updated details, including affected layers.</span>
+
+<span class="sd">        :param hrn: the *HERE Resource Name* of the catalog</span>
+<span class="sd">        :param name: the optional new short name of the catalog.</span>
+<span class="sd">        :param summary: the optional new summary of the catalog.</span>
+<span class="sd">        :param description: the optional new detailed description of the catalog.</span>
+<span class="sd">        :param new_layers: the optional list of new layers - each new layer needs to be a dict</span>
+<span class="sd">                           For the format please see the documentation for the catalog configuration.</span>
+<span class="sd">                           Please note that layers can only be added to the catalog using this function.</span>
+<span class="sd">        :param details: Optional catalog details - tags, version, notifications and replication.</span>
+<span class="sd">                        See the documentation for the catalog configuration for more information.</span>
+
+<span class="sd">        The documentation for the API endpoint used can be found here:</span>
+<span class="sd">        |update_catalog|</span>
+
+<span class="sd">        .. |update_catalog| raw:: html</span>
+
+<span class="sd">          &lt;a href=&quot;https://developer.here.com/documentation/data-api/api-reference-config.html&quot; target=&quot;_blank&quot;&gt;Updates a Catalog&lt;/a&gt;  # noqa E501</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">          &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">          &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">          &gt;&gt;&gt; new_layer = {}  # put the configuration of a new layer here as a dict</span>
+<span class="sd">          &gt;&gt;&gt; platform.update_catalog(hrn=&#39;hrn:here:data::olp-here:update&#39;, name=&#39;updated&#39;, new_layers=[new_layer]) # doctest: +SKIP</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">details</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="ow">not</span> <span class="p">(</span><span class="s2">&quot;layers&quot;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">new_layers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">),</span> <span class="p">(</span>
+            <span class="s2">&quot;You can either define the new_layers or overwrite&quot;</span>
+            <span class="s2">&quot; the existing layers but not both at the same time.&quot;</span>
+        <span class="p">)</span>
+        <span class="n">catalog</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_catalog</span><span class="p">(</span><span class="n">hrn</span><span class="p">)</span>
+        <span class="n">catalog_conf</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">configuration</span>
+        <span class="c1"># the &quot;id&quot; field cannot be updated however it must be in the request body</span>
+        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">catalog_conf</span><span class="o">.</span><span class="n">id</span>
+        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span> <span class="k">if</span> <span class="n">name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">catalog_conf</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;summary&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">summary</span> <span class="k">if</span> <span class="n">summary</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">catalog_conf</span><span class="o">.</span><span class="n">summary</span>
+        <span class="n">data</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">description</span> <span class="k">if</span> <span class="n">description</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">catalog_conf</span><span class="o">.</span><span class="n">description</span>
+        <span class="k">if</span> <span class="s2">&quot;layers&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">lyr</span><span class="o">.</span><span class="n">json</span> <span class="k">for</span> <span class="n">lyr</span> <span class="ow">in</span> <span class="n">catalog_conf</span><span class="o">.</span><span class="n">layers</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">new_layers</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">]</span> <span class="o">+=</span> <span class="n">new_layers</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">update_catalog</span><span class="p">(</span>
+            <span class="n">catalog_hrn</span><span class="o">=</span><span class="n">hrn</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+        <span class="p">)</span>
+        <span class="n">status_response</span><span class="p">,</span> <span class="n">complete</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_catalog_status</span><span class="p">(</span>
+            <span class="n">response</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+        <span class="p">)</span>
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">complete</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;status polling wait </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="si">}</span><span class="s2"> sec.&quot;</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="p">)</span>
+            <span class="n">status_response</span><span class="p">,</span> <span class="n">complete</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_catalog_status</span><span class="p">(</span>
+                <span class="n">response</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+            <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.delete_catalog">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.delete_catalog">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_catalog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Delete a catalog along with the layers it contains.</span>
+
+<span class="sd">        :param hrn: the *HERE Resource Name* of the catalog</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">          &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">          &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">          &gt;&gt;&gt; platform.delete_catalog(&quot;hrn:here:data::olp-here:delete&quot;) # doctest: +SKIP</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">delete_catalog</span><span class="p">(</span><span class="n">hrn</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span><span class="p">)</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">logging</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;status polling wait </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="si">}</span><span class="s2"> sec.&quot;</span><span class="p">)</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="p">)</span>
+            <span class="n">status_response</span><span class="p">,</span> <span class="n">complete</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_catalog_status</span><span class="p">(</span>
+                <span class="n">response</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">],</span> <span class="n">billing_tag</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">billing_tag</span>
+            <span class="p">)</span>
+            <span class="n">status</span> <span class="o">=</span> <span class="n">status_response</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Catalog delete: </span><span class="si">{</span><span class="n">hrn</span><span class="si">}</span><span class="s2"> state: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">complete</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">api_factory</span><span class="o">.</span><span class="n">remove_catalog_apis</span><span class="p">(</span><span class="n">hrn</span><span class="p">)</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Catalog deletion for hrn: </span><span class="si">{</span><span class="n">hrn</span><span class="si">}</span><span class="s2"> finished with status: </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">return</span></div>
+
+
+<div class="viewcode-block" id="Platform.get_project">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.get_project">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_project</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Project</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a :class:`Project` object for the given HRN.</span>
+
+<span class="sd">        :param hrn: a string representing a *HERE Resource Name*.</span>
+
+<span class="sd">        :return: the Project.</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">        &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">        &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">        &gt;&gt;&gt; platform.get_project(&quot;hrn:here:authorization::olp-here:project/test&quot;)# doctest: +SKIP</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">Project</span><span class="p">(</span><span class="n">hrn</span><span class="p">,</span> <span class="n">platform</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.create_project">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.create_project">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create_project</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">project_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">project_desc</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Project</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a project.</span>
+
+<span class="sd">        :param project_id: A unique id for the project.</span>
+<span class="sd">        :param project_name: The short name for the project.</span>
+<span class="sd">        :param project_desc: A detailed description of the project and what it contains.</span>
+<span class="sd">        :return: a :class &#39;Project&#39; object.</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">        &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">        &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">        &gt;&gt;&gt; project = platform.create_project(id=&quot;create-project&quot;, name=&quot;name&quot;,# doctest: +SKIP</span>
+<span class="sd">        &gt;&gt;&gt;                              description=&quot;description&quot;) # doctest: +SKIP</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">project_id</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">project_desc</span><span class="p">}</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">aaa_auth_api</span><span class="o">.</span><span class="n">create_project</span><span class="p">(</span><span class="n">body</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Project</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">],</span> <span class="n">platform</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.list_projects">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.list_projects">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_projects</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">can_manage</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">is_member</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="c1"># page_token: Optional[str] = None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Project</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the list of projects that you are a project admin or a member based on the can_manage</span>
+<span class="sd">        and is_member.</span>
+
+<span class="sd">        :param limit: Number of entries to be returned in the response</span>
+<span class="sd">        :param can_manage: If true returns all projects of which the</span>
+<span class="sd">            caller(user/app) is a project admin</span>
+<span class="sd">        :param is_member: If true returns all projects of which the caller(user/app) is a member</span>
+
+<span class="sd">        :return: a list of projects.</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">        &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">        &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">        &gt;&gt;&gt; resp = platform.list_projects(limit=10) # doctest: +SKIP</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">aaa_auth_api</span><span class="o">.</span><span class="n">get_project_list</span><span class="p">(</span>
+            <span class="n">limit</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">limit</span><span class="p">)</span> <span class="k">if</span> <span class="n">limit</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span>
+            <span class="c1"># page_token=page_token,</span>
+            <span class="n">can_manage</span><span class="o">=</span><span class="n">can_manage</span><span class="p">,</span>
+            <span class="n">is_member</span><span class="o">=</span><span class="n">is_member</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="p">[</span><span class="n">Project</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">],</span> <span class="bp">self</span><span class="p">)</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]]</span></div>
+
+
+<div class="viewcode-block" id="Platform.update_project">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.update_project">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">update_project</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">project_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">project_desc</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Update the project metadata.</span>
+
+<span class="sd">        :param hrn: HRN identifying the project</span>
+<span class="sd">        :param project_name: The short name for the project.</span>
+<span class="sd">        :param project_desc: A detailed description of the project and what it contains.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">project_desc</span><span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">aaa_auth_api</span><span class="o">.</span><span class="n">patch_project</span><span class="p">(</span><span class="n">project</span><span class="o">=</span><span class="n">hrn</span><span class="p">,</span> <span class="n">body</span><span class="o">=</span><span class="n">payload</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.delete_project">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.delete_project">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_project</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Delete a project along with the catalogs it contains.</span>
+
+<span class="sd">        :param hrn: HRN identifying the project</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">aaa_auth_api</span><span class="o">.</span><span class="n">delete_project</span><span class="p">(</span><span class="n">hrn</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.leave_project">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.leave_project">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">leave_project</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Remove the caller from the specified Project.</span>
+
+<span class="sd">        :param hrn: HRN identifying the project</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">        &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">        &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">        &gt;&gt;&gt; platform.leave_project(&quot;hrn:here:authorization::&quot; # doctest: +SKIP</span>
+<span class="sd">                               &quot;olp-here:project/test&quot;) # doctest: +SKIP</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">aaa_auth_api</span><span class="o">.</span><span class="n">leave_project</span><span class="p">(</span><span class="n">hrn</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.list_layer_details">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.list_layer_details">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_layer_details</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">filters</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">dict</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List all the layer details accessible on the HERE platform.</span>
+
+<span class="sd">        Optionally, search and return only layers specified by some filter criteria.</span>
+<span class="sd">        It does not return layers that credentials don&#39;t provide access to.</span>
+
+<span class="sd">        :param filters: keywords to search for</span>
+<span class="sd">        :return: list of layer details</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">          &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">          &gt;&gt;&gt; import pandas as pd</span>
+<span class="sd">          &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">          &gt;&gt;&gt; layers = platform.list_layer_details(coverage=&#39;US&#39;) # doctest: +ELLIPSIS</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">filters</span><span class="p">[</span><span class="s2">&quot;verbose&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;True&quot;</span>
+        <span class="n">catalogs_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_catalogs</span><span class="p">(</span><span class="o">**</span><span class="n">filters</span><span class="p">)</span>
+        <span class="n">catalogs</span> <span class="o">=</span> <span class="n">catalogs_info</span><span class="p">[</span><span class="s2">&quot;results&quot;</span><span class="p">][</span><span class="s2">&quot;items&quot;</span><span class="p">]</span>
+        <span class="n">layer_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">cat</span> <span class="ow">in</span> <span class="n">catalogs</span><span class="p">:</span>
+            <span class="n">layers</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">]</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">catalog</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_catalog</span><span class="p">(</span><span class="n">cat</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">])</span>
+            <span class="k">except</span> <span class="n">AuthenticationException</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;App doesn&#39;t have access to </span><span class="si">{</span><span class="n">cat</span><span class="p">[</span><span class="s1">&#39;hrn&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">:</span>
+                <span class="n">layer</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+                <span class="n">layer_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">get_details</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">layer_list</span></div>
+
+
+<div class="viewcode-block" id="Platform.list_layers">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.list_layers">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_layers</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">filters</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Layer</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List all the layer details accessible on the HERE platform.</span>
+
+<span class="sd">        Optionally, search and return only layers specified by some filter criteria.</span>
+<span class="sd">        It does not return layers that credentials don&#39;t provide access to.</span>
+
+<span class="sd">        :param filters: keywords to search for</span>
+<span class="sd">        :return: dataframe with layer details</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">          &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">          &gt;&gt;&gt; import pandas as pd</span>
+<span class="sd">          &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">          &gt;&gt;&gt; layer_df = platform.list_layers(coverage=&#39;US&#39;) # doctest: +ELLIPSIS</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">filters</span><span class="p">[</span><span class="s2">&quot;verbose&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;True&quot;</span>
+        <span class="n">catalogs_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_catalogs</span><span class="p">(</span><span class="o">**</span><span class="n">filters</span><span class="p">)</span>
+        <span class="n">catalogs</span> <span class="o">=</span> <span class="n">catalogs_info</span><span class="p">[</span><span class="s2">&quot;results&quot;</span><span class="p">][</span><span class="s2">&quot;items&quot;</span><span class="p">]</span>
+        <span class="n">layer_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">cat</span> <span class="ow">in</span> <span class="n">catalogs</span><span class="p">:</span>
+            <span class="n">layers</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">]</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">catalog</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_catalog</span><span class="p">(</span><span class="n">cat</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">])</span>
+            <span class="k">except</span> <span class="n">AuthenticationException</span><span class="p">:</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;App doesn&#39;t have access to </span><span class="si">{</span><span class="n">cat</span><span class="p">[</span><span class="s1">&#39;hrn&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+                <span class="k">continue</span>
+            <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">:</span>
+                <span class="n">layer</span> <span class="o">=</span> <span class="n">catalog</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+                <span class="n">layer_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">layer_list</span></div>
+
+
+<div class="viewcode-block" id="Platform.list_services">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.list_services">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_services</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Service</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List all the services accessible on the HERE platform.</span>
+
+<span class="sd">        :return: a list of :class:`Service` objects</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">          &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">          &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">          &gt;&gt;&gt; platform.list_services() # doctest: +ELLIPSIS</span>
+<span class="sd">          [&lt;here.platform.service.Service object at ...]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">services_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">service_registry_api</span><span class="o">.</span><span class="n">get_services</span><span class="p">()</span>
+        <span class="n">services</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">Service</span><span class="p">(</span>
+                <span class="n">hrn</span><span class="o">=</span><span class="n">service_info</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">],</span>
+                <span class="n">configuration</span><span class="o">=</span><span class="n">ServiceConfiguration</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">json_dict</span><span class="o">=</span><span class="n">service_info</span><span class="p">),</span>
+                <span class="n">platform</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">service_info</span> <span class="ow">in</span> <span class="n">services_info</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="n">services</span></div>
+
+
+<div class="viewcode-block" id="Platform.get_service">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.get_service">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_service</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Service</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return a :class:`Service` object for the given HRN.</span>
+
+<span class="sd">        :param hrn: a string representing a *HERE Resource Name*.</span>
+<span class="sd">        :return: :class:`Service` object</span>
+
+<span class="sd">        Usage::</span>
+
+<span class="sd">          &gt;&gt;&gt; from here.platform import Platform</span>
+<span class="sd">          &gt;&gt;&gt; platform = Platform()</span>
+<span class="sd">          &gt;&gt;&gt; platform.get_service(&quot;hrn:here:service::olp-here:routing-8&quot;) #doctest: +ELLIPSIS</span>
+<span class="sd">          &lt;here.platform.service.Service object at 0x...&gt;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">service_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">service_registry_api</span><span class="o">.</span><span class="n">get_service</span><span class="p">(</span><span class="n">service_hrn</span><span class="o">=</span><span class="n">hrn</span><span class="p">)</span>
+        <span class="n">service_config</span> <span class="o">=</span> <span class="n">ServiceConfiguration</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">json_dict</span><span class="o">=</span><span class="n">service_info</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Service</span><span class="p">(</span><span class="n">hrn</span><span class="o">=</span><span class="n">hrn</span><span class="p">,</span> <span class="n">configuration</span><span class="o">=</span><span class="n">service_config</span><span class="p">,</span> <span class="n">platform</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.clone_catalog">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.clone_catalog">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">clone_catalog</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">source</span><span class="p">:</span> <span class="n">Catalog</span><span class="p">,</span>
+        <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">summary</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">description</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">billing_tag</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">layers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Create a catalog from a source catalog and return</span>
+<span class="sd">        a :class:`Catalog` object. Cloning will be restricted to configuration.</span>
+<span class="sd">        No data will be cloned or copied from source to new catalog.</span>
+
+<span class="sd">        :param source: Catalog object from which new catalog need to be cloned.</span>
+<span class="sd">        :param id: An identifier unique within the realm, used to construct the catalog HRN</span>
+<span class="sd">        :param name: The short name for the catalog</span>
+<span class="sd">        :param summary: A one-sentence summary of the catalog</span>
+<span class="sd">        :param description: A detailed description of the catalog and what it contains</span>
+<span class="sd">        :param billing_tag: A string to represent a grouping of billing records.</span>
+<span class="sd">                        If None, platform billing tag will be used,if present.</span>
+<span class="sd">        :param layers: A list of layer ids to be added in clone catalog.</span>
+<span class="sd">                        These layer ids must be present in source catalog.</span>
+<span class="sd">                        If None, all layers present in source catalog will be copied.</span>
+<span class="sd">        :return: a :class:`Catalog` object</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">source_details</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">get_details</span><span class="p">()</span>
+        <span class="n">layer_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">layers</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">:</span>
+                <span class="n">layer</span> <span class="o">=</span> <span class="n">source</span><span class="o">.</span><span class="n">get_layer</span><span class="p">(</span><span class="n">layer_id</span><span class="o">=</span><span class="n">layer</span><span class="p">)</span>
+                <span class="n">layer_details</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">get_details</span><span class="p">()</span>
+                <span class="n">layer_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">layer_details</span><span class="p">)</span>
+        <span class="n">cat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_catalog</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="nb">id</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="n">name</span> <span class="k">if</span> <span class="n">name</span> <span class="k">else</span> <span class="n">source_details</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span>
+            <span class="n">summary</span><span class="o">=</span><span class="n">summary</span> <span class="k">if</span> <span class="n">summary</span> <span class="k">else</span> <span class="n">source_details</span><span class="p">[</span><span class="s2">&quot;summary&quot;</span><span class="p">],</span>
+            <span class="n">description</span><span class="o">=</span><span class="n">description</span> <span class="k">if</span> <span class="n">description</span> <span class="k">else</span> <span class="n">source_details</span><span class="p">[</span><span class="s2">&quot;description&quot;</span><span class="p">],</span>
+            <span class="n">billing_tag</span><span class="o">=</span><span class="n">billing_tag</span><span class="p">,</span>
+            <span class="n">layers</span><span class="o">=</span><span class="n">layer_list</span> <span class="k">if</span> <span class="n">layers</span> <span class="k">else</span> <span class="n">source_details</span><span class="p">[</span><span class="s2">&quot;layers&quot;</span><span class="p">],</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">cat</span></div>
+
+
+<div class="viewcode-block" id="Platform.map_matcher_map_versions">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.map_matcher_map_versions">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">map_matcher_map_versions</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">MapMatcher</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List all available map matcher map versions</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">map_matching_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">map_matching_api</span><span class="o">.</span><span class="n">map_matcher_map_versions</span><span class="p">()</span>
+        <span class="n">map_matcher_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">map_matcher_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">map_matching_info</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">map_matcher</span> <span class="ow">in</span> <span class="n">map_matcher_dict</span><span class="p">[</span><span class="s2">&quot;versions&quot;</span><span class="p">]:</span>
+            <span class="n">map_matcher_obj</span> <span class="o">=</span> <span class="n">MapMatcher</span><span class="p">(</span>
+                <span class="n">version</span><span class="o">=</span><span class="n">map_matcher</span><span class="p">[</span><span class="s2">&quot;version&quot;</span><span class="p">],</span> <span class="n">hrn</span><span class="o">=</span><span class="n">map_matcher</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">],</span> <span class="n">platform</span><span class="o">=</span><span class="bp">self</span>
+            <span class="p">)</span>
+            <span class="n">map_matcher_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">map_matcher_obj</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">map_matcher_list</span></div>
+
+
+<div class="viewcode-block" id="Platform.get_map_matcher_map_version">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.get_map_matcher_map_version">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_map_matcher_map_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">version</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;latest&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">MapMatcher</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Gets information for a specific map matcher map version</span>
+<span class="sd">        :param version: map version to use or `latest` to use the latest available version</span>
+<span class="sd">        :return: a :class:`MapMatcher` object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">map_version</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">map_matching_api</span><span class="o">.</span><span class="n">get_map_matcher_map_version</span><span class="p">(</span><span class="n">version</span><span class="p">)</span>
+        <span class="n">map_matcher_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">map_version</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">MapMatcher</span><span class="p">(</span>
+            <span class="n">version</span><span class="o">=</span><span class="n">map_matcher_dict</span><span class="p">[</span><span class="s2">&quot;version&quot;</span><span class="p">],</span> <span class="n">hrn</span><span class="o">=</span><span class="n">map_matcher_dict</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">],</span> <span class="n">platform</span><span class="o">=</span><span class="bp">self</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.list_artifacts">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.list_artifacts">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_artifacts</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">access</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">AccessType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sort</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">order</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">from_param</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">group_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">artifact_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">offset</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Artifact</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        List all the artifacts accessible on the HERE platform.</span>
+
+<span class="sd">        :param access: Comma separated list of access types (with OR semantic) to filter result.</span>
+<span class="sd">            If &#39;default&#39;, returns artifacts user has read access to.</span>
+<span class="sd">            If &#39;orgAdmin&#39;, returns artifacts</span>
+<span class="sd">            OrgAdmin user have access to.</span>
+<span class="sd">        :param sort: sort parameter</span>
+<span class="sd">        :param order: order of sorting. Available values : ASC, DESC</span>
+<span class="sd">        :param from_param: from parameter</span>
+<span class="sd">        :param group_id: Applies filtering based on groupId</span>
+<span class="sd">        :param artifact_id: Applies filtering based on artifactId</span>
+<span class="sd">        :param limit: limit number of records</span>
+<span class="sd">        :param offset: offset number of records</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">artifacts</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">artifact_api</span><span class="o">.</span><span class="n">list_artifacts</span><span class="p">(</span>
+            <span class="n">access</span><span class="o">=</span><span class="n">access</span><span class="p">,</span>
+            <span class="n">sort</span><span class="o">=</span><span class="n">sort</span><span class="p">,</span>
+            <span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">,</span>
+            <span class="n">from_param</span><span class="o">=</span><span class="n">from_param</span><span class="p">,</span>
+            <span class="n">group_id</span><span class="o">=</span><span class="n">group_id</span><span class="p">,</span>
+            <span class="n">artifact_id</span><span class="o">=</span><span class="n">artifact_id</span><span class="p">,</span>
+            <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span>
+            <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">artifacts_list</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">Artifact</span><span class="p">(</span>
+                <span class="n">hrn</span><span class="o">=</span><span class="n">artifact</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">],</span>
+                <span class="n">configuration</span><span class="o">=</span><span class="n">ArtifactConfiguration</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">json_dict</span><span class="o">=</span><span class="n">artifact</span><span class="p">),</span>
+                <span class="n">platform</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">artifact</span> <span class="ow">in</span> <span class="n">artifacts</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="n">artifacts_list</span></div>
+
+
+<div class="viewcode-block" id="Platform.get_artifact">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.get_artifact">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_artifact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">artifact_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Artifact</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the information about artifact (hrn, groupId, artifactId, version) and linked</span>
+<span class="sd">        files.</span>
+
+<span class="sd">        :param artifact_hrn: The HRN of the artifact.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">artifact_details</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">artifact_api</span><span class="o">.</span><span class="n">get_artifact</span><span class="p">(</span><span class="n">artifact_hrn</span><span class="o">=</span><span class="n">artifact_hrn</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Artifact</span><span class="p">(</span>
+            <span class="n">hrn</span><span class="o">=</span><span class="n">artifact_details</span><span class="p">[</span><span class="s2">&quot;artifact&quot;</span><span class="p">][</span><span class="s2">&quot;hrn&quot;</span><span class="p">],</span>
+            <span class="n">configuration</span><span class="o">=</span><span class="n">ArtifactConfiguration</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">json_dict</span><span class="o">=</span><span class="n">artifact_details</span><span class="p">[</span><span class="s2">&quot;artifact&quot;</span><span class="p">]),</span>
+            <span class="n">platform</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.delete_artifact">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.delete_artifact">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_artifact</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">artifact_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Delete the artifact and related files by given HRN.</span>
+
+<span class="sd">        :param artifact_hrn: The HRN of the schema.</span>
+<span class="sd">        :param force: The flag to force the deletion even if the artifact</span>
+<span class="sd">         is linked to a project. By default force flag is set to false.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">artifact_api</span><span class="o">.</span><span class="n">delete_artifact</span><span class="p">(</span><span class="n">artifact_hrn</span><span class="o">=</span><span class="n">artifact_hrn</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.list_schemas">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.list_schemas">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">list_schemas</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">access</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">sort</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">order</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">from_param</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">group_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">artifact_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">offset</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Schema</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the list of available schemas.</span>
+
+<span class="sd">        :param access: Comma separated list of access types (with OR semantic) to filter result.</span>
+<span class="sd">            If &#39;default&#39;, returns schema user have read access to. If &#39;orgAdmin&#39;, returns catalogs</span>
+<span class="sd">            OrgAdmin user have access to.</span>
+<span class="sd">        :param sort: sort parameter</span>
+<span class="sd">        :param order: order of sorting</span>
+<span class="sd">        :param from_param: from parameter</span>
+<span class="sd">        :param group_id: Applies filtering based on groupId</span>
+<span class="sd">        :param artifact_id: Applies filtering based on artifactId</span>
+<span class="sd">        :param limit: limit number of records</span>
+<span class="sd">        :param offset: offset number of records</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">schemas</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">artifact_api</span><span class="o">.</span><span class="n">list_schemas</span><span class="p">(</span>
+            <span class="n">access</span><span class="o">=</span><span class="n">access</span><span class="p">,</span>
+            <span class="n">sort</span><span class="o">=</span><span class="n">sort</span><span class="p">,</span>
+            <span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">,</span>
+            <span class="n">from_param</span><span class="o">=</span><span class="n">from_param</span><span class="p">,</span>
+            <span class="n">group_id</span><span class="o">=</span><span class="n">group_id</span><span class="p">,</span>
+            <span class="n">artifact_id</span><span class="o">=</span><span class="n">artifact_id</span><span class="p">,</span>
+            <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">,</span>
+            <span class="n">offset</span><span class="o">=</span><span class="n">offset</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="n">schemas_list</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">Schema</span><span class="p">(</span>
+                <span class="n">hrn</span><span class="o">=</span><span class="n">schema</span><span class="p">[</span><span class="s2">&quot;hrn&quot;</span><span class="p">],</span>
+                <span class="n">configuration</span><span class="o">=</span><span class="n">SchemaConfiguration</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">json_dict</span><span class="o">=</span><span class="n">schema</span><span class="p">),</span>
+                <span class="n">platform</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="k">for</span> <span class="n">schema</span> <span class="ow">in</span> <span class="n">schemas</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="n">schemas_list</span></div>
+
+
+<div class="viewcode-block" id="Platform.get_schema">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.get_schema">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schema_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Schema</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return the information about schema (hrn, groupId, artifactId, version) and related</span>
+<span class="sd">        artifact and variants for the given HRN.</span>
+
+<span class="sd">        :param schema_hrn: The HRN of the schema.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">schema_details</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">artifact_api</span><span class="o">.</span><span class="n">get_schema</span><span class="p">(</span><span class="n">schema_hrn</span><span class="o">=</span><span class="n">schema_hrn</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Schema</span><span class="p">(</span>
+            <span class="n">hrn</span><span class="o">=</span><span class="n">schema_details</span><span class="p">[</span><span class="s2">&quot;schema&quot;</span><span class="p">][</span><span class="s2">&quot;hrn&quot;</span><span class="p">],</span>
+            <span class="n">configuration</span><span class="o">=</span><span class="n">SchemaConfiguration</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">json_dict</span><span class="o">=</span><span class="n">schema_details</span><span class="p">[</span><span class="s2">&quot;schema&quot;</span><span class="p">]),</span>
+            <span class="n">platform</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
+        <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.delete_schema">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.delete_schema">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">delete_schema</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">schema_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Delete the schema and related artifacts by given HRN.</span>
+
+<span class="sd">        :param schema_hrn: The HRN of the schema.</span>
+<span class="sd">        :return: response from the API.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">artifact_api</span><span class="o">.</span><span class="n">delete_schema</span><span class="p">(</span><span class="n">schema_hrn</span><span class="o">=</span><span class="n">schema_hrn</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.get_all_subscriptions">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.get_all_subscriptions">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_all_subscriptions</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">InteractiveMapSubscription</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Lists all subscriptions that your account has access to.</span>
+
+<span class="sd">        :param limit: number of records to limit per fetch.</span>
+<span class="sd">        :yields: A :`List of InteractiveMapSubscription class` object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">page_token</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">filters</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">limit</span><span class="p">:</span>
+                <span class="n">filters</span><span class="p">[</span><span class="s2">&quot;limit&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">limit</span>
+
+            <span class="k">if</span> <span class="n">page_token</span><span class="p">:</span>
+                <span class="n">filters</span><span class="p">[</span><span class="s2">&quot;pageToken&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">page_token</span>
+
+            <span class="n">subscriptions</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">list_subscriptions</span><span class="p">(</span><span class="o">**</span><span class="n">filters</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">subscriptions</span><span class="p">[</span><span class="s2">&quot;items&quot;</span><span class="p">]:</span>
+                <span class="k">yield</span> <span class="n">InteractiveMapSubscription</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+
+            <span class="n">page_token</span> <span class="o">=</span> <span class="n">subscriptions</span><span class="p">[</span><span class="s2">&quot;nextPageToken&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="s2">&quot;nextPageToken&quot;</span> <span class="ow">in</span> <span class="n">subscriptions</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">page_token</span><span class="p">:</span>
+                <span class="k">break</span></div>
+
+
+<div class="viewcode-block" id="Platform.subscription_exists">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.subscription_exists">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">subscription_exists</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subscription_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Checks whether a subscription with the specified HRN exists.</span>
+
+<span class="sd">        :param subscription_hrn: The HERE Resource Name (HRN) of subscription</span>
+<span class="sd">        :return: True if subscription exists.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">check_subscription_exists</span><span class="p">(</span><span class="n">subscription_hrn</span><span class="o">=</span><span class="n">subscription_hrn</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.get_subscription">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.get_subscription">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_subscription</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subscription_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">InteractiveMapSubscription</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        To get configuration of the subscription associated with the HRN.</span>
+
+<span class="sd">        :param subscription_hrn: The HERE Resource Name (HRN) of subscription</span>
+<span class="sd">        :return: InteractiveMapSubscription object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">subscription_resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_subscription</span><span class="p">(</span>
+            <span class="n">subscription_hrn</span><span class="o">=</span><span class="n">subscription_hrn</span>
+        <span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Get Subscription Response : </span><span class="si">{</span><span class="n">subscription_resp</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">InteractiveMapSubscription</span><span class="p">(</span><span class="n">subscription_resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.subscribe">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.subscribe">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">subscribe</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">subscription_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">description</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">source_catalog_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">source_layer</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">destination_catalog_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">destination_layer_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+        <span class="n">interactive_map_subscription_type</span><span class="p">:</span> <span class="n">InteractiveMapSubscriptionType</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">InteractiveMapSubscription</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method to Subscribe to a Stream Layer from Layer&#39;s Catalog HRN.</span>
+<span class="sd">        Source Layer is the current layer and Source Catalog is Layer&#39;s Catalog which it belongs.</span>
+
+<span class="sd">        :param subscription_name: Name of the subscription.</span>
+<span class="sd">        :param description: Description of the subscription.</span>
+<span class="sd">        :param source_catalog_hrn: Catalog HRN of the source Catalog.</span>
+<span class="sd">        :param source_layer: Layer id of the source Interactive Map Layer.</span>
+<span class="sd">        :param destination_catalog_hrn: Catalog HRN of the destination Catalog.</span>
+<span class="sd">        :param destination_layer_id: Layer id of the destination Stream Layer.</span>
+<span class="sd">        :param interactive_map_subscription_type: InteractiveMapSubscriptionType containing type of</span>
+<span class="sd">        subscription.</span>
+<span class="sd">        :raises KeyError: in case statusToken in Response of createSubscription.</span>
+<span class="sd">        :raises ValueError: in case Created Subscription Status is NOT Active after</span>
+<span class="sd">                        multiple retry till max retry time.</span>
+<span class="sd">        :return: InteractiveMapSubscription object containing details of the created subscription.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">configuration_object</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;subscriptionName&quot;</span><span class="p">:</span> <span class="n">subscription_name</span><span class="p">,</span>
+                <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="n">description</span><span class="p">,</span>
+                <span class="s2">&quot;sourceCatalog&quot;</span><span class="p">:</span> <span class="n">source_catalog_hrn</span><span class="p">,</span>
+                <span class="s2">&quot;sourceLayer&quot;</span><span class="p">:</span> <span class="n">source_layer</span><span class="p">,</span>
+                <span class="s2">&quot;destinationCatalog&quot;</span><span class="p">:</span> <span class="n">destination_catalog_hrn</span><span class="p">,</span>
+                <span class="s2">&quot;destinationLayer&quot;</span><span class="p">:</span> <span class="n">destination_layer_id</span><span class="p">,</span>
+                <span class="s2">&quot;interactiveMapSubscription&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="n">interactive_map_subscription_type</span><span class="o">.</span><span class="n">value</span><span class="p">},</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+
+        <span class="n">subscription_status_resp</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">({</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">})</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="n">x_idempotency_key</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+
+        <span class="n">create_subscription_resp</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
+            <span class="n">configuration_object</span><span class="o">=</span><span class="n">configuration_object</span><span class="p">,</span> <span class="n">x_idempotency_key</span><span class="o">=</span><span class="n">x_idempotency_key</span>
+        <span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Create Subscription Response : </span><span class="si">{</span><span class="n">create_subscription_resp</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;statusToken&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">create_subscription_resp</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="s2">&quot;Missing statusToken in Response of createSubscription.&quot;</span><span class="p">)</span>
+
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="p">))</span>
+
+        <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_retry_max_time</span><span class="p">:</span>
+            <span class="n">subscription_status_resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_subscription_status</span><span class="p">(</span>
+                <span class="n">status_token</span><span class="o">=</span><span class="n">create_subscription_resp</span><span class="p">[</span><span class="s2">&quot;statusToken&quot;</span><span class="p">]</span>
+            <span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Subscription Status Response : </span><span class="si">{</span><span class="n">subscription_status_resp</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">subscription_status_resp</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;active&quot;</span><span class="p">:</span>
+                <span class="k">break</span>
+
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;Total wait time for Subscription Status Response : </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start_time</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;status&quot;</span> <span class="ow">in</span> <span class="n">subscription_status_resp</span> <span class="ow">and</span> <span class="n">subscription_status_resp</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;active&quot;</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;Created Subscription Status is NOT Active &quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;for statusToken </span><span class="si">{</span><span class="n">create_subscription_resp</span><span class="p">[</span><span class="s1">&#39;statusToken&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">subscription_resp</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_subscription</span><span class="p">(</span>
+            <span class="n">subscription_hrn</span><span class="o">=</span><span class="n">subscription_status_resp</span><span class="p">[</span><span class="s2">&quot;subscriptionHrn&quot;</span><span class="p">]</span>
+        <span class="p">)</span>
+
+        <span class="n">subscription_resp</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">create_subscription_resp</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">InteractiveMapSubscription</span><span class="p">(</span><span class="n">subscription_resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.subscription_status">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.subscription_status">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">subscription_status</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">status_token</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">InteractiveMapSubscriptionStatus</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get the status of the subscription.</span>
+
+<span class="sd">        :param status_token: Status token from create/delete subscription response.</span>
+<span class="sd">        :return: InteractiveMapSubscriptionStatus object containing status.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">subscription_status_resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_subscription_status</span><span class="p">(</span>
+            <span class="n">status_token</span><span class="o">=</span><span class="n">status_token</span>
+        <span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Subscription Status Response : </span><span class="si">{</span><span class="n">subscription_status_resp</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">InteractiveMapSubscriptionStatus</span><span class="p">(</span><span class="n">subscription_status_resp</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Platform.unsubscribe">
+<a class="viewcode-back" href="../../../here.platform.platform.html#here.platform.platform.Platform.unsubscribe">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">unsubscribe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">subscription_hrn</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">InteractiveMapUnsubscribe</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Deletes a subscription associated with the HRN.</span>
+
+<span class="sd">        :param subscription_hrn: The HERE Resource Name (HRN) of subscription.</span>
+<span class="sd">        :return: InteractiveMapUnsubscribe object containing details.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x_idempotency_key</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>
+        <span class="n">subscription_status</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">({</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">})</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+        <span class="n">delete_subscription_resp</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">delete_subscription</span><span class="p">(</span>
+            <span class="n">x_idempotency_key</span><span class="o">=</span><span class="n">x_idempotency_key</span><span class="p">,</span> <span class="n">subscription_hrn</span><span class="o">=</span><span class="n">subscription_hrn</span>
+        <span class="p">)</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Delete Subscription response: </span><span class="si">{</span><span class="n">delete_subscription_resp</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="p">))</span>
+
+        <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">_retry_max_time</span><span class="p">:</span>
+            <span class="n">subscription_status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_config_api</span><span class="o">.</span><span class="n">get_subscription_status</span><span class="p">(</span>
+                <span class="n">status_token</span><span class="o">=</span><span class="n">delete_subscription_resp</span><span class="p">[</span><span class="s2">&quot;statusToken&quot;</span><span class="p">]</span>
+            <span class="p">)</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Delete Subscription Status response: </span><span class="si">{</span><span class="n">subscription_status</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">subscription_status</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;deleted&quot;</span><span class="p">:</span>
+                <span class="k">break</span>
+
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_polling_wait</span><span class="p">)</span>
+
+        <span class="n">delete_subscription_resp</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">subscription_status</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">InteractiveMapUnsubscribe</span><span class="p">(</span><span class="n">delete_subscription_resp</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

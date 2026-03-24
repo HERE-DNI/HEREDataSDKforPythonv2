@@ -1,0 +1,7 @@
+here.inspector.brand.colors module
+==================================
+
+.. automodule:: here.inspector.brand.colors
+   :members:
+   :undoc-members:
+   :show-inheritance:

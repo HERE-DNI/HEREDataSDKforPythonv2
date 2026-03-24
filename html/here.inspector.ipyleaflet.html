@@ -1,0 +1,813 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>here.inspector.ipyleaflet package &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="_static/documentation_options.js?v=8a448e45"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'here.inspector.ipyleaflet';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="here.inspector.ipyleaflet.basemaps module" href="here.inspector.ipyleaflet.basemaps.html" />
+    <link rel="prev" title="here.inspector.brand.colors module" href="here.inspector.brand.colors.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.content.html">here.content package</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.content.hmc2.html">here.content.hmc2 package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.adas_attributes.html">here.content.hmc2.adas_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.address_attributes.html">here.content.hmc2.address_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_index.html">here.content.hmc2.admin_index module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_locations.html">here.content.hmc2.admin_locations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_place_profiles.html">here.content.hmc2.admin_place_profiles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_places.html">here.content.hmc2.admin_places module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.advanced_navigation_attributes.html">here.content.hmc2.advanced_navigation_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.base_attributes.html">here.content.hmc2.base_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.bicycle_attributes.html">here.content.hmc2.bicycle_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.composite_road_attributes.html">here.content.hmc2.composite_road_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.constants.html">here.content.hmc2.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.environmental_zone_conditions.html">here.content.hmc2.environmental_zone_conditions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.environmental_zones.html">here.content.hmc2.environmental_zones module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.extended_speed_limit.html">here.content.hmc2.extended_speed_limit module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.extracters.html">here.content.hmc2.extracters module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.here_places.html">here.content.hmc2.here_places module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.hmc.html">here.content.hmc2.hmc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.metadata.html">here.content.hmc2.metadata module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.models.html">here.content.hmc2.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.navigation_attributes.html">here.content.hmc2.navigation_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.parsers.html">here.content.hmc2.parsers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.place_context.html">here.content.hmc2.place_context module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.road_attributes.html">here.content.hmc2.road_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.segment_admin_boundary.html">here.content.hmc2.segment_admin_boundary module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.segment_street_names.html">here.content.hmc2.segment_street_names module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.sign_text.html">here.content.hmc2.sign_text module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.street_names.html">here.content.hmc2.street_names module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.topology_attributes.html">here.content.hmc2.topology_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.topology_geometry.html">here.content.hmc2.topology_geometry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.traffic_patterns.html">here.content.hmc2.traffic_patterns module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.truck_attributes.html">here.content.hmc2.truck_attributes module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.content.utils.html">here.content.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.utils.hmc_external_references.html">here.content.utils.hmc_external_references module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.utils.proto.html">here.content.utils.proto module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.base.html">here.content.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.content.html">here.content.content module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.geopandas_adapter.html">here.geopandas_adapter package</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.geopandas_adapter.geotiles.html">here.geopandas_adapter.geotiles package</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.geotiles.heretile.html">here.geopandas_adapter.geotiles.heretile module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.geopandas_adapter.utils.html">here.geopandas_adapter.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.utils.dataframe.html">here.geopandas_adapter.utils.dataframe module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.utils.geo.html">here.geopandas_adapter.utils.geo module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.geopandas_adapter.geopandas_adapter.html">here.geopandas_adapter.geopandas_adapter module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.geotiles.html">here.geotiles package</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="here.geotiles.heretile.html">here.geotiles.heretile module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="here.inspector.html">here.inspector package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.brand.html">here.inspector.brand package</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.brand.colors.html">here.inspector.brand.colors module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">here.inspector.ipyleaflet package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.ipyleaflet.basemaps.html">here.inspector.ipyleaflet.basemaps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.ipyleaflet.utils.html">here.inspector.ipyleaflet.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.keplergl.html">here.inspector.keplergl package</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.keplergl.utils.html">here.inspector.keplergl.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.base.html">here.inspector.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.styles.html">here.inspector.styles module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.utils.html">here.inspector.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.platform.html">here.platform package</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.api.html">here.platform.api package</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="here.platform.api.factory.html">here.platform.api.factory namespace</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.platform.api.factory.apifactory.html">here.platform.api.factory.apifactory module</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="here.platform.api.registry.html">here.platform.api.registry package</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.platform.api.registry.lookup_api_registry.html">here.platform.api.registry.lookup_api_registry module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.aaa_authorization_api.html">here.platform.api.aaa_authorization_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.aaa_oauth2_api.html">here.platform.api.aaa_oauth2_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.artifact_api.html">here.platform.api.artifact_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.base_api.html">here.platform.api.base_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_blob_api.html">here.platform.api.data_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_config_api.html">here.platform.api.data_config_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_index_api.html">here.platform.api.data_index_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_ingest_api.html">here.platform.api.data_ingest_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_interactive_api.html">here.platform.api.data_interactive_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_metadata_api.html">here.platform.api.data_metadata_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_object_blob_api.html">here.platform.api.data_object_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_publish_api.html">here.platform.api.data_publish_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_query_api.html">here.platform.api.data_query_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_statistics_api.html">here.platform.api.data_statistics_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_stream_api.html">here.platform.api.data_stream_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_volatile_blob_api.html">here.platform.api.data_volatile_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.lookup_api.html">here.platform.api.lookup_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.map_matching_api.html">here.platform.api.map_matching_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.service_api.html">here.platform.api.service_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.service_registry_api.html">here.platform.api.service_registry_api module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.config.html">here.platform.config package</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.china.html">here.platform.config.china package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.default.html">here.platform.config.default package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.internal.html">here.platform.config.internal package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.local.html">here.platform.config.local package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.private_eu_west_1.html">here.platform.config.private_eu_west_1 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.private_us_west_2.html">here.platform.config.private_us_west_2 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.application_config.html">here.platform.config.application_config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.platform_config.html">here.platform.config.platform_config module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.model.html">here.platform.model package</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.publication.html">here.platform.model.publication module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.subscription.html">here.platform.model.subscription module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.version_dependency.html">here.platform.model.version_dependency module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.schema.html">here.platform.schema package</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.ParserFactory.html">here.platform.schema.ParserFactory module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.geojson_parser.html">here.platform.schema.geojson_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.json_parser.html">here.platform.schema.json_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.parser.html">here.platform.schema.parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.protobuf_parser.html">here.platform.schema.protobuf_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.schema.html">here.platform.schema.schema module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.schema_registry.html">here.platform.schema.schema_registry module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.utils.html">here.platform.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.collection.html">here.platform.utils.collection module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.deprecation.html">here.platform.utils.deprecation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.file.html">here.platform.utils.file module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.geo.html">here.platform.utils.geo module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.properties_helper.html">here.platform.utils.properties_helper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.protobuf.html">here.platform.utils.protobuf module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.adapter.html">here.platform.adapter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.adapter_default.html">here.platform.adapter_default module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.artifact.html">here.platform.artifact module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.auth.html">here.platform.auth module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.catalog.html">here.platform.catalog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.constants.html">here.platform.constants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.credentials.html">here.platform.credentials module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.environment.html">here.platform.environment module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.exceptions.html">here.platform.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.layer.html">here.platform.layer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.map_matcher.html">here.platform.map_matcher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.models.html">here.platform.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.partition.html">here.platform.partition module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.platform.html">here.platform.platform module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.project.html">here.platform.project module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.schema_api.html">here.platform.schema_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.service.html">here.platform.service module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="here.html" class="nav-link">here namespace</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="here.inspector.html" class="nav-link">here.inspector package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.inspector.ipyleaflet package</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="module-here.inspector.ipyleaflet">
+<span id="here-inspector-ipyleaflet-package"></span><h1>here.inspector.ipyleaflet package<a class="headerlink" href="#module-here.inspector.ipyleaflet" title="Link to this heading">#</a></h1>
+<p>An inspector for the HERE PySDK based on ipyleaflet.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="here.inspector.ipyleaflet.IpyleafletInspector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">here.inspector.ipyleaflet.</span></span><span class="sig-name descname"><span class="pre">IpyleafletInspector</span></span><a class="reference internal" href="_modules/here/inspector/ipyleaflet.html#IpyleafletInspector"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.inspector.ipyleaflet.IpyleafletInspector" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="here.inspector.base.html#here.inspector.base.Inspector" title="here.inspector.base.Inspector"><code class="xref py py-class docutils literal notranslate"><span class="pre">Inspector</span></code></a></p>
+<p>An inspector based on ipyleaflet.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="here.inspector.ipyleaflet.IpyleafletInspector.add_features">
+<span class="sig-name descname"><span class="pre">add_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">GeoSeries</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">GeoDataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">BaseGeometry</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">BaseGeometry</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">BaseGeometry</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.inspector.styles.html#here.inspector.styles.Color" title="here.inspector.styles.Color"><span class="pre">Color</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hover_style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.inspector.styles.html#here.inspector.styles.Color" title="here.inspector.styles.Color"><span class="pre">Color</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.inspector.styles.html#here.inspector.styles.Color" title="here.inspector.styles.Color"><span class="pre">Color</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#here.inspector.ipyleaflet.IpyleafletInspector" title="here.inspector.ipyleaflet.IpyleafletInspector"><span class="pre">IpyleafletInspector</span></a></span></span><a class="reference internal" href="_modules/here/inspector/ipyleaflet.html#IpyleafletInspector.add_features"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.inspector.ipyleaflet.IpyleafletInspector.add_features" title="Link to this definition">#</a></dt>
+<dd><p>Add to the inspector a collection of map features (attributed geometries) as new layer.</p>
+<p>The features layer can be named and styled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>features</strong> – <p>the attributed geometries to render. Supported types:
+- <code class="docutils literal notranslate"><span class="pre">gpd.GeoSeries</span></code>, unattributed geometries
+- <code class="docutils literal notranslate"><span class="pre">gpd.GeoDataFrame</span></code>, attributes geometries
+- <code class="docutils literal notranslate"><span class="pre">BaseGeometry</span></code>, individual geometries
+- <code class="docutils literal notranslate"><span class="pre">Iterable</span></code> of <cite>BaseGeometry</cite>, it can be any container</p>
+<blockquote>
+<div><p>but also a <code class="docutils literal notranslate"><span class="pre">Generator</span></code> of unattributed geometries</p>
+</div></blockquote>
+<ul>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Iterable</span></code> of pair of <code class="docutils literal notranslate"><span class="pre">BaseGeometry</span></code> and <code class="docutils literal notranslate"><span class="pre">Dict</span></code>, it can be any container</dt><dd><p>but also a <code class="docutils literal notranslate"><span class="pre">Generator</span></code> of geometries paired with attributes</p>
+</dd>
+</dl>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Dict</span></code>     a parsed GeoJSON <code class="docutils literal notranslate"><span class="pre">FeatureCollection</span></code> or <code class="docutils literal notranslate"><span class="pre">Feature</span></code></p></li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Iterable</span></code> of parsed GeoJSON <cite>Feature</cite>, it can be any container</dt><dd><p>but also a <code class="docutils literal notranslate"><span class="pre">Generator</span></code> of parsed GeoJSON features</p>
+</dd>
+</dl>
+</li>
+</ul>
+</p></li>
+<li><p><strong>name</strong> – an optional name to assign to the layer</p></li>
+<li><p><strong>style</strong> – an optional style for the features. If not present, a default one is picked.
+It can be a generic inspector style, as defined in <code class="docutils literal notranslate"><span class="pre">here.inspector.styles</span></code>,
+or directly an ipyleaflet style dictionary.</p></li>
+<li><p><strong>hover_style</strong> – an optional hover style. If not present, a default one is picked, based on <code class="docutils literal notranslate"><span class="pre">style</span></code>.
+It can be a generic inspector style, as defined in <code class="docutils literal notranslate"><span class="pre">here.inspector.styles</span></code>,
+or directly an ipyleaflet style dictionary.</p></li>
+<li><p><strong>point_style</strong> – an optional point style. If not present, a default one is picked, based on <code class="docutils literal notranslate"><span class="pre">style</span></code>.
+It can be a generic inspector style, as defined in <code class="docutils literal notranslate"><span class="pre">here.inspector.styles</span></code>,
+or directly an ipyleaflet style dictionary.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">self</span></code>, for further chaining</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.inspector.ipyleaflet.IpyleafletInspector.add_tiles">
+<span class="sig-name descname"><span class="pre">add_tiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tiles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Series</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Iterable</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.inspector.styles.html#here.inspector.styles.Color" title="here.inspector.styles.Color"><span class="pre">Color</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hover_style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.inspector.styles.html#here.inspector.styles.Color" title="here.inspector.styles.Color"><span class="pre">Color</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#here.inspector.ipyleaflet.IpyleafletInspector" title="here.inspector.ipyleaflet.IpyleafletInspector"><span class="pre">IpyleafletInspector</span></a></span></span><a class="reference internal" href="_modules/here/inspector/ipyleaflet.html#IpyleafletInspector.add_tiles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.inspector.ipyleaflet.IpyleafletInspector.add_tiles" title="Link to this definition">#</a></dt>
+<dd><p>Add to the inspector a tiling grid as new layer.</p>
+<p>The grid can be a complete grid or contain only some tiles.
+The grid layer can be named and styled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tiles</strong> – the identifier of the tiles to render. Supported types:
+- <code class="docutils literal notranslate"><span class="pre">pd.Series</span></code> of tile identifiers
+- <code class="docutils literal notranslate"><span class="pre">Iterable</span></code>  of tile identifiers, it can be any container but also a <code class="docutils literal notranslate"><span class="pre">Generator</span></code>
+- <code class="docutils literal notranslate"><span class="pre">None</span></code>      add the complete grid of all the tiles defined by the tiling scheme</p></li>
+<li><p><strong>name</strong> – an optional name to assign to the layer</p></li>
+<li><p><strong>style</strong> – an optional style for the tiling grid. If not present, a default one is picked.
+It can be a generic inspector style, as defined in <code class="docutils literal notranslate"><span class="pre">here.inspector.styles</span></code>,
+or directly an ipyleaflet style dictionary.</p></li>
+<li><p><strong>hover_style</strong> – an optional hover style. If not present, a default one is picked, based on <code class="docutils literal notranslate"><span class="pre">style</span></code>.
+It can be a generic inspector style, as defined in <code class="docutils literal notranslate"><span class="pre">here.inspector.styles</span></code>,
+or directly an ipyleaflet style dictionary.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">self</span></code>, for further chaining</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.inspector.ipyleaflet.IpyleafletInspector.backend">
+<span class="sig-name descname"><span class="pre">backend</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Map</span></span></span><a class="reference internal" href="_modules/here/inspector/ipyleaflet.html#IpyleafletInspector.backend"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.inspector.ipyleaflet.IpyleafletInspector.backend" title="Link to this definition">#</a></dt>
+<dd><p>Return the inspector’s backend, in this case its <code class="docutils literal notranslate"><span class="pre">Map</span></code> object.</p>
+<p>The backend is populated with the features, tiling grids and settings
+specified so far. Users can further configure the <code class="docutils literal notranslate"><span class="pre">Map</span></code>, but also UI
+components, according to the ipyleaflet documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The <code class="docutils literal notranslate"><span class="pre">ipyleaflet.Map</span></code> object created by the inspector</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – in case the backend can’t be configured with the data provided</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.inspector.ipyleaflet.IpyleafletInspector.set_basemap">
+<span class="sig-name descname"><span class="pre">set_basemap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">basemap</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">TileProvider</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="here.inspector.base.html#here.inspector.base.Inspector" title="here.inspector.base.Inspector"><span class="pre">Inspector</span></a></span></span><a class="reference internal" href="_modules/here/inspector/ipyleaflet.html#IpyleafletInspector.set_basemap"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.inspector.ipyleaflet.IpyleafletInspector.set_basemap" title="Link to this definition">#</a></dt>
+<dd><p>Set a custom basemap to use as a background.</p>
+<p>This overrides the default base map of the theme, if any is defined.
+Setting it to <code class="docutils literal notranslate"><span class="pre">None</span></code> restores the default base map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>basemap</strong> – Either a dictionary or an object of class:<cite>xyzservices.lib.TileProvider</cite>.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a href="#id1"><span class="problematic" id="id2">``</span></a>self`, for further chaining</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.inspector.ipyleaflet.IpyleafletInspector.set_center">
+<span class="sig-name descname"><span class="pre">set_center</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Point</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#here.inspector.ipyleaflet.IpyleafletInspector" title="here.inspector.ipyleaflet.IpyleafletInspector"><span class="pre">IpyleafletInspector</span></a></span></span><a class="reference internal" href="_modules/here/inspector/ipyleaflet.html#IpyleafletInspector.set_center"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.inspector.ipyleaflet.IpyleafletInspector.set_center" title="Link to this definition">#</a></dt>
+<dd><p>Configure the location to show in the inspector when opened.</p>
+<p>If not set, an optimal starting location
+is calculated from the features and tiling grids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>center</strong> – the center point of the map</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">self</span></code>, for further chaining</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.inspector.ipyleaflet.IpyleafletInspector.set_colors">
+<span class="sig-name descname"><span class="pre">set_colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="here.inspector.styles.html#here.inspector.styles.Color" title="here.inspector.styles.Color"><span class="pre">Color</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#here.inspector.ipyleaflet.IpyleafletInspector" title="here.inspector.ipyleaflet.IpyleafletInspector"><span class="pre">IpyleafletInspector</span></a></span></span><a class="reference internal" href="_modules/here/inspector/ipyleaflet.html#IpyleafletInspector.set_colors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.inspector.ipyleaflet.IpyleafletInspector.set_colors" title="Link to this definition">#</a></dt>
+<dd><p>Set the list of colors the inspector cycles through
+to render content when no color or style is specified.</p>
+<p>The default color list can be overridden in
+<code class="docutils literal notranslate"><span class="pre">here.inspector.options.default_colors</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>colors</strong> – a non-empty list of colors</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">self</span></code>, for further chaining</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.inspector.ipyleaflet.IpyleafletInspector.set_theme">
+<span class="sig-name descname"><span class="pre">set_theme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">theme</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="here.inspector.styles.html#here.inspector.styles.Theme" title="here.inspector.styles.Theme"><span class="pre">Theme</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#here.inspector.ipyleaflet.IpyleafletInspector" title="here.inspector.ipyleaflet.IpyleafletInspector"><span class="pre">IpyleafletInspector</span></a></span></span><a class="reference internal" href="_modules/here/inspector/ipyleaflet.html#IpyleafletInspector.set_theme"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.inspector.ipyleaflet.IpyleafletInspector.set_theme" title="Link to this definition">#</a></dt>
+<dd><p>Set the inspector theme.</p>
+<p>This determines the background map, if any, and colors.
+The default theme can be overridden in <code class="docutils literal notranslate"><span class="pre">here.inspector.options.default_theme</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>theme</strong> – one of the predefined inspector themes</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">self</span></code>, for further chaining</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.inspector.ipyleaflet.IpyleafletInspector.set_zoom">
+<span class="sig-name descname"><span class="pre">set_zoom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zoom</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#here.inspector.ipyleaflet.IpyleafletInspector" title="here.inspector.ipyleaflet.IpyleafletInspector"><span class="pre">IpyleafletInspector</span></a></span></span><a class="reference internal" href="_modules/here/inspector/ipyleaflet.html#IpyleafletInspector.set_zoom"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.inspector.ipyleaflet.IpyleafletInspector.set_zoom" title="Link to this definition">#</a></dt>
+<dd><p>Configure the starting zoom level of the inspector.</p>
+<p>If not set, an optimal starting zoom level
+is calculated from the geodata and tiling grids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>zoom</strong> – the zoom level, from 0 to 31</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">self</span></code>, for further chaining</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="here.inspector.ipyleaflet.IpyleafletInspector.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Map</span></span></span><a class="reference internal" href="_modules/here/inspector/ipyleaflet.html#IpyleafletInspector.show"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.inspector.ipyleaflet.IpyleafletInspector.show" title="Link to this definition">#</a></dt>
+<dd><p>Show the inspector in a Jupyter notebook with the features and tiles loaded so far.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The <code class="docutils literal notranslate"><span class="pre">ipyleaflet.Map</span></code> object created by the inspector</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="here.inspector.ipyleaflet.basemaps.html">here.inspector.ipyleaflet.basemaps module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.ipyleaflet.basemaps.html#here.inspector.ipyleaflet.basemaps.basemap_to_tiles"><code class="docutils literal notranslate"><span class="pre">basemap_to_tiles()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="here.inspector.ipyleaflet.utils.html">here.inspector.ipyleaflet.utils module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.ipyleaflet.utils.html#here.inspector.ipyleaflet.utils.to_style"><code class="docutils literal notranslate"><span class="pre">to_style()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="here.inspector.brand.colors.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">here.inspector.brand.colors module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="here.inspector.ipyleaflet.basemaps.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">here.inspector.ipyleaflet.basemaps module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here.inspector.ipyleaflet.IpyleafletInspector"><code class="docutils literal notranslate"><span class="pre">IpyleafletInspector</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.inspector.ipyleaflet.IpyleafletInspector.add_features"><code class="docutils literal notranslate"><span class="pre">IpyleafletInspector.add_features()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.inspector.ipyleaflet.IpyleafletInspector.add_tiles"><code class="docutils literal notranslate"><span class="pre">IpyleafletInspector.add_tiles()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.inspector.ipyleaflet.IpyleafletInspector.backend"><code class="docutils literal notranslate"><span class="pre">IpyleafletInspector.backend()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.inspector.ipyleaflet.IpyleafletInspector.set_basemap"><code class="docutils literal notranslate"><span class="pre">IpyleafletInspector.set_basemap()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.inspector.ipyleaflet.IpyleafletInspector.set_center"><code class="docutils literal notranslate"><span class="pre">IpyleafletInspector.set_center()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.inspector.ipyleaflet.IpyleafletInspector.set_colors"><code class="docutils literal notranslate"><span class="pre">IpyleafletInspector.set_colors()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.inspector.ipyleaflet.IpyleafletInspector.set_theme"><code class="docutils literal notranslate"><span class="pre">IpyleafletInspector.set_theme()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.inspector.ipyleaflet.IpyleafletInspector.set_zoom"><code class="docutils literal notranslate"><span class="pre">IpyleafletInspector.set_zoom()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.inspector.ipyleaflet.IpyleafletInspector.show"><code class="docutils literal notranslate"><span class="pre">IpyleafletInspector.show()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="_sources/here.inspector.ipyleaflet.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

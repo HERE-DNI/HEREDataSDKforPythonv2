@@ -1,0 +1,1282 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.content.hmc2.models &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/content/hmc2/models';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.content.hmc2.models</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.content.hmc2.models</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2022-2023 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Models for the HMC Layers.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">dataclasses</span><span class="w"> </span><span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">geojson</span><span class="w"> </span><span class="kn">import</span> <span class="n">MultiPolygon</span><span class="p">,</span> <span class="n">Point</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.content.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">ContentIndexer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">here.platform.adapter</span><span class="w"> </span><span class="kn">import</span> <span class="n">DecodedMessage</span><span class="p">,</span> <span class="n">Identifier</span><span class="p">,</span> <span class="n">Partition</span><span class="p">,</span> <span class="n">Ref</span>
+
+
+<div class="viewcode-block" id="DTO">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.DTO">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">DTO</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Object to carry dynamic data to pass to parser functions.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initializes object with keyword arguments `:param:kwargs`&quot;&quot;&quot;</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">=</span> <span class="n">kwargs</span></div>
+
+
+
+<div class="viewcode-block" id="Name">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Name">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Name</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Names Details.&quot;&quot;&quot;</span>
+
+    <span class="n">text</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">representation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">primary</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+
+<div class="viewcode-block" id="Supplier">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Supplier">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Supplier</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Supplier Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="n">Identifier</span>
+    <span class="n">names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Name</span><span class="p">]</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Ref</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">,</span> <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Author">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Author">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Author</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Author Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Place">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Place">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Place</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Place Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="n">Identifier</span>
+    <span class="n">names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Name</span><span class="p">]</span>
+    <span class="n">location</span><span class="p">:</span> <span class="n">Ref</span>
+    <span class="n">categories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Ref</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">alt_categories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Ref</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">political_view_name_replacement</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">political_view_action</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">valid_unnamed</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">,</span> <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="ExternalIdentifier">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.ExternalIdentifier">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ExternalIdentifier</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;External Identifier Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="n">Identifier</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">supplier</span><span class="p">:</span> <span class="n">Supplier</span>
+    <span class="n">inactive</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Ref</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">,</span> <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="ContactAdditionalData">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.ContactAdditionalData">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ContactAdditionalData</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Additional Data in Contact.&quot;&quot;&quot;</span>
+
+    <span class="n">key</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">value</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">language_code</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">language_type</span><span class="p">:</span> <span class="nb">str</span></div>
+
+
+
+<div class="viewcode-block" id="Contact">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Contact">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Contact</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Contact Details.&quot;&quot;&quot;</span>
+
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">value</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">preferred</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">label</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">country_code</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">additional_data</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">ContactAdditionalData</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+
+<div class="viewcode-block" id="ContactInformation">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.ContactInformation">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ContactInformation</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Contact Information Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">contacts</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Contact</span><span class="p">]</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Time">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Time">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Time</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Time in Seconds and Nanos.&quot;&quot;&quot;</span>
+
+    <span class="n">seconds</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">nanos</span><span class="p">:</span> <span class="nb">int</span></div>
+
+
+
+<div class="viewcode-block" id="TimeRange">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.TimeRange">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TimeRange</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Time Range with Start and End Time of the Day.&quot;&quot;&quot;</span>
+
+    <span class="n">start_time_of_day</span><span class="p">:</span> <span class="n">Time</span>
+    <span class="n">end_time_of_day</span><span class="p">:</span> <span class="n">Time</span></div>
+
+
+
+<div class="viewcode-block" id="OperationTime">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.OperationTime">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">OperationTime</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Operation Time Details.&quot;&quot;&quot;</span>
+
+    <span class="n">excluded</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">approx_seasonal_range</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">days_of_week</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">time_range</span><span class="p">:</span> <span class="n">TimeRange</span></div>
+
+
+
+<div class="viewcode-block" id="OperatingTime">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.OperatingTime">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">OperatingTime</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Operating Time Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">operation_times</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">OperationTime</span><span class="p">]</span>
+    <span class="n">open24x7</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">categories</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Ref</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">additional_data</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Feedback">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Feedback">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Feedback</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Feedback Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Payment">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Payment">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Payment</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Payment Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">type_qualifier</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">accepted</span><span class="p">:</span> <span class="nb">bool</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Relationship">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Relationship">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Relationship</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Relationship Details.&quot;&quot;&quot;</span>
+
+    <span class="n">references</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">primary</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">system</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span></div>
+
+
+
+<div class="viewcode-block" id="RelationshipAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.RelationshipAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">RelationshipAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Releation Attribute Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">relationships</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Relationship</span><span class="p">]</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="CapacityAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.CapacityAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">CapacityAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Capacity Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="InternetConnectionAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.InternetConnectionAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">InternetConnectionAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Internet Connection Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Qualifier">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Qualifier">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Qualifier</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Qualifier for Price Range.&quot;&quot;&quot;</span>
+
+    <span class="n">value</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">language</span><span class="p">:</span> <span class="nb">str</span></div>
+
+
+
+<div class="viewcode-block" id="PriceRange">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.PriceRange">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PriceRange</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Price Range Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">qualifiers</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Qualifier</span><span class="p">]</span>
+    <span class="n">notes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span>
+    <span class="n">min_range</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">max_range</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">currency_type</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="SpokenLanguage">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.SpokenLanguage">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SpokenLanguage</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Spoken Language Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="QrCodeAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.QrCodeAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">QrCodeAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;QR Code Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Verification">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Verification">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Verification</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Verification Details.&quot;&quot;&quot;</span>
+
+    <span class="n">attributes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">method</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">system</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">verified</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">start_date</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">end_date</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">expiration_date</span><span class="p">:</span> <span class="nb">str</span></div>
+
+
+
+<div class="viewcode-block" id="VerificationAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.VerificationAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">VerificationAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Verification Attribute Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">verifications</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Verification</span><span class="p">]</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="MediaReference">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.MediaReference">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MediaReference</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Media Reference Details.&quot;&quot;&quot;</span>
+
+    <span class="n">labels</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">url</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+
+
+<div class="viewcode-block" id="MediaReferenceAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.MediaReferenceAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MediaReferenceAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Media Reference Attribute Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">media_refs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">MediaReference</span><span class="p">]</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="QualityScore">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.QualityScore">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">QualityScore</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Quality Score Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">overall_confidence</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">place_confidence</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">open_confidence</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">address_confidence</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name_confidence</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">phone_confidence</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">model_version</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">place_quality_level</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">open_quality_level</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">address_quality_level</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">name_quality_level</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">phone_quality_level</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">reality_confidence</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">reality_quality_level</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="PlaceAccessAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.PlaceAccessAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PlaceAccessAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Place Access Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">group_restrictions</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span>
+    <span class="n">dogs_allowed</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">handicap_accessible</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">private_access</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="AlcoholServiceAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.AlcoholServiceAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">AlcoholServiceAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Alcohol Service Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">alcohol_notes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span>
+    <span class="n">beer</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">wine</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">liquor</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="AmenitiesAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.AmenitiesAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">AmenitiesAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Amenities Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">air_conditioning</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">elevators</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">escalators</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">family_friendly</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">onsite_heart_defribillator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">restrooms_available</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">security_guard</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">smoking</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">television</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">seating_options</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">seating_capacity</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="BasicInfoAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.BasicInfoAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">BasicInfoAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Basic Information.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">access_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">building_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">capital_indicator</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">capital_level</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">population</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="OtherInformation">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.OtherInformation">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">OtherInformation</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Other Information.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">additional_notes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span>
+    <span class="n">national_importance</span><span class="p">:</span> <span class="nb">bool</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="ElectricChargeAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.ElectricChargeAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ElectricChargeAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Electric Charge Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="HotelAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.HotelAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">HotelAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Hotel Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">breakfast_included</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">conference_hall</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">handicap_rooms</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">hot_tub</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">sauna</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">spa</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">sports_infrastructure</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">swimming</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">swimming_pool</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">swimming_pool_indoor</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">swimming_pool_outdoor</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="LocationInformation">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.LocationInformation">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">LocationInformation</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Location Information Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="ParkingAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.ParkingAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ParkingAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Parking Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="RestaurantAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.RestaurantAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">RestaurantAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Restaurant Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">beer_selections</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">cooking_types</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">specialities</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">wine_selections</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">catering</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">childrens_menu</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">delivery</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">dress_code</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">reservation_required</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">takeout</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="TransitAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.TransitAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TransitAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Transit Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="VehicleServicesAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.VehicleServicesAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">VehicleServicesAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Vehicle Service Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="PostalCode">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.PostalCode">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PostalCode</span><span class="p">(</span><span class="n">Name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Postal Code Details.&quot;&quot;&quot;</span>
+
+    <span class="k">pass</span></div>
+
+
+
+<div class="viewcode-block" id="Address">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Address">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Address</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Address Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">postal_codes</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">PostalCode</span><span class="p">]</span>
+    <span class="n">location_address_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">source_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">cities</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">states</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">counties</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">regions</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">districts</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">areas</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">streets</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">houses</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">buildings</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">building_units</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">level_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">unit_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">postal_mappings</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">state_codes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">country_code</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Location">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.Location">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Location</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Location Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">location_id</span><span class="p">:</span> <span class="n">Identifier</span>
+    <span class="n">location_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">display_position</span><span class="p">:</span> <span class="n">Point</span>
+    <span class="n">address</span><span class="p">:</span> <span class="n">Address</span>
+    <span class="n">address_relation</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">area_type</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">segment_anchor</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+    <span class="n">segment_anchor_side</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="n">geometry</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">MultiPolygon</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">level_info</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">accessors</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">political_geometry</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">alternate_geometry</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">within_location_ref</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">bounding_box</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">DecodedMessage</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">,</span> <span class="n">identifier</span><span class="o">=</span><span class="s2">&quot;location_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="TruckAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.TruckAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TruckAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Truck Attribute Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">high_canopy</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">idle_reduction_system</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">number_of_showers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">showers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">truck_parking</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">truck_scales</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">truck_service</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">truck_wash</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">truck_secure_parking</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">truck_night_parking_only</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">truck_stop</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="FuelTypeAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.FuelTypeAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">FuelTypeAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fuel Type Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">biodiesel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">biodiesel_grade</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">cng</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">diesel</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">diesel_additive</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">diesel_additive_type</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">diesel_with_additives</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">e85</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">e10</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">ethanol</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">ethanol_with_additives</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">gasoline</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">high_volume_pumps</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">hydrogen</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">hydrogen_pressure</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">lpg</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">midgrade</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">pay_at_pump</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">premium</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">premium_with_additives</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">regular</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">regular_with_additives</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">lng</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">category</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Ref</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="SocialSignal">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.SocialSignal">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SocialSignal</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Social Signal Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="PortAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.PortAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PortAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Port Details Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="SafetyCamera">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.SafetyCamera">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">SafetyCamera</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Safety Camera Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="BlackSpot">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.BlackSpot">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">BlackSpot</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Black Spot Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="MatchLevelAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.MatchLevelAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MatchLevelAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Match Level Attribute Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">places</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Place</span><span class="p">]</span>
+    <span class="n">match_level</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="AffiliationAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.AffiliationAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">AffiliationAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Affiliation Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="OfficeTypeAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.OfficeTypeAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">OfficeTypeAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Office Type Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="NoteTypeAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.NoteTypeAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">NoteTypeAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Note Type Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="PlaceCategoryConfidenceAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.PlaceCategoryConfidenceAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PlaceCategoryConfidenceAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Place Category Confidence Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="PopularityAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.PopularityAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PopularityAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Popularity Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="VendorUrlAttribute">
+<a class="viewcode-back" href="../../../../here.content.hmc2.models.html#here.content.hmc2.models.VendorUrlAttribute">[docs]</a>
+<span class="nd">@dataclass</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">VendorUrlAttribute</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Vendor Url Details.&quot;&quot;&quot;</span>
+
+    <span class="n">partition_id</span><span class="p">:</span> <span class="n">Partition</span>
+    <span class="n">value</span><span class="p">:</span> <span class="n">DecodedMessage</span>
+
+    <span class="n">indexer</span> <span class="o">=</span> <span class="n">ContentIndexer</span><span class="p">(</span><span class="n">partition</span><span class="o">=</span><span class="s2">&quot;partition_id&quot;</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

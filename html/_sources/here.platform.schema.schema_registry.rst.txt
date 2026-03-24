@@ -1,0 +1,7 @@
+here.platform.schema.schema\_registry module
+============================================
+
+.. automodule:: here.platform.schema.schema_registry
+   :members:
+   :undoc-members:
+   :show-inheritance:

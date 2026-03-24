@@ -1,0 +1,7 @@
+here.content.utils.hmc\_external\_references module
+===================================================
+
+.. automodule:: here.content.utils.hmc_external_references
+   :members:
+   :undoc-members:
+   :show-inheritance:

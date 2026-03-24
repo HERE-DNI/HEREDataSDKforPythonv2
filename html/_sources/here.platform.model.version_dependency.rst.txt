@@ -1,0 +1,7 @@
+here.platform.model.version\_dependency module
+==============================================
+
+.. automodule:: here.platform.model.version_dependency
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+here.platform.api.service\_registry\_api module
+===============================================
+
+.. automodule:: here.platform.api.service_registry_api
+   :members:
+   :undoc-members:
+   :show-inheritance:

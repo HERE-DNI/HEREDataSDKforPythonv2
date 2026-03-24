@@ -1,0 +1,7 @@
+here.content.hmc2.truck\_attributes module
+==========================================
+
+.. automodule:: here.content.hmc2.truck_attributes
+   :members:
+   :undoc-members:
+   :show-inheritance:

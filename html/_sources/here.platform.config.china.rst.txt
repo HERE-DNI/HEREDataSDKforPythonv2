@@ -1,0 +1,7 @@
+here.platform.config.china package
+==================================
+
+.. automodule:: here.platform.config.china
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+here.content.hmc2.models module
+===============================
+
+.. automodule:: here.content.hmc2.models
+   :members:
+   :undoc-members:
+   :show-inheritance:

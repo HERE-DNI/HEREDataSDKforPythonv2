@@ -1,0 +1,7 @@
+here.platform.api.aaa\_authorization\_api module
+================================================
+
+.. automodule:: here.platform.api.aaa_authorization_api
+   :members:
+   :undoc-members:
+   :show-inheritance:

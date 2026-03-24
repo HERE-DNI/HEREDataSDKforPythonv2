@@ -1,0 +1,29 @@
+here.platform.config package
+============================
+
+.. automodule:: here.platform.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.platform.config.china
+   here.platform.config.default
+   here.platform.config.internal
+   here.platform.config.local
+   here.platform.config.private_eu_west_1
+   here.platform.config.private_us_west_2
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.platform.config.application_config
+   here.platform.config.platform_config

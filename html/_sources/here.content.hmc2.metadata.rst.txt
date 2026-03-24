@@ -1,0 +1,7 @@
+here.content.hmc2.metadata module
+=================================
+
+.. automodule:: here.content.hmc2.metadata
+   :members:
+   :undoc-members:
+   :show-inheritance:

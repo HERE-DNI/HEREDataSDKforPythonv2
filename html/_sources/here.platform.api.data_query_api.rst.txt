@@ -1,0 +1,7 @@
+here.platform.api.data\_query\_api module
+=========================================
+
+.. automodule:: here.platform.api.data_query_api
+   :members:
+   :undoc-members:
+   :show-inheritance:

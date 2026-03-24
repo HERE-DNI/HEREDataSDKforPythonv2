@@ -1,0 +1,17 @@
+here.platform.model package
+===========================
+
+.. automodule:: here.platform.model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.platform.model.publication
+   here.platform.model.subscription
+   here.platform.model.version_dependency

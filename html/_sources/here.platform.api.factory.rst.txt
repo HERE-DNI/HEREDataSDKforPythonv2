@@ -1,0 +1,12 @@
+here.platform.api.factory namespace
+===================================
+
+.. py:module:: here.platform.api.factory
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.platform.api.factory.apifactory

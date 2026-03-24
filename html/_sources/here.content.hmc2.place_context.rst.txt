@@ -1,0 +1,7 @@
+here.content.hmc2.place\_context module
+=======================================
+
+.. automodule:: here.content.hmc2.place_context
+   :members:
+   :undoc-members:
+   :show-inheritance:

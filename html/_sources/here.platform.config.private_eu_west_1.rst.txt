@@ -1,0 +1,7 @@
+here.platform.config.private\_eu\_west\_1 package
+=================================================
+
+.. automodule:: here.platform.config.private_eu_west_1
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+here.platform.api.data\_index\_api module
+=========================================
+
+.. automodule:: here.platform.api.data_index_api
+   :members:
+   :undoc-members:
+   :show-inheritance:

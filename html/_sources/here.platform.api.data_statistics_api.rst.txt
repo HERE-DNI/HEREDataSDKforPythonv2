@@ -1,0 +1,7 @@
+here.platform.api.data\_statistics\_api module
+==============================================
+
+.. automodule:: here.platform.api.data_statistics_api
+   :members:
+   :undoc-members:
+   :show-inheritance:

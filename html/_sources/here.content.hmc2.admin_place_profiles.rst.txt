@@ -1,0 +1,7 @@
+here.content.hmc2.admin\_place\_profiles module
+===============================================
+
+.. automodule:: here.content.hmc2.admin_place_profiles
+   :members:
+   :undoc-members:
+   :show-inheritance:

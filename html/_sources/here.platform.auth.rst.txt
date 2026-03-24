@@ -1,0 +1,7 @@
+here.platform.auth module
+=========================
+
+.. automodule:: here.platform.auth
+   :members:
+   :undoc-members:
+   :show-inheritance:

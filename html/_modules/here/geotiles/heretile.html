@@ -1,0 +1,1049 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>here.geotiles.heretile &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="../../../_static/documentation_options.js?v=8a448e45"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/here/geotiles/heretile';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../../here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.geotiles.heretile</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <h1>Source code for here.geotiles.heretile</h1><div class="highlight"><pre>
+<span></span><span class="c1"># Copyright (C) 2019-2022 HERE Global B.V. and its affiliate(s).</span>
+<span class="c1"># All rights reserved.</span>
+<span class="c1">#</span>
+<span class="c1"># This software and other materials contain proprietary information</span>
+<span class="c1"># controlled by HERE and are protected by applicable copyright legislation.</span>
+<span class="c1"># Any use and utilization of this software and other materials and</span>
+<span class="c1"># disclosure to any third parties is conditional upon having a separate</span>
+<span class="c1"># agreement with HERE for the access, use, utilization or disclosure of this</span>
+<span class="c1"># software. In the absence of such agreement, the use of the software is not</span>
+<span class="c1"># allowed.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Module to operate with HERETile tiling scheme.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">OrderedDict</span> <span class="k">as</span> <span class="n">OrdDict</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Iterator</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">mapquadlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">BoundingBox</span><span class="p">,</span> <span class="n">GeoCoordinate</span><span class="p">,</span> <span class="n">HereQuad</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mapquadlib.common.mapquad_iterator</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapQuadIterator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">shapely.geometry</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRing</span><span class="p">,</span> <span class="n">Point</span><span class="p">,</span> <span class="n">Polygon</span><span class="p">,</span> <span class="n">box</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">shapely.geometry.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseGeometry</span>
+
+<span class="c1"># The term &quot;Tile ID&quot; here means the integer (long) key of a HereQuad.</span>
+<span class="n">TileID</span> <span class="o">=</span> <span class="nb">int</span>
+
+
+<div class="viewcode-block" id="root">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.root">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">root</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">TileID</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the ID of the root tile.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">1</span></div>
+
+
+
+<div class="viewcode-block" id="is_valid">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.is_valid">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">is_valid</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if an integer is a valid tile ID.</span>
+
+<span class="sd">    :param tile_id: an integer</span>
+<span class="sd">    :return: if the passed integer is a valid tile identifier</span>
+
+<span class="sd">    &gt;&gt;&gt; # Valid tile IDs</span>
+<span class="sd">    &gt;&gt;&gt; is_valid(1)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; is_valid(5)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; is_valid(&quot;5&quot;)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; is_valid(from_coordinates(13.3, 52.5, 7))</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; # Invalid tile IDs</span>
+<span class="sd">    &gt;&gt;&gt; is_valid(0)</span>
+<span class="sd">    False</span>
+<span class="sd">    &gt;&gt;&gt; is_valid(7)</span>
+<span class="sd">    False</span>
+<span class="sd">    &gt;&gt;&gt; is_valid(&quot;7&quot;)</span>
+<span class="sd">    False</span>
+<span class="sd">    &gt;&gt;&gt; is_valid(from_coordinates(13.3, 52.5, 7) &lt;&lt; 1)</span>
+<span class="sd">    False</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+        <span class="n">HereQuad</span><span class="o">.</span><span class="n">validate_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+
+<div class="viewcode-block" id="from_x_y_level">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.from_x_y_level">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">from_x_y_level</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TileID</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tile given X and Y components and level.</span>
+
+<span class="sd">    :param x: the tile X component</span>
+<span class="sd">    :param y: the tile Y component</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :return: the tile ID</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">TileID</span><span class="p">(</span><span class="n">HereQuad</span><span class="o">.</span><span class="n">from_x_y_level</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span><span class="o">.</span><span class="n">long_key</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="from_coordinates">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.from_coordinates">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">from_coordinates</span><span class="p">(</span><span class="n">lng</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">lat</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TileID</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tile that contains a point.</span>
+
+<span class="sd">    :param lng: longitude</span>
+<span class="sd">    :param lat: latitude</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :return: the tile ID</span>
+<span class="sd">    :raises ValueError: if no tile ID can correspond to the input parameters</span>
+
+<span class="sd">    &gt;&gt;&gt; # Berlin main station</span>
+<span class="sd">    &gt;&gt;&gt; from_coordinates(13.36937, 52.52507, 14)</span>
+<span class="sd">    377894440</span>
+
+<span class="sd">    Boundary conditions: at a given level, one points belongs to only one tile.</span>
+<span class="sd">    For this purpose, the western and southern border of a tile is considered</span>
+<span class="sd">    included in the tile, while eastern and norther borders are not.</span>
+<span class="sd">    A point located on the border between two tiles belongs to only of the them.</span>
+
+<span class="sd">    &gt;&gt;&gt; # Longitude boundary</span>
+<span class="sd">    &gt;&gt;&gt; from_coordinates(90, 45, 2)</span>
+<span class="sd">    23</span>
+<span class="sd">    &gt;&gt;&gt; # Latitude boundary</span>
+<span class="sd">    &gt;&gt;&gt; from_coordinates(45, 0, 2)</span>
+<span class="sd">    22</span>
+
+<span class="sd">    If you&#39;re interested in obtaining two or four tile IDs in case the</span>
+<span class="sd">    point is on a border or corner of a tile, please use ``in_geometry``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">level</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Tile level cannot be negative.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">TileID</span><span class="p">(</span><span class="n">HereQuad</span><span class="o">.</span><span class="n">from_lat_lng_level</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lng</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span><span class="o">.</span><span class="n">long_key</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="from_point">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.from_point">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">from_point</span><span class="p">(</span><span class="n">pt</span><span class="p">:</span> <span class="n">Point</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TileID</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tile that contains a point.</span>
+
+<span class="sd">    :param pt: the point</span>
+<span class="sd">    :param level: the tile level</span>
+<span class="sd">    :return: the tile ID</span>
+
+<span class="sd">    &gt;&gt;&gt; # Berlin main station</span>
+<span class="sd">    &gt;&gt;&gt; p = Point(13.36937, 52.52507)</span>
+<span class="sd">    &gt;&gt;&gt; from_point(p, 14)</span>
+<span class="sd">    377894440</span>
+
+<span class="sd">    Boundary conditions: at a given level, one points belongs to only one tile.</span>
+<span class="sd">    For this purpose, the western and southern border of a tile is considered</span>
+<span class="sd">    included in the tile, while eastern and norther borders are not.</span>
+<span class="sd">    A point located on the border between two tiles belongs to only of the them.</span>
+
+<span class="sd">    &gt;&gt;&gt; # Longitude boundary</span>
+<span class="sd">    &gt;&gt;&gt; p = Point(90, 45)</span>
+<span class="sd">    &gt;&gt;&gt; from_point(p, 2)</span>
+<span class="sd">    23</span>
+<span class="sd">    &gt;&gt;&gt; # Latitude boundary</span>
+<span class="sd">    &gt;&gt;&gt; p = Point(45, 0)</span>
+<span class="sd">    &gt;&gt;&gt; from_point(p, 2)</span>
+<span class="sd">    22</span>
+
+<span class="sd">    If you&#39;re interested in obtaining two or four tile IDs in case the</span>
+<span class="sd">    point is on a border or corner of a tile, please use ``in_geometry``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">from_coordinates</span><span class="p">(</span><span class="n">pt</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">pt</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="in_bounding_box">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.in_bounding_box">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">in_bounding_box</span><span class="p">(</span>
+    <span class="n">west</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">south</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">east</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">north</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">fully_contained</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">TileID</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tiles that are included the given bounding box.</span>
+
+<span class="sd">    If ``fully_contained`` is false, some of the returned tiles may be partially</span>
+<span class="sd">    outside the bounding box. Otherwise, return only the tiles wholly inside the bounding box.</span>
+
+<span class="sd">    :param west: western border of the bounding box</span>
+<span class="sd">    :param south: southern border of the bounding box</span>
+<span class="sd">    :param east: eastern border of the bounding box</span>
+<span class="sd">    :param north: northern border of the bounding box</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :param fully_contained: return only tiles wholly inside the bounding box</span>
+<span class="sd">    :yield: the tile IDs in the order of West to East first, then South to North.</span>
+
+<span class="sd">    &gt;&gt;&gt; next(in_bounding_box(</span>
+<span class="sd">    ...     west=13.36937,</span>
+<span class="sd">    ...     south=52.52507,</span>
+<span class="sd">    ...     east=13.36938,</span>
+<span class="sd">    ...     north=52.52508,</span>
+<span class="sd">    ...     level=12</span>
+<span class="sd">    ... ))</span>
+<span class="sd">    23618402</span>
+<span class="sd">    &gt;&gt;&gt; list(in_bounding_box(</span>
+<span class="sd">    ...     west=-115.81741,</span>
+<span class="sd">    ...     south=46.16326,</span>
+<span class="sd">    ...     east=-115.51230,</span>
+<span class="sd">    ...     north=46.39060,</span>
+<span class="sd">    ...     level=12,</span>
+<span class="sd">    ...     fully_contained=True</span>
+<span class="sd">    ... ))</span>
+<span class="sd">    [19681773, 19681784]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">bbox</span> <span class="o">=</span> <span class="n">BoundingBox</span><span class="p">(</span><span class="n">west</span><span class="p">,</span> <span class="n">south</span><span class="p">,</span> <span class="n">east</span><span class="p">,</span> <span class="n">north</span><span class="p">)</span>
+    <span class="n">dummy_quad</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">q</span> <span class="ow">in</span> <span class="n">MapQuadIterator</span><span class="p">(</span><span class="n">quad_type</span><span class="o">=</span><span class="n">dummy_quad</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="n">level</span><span class="p">,</span> <span class="n">bounding_box</span><span class="o">=</span><span class="n">bbox</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">fully_contained</span> <span class="ow">or</span> <span class="n">bbox</span><span class="o">.</span><span class="n">covers</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">bounding_box</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="n">q</span><span class="o">.</span><span class="n">long_key</span></div>
+
+
+
+<div class="viewcode-block" id="between_points">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.between_points">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">between_points</span><span class="p">(</span>
+    <span class="n">south_west</span><span class="p">:</span> <span class="n">Point</span><span class="p">,</span>
+    <span class="n">north_east</span><span class="p">:</span> <span class="n">Point</span><span class="p">,</span>
+    <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+    <span class="n">fully_contained</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">TileID</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tiles that are included the the bounding box identified by two points.</span>
+
+<span class="sd">    :param south_west: point at the south-western corner of the bounding box</span>
+<span class="sd">    :param north_east: point at the north-eastern corner of the bounding box</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :param fully_contained: return only tiles wholly inside the bounding box</span>
+<span class="sd">    :return: the tile IDs in the order of West to East first, then South to North.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">west</span> <span class="o">=</span> <span class="n">south_west</span><span class="o">.</span><span class="n">x</span>
+    <span class="n">south</span> <span class="o">=</span> <span class="n">south_west</span><span class="o">.</span><span class="n">y</span>
+    <span class="n">east</span> <span class="o">=</span> <span class="n">north_east</span><span class="o">.</span><span class="n">x</span>
+    <span class="n">north</span> <span class="o">=</span> <span class="n">north_east</span><span class="o">.</span><span class="n">y</span>
+
+    <span class="k">return</span> <span class="n">in_bounding_box</span><span class="p">(</span><span class="n">west</span><span class="p">,</span> <span class="n">south</span><span class="p">,</span> <span class="n">east</span><span class="p">,</span> <span class="n">north</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">fully_contained</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="in_geometry_bounds">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.in_geometry_bounds">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">in_geometry_bounds</span><span class="p">(</span>
+    <span class="n">geometry</span><span class="p">:</span> <span class="n">BaseGeometry</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">fully_contained</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">TileID</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tiles that are included in the bounds of a geometry.</span>
+
+<span class="sd">    If ``fully_contained`` is false, some of the returned tiles may be partially</span>
+<span class="sd">    outside the bounds. Otherwise, return only the tiles wholly inside the bounds.</span>
+
+<span class="sd">    :param geometry: an arbitrary geometry</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :param fully_contained: return only tiles wholly inside the bounding box</span>
+<span class="sd">    :return: iterator of tile IDs in the order of West to East first, then South to North.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">west</span><span class="p">,</span> <span class="n">south</span><span class="p">,</span> <span class="n">east</span><span class="p">,</span> <span class="n">north</span> <span class="o">=</span> <span class="n">geometry</span><span class="o">.</span><span class="n">bounds</span>
+    <span class="k">return</span> <span class="n">in_bounding_box</span><span class="p">(</span><span class="n">west</span><span class="p">,</span> <span class="n">south</span><span class="p">,</span> <span class="n">east</span><span class="p">,</span> <span class="n">north</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">fully_contained</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="in_geometry">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.in_geometry">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">in_geometry</span><span class="p">(</span>
+    <span class="n">geometry</span><span class="p">:</span> <span class="n">BaseGeometry</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">fully_contained</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">TileID</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tiles that are included in the given geometry.</span>
+
+<span class="sd">    :param geometry: an arbitrary geometry</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :param fully_contained: return only tiles wholly inside the geometry</span>
+<span class="sd">    :return: iterator of tile IDs, in no particular order</span>
+
+<span class="sd">    If ``fully_contained`` is false, some of the returned tiles may be partially</span>
+<span class="sd">    outside the geometry. Otherwise, return only the tiles wholly inside the geometry.</span>
+
+<span class="sd">    Inclusion is modeled as the shapely relation ``intersects`` (``fully_contained`` is false)</span>
+<span class="sd">    or ``contains`` (otherwise) between the geometry and the tiles.</span>
+
+<span class="sd">    Examples (``fully_contained`` is false):</span>
+<span class="sd">    - if the geometry is a point, return one, two or four tiles</span>
+<span class="sd">    - if the geometry is a line string, it return all the tiles along the line</span>
+<span class="sd">    - if the geometry is a polygon, it returns all the tiles intersecting with the polygon</span>
+<span class="sd">    - for multi-geometries, return the union of the tiles in each geometry</span>
+
+<span class="sd">    Examples (``fully_contained`` is true):</span>
+<span class="sd">    - if the geometry is a point, nothing is returned</span>
+<span class="sd">    - if the geometry is a line string, nothing is returned</span>
+<span class="sd">    - if the geometry is a polygon, it returns all the tiles contained in the polygon</span>
+<span class="sd">    - for multi-geometries, return the union of the tiles in each geometry</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">filter_tile</span><span class="p">(</span><span class="n">tile_id</span><span class="p">):</span>
+        <span class="n">poly</span> <span class="o">=</span> <span class="n">get_polygon</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">fully_contained</span> <span class="ow">and</span> <span class="n">geometry</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">poly</span><span class="p">))</span> <span class="ow">or</span> <span class="p">(</span>
+            <span class="ow">not</span> <span class="n">fully_contained</span> <span class="ow">and</span> <span class="n">geometry</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="nb">filter</span><span class="p">(</span><span class="n">filter_tile</span><span class="p">,</span> <span class="n">in_geometry_bounds</span><span class="p">(</span><span class="n">geometry</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">fully_contained</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="get_x">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.get_x">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_x</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the X component of a given tile.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :return: the X component of the tile ID</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span><span class="o">.</span><span class="n">x</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_y">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.get_y">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_y</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the Y component of a given tile.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :return: the Y component of the tile ID</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span><span class="o">.</span><span class="n">y</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_level">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.get_level">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_level</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the level of a given tile.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :return: the level of the tile ID</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span><span class="o">.</span><span class="n">level</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_x_y_level">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.get_x_y_level">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_x_y_level</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the X and Y components and level of a given tile.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :return: the components and level, a tuple of 3 elements: (x, y, level)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">quad</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">quad</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">quad</span><span class="o">.</span><span class="n">level</span></div>
+
+
+
+<div class="viewcode-block" id="get_center_coordinates">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.get_center_coordinates">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_center_coordinates</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the center point of given tile.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :return: the center point, a tuple of 2 coordinates: (longitude, latitude)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span><span class="o">.</span><span class="n">bounding_box</span><span class="o">.</span><span class="n">center</span>
+    <span class="k">return</span> <span class="n">c</span><span class="o">.</span><span class="n">lng</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">lat</span></div>
+
+
+
+<div class="viewcode-block" id="get_center_point">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.get_center_point">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_center_point</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Point</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the center point of given tile.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :return: the center point</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span><span class="o">.</span><span class="n">bounding_box</span><span class="o">.</span><span class="n">center</span>
+    <span class="k">return</span> <span class="n">Point</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">lng</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">lat</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_corners">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.get_corners">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_corners</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Point</span><span class="p">,</span> <span class="n">Point</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the southwestern and northeastern corners of given tile.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :return: the corner points, a tuple of 2 points: (sw, ne)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">bbox</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span><span class="o">.</span><span class="n">bounding_box</span>
+    <span class="k">return</span> <span class="n">Point</span><span class="p">(</span><span class="n">bbox</span><span class="o">.</span><span class="n">west</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">south</span><span class="p">),</span> <span class="n">Point</span><span class="p">(</span><span class="n">bbox</span><span class="o">.</span><span class="n">east</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">north</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_bounds">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.get_bounds">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_bounds</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the bounds of given tile.</span>
+
+<span class="sd">    This function returns bounds following the same</span>
+<span class="sd">    convention of the ``bounds`` function of shapely.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :return: the bounds, a tuple of 4 coordinates: (west, south, east, north)</span>
+
+<span class="sd">    &gt;&gt;&gt; get_bounds(23618402)</span>
+<span class="sd">    (13.359375, 52.470703125, 13.447265625, 52.55859375)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">bbox</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span><span class="o">.</span><span class="n">bounding_box</span>
+    <span class="k">return</span> <span class="n">bbox</span><span class="o">.</span><span class="n">west</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">south</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">east</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">north</span></div>
+
+
+
+<div class="viewcode-block" id="get_boundary_ring">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.get_boundary_ring">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_boundary_ring</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LinearRing</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the boundary of given tile as linear ring.</span>
+<span class="sd">    The ring describes the boundary counter-clockwise.</span>
+<span class="sd">    It contains 5 points, since a linear ring is always closed</span>
+<span class="sd">    by repeating its first point.</span>
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :return: the tile boundary as linear ring</span>
+
+<span class="sd">    &gt;&gt;&gt; lr = get_boundary_ring(23618402)</span>
+<span class="sd">    &gt;&gt;&gt; lr.equals(LinearRing([(13.447265625, 52.470703125),</span>
+<span class="sd">    ...     (13.447265625, 52.55859375),</span>
+<span class="sd">    ...     (13.359375, 52.55859375),</span>
+<span class="sd">    ...     (13.359375, 52.470703125),</span>
+<span class="sd">    ...     (13.447265625, 52.470703125)</span>
+<span class="sd">    ... ]))</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">get_polygon</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span><span class="o">.</span><span class="n">exterior</span></div>
+
+
+
+<div class="viewcode-block" id="get_polygon">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.get_polygon">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_polygon</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Polygon</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the given tile as polygon.</span>
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :return: the tile as polygon</span>
+
+<span class="sd">    &gt;&gt;&gt; p = get_polygon(23618402)</span>
+<span class="sd">    &gt;&gt;&gt; p.equals(Polygon([(13.447265625, 52.470703125),</span>
+<span class="sd">    ...     (13.447265625, 52.55859375),</span>
+<span class="sd">    ...     (13.359375, 52.55859375),</span>
+<span class="sd">    ...     (13.359375, 52.470703125),</span>
+<span class="sd">    ...     (13.447265625, 52.470703125)</span>
+<span class="sd">    ... ]))</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">bbox</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span><span class="o">.</span><span class="n">bounding_box</span>
+    <span class="k">return</span> <span class="n">box</span><span class="p">(</span><span class="n">bbox</span><span class="o">.</span><span class="n">west</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">south</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">east</span><span class="p">,</span> <span class="n">bbox</span><span class="o">.</span><span class="n">north</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="contains_coordinates">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.contains_coordinates">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">contains_coordinates</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">lng</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">lat</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return if the tile contains a point.</span>
+
+<span class="sd">    The check includes the tile boundary, aligned with the</span>
+<span class="sd">    way shapely ``intersects`` operates.</span>
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :param lng: longitude</span>
+<span class="sd">    :param lat: latitude</span>
+<span class="sd">    :return: if the point is inside the given tile</span>
+
+<span class="sd">    &gt;&gt;&gt; tile = from_x_y_level(2, 1, 2)</span>
+<span class="sd">    &gt;&gt;&gt; contains_coordinates(tile, 45, 45)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; contains_coordinates(tile, 0, 0)</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">quad</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">quad</span><span class="o">.</span><span class="n">bounding_box</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">GeoCoordinate</span><span class="p">(</span><span class="n">lng</span><span class="p">,</span> <span class="n">lat</span><span class="p">)))</span></div>
+
+
+
+<div class="viewcode-block" id="contains_point">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.contains_point">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">contains_point</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">pt</span><span class="p">:</span> <span class="n">Point</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return if the tile contains a point.</span>
+
+<span class="sd">    This method is more efficient than ``contains_geometry`` for points.</span>
+
+<span class="sd">    The check includes the tile boundary, aligned with the</span>
+<span class="sd">    way shapely ``intersects`` operates.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :param pt: a point</span>
+<span class="sd">    :return: if the point is inside the given tile</span>
+
+<span class="sd">    &gt;&gt;&gt; tile = from_x_y_level(2, 1, 2)</span>
+<span class="sd">    &gt;&gt;&gt; contains_point(tile, Point(90, 45))</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; contains_point(tile, Point(0, 0))</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">contains_coordinates</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">pt</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">pt</span><span class="o">.</span><span class="n">y</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="contains_geometry">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.contains_geometry">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">contains_geometry</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">geometry</span><span class="p">:</span> <span class="n">BaseGeometry</span><span class="p">,</span> <span class="n">fully_contained</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return if the tile contains a geometry.</span>
+
+<span class="sd">    Inclusion is modeled as the shapely relation ``intersects`` (``fully_contained`` is false)</span>
+<span class="sd">    or ``contains`` (otherwise) between the tile and the geometry.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :param geometry: any geometry</span>
+<span class="sd">    :param fully_contained: check if the geometry is fully contained in the tile</span>
+<span class="sd">    :return: if the geometry is contained in the given tile, fully or partially</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">fully_contained</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">get_polygon</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">geometry</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">get_polygon</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">geometry</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="is_contained_in_geometry">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.is_contained_in_geometry">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">is_contained_in_geometry</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">geometry</span><span class="p">:</span> <span class="n">BaseGeometry</span><span class="p">,</span> <span class="n">fully_contained</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return if the tile is contained in a geometry.</span>
+
+<span class="sd">    Inclusion is modeled as the shapely relation ``intersects`` (``fully_contained`` is false)</span>
+<span class="sd">    or ``contains`` (otherwise) between the geometry and the tile.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :param geometry: any geometry</span>
+<span class="sd">    :param fully_contained: check if the tile is fully contained in the geometry</span>
+<span class="sd">    :return: if the tile is contained in the given geometry, fully or partially</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">fully_contained</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">geometry</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="n">get_polygon</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="n">geometry</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">get_polygon</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)))</span></div>
+
+
+
+<div class="viewcode-block" id="ancestor">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.ancestor">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">ancestor</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TileID</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the ancestor tile at the given level for the given tile.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :return: the tile ID of the ancestor or parent, when existing</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">quad</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">level</span> <span class="o">&lt;</span> <span class="n">level</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">elif</span> <span class="n">quad</span><span class="o">.</span><span class="n">level</span> <span class="o">==</span> <span class="n">level</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">TileID</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">TileID</span><span class="p">(</span><span class="n">quad</span><span class="o">.</span><span class="n">ancestor</span><span class="p">(</span><span class="n">level</span><span class="p">)</span><span class="o">.</span><span class="n">long_key</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">quad</span><span class="o">.</span><span class="n">level</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="n">TileID</span><span class="p">(</span><span class="n">quad</span><span class="o">.</span><span class="n">ancestor</span><span class="p">()</span><span class="o">.</span><span class="n">long_key</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="ancestors">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.ancestors">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">ancestors</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    For a given ``tile_id`` return a dictionary of its ancestor levels and tile IDs.</span>
+
+<span class="sd">    If ``level`` is not provided the result contains tile IDs of all ancestors</span>
+<span class="sd">    up to the largest &quot;root&quot; tile, else up to the specified level only.</span>
+
+<span class="sd">    :param tile_id: the tile ID</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :return: an ordered dictionary with tile levels mapped to tile IDs</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">OrdDict</span><span class="p">()</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">q</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">ancestor</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">if</span> <span class="n">level</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">q</span><span class="o">.</span><span class="n">level</span> <span class="o">&gt;</span> <span class="n">level</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">[</span><span class="n">q</span><span class="o">.</span><span class="n">level</span><span class="p">]</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">long_key</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">move_to_end</span><span class="p">(</span><span class="n">q</span><span class="o">.</span><span class="n">level</span><span class="p">,</span> <span class="n">last</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="descendants">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.descendants">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">descendants</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">TileID</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return the tile IDs of all descendants at some level for a given tile.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">quad</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">desc_quads</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">descendants</span><span class="p">(</span><span class="n">level</span><span class="p">)</span> <span class="k">if</span> <span class="n">level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">quad</span><span class="o">.</span><span class="n">descendants</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">desc_quads</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">d</span><span class="o">.</span><span class="n">long_key</span></div>
+
+
+
+<div class="viewcode-block" id="is_parent">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.is_parent">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">is_parent</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">of_tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if a tile is the direct parent of another tile.</span>
+
+<span class="sd">    :param tile_id: the subject tile ID</span>
+<span class="sd">    :param of_tile_id: check the relationship of the subject with this tile ID</span>
+<span class="sd">    :return: if tile_id is the parent of of_tile_id</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">of_tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">of_tile_id</span><span class="p">)</span>
+    <span class="n">qa</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">qb</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">of_tile_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">qb</span><span class="o">.</span><span class="n">level</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">bool</span><span class="p">(</span><span class="n">qa</span> <span class="o">==</span> <span class="n">qb</span><span class="o">.</span><span class="n">ancestor</span><span class="p">())</span></div>
+
+
+
+<div class="viewcode-block" id="is_descendant">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.is_descendant">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">is_descendant</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">of_tile_id</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if a tile is a direct descendant of another tile.</span>
+
+<span class="sd">    :param tile_id: the subject tile ID</span>
+<span class="sd">    :param of_tile_id: check the relationship of the subject with this tile ID</span>
+<span class="sd">    :return: if tile_id is a descendant of of_tile_id</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">of_tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">of_tile_id</span><span class="p">)</span>
+    <span class="n">qa</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">qb</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">of_tile_id</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">qb</span><span class="o">.</span><span class="n">descendants</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="n">qa</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span></div>
+
+
+
+<div class="viewcode-block" id="neighbors">
+<a class="viewcode-back" href="../../../here.geotiles.heretile.html#here.geotiles.heretile.neighbors">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">neighbors</span><span class="p">(</span><span class="n">tile_id</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Iterator</span><span class="p">[</span><span class="n">TileID</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return tile IDs of all neighbors on given level for the given tile.</span>
+
+<span class="sd">    :param tile_id: the subject tile ID</span>
+<span class="sd">    :param level: the tiling level</span>
+<span class="sd">    :yield: neighboring tile IDs, in no particular order</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">tile_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="n">q</span> <span class="o">=</span> <span class="n">HereQuad</span><span class="o">.</span><span class="n">from_long_key</span><span class="p">(</span><span class="n">tile_id</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">q</span><span class="o">.</span><span class="n">neighbors</span><span class="p">(</span><span class="n">level</span><span class="p">)</span> <span class="k">if</span> <span class="n">level</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">q</span><span class="o">.</span><span class="n">neighbors</span><span class="p">():</span>
+        <span class="k">yield</span> <span class="n">n</span><span class="o">.</span><span class="n">long_key</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

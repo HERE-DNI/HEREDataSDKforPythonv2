@@ -1,0 +1,25 @@
+here.content package
+====================
+
+.. automodule:: here.content
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.content.hmc2
+   here.content.utils
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.content.base
+   here.content.content

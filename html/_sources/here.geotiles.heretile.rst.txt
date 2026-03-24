@@ -1,0 +1,7 @@
+here.geotiles.heretile module
+=============================
+
+.. automodule:: here.geotiles.heretile
+   :members:
+   :undoc-members:
+   :show-inheritance:

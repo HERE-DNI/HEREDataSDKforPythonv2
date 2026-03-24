@@ -1,0 +1,7 @@
+here.platform.schema.protobuf\_parser module
+============================================
+
+.. automodule:: here.platform.schema.protobuf_parser
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+here.content.hmc2.traffic\_patterns module
+==========================================
+
+.. automodule:: here.content.hmc2.traffic_patterns
+   :members:
+   :undoc-members:
+   :show-inheritance:

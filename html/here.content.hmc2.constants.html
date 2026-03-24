@@ -1,0 +1,1894 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>here.content.hmc2.constants module &#8212; HERE Data SDK for Python  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=232d25c0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script src="_static/documentation_options.js?v=8a448e45"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'here.content.hmc2.constants';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="here.content.hmc2.environmental_zone_conditions module" href="here.content.hmc2.environmental_zone_conditions.html" />
+    <link rel="prev" title="here.content.hmc2.composite_road_attributes module" href="here.content.hmc2.composite_road_attributes.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/here.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/here.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="here.html">
+                        API reference
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="here.content.html">here.content package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="here.content.hmc2.html">here.content.hmc2 package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.adas_attributes.html">here.content.hmc2.adas_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.address_attributes.html">here.content.hmc2.address_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_index.html">here.content.hmc2.admin_index module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_locations.html">here.content.hmc2.admin_locations module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_place_profiles.html">here.content.hmc2.admin_place_profiles module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.admin_places.html">here.content.hmc2.admin_places module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.advanced_navigation_attributes.html">here.content.hmc2.advanced_navigation_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.base_attributes.html">here.content.hmc2.base_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.bicycle_attributes.html">here.content.hmc2.bicycle_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.composite_road_attributes.html">here.content.hmc2.composite_road_attributes module</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">here.content.hmc2.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.environmental_zone_conditions.html">here.content.hmc2.environmental_zone_conditions module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.environmental_zones.html">here.content.hmc2.environmental_zones module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.extended_speed_limit.html">here.content.hmc2.extended_speed_limit module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.extracters.html">here.content.hmc2.extracters module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.here_places.html">here.content.hmc2.here_places module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.hmc.html">here.content.hmc2.hmc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.metadata.html">here.content.hmc2.metadata module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.models.html">here.content.hmc2.models module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.navigation_attributes.html">here.content.hmc2.navigation_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.parsers.html">here.content.hmc2.parsers module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.place_context.html">here.content.hmc2.place_context module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.road_attributes.html">here.content.hmc2.road_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.segment_admin_boundary.html">here.content.hmc2.segment_admin_boundary module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.segment_street_names.html">here.content.hmc2.segment_street_names module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.sign_text.html">here.content.hmc2.sign_text module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.street_names.html">here.content.hmc2.street_names module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.topology_attributes.html">here.content.hmc2.topology_attributes module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.topology_geometry.html">here.content.hmc2.topology_geometry module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.traffic_patterns.html">here.content.hmc2.traffic_patterns module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.hmc2.truck_attributes.html">here.content.hmc2.truck_attributes module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.content.utils.html">here.content.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.content.utils.hmc_external_references.html">here.content.utils.hmc_external_references module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.content.utils.proto.html">here.content.utils.proto module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.base.html">here.content.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.content.content.html">here.content.content module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.geopandas_adapter.html">here.geopandas_adapter package</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.geopandas_adapter.geotiles.html">here.geopandas_adapter.geotiles package</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.geotiles.heretile.html">here.geopandas_adapter.geotiles.heretile module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.geopandas_adapter.utils.html">here.geopandas_adapter.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.utils.dataframe.html">here.geopandas_adapter.utils.dataframe module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.geopandas_adapter.utils.geo.html">here.geopandas_adapter.utils.geo module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.geopandas_adapter.geopandas_adapter.html">here.geopandas_adapter.geopandas_adapter module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.geotiles.html">here.geotiles package</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="here.geotiles.heretile.html">here.geotiles.heretile module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.inspector.html">here.inspector package</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.brand.html">here.inspector.brand package</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.brand.colors.html">here.inspector.brand.colors module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.ipyleaflet.html">here.inspector.ipyleaflet package</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.ipyleaflet.basemaps.html">here.inspector.ipyleaflet.basemaps module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.ipyleaflet.utils.html">here.inspector.ipyleaflet.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.inspector.keplergl.html">here.inspector.keplergl package</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.inspector.keplergl.utils.html">here.inspector.keplergl.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.base.html">here.inspector.base module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.styles.html">here.inspector.styles module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.inspector.utils.html">here.inspector.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="here.platform.html">here.platform package</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.api.html">here.platform.api package</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="here.platform.api.factory.html">here.platform.api.factory namespace</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.platform.api.factory.apifactory.html">here.platform.api.factory.apifactory module</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="here.platform.api.registry.html">here.platform.api.registry package</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="here.platform.api.registry.lookup_api_registry.html">here.platform.api.registry.lookup_api_registry module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.aaa_authorization_api.html">here.platform.api.aaa_authorization_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.aaa_oauth2_api.html">here.platform.api.aaa_oauth2_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.artifact_api.html">here.platform.api.artifact_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.base_api.html">here.platform.api.base_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_blob_api.html">here.platform.api.data_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_config_api.html">here.platform.api.data_config_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_index_api.html">here.platform.api.data_index_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_ingest_api.html">here.platform.api.data_ingest_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_interactive_api.html">here.platform.api.data_interactive_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_metadata_api.html">here.platform.api.data_metadata_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_object_blob_api.html">here.platform.api.data_object_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_publish_api.html">here.platform.api.data_publish_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_query_api.html">here.platform.api.data_query_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_statistics_api.html">here.platform.api.data_statistics_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_stream_api.html">here.platform.api.data_stream_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.data_volatile_blob_api.html">here.platform.api.data_volatile_blob_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.lookup_api.html">here.platform.api.lookup_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.map_matching_api.html">here.platform.api.map_matching_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.service_api.html">here.platform.api.service_api module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.api.service_registry_api.html">here.platform.api.service_registry_api module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.config.html">here.platform.config package</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.china.html">here.platform.config.china package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.default.html">here.platform.config.default package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.internal.html">here.platform.config.internal package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.local.html">here.platform.config.local package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.private_eu_west_1.html">here.platform.config.private_eu_west_1 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.private_us_west_2.html">here.platform.config.private_us_west_2 package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.application_config.html">here.platform.config.application_config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.config.platform_config.html">here.platform.config.platform_config module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.model.html">here.platform.model package</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.publication.html">here.platform.model.publication module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.subscription.html">here.platform.model.subscription module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.model.version_dependency.html">here.platform.model.version_dependency module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.schema.html">here.platform.schema package</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.ParserFactory.html">here.platform.schema.ParserFactory module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.geojson_parser.html">here.platform.schema.geojson_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.json_parser.html">here.platform.schema.json_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.parser.html">here.platform.schema.parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.protobuf_parser.html">here.platform.schema.protobuf_parser module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.schema.html">here.platform.schema.schema module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.schema.schema_registry.html">here.platform.schema.schema_registry module</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="here.platform.utils.html">here.platform.utils package</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.collection.html">here.platform.utils.collection module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.deprecation.html">here.platform.utils.deprecation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.file.html">here.platform.utils.file module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.geo.html">here.platform.utils.geo module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.properties_helper.html">here.platform.utils.properties_helper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="here.platform.utils.protobuf.html">here.platform.utils.protobuf module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.adapter.html">here.platform.adapter module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.adapter_default.html">here.platform.adapter_default module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.artifact.html">here.platform.artifact module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.auth.html">here.platform.auth module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.catalog.html">here.platform.catalog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.constants.html">here.platform.constants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.credentials.html">here.platform.credentials module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.environment.html">here.platform.environment module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.exceptions.html">here.platform.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.layer.html">here.platform.layer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.map_matcher.html">here.platform.map_matcher module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.models.html">here.platform.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.partition.html">here.platform.partition module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.platform.html">here.platform.platform module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.project.html">here.platform.project module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.schema_api.html">here.platform.schema_api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="here.platform.service.html">here.platform.service module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+
+
+<nav aria-label="Breadcrumbs">
+  <ul class="bd-breadcrumbs" role="navigation" aria-label="Breadcrumb">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="here.html" class="nav-link">here namespace</a></li>
+    
+    
+    <li class="breadcrumb-item"><i class="fa-solid fa-ellipsis"></i></li>
+    
+    
+    <li class="breadcrumb-item"><a href="here.content.hmc2.html" class="nav-link">here.content.hmc2 package</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">here.content.hmc2.constants module</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="module-here.content.hmc2.constants">
+<span id="here-content-hmc2-constants-module"></span><h1>here.content.hmc2.constants module<a class="headerlink" href="#module-here.content.hmc2.constants" title="Link to this heading">#</a></h1>
+<p>Constants for the HMC.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.Constant">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">here.content.hmc2.constants.</span></span><span class="sig-name descname"><span class="pre">Constant</span></span><a class="reference internal" href="_modules/here/content/hmc2/constants.html#Constant"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.content.hmc2.constants.Constant" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Constants needed across the code.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.Constant.address_extracter">
+<span class="sig-name descname"><span class="pre">address_extracter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'address_extracter'</span></em><a class="headerlink" href="#here.content.hmc2.constants.Constant.address_extracter" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.Constant.partition_id">
+<span class="sig-name descname"><span class="pre">partition_id</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'partition_id'</span></em><a class="headerlink" href="#here.content.hmc2.constants.Constant.partition_id" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.Constant.place_extracter">
+<span class="sig-name descname"><span class="pre">place_extracter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'place_extracter'</span></em><a class="headerlink" href="#here.content.hmc2.constants.Constant.place_extracter" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.Constant.supplier_extracter">
+<span class="sig-name descname"><span class="pre">supplier_extracter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'supplier_extracter'</span></em><a class="headerlink" href="#here.content.hmc2.constants.Constant.supplier_extracter" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">here.content.hmc2.constants.</span></span><span class="sig-name descname"><span class="pre">FieldName</span></span><a class="reference internal" href="_modules/here/content/hmc2/constants.html#FieldName"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.content.hmc2.constants.FieldName" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>HMC Field Name Constants.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.accessors">
+<span class="sig-name descname"><span class="pre">accessors</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'accessors'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.accessors" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.additional_data">
+<span class="sig-name descname"><span class="pre">additional_data</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'additional_data'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.additional_data" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.address">
+<span class="sig-name descname"><span class="pre">address</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'address'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.address" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.address_relation">
+<span class="sig-name descname"><span class="pre">address_relation</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'address_relation'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.address_relation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.affiliation_attribute">
+<span class="sig-name descname"><span class="pre">affiliation_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'affiliation_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.affiliation_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.air_conditioning">
+<span class="sig-name descname"><span class="pre">air_conditioning</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'air_conditioning'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.air_conditioning" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.alcohol_service_attribute">
+<span class="sig-name descname"><span class="pre">alcohol_service_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'alcohol_service_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.alcohol_service_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.alt_category">
+<span class="sig-name descname"><span class="pre">alt_category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'alt_category'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.alt_category" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.alternate_geometry">
+<span class="sig-name descname"><span class="pre">alternate_geometry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'alternate_geometry'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.alternate_geometry" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.amenities_attribute">
+<span class="sig-name descname"><span class="pre">amenities_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'amenities_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.amenities_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.area">
+<span class="sig-name descname"><span class="pre">area</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'area'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.area" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.area_type">
+<span class="sig-name descname"><span class="pre">area_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'area_type'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.area_type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.author">
+<span class="sig-name descname"><span class="pre">author</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'author'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.author" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.basic_info_attribute">
+<span class="sig-name descname"><span class="pre">basic_info_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'basic_info_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.basic_info_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.beer_selection">
+<span class="sig-name descname"><span class="pre">beer_selection</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'beer_selection'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.beer_selection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.biodiesel">
+<span class="sig-name descname"><span class="pre">biodiesel</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'biodiesel'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.biodiesel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.biodiesel_grade">
+<span class="sig-name descname"><span class="pre">biodiesel_grade</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'biodiesel_grade'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.biodiesel_grade" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.black_spot">
+<span class="sig-name descname"><span class="pre">black_spot</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'black_spot'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.black_spot" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.bounding_box">
+<span class="sig-name descname"><span class="pre">bounding_box</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'bounding_box'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.bounding_box" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.building">
+<span class="sig-name descname"><span class="pre">building</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'building'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.building" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.building_unit">
+<span class="sig-name descname"><span class="pre">building_unit</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'building_unit'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.building_unit" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.capacity_attribute">
+<span class="sig-name descname"><span class="pre">capacity_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'capacity_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.capacity_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.category">
+<span class="sig-name descname"><span class="pre">category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'category'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.category" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.catering">
+<span class="sig-name descname"><span class="pre">catering</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'catering'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.catering" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.childrens_menu">
+<span class="sig-name descname"><span class="pre">childrens_menu</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'childrens_menu'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.childrens_menu" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.city">
+<span class="sig-name descname"><span class="pre">city</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'city'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.city" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.cng">
+<span class="sig-name descname"><span class="pre">cng</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cng'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.cng" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.conference_hall">
+<span class="sig-name descname"><span class="pre">conference_hall</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'conference_hall'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.conference_hall" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.contact_info">
+<span class="sig-name descname"><span class="pre">contact_info</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'contact_info'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.contact_info" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.contact_information">
+<span class="sig-name descname"><span class="pre">contact_information</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'contact_information'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.contact_information" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.cooking_types">
+<span class="sig-name descname"><span class="pre">cooking_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cooking_types'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.cooking_types" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.country_code">
+<span class="sig-name descname"><span class="pre">country_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'country_code'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.country_code" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.county">
+<span class="sig-name descname"><span class="pre">county</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'county'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.county" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.currency_type">
+<span class="sig-name descname"><span class="pre">currency_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'currency_type'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.currency_type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.day_of_week">
+<span class="sig-name descname"><span class="pre">day_of_week</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'day_of_week'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.day_of_week" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.delivery">
+<span class="sig-name descname"><span class="pre">delivery</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'delivery'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.delivery" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.diesel">
+<span class="sig-name descname"><span class="pre">diesel</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'diesel'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.diesel" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.diesel_additive">
+<span class="sig-name descname"><span class="pre">diesel_additive</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'diesel_additive'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.diesel_additive" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.diesel_additive_type">
+<span class="sig-name descname"><span class="pre">diesel_additive_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'diesel_additive_type'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.diesel_additive_type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.diesel_with_additives">
+<span class="sig-name descname"><span class="pre">diesel_with_additives</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'diesel_with_additives'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.diesel_with_additives" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.district">
+<span class="sig-name descname"><span class="pre">district</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'district'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.district" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.dress_code">
+<span class="sig-name descname"><span class="pre">dress_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'dress_code'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.dress_code" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.e10">
+<span class="sig-name descname"><span class="pre">e10</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'e10'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.e10" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.e85">
+<span class="sig-name descname"><span class="pre">e85</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'e85'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.e85" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.electric_charge_attribute">
+<span class="sig-name descname"><span class="pre">electric_charge_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'electric_charge_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.electric_charge_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.elevators">
+<span class="sig-name descname"><span class="pre">elevators</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'elevators'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.elevators" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.escalators">
+<span class="sig-name descname"><span class="pre">escalators</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'escalators'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.escalators" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.ethanol">
+<span class="sig-name descname"><span class="pre">ethanol</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ethanol'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.ethanol" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.ethanol_with_additives">
+<span class="sig-name descname"><span class="pre">ethanol_with_additives</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ethanol_with_additives'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.ethanol_with_additives" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.external_identifier">
+<span class="sig-name descname"><span class="pre">external_identifier</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'external_identifier'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.external_identifier" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.family_friendly">
+<span class="sig-name descname"><span class="pre">family_friendly</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'family_friendly'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.family_friendly" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.feedback">
+<span class="sig-name descname"><span class="pre">feedback</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'feedback'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.feedback" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.fuel_type_attribute">
+<span class="sig-name descname"><span class="pre">fuel_type_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fuel_type_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.fuel_type_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.gasoline">
+<span class="sig-name descname"><span class="pre">gasoline</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'gasoline'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.gasoline" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.geometry">
+<span class="sig-name descname"><span class="pre">geometry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'geometry'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.geometry" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.handicap_accessible">
+<span class="sig-name descname"><span class="pre">handicap_accessible</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'handicap_accessible'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.handicap_accessible" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.handicap_rooms">
+<span class="sig-name descname"><span class="pre">handicap_rooms</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'handicap_rooms'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.handicap_rooms" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.high_canopy">
+<span class="sig-name descname"><span class="pre">high_canopy</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'high_canopy'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.high_canopy" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.high_volume_pumps">
+<span class="sig-name descname"><span class="pre">high_volume_pumps</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'high_volume_pumps'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.high_volume_pumps" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.hot_tub">
+<span class="sig-name descname"><span class="pre">hot_tub</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'hot_tub'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.hot_tub" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.hotel_attribute">
+<span class="sig-name descname"><span class="pre">hotel_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'hotel_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.hotel_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.house">
+<span class="sig-name descname"><span class="pre">house</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'house'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.house" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.hydrogen">
+<span class="sig-name descname"><span class="pre">hydrogen</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'hydrogen'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.hydrogen" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.hydrogen_pressure">
+<span class="sig-name descname"><span class="pre">hydrogen_pressure</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'hydrogen_pressure'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.hydrogen_pressure" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'id'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.id" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.idle_reduction_system">
+<span class="sig-name descname"><span class="pre">idle_reduction_system</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'idle_reduction_system'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.idle_reduction_system" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.internet_connection_attribute">
+<span class="sig-name descname"><span class="pre">internet_connection_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'internet_connection_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.internet_connection_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.label">
+<span class="sig-name descname"><span class="pre">label</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'label'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.label" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.level_information">
+<span class="sig-name descname"><span class="pre">level_information</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'level_information'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.level_information" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.level_name">
+<span class="sig-name descname"><span class="pre">level_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'level_name'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.level_name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.lng">
+<span class="sig-name descname"><span class="pre">lng</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'lng'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.lng" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.location">
+<span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'location'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.location" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.location_address_type">
+<span class="sig-name descname"><span class="pre">location_address_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'location_address_type'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.location_address_type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.location_information">
+<span class="sig-name descname"><span class="pre">location_information</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'location_information'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.location_information" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.location_type">
+<span class="sig-name descname"><span class="pre">location_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'location_type'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.location_type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.lpg">
+<span class="sig-name descname"><span class="pre">lpg</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'lpg'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.lpg" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.match_level">
+<span class="sig-name descname"><span class="pre">match_level</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'match_level'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.match_level" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.match_level_attribute">
+<span class="sig-name descname"><span class="pre">match_level_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'match_level_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.match_level_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.media_reference">
+<span class="sig-name descname"><span class="pre">media_reference</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'media_reference'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.media_reference" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.media_reference_attribute">
+<span class="sig-name descname"><span class="pre">media_reference_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'media_reference_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.media_reference_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.midgrade">
+<span class="sig-name descname"><span class="pre">midgrade</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'midgrade'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.midgrade" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'name'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.name_type">
+<span class="sig-name descname"><span class="pre">name_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'name_type'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.name_type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.note_type_attribute">
+<span class="sig-name descname"><span class="pre">note_type_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'note_type_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.note_type_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.number_of_showers">
+<span class="sig-name descname"><span class="pre">number_of_showers</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'number_of_showers'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.number_of_showers" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.office_type_attribute">
+<span class="sig-name descname"><span class="pre">office_type_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'office_type_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.office_type_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.onsite_heart_defribillator">
+<span class="sig-name descname"><span class="pre">onsite_heart_defribillator</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'onsite_heart_defribillator'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.onsite_heart_defribillator" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.operating_time">
+<span class="sig-name descname"><span class="pre">operating_time</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'operating_time'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.operating_time" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.other_information">
+<span class="sig-name descname"><span class="pre">other_information</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'other_information'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.other_information" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.parking_attribute">
+<span class="sig-name descname"><span class="pre">parking_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'parking_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.parking_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.pay_at_pump">
+<span class="sig-name descname"><span class="pre">pay_at_pump</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pay_at_pump'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.pay_at_pump" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.payment">
+<span class="sig-name descname"><span class="pre">payment</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'payment'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.payment" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.payment_type">
+<span class="sig-name descname"><span class="pre">payment_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'payment_type'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.payment_type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.place">
+<span class="sig-name descname"><span class="pre">place</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'place'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.place" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.place_access_attribute">
+<span class="sig-name descname"><span class="pre">place_access_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'place_access_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.place_access_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.place_category_confidence_attribute">
+<span class="sig-name descname"><span class="pre">place_category_confidence_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'place_category_confidence_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.place_category_confidence_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.political_geometry">
+<span class="sig-name descname"><span class="pre">political_geometry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'political_geometry'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.political_geometry" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.political_view_action">
+<span class="sig-name descname"><span class="pre">political_view_action</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'political_view_action'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.political_view_action" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.political_view_name_replacement">
+<span class="sig-name descname"><span class="pre">political_view_name_replacement</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'political_view_name_replacement'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.political_view_name_replacement" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.popularity_attribute">
+<span class="sig-name descname"><span class="pre">popularity_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'popularity_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.popularity_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.port_attribute">
+<span class="sig-name descname"><span class="pre">port_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'port_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.port_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.postal_code">
+<span class="sig-name descname"><span class="pre">postal_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'postal_code'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.postal_code" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.postal_mapping">
+<span class="sig-name descname"><span class="pre">postal_mapping</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'postal_mapping'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.postal_mapping" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.premium">
+<span class="sig-name descname"><span class="pre">premium</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'premium'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.premium" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.premium_with_additives">
+<span class="sig-name descname"><span class="pre">premium_with_additives</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'premium_with_additives'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.premium_with_additives" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.price_range">
+<span class="sig-name descname"><span class="pre">price_range</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'price_range'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.price_range" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.primary">
+<span class="sig-name descname"><span class="pre">primary</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'primary'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.primary" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.qr_code_attribute">
+<span class="sig-name descname"><span class="pre">qr_code_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'qr_code_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.qr_code_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.qualifier">
+<span class="sig-name descname"><span class="pre">qualifier</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'qualifier'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.qualifier" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.quality_score">
+<span class="sig-name descname"><span class="pre">quality_score</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'quality_score'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.quality_score" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.region">
+<span class="sig-name descname"><span class="pre">region</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'region'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.region" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.regular">
+<span class="sig-name descname"><span class="pre">regular</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'regular'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.regular" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.regular_with_additives">
+<span class="sig-name descname"><span class="pre">regular_with_additives</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'regular_with_additives'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.regular_with_additives" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.relationship">
+<span class="sig-name descname"><span class="pre">relationship</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'relationship'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.relationship" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.relationship_attribute">
+<span class="sig-name descname"><span class="pre">relationship_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'relationship_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.relationship_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.representation">
+<span class="sig-name descname"><span class="pre">representation</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'representation'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.representation" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.reservation_required">
+<span class="sig-name descname"><span class="pre">reservation_required</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'reservation_required'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.reservation_required" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.restaurant_attribute">
+<span class="sig-name descname"><span class="pre">restaurant_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'restaurant_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.restaurant_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.restrooms_available">
+<span class="sig-name descname"><span class="pre">restrooms_available</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'restrooms_available'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.restrooms_available" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.safety_camera">
+<span class="sig-name descname"><span class="pre">safety_camera</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'safety_camera'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.safety_camera" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.sauna">
+<span class="sig-name descname"><span class="pre">sauna</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'sauna'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.sauna" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.seating_capacity">
+<span class="sig-name descname"><span class="pre">seating_capacity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'seating_capacity'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.seating_capacity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.seating_options">
+<span class="sig-name descname"><span class="pre">seating_options</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'seating_options'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.seating_options" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.security_guard">
+<span class="sig-name descname"><span class="pre">security_guard</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'security_guard'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.security_guard" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.segment_anchor_side">
+<span class="sig-name descname"><span class="pre">segment_anchor_side</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'segment_anchor_side'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.segment_anchor_side" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.showers">
+<span class="sig-name descname"><span class="pre">showers</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'showers'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.showers" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.smoking">
+<span class="sig-name descname"><span class="pre">smoking</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'smoking'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.smoking" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.social_signal">
+<span class="sig-name descname"><span class="pre">social_signal</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'social_signal'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.social_signal" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.source_type">
+<span class="sig-name descname"><span class="pre">source_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'source_type'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.source_type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.spa">
+<span class="sig-name descname"><span class="pre">spa</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'spa'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.spa" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.specialties">
+<span class="sig-name descname"><span class="pre">specialties</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'specialties'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.specialties" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.spoken_language">
+<span class="sig-name descname"><span class="pre">spoken_language</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'spoken_language'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.spoken_language" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.sports_infrastructure">
+<span class="sig-name descname"><span class="pre">sports_infrastructure</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'sports_infrastructure'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.sports_infrastructure" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.state">
+<span class="sig-name descname"><span class="pre">state</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'state'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.state" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.state_code">
+<span class="sig-name descname"><span class="pre">state_code</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'state_code'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.state_code" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.status">
+<span class="sig-name descname"><span class="pre">status</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'status'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.status" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.street">
+<span class="sig-name descname"><span class="pre">street</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'street'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.street" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.supplier">
+<span class="sig-name descname"><span class="pre">supplier</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'supplier'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.supplier" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.swimming">
+<span class="sig-name descname"><span class="pre">swimming</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'swimming'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.swimming" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.swimming_pool">
+<span class="sig-name descname"><span class="pre">swimming_pool</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'swimming_pool'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.swimming_pool" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.swimming_pool_indoor">
+<span class="sig-name descname"><span class="pre">swimming_pool_indoor</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'swimming_pool_indoor'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.swimming_pool_indoor" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.swimming_pool_outdoor">
+<span class="sig-name descname"><span class="pre">swimming_pool_outdoor</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'swimming_pool_outdoor'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.swimming_pool_outdoor" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.takeout">
+<span class="sig-name descname"><span class="pre">takeout</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'takeout'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.takeout" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.television">
+<span class="sig-name descname"><span class="pre">television</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'television'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.television" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.transit_attribute">
+<span class="sig-name descname"><span class="pre">transit_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'transit_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.transit_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.truck_attribute">
+<span class="sig-name descname"><span class="pre">truck_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'truck_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.truck_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.truck_night_parking_only">
+<span class="sig-name descname"><span class="pre">truck_night_parking_only</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'truck_night_parking_only'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.truck_night_parking_only" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.truck_parking">
+<span class="sig-name descname"><span class="pre">truck_parking</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'truck_parking'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.truck_parking" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.truck_scales">
+<span class="sig-name descname"><span class="pre">truck_scales</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'truck_scales'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.truck_scales" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.truck_secure_parking">
+<span class="sig-name descname"><span class="pre">truck_secure_parking</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'truck_secure_parking'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.truck_secure_parking" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.truck_service">
+<span class="sig-name descname"><span class="pre">truck_service</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'truck_service'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.truck_service" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.truck_stop">
+<span class="sig-name descname"><span class="pre">truck_stop</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'truck_stop'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.truck_stop" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.truck_wash">
+<span class="sig-name descname"><span class="pre">truck_wash</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'truck_wash'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.truck_wash" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.type">
+<span class="sig-name descname"><span class="pre">type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'type'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.unit_name">
+<span class="sig-name descname"><span class="pre">unit_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'unit_name'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.unit_name" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.valid_unnamed">
+<span class="sig-name descname"><span class="pre">valid_unnamed</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'valid_unnamed'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.valid_unnamed" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'value'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.value" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.vehicle_services_attribute">
+<span class="sig-name descname"><span class="pre">vehicle_services_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'vehicle_services_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.vehicle_services_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.vendor_url_attribute">
+<span class="sig-name descname"><span class="pre">vendor_url_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'vendor_url_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.vendor_url_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.verification_attribute">
+<span class="sig-name descname"><span class="pre">verification_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'verification_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.verification_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.verified">
+<span class="sig-name descname"><span class="pre">verified</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'verified'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.verified" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.wine_selection">
+<span class="sig-name descname"><span class="pre">wine_selection</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'wine_selection'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.wine_selection" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.FieldName.within_location_ref">
+<span class="sig-name descname"><span class="pre">within_location_ref</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'within_location_ref'</span></em><a class="headerlink" href="#here.content.hmc2.constants.FieldName.within_location_ref" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">here.content.hmc2.constants.</span></span><span class="sig-name descname"><span class="pre">ObjectType</span></span><a class="reference internal" href="_modules/here/content/hmc2/constants.html#ObjectType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#here.content.hmc2.constants.ObjectType" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>HMC Object Type Name Constants.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.address">
+<span class="sig-name descname"><span class="pre">address</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'address'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.address" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.affiliation_attribute">
+<span class="sig-name descname"><span class="pre">affiliation_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'affiliation_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.affiliation_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.alcohol_service_attribute">
+<span class="sig-name descname"><span class="pre">alcohol_service_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'alcohol_service_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.alcohol_service_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.amenities_attribute">
+<span class="sig-name descname"><span class="pre">amenities_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'amenities_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.amenities_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.author">
+<span class="sig-name descname"><span class="pre">author</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'author'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.author" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.basic_info_attribute">
+<span class="sig-name descname"><span class="pre">basic_info_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'basic_info_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.basic_info_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.black_spot">
+<span class="sig-name descname"><span class="pre">black_spot</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'black_spot'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.black_spot" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.capacity_attribute">
+<span class="sig-name descname"><span class="pre">capacity_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'capacity_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.capacity_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.contact_information">
+<span class="sig-name descname"><span class="pre">contact_information</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'contact_information'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.contact_information" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.electric_charge_attribute">
+<span class="sig-name descname"><span class="pre">electric_charge_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'electric_charge_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.electric_charge_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.external_identifier">
+<span class="sig-name descname"><span class="pre">external_identifier</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'external_identifier'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.external_identifier" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.feedback">
+<span class="sig-name descname"><span class="pre">feedback</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'feedback'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.feedback" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.fuel_type_attribute">
+<span class="sig-name descname"><span class="pre">fuel_type_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fuel_type_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.fuel_type_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.hotel_attribute">
+<span class="sig-name descname"><span class="pre">hotel_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'hotel_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.hotel_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.internet_connection_attribute">
+<span class="sig-name descname"><span class="pre">internet_connection_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'internet_connection_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.internet_connection_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.location">
+<span class="sig-name descname"><span class="pre">location</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'location'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.location" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.location_information">
+<span class="sig-name descname"><span class="pre">location_information</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'location_information'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.location_information" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.match_level_attribute">
+<span class="sig-name descname"><span class="pre">match_level_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'match_level_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.match_level_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.media_reference_attribute">
+<span class="sig-name descname"><span class="pre">media_reference_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'media_reference_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.media_reference_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.note_type_attribute">
+<span class="sig-name descname"><span class="pre">note_type_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'note_type_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.note_type_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.office_type_attribute">
+<span class="sig-name descname"><span class="pre">office_type_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'office_type_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.office_type_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.operating_time">
+<span class="sig-name descname"><span class="pre">operating_time</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'operating_time'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.operating_time" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.other_information">
+<span class="sig-name descname"><span class="pre">other_information</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'other_information'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.other_information" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.parking_attribute">
+<span class="sig-name descname"><span class="pre">parking_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'parking_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.parking_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.payment">
+<span class="sig-name descname"><span class="pre">payment</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'payment'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.payment" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.place">
+<span class="sig-name descname"><span class="pre">place</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'place'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.place" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.place_access_attribute">
+<span class="sig-name descname"><span class="pre">place_access_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'place_access_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.place_access_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.place_category_confidence_attribute">
+<span class="sig-name descname"><span class="pre">place_category_confidence_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'place_category_confidence_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.place_category_confidence_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.popularity_attribute">
+<span class="sig-name descname"><span class="pre">popularity_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'popularity_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.popularity_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.port_attribute">
+<span class="sig-name descname"><span class="pre">port_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'port_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.port_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.price_range">
+<span class="sig-name descname"><span class="pre">price_range</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'price_range'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.price_range" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.qr_code_attribute">
+<span class="sig-name descname"><span class="pre">qr_code_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'qr_code_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.qr_code_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.quality_score">
+<span class="sig-name descname"><span class="pre">quality_score</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'quality_score'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.quality_score" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.relationship_attribute">
+<span class="sig-name descname"><span class="pre">relationship_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'relationship_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.relationship_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.restaurant_attribute">
+<span class="sig-name descname"><span class="pre">restaurant_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'restaurant_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.restaurant_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.safety_camera">
+<span class="sig-name descname"><span class="pre">safety_camera</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'safety_camera'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.safety_camera" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.social_signal">
+<span class="sig-name descname"><span class="pre">social_signal</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'social_signal'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.social_signal" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.spoken_language">
+<span class="sig-name descname"><span class="pre">spoken_language</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'spoken_language'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.spoken_language" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.supplier">
+<span class="sig-name descname"><span class="pre">supplier</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'supplier'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.supplier" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.transit_attribute">
+<span class="sig-name descname"><span class="pre">transit_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'transit_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.transit_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.truck_attribute">
+<span class="sig-name descname"><span class="pre">truck_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'truck_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.truck_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.vehicle_services_attribute">
+<span class="sig-name descname"><span class="pre">vehicle_services_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'vehicle_services_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.vehicle_services_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.vendor_url_attribute">
+<span class="sig-name descname"><span class="pre">vendor_url_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'vendor_url_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.vendor_url_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="here.content.hmc2.constants.ObjectType.verification_attribute">
+<span class="sig-name descname"><span class="pre">verification_attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'verification_attribute'</span></em><a class="headerlink" href="#here.content.hmc2.constants.ObjectType.verification_attribute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="here.content.hmc2.composite_road_attributes.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">here.content.hmc2.composite_road_attributes module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="here.content.hmc2.environmental_zone_conditions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">here.content.hmc2.environmental_zone_conditions module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.Constant"><code class="docutils literal notranslate"><span class="pre">Constant</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.Constant.address_extracter"><code class="docutils literal notranslate"><span class="pre">Constant.address_extracter</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.Constant.partition_id"><code class="docutils literal notranslate"><span class="pre">Constant.partition_id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.Constant.place_extracter"><code class="docutils literal notranslate"><span class="pre">Constant.place_extracter</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.Constant.supplier_extracter"><code class="docutils literal notranslate"><span class="pre">Constant.supplier_extracter</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName"><code class="docutils literal notranslate"><span class="pre">FieldName</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.accessors"><code class="docutils literal notranslate"><span class="pre">FieldName.accessors</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.additional_data"><code class="docutils literal notranslate"><span class="pre">FieldName.additional_data</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.address"><code class="docutils literal notranslate"><span class="pre">FieldName.address</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.address_relation"><code class="docutils literal notranslate"><span class="pre">FieldName.address_relation</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.affiliation_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.affiliation_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.air_conditioning"><code class="docutils literal notranslate"><span class="pre">FieldName.air_conditioning</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.alcohol_service_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.alcohol_service_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.alt_category"><code class="docutils literal notranslate"><span class="pre">FieldName.alt_category</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.alternate_geometry"><code class="docutils literal notranslate"><span class="pre">FieldName.alternate_geometry</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.amenities_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.amenities_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.area"><code class="docutils literal notranslate"><span class="pre">FieldName.area</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.area_type"><code class="docutils literal notranslate"><span class="pre">FieldName.area_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.author"><code class="docutils literal notranslate"><span class="pre">FieldName.author</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.basic_info_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.basic_info_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.beer_selection"><code class="docutils literal notranslate"><span class="pre">FieldName.beer_selection</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.biodiesel"><code class="docutils literal notranslate"><span class="pre">FieldName.biodiesel</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.biodiesel_grade"><code class="docutils literal notranslate"><span class="pre">FieldName.biodiesel_grade</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.black_spot"><code class="docutils literal notranslate"><span class="pre">FieldName.black_spot</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.bounding_box"><code class="docutils literal notranslate"><span class="pre">FieldName.bounding_box</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.building"><code class="docutils literal notranslate"><span class="pre">FieldName.building</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.building_unit"><code class="docutils literal notranslate"><span class="pre">FieldName.building_unit</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.capacity_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.capacity_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.category"><code class="docutils literal notranslate"><span class="pre">FieldName.category</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.catering"><code class="docutils literal notranslate"><span class="pre">FieldName.catering</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.childrens_menu"><code class="docutils literal notranslate"><span class="pre">FieldName.childrens_menu</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.city"><code class="docutils literal notranslate"><span class="pre">FieldName.city</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.cng"><code class="docutils literal notranslate"><span class="pre">FieldName.cng</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.conference_hall"><code class="docutils literal notranslate"><span class="pre">FieldName.conference_hall</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.contact_info"><code class="docutils literal notranslate"><span class="pre">FieldName.contact_info</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.contact_information"><code class="docutils literal notranslate"><span class="pre">FieldName.contact_information</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.cooking_types"><code class="docutils literal notranslate"><span class="pre">FieldName.cooking_types</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.country_code"><code class="docutils literal notranslate"><span class="pre">FieldName.country_code</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.county"><code class="docutils literal notranslate"><span class="pre">FieldName.county</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.currency_type"><code class="docutils literal notranslate"><span class="pre">FieldName.currency_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.day_of_week"><code class="docutils literal notranslate"><span class="pre">FieldName.day_of_week</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.delivery"><code class="docutils literal notranslate"><span class="pre">FieldName.delivery</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.diesel"><code class="docutils literal notranslate"><span class="pre">FieldName.diesel</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.diesel_additive"><code class="docutils literal notranslate"><span class="pre">FieldName.diesel_additive</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.diesel_additive_type"><code class="docutils literal notranslate"><span class="pre">FieldName.diesel_additive_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.diesel_with_additives"><code class="docutils literal notranslate"><span class="pre">FieldName.diesel_with_additives</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.district"><code class="docutils literal notranslate"><span class="pre">FieldName.district</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.dress_code"><code class="docutils literal notranslate"><span class="pre">FieldName.dress_code</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.e10"><code class="docutils literal notranslate"><span class="pre">FieldName.e10</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.e85"><code class="docutils literal notranslate"><span class="pre">FieldName.e85</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.electric_charge_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.electric_charge_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.elevators"><code class="docutils literal notranslate"><span class="pre">FieldName.elevators</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.escalators"><code class="docutils literal notranslate"><span class="pre">FieldName.escalators</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.ethanol"><code class="docutils literal notranslate"><span class="pre">FieldName.ethanol</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.ethanol_with_additives"><code class="docutils literal notranslate"><span class="pre">FieldName.ethanol_with_additives</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.external_identifier"><code class="docutils literal notranslate"><span class="pre">FieldName.external_identifier</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.family_friendly"><code class="docutils literal notranslate"><span class="pre">FieldName.family_friendly</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.feedback"><code class="docutils literal notranslate"><span class="pre">FieldName.feedback</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.fuel_type_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.fuel_type_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.gasoline"><code class="docutils literal notranslate"><span class="pre">FieldName.gasoline</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.geometry"><code class="docutils literal notranslate"><span class="pre">FieldName.geometry</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.handicap_accessible"><code class="docutils literal notranslate"><span class="pre">FieldName.handicap_accessible</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.handicap_rooms"><code class="docutils literal notranslate"><span class="pre">FieldName.handicap_rooms</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.high_canopy"><code class="docutils literal notranslate"><span class="pre">FieldName.high_canopy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.high_volume_pumps"><code class="docutils literal notranslate"><span class="pre">FieldName.high_volume_pumps</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.hot_tub"><code class="docutils literal notranslate"><span class="pre">FieldName.hot_tub</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.hotel_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.hotel_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.house"><code class="docutils literal notranslate"><span class="pre">FieldName.house</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.hydrogen"><code class="docutils literal notranslate"><span class="pre">FieldName.hydrogen</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.hydrogen_pressure"><code class="docutils literal notranslate"><span class="pre">FieldName.hydrogen_pressure</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.id"><code class="docutils literal notranslate"><span class="pre">FieldName.id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.idle_reduction_system"><code class="docutils literal notranslate"><span class="pre">FieldName.idle_reduction_system</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.internet_connection_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.internet_connection_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.label"><code class="docutils literal notranslate"><span class="pre">FieldName.label</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.level_information"><code class="docutils literal notranslate"><span class="pre">FieldName.level_information</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.level_name"><code class="docutils literal notranslate"><span class="pre">FieldName.level_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.lng"><code class="docutils literal notranslate"><span class="pre">FieldName.lng</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.location"><code class="docutils literal notranslate"><span class="pre">FieldName.location</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.location_address_type"><code class="docutils literal notranslate"><span class="pre">FieldName.location_address_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.location_information"><code class="docutils literal notranslate"><span class="pre">FieldName.location_information</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.location_type"><code class="docutils literal notranslate"><span class="pre">FieldName.location_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.lpg"><code class="docutils literal notranslate"><span class="pre">FieldName.lpg</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.match_level"><code class="docutils literal notranslate"><span class="pre">FieldName.match_level</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.match_level_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.match_level_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.media_reference"><code class="docutils literal notranslate"><span class="pre">FieldName.media_reference</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.media_reference_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.media_reference_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.midgrade"><code class="docutils literal notranslate"><span class="pre">FieldName.midgrade</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.name"><code class="docutils literal notranslate"><span class="pre">FieldName.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.name_type"><code class="docutils literal notranslate"><span class="pre">FieldName.name_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.note_type_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.note_type_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.number_of_showers"><code class="docutils literal notranslate"><span class="pre">FieldName.number_of_showers</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.office_type_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.office_type_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.onsite_heart_defribillator"><code class="docutils literal notranslate"><span class="pre">FieldName.onsite_heart_defribillator</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.operating_time"><code class="docutils literal notranslate"><span class="pre">FieldName.operating_time</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.other_information"><code class="docutils literal notranslate"><span class="pre">FieldName.other_information</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.parking_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.parking_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.pay_at_pump"><code class="docutils literal notranslate"><span class="pre">FieldName.pay_at_pump</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.payment"><code class="docutils literal notranslate"><span class="pre">FieldName.payment</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.payment_type"><code class="docutils literal notranslate"><span class="pre">FieldName.payment_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.place"><code class="docutils literal notranslate"><span class="pre">FieldName.place</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.place_access_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.place_access_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.place_category_confidence_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.place_category_confidence_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.political_geometry"><code class="docutils literal notranslate"><span class="pre">FieldName.political_geometry</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.political_view_action"><code class="docutils literal notranslate"><span class="pre">FieldName.political_view_action</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.political_view_name_replacement"><code class="docutils literal notranslate"><span class="pre">FieldName.political_view_name_replacement</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.popularity_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.popularity_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.port_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.port_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.postal_code"><code class="docutils literal notranslate"><span class="pre">FieldName.postal_code</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.postal_mapping"><code class="docutils literal notranslate"><span class="pre">FieldName.postal_mapping</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.premium"><code class="docutils literal notranslate"><span class="pre">FieldName.premium</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.premium_with_additives"><code class="docutils literal notranslate"><span class="pre">FieldName.premium_with_additives</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.price_range"><code class="docutils literal notranslate"><span class="pre">FieldName.price_range</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.primary"><code class="docutils literal notranslate"><span class="pre">FieldName.primary</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.qr_code_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.qr_code_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.qualifier"><code class="docutils literal notranslate"><span class="pre">FieldName.qualifier</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.quality_score"><code class="docutils literal notranslate"><span class="pre">FieldName.quality_score</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.region"><code class="docutils literal notranslate"><span class="pre">FieldName.region</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.regular"><code class="docutils literal notranslate"><span class="pre">FieldName.regular</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.regular_with_additives"><code class="docutils literal notranslate"><span class="pre">FieldName.regular_with_additives</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.relationship"><code class="docutils literal notranslate"><span class="pre">FieldName.relationship</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.relationship_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.relationship_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.representation"><code class="docutils literal notranslate"><span class="pre">FieldName.representation</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.reservation_required"><code class="docutils literal notranslate"><span class="pre">FieldName.reservation_required</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.restaurant_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.restaurant_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.restrooms_available"><code class="docutils literal notranslate"><span class="pre">FieldName.restrooms_available</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.safety_camera"><code class="docutils literal notranslate"><span class="pre">FieldName.safety_camera</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.sauna"><code class="docutils literal notranslate"><span class="pre">FieldName.sauna</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.seating_capacity"><code class="docutils literal notranslate"><span class="pre">FieldName.seating_capacity</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.seating_options"><code class="docutils literal notranslate"><span class="pre">FieldName.seating_options</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.security_guard"><code class="docutils literal notranslate"><span class="pre">FieldName.security_guard</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.segment_anchor_side"><code class="docutils literal notranslate"><span class="pre">FieldName.segment_anchor_side</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.showers"><code class="docutils literal notranslate"><span class="pre">FieldName.showers</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.smoking"><code class="docutils literal notranslate"><span class="pre">FieldName.smoking</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.social_signal"><code class="docutils literal notranslate"><span class="pre">FieldName.social_signal</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.source_type"><code class="docutils literal notranslate"><span class="pre">FieldName.source_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.spa"><code class="docutils literal notranslate"><span class="pre">FieldName.spa</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.specialties"><code class="docutils literal notranslate"><span class="pre">FieldName.specialties</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.spoken_language"><code class="docutils literal notranslate"><span class="pre">FieldName.spoken_language</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.sports_infrastructure"><code class="docutils literal notranslate"><span class="pre">FieldName.sports_infrastructure</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.state"><code class="docutils literal notranslate"><span class="pre">FieldName.state</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.state_code"><code class="docutils literal notranslate"><span class="pre">FieldName.state_code</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.status"><code class="docutils literal notranslate"><span class="pre">FieldName.status</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.street"><code class="docutils literal notranslate"><span class="pre">FieldName.street</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.supplier"><code class="docutils literal notranslate"><span class="pre">FieldName.supplier</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.swimming"><code class="docutils literal notranslate"><span class="pre">FieldName.swimming</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.swimming_pool"><code class="docutils literal notranslate"><span class="pre">FieldName.swimming_pool</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.swimming_pool_indoor"><code class="docutils literal notranslate"><span class="pre">FieldName.swimming_pool_indoor</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.swimming_pool_outdoor"><code class="docutils literal notranslate"><span class="pre">FieldName.swimming_pool_outdoor</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.takeout"><code class="docutils literal notranslate"><span class="pre">FieldName.takeout</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.television"><code class="docutils literal notranslate"><span class="pre">FieldName.television</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.transit_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.transit_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.truck_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.truck_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.truck_night_parking_only"><code class="docutils literal notranslate"><span class="pre">FieldName.truck_night_parking_only</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.truck_parking"><code class="docutils literal notranslate"><span class="pre">FieldName.truck_parking</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.truck_scales"><code class="docutils literal notranslate"><span class="pre">FieldName.truck_scales</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.truck_secure_parking"><code class="docutils literal notranslate"><span class="pre">FieldName.truck_secure_parking</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.truck_service"><code class="docutils literal notranslate"><span class="pre">FieldName.truck_service</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.truck_stop"><code class="docutils literal notranslate"><span class="pre">FieldName.truck_stop</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.truck_wash"><code class="docutils literal notranslate"><span class="pre">FieldName.truck_wash</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.type"><code class="docutils literal notranslate"><span class="pre">FieldName.type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.unit_name"><code class="docutils literal notranslate"><span class="pre">FieldName.unit_name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.valid_unnamed"><code class="docutils literal notranslate"><span class="pre">FieldName.valid_unnamed</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.value"><code class="docutils literal notranslate"><span class="pre">FieldName.value</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.vehicle_services_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.vehicle_services_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.vendor_url_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.vendor_url_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.verification_attribute"><code class="docutils literal notranslate"><span class="pre">FieldName.verification_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.verified"><code class="docutils literal notranslate"><span class="pre">FieldName.verified</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.wine_selection"><code class="docutils literal notranslate"><span class="pre">FieldName.wine_selection</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.FieldName.within_location_ref"><code class="docutils literal notranslate"><span class="pre">FieldName.within_location_ref</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType"><code class="docutils literal notranslate"><span class="pre">ObjectType</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.address"><code class="docutils literal notranslate"><span class="pre">ObjectType.address</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.affiliation_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.affiliation_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.alcohol_service_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.alcohol_service_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.amenities_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.amenities_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.author"><code class="docutils literal notranslate"><span class="pre">ObjectType.author</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.basic_info_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.basic_info_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.black_spot"><code class="docutils literal notranslate"><span class="pre">ObjectType.black_spot</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.capacity_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.capacity_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.contact_information"><code class="docutils literal notranslate"><span class="pre">ObjectType.contact_information</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.electric_charge_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.electric_charge_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.external_identifier"><code class="docutils literal notranslate"><span class="pre">ObjectType.external_identifier</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.feedback"><code class="docutils literal notranslate"><span class="pre">ObjectType.feedback</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.fuel_type_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.fuel_type_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.hotel_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.hotel_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.internet_connection_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.internet_connection_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.location"><code class="docutils literal notranslate"><span class="pre">ObjectType.location</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.location_information"><code class="docutils literal notranslate"><span class="pre">ObjectType.location_information</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.match_level_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.match_level_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.media_reference_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.media_reference_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.note_type_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.note_type_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.office_type_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.office_type_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.operating_time"><code class="docutils literal notranslate"><span class="pre">ObjectType.operating_time</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.other_information"><code class="docutils literal notranslate"><span class="pre">ObjectType.other_information</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.parking_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.parking_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.payment"><code class="docutils literal notranslate"><span class="pre">ObjectType.payment</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.place"><code class="docutils literal notranslate"><span class="pre">ObjectType.place</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.place_access_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.place_access_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.place_category_confidence_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.place_category_confidence_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.popularity_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.popularity_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.port_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.port_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.price_range"><code class="docutils literal notranslate"><span class="pre">ObjectType.price_range</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.qr_code_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.qr_code_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.quality_score"><code class="docutils literal notranslate"><span class="pre">ObjectType.quality_score</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.relationship_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.relationship_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.restaurant_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.restaurant_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.safety_camera"><code class="docutils literal notranslate"><span class="pre">ObjectType.safety_camera</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.social_signal"><code class="docutils literal notranslate"><span class="pre">ObjectType.social_signal</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.spoken_language"><code class="docutils literal notranslate"><span class="pre">ObjectType.spoken_language</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.supplier"><code class="docutils literal notranslate"><span class="pre">ObjectType.supplier</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.transit_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.transit_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.truck_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.truck_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.vehicle_services_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.vehicle_services_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.vendor_url_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.vendor_url_attribute</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#here.content.hmc2.constants.ObjectType.verification_attribute"><code class="docutils literal notranslate"><span class="pre">ObjectType.verification_attribute</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+  <div class="tocsection sourcelink">
+    <a href="_sources/here.content.hmc2.constants.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2025, HERE Technologies.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

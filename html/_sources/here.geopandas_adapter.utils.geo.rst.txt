@@ -1,0 +1,7 @@
+here.geopandas\_adapter.utils.geo module
+========================================
+
+.. automodule:: here.geopandas_adapter.utils.geo
+   :members:
+   :undoc-members:
+   :show-inheritance:

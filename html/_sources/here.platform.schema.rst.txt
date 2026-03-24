@@ -1,0 +1,21 @@
+here.platform.schema package
+============================
+
+.. automodule:: here.platform.schema
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   here.platform.schema.ParserFactory
+   here.platform.schema.geojson_parser
+   here.platform.schema.json_parser
+   here.platform.schema.parser
+   here.platform.schema.protobuf_parser
+   here.platform.schema.schema
+   here.platform.schema.schema_registry

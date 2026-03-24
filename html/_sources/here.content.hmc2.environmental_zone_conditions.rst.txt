@@ -1,0 +1,7 @@
+here.content.hmc2.environmental\_zone\_conditions module
+========================================================
+
+.. automodule:: here.content.hmc2.environmental_zone_conditions
+   :members:
+   :undoc-members:
+   :show-inheritance:

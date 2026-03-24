@@ -1,0 +1,7 @@
+here.platform.api.data\_metadata\_api module
+============================================
+
+.. automodule:: here.platform.api.data_metadata_api
+   :members:
+   :undoc-members:
+   :show-inheritance:

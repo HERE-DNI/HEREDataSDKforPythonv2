@@ -1,0 +1,7 @@
+here.platform.model.subscription module
+=======================================
+
+.. automodule:: here.platform.model.subscription
+   :members:
+   :undoc-members:
+   :show-inheritance:

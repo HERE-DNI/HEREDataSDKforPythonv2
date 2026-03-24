@@ -1,0 +1,7 @@
+here.platform.utils.properties\_helper module
+=============================================
+
+.. automodule:: here.platform.utils.properties_helper
+   :members:
+   :undoc-members:
+   :show-inheritance:

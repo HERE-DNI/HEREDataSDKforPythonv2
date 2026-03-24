@@ -1,0 +1,7 @@
+here.platform.api.map\_matching\_api module
+===========================================
+
+.. automodule:: here.platform.api.map_matching_api
+   :members:
+   :undoc-members:
+   :show-inheritance:

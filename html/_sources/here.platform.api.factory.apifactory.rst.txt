@@ -1,0 +1,7 @@
+here.platform.api.factory.apifactory module
+===========================================
+
+.. automodule:: here.platform.api.factory.apifactory
+   :members:
+   :undoc-members:
+   :show-inheritance:
