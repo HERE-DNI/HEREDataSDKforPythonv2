@@ -43,8 +43,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <style>
-header.bd-header {
+/* 1. Hide accessibility skip link */
+a.skip-link {
   display: none !important;
+}
+
+/* 2. Hide search UI (input + Ctrl+K overlay) */
+.search-button__wrapper,
+.bd-search {
+  display: none !important;
+}
+
+/* 3. Hide the top header / navbar (logo, hamburger, theme switcher) */
+header.bd-header,
+nav.bd-header {
+  display: none !important;
+}
+
+/* 4. Hide the primary (left) sidebar navigation */
+.bd-sidebar-primary {
+  display: none !important;
+}
+
+/* 5. Optional: remove empty spacing left by hidden sidebars */
+.bd-container {
+  margin-left: 0 !important;
+}
+
+.bd-main {
+  width: 100% !important;
 }
 </style>
 
